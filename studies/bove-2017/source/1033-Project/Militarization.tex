@@ -1,0 +1,512 @@
+\documentclass[a4paper, 12pt, reqno]{article}
+\usepackage{amssymb, amsmath, amsthm, amsfonts, amscd}
+\usepackage[english]{babel}
+\usepackage[noxcolor] {pstricks}
+\usepackage{pstcol}
+\usepackage{setspace}
+\usepackage{longtable}
+\usepackage{lscape}
+\usepackage{egameps}
+\usepackage{sgame}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{psfrag}
+\usepackage{appendix}
+\usepackage{tabularx}
+\usepackage{pdflscape}
+\usepackage{amsthm}
+\usepackage{threeparttable}
+\usepackage{booktabs}
+\usepackage{placeins}
+\newcommand{\sym}[1]{\rlap{#1}}
+\usepackage{afterpage}
+\renewcommand{\thesection}{\Roman{section}} 
+\renewcommand{\thesubsection}{\Alph{subsection}}
+\usepackage[margin=1.28in]{geometry}
+ 
+
+
+
+\begin{document}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\title{\LARGE\textbf{{Policeman on the Frontline or a Soldier? The Effect of Police Militarization  on Crime\thanks{The authors wish to thank Stella Chatzitheochari, Claudio Deiana, Mirko Draca, Matthew C. Harris, Giovanni Mastrobuoni, Roberto Nistic\`{o}, and Floris Zoutman, for helpful feedback.  We are also grateful to the journal's editor, John Friedman, and three anonymous reviewers for constructive suggestions that helped us improve the article. The usual disclaimer applies.}}}}
+ 
+
+\author{Vincenzo Bove\thanks{v.bove@warwick.ac.uk} \\   University of Warwick  \and  Evelina Gavrilova\thanks{evelina.gavrilova@nhh.no} \\ Norwegian School of Economics }
+
+ \date{\today}
+
+
+\maketitle
+
+\newpage
+
+\begin{figure}[!]
+\centering 
+\includegraphics[width=0.70\textwidth]{Figure_1.png} 
+\caption{Average Aid per Capita and the Crime Rate}
+\label{fig:scatter1}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{figure}[!]
+\centering
+\begin{minipage}[v]{0.70\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{Figure_2a.png}
+        \subcaption{Difference in Crime Rate (per 100,000) between Low and High Recipient Counties}
+     \end{minipage}
+\begin{minipage}[v]{0.70\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{Figure_2b.png}
+        \subcaption{Difference in Total Military Aid (in log) Received between Low and High Recipient Counties}
+     \end{minipage}
+\caption{Crime Rate and Military Raid}
+\footnotesize Notes: Both figures represent plots for raw data. Low Recipient Counties are defined as counties that have received only once military aid. High Recipient Counties are those that have received military aid every year of the sample period.
+\label{fig:data}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{figure}[!]
+\centering
+\begin{minipage}[v]{0.70\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{Figure_3a.png}
+        \subcaption{Total Military Aid (in log) and Military Expenditure IV: The First Stage}
+     \end{minipage}
+\begin{minipage}[v]{0.70\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{Figure3b.png}
+        \subcaption{Total Military Aid (in log) and Crime (per 100,000): The Second Stage}
+     \end{minipage}
+\caption{Binned scatter plot representations of the first (second) stage in our analysis. Each point of the scatter represents the mean military expenditure (crime) and total aid over equally sized bin. The line presents a linear fit.}
+\label{fig:binscatter}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+\input{Table1.tex}
+
+
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{landscape}
+\begin{table}[t]
+\centering
+ \caption{The Effect of Military Aid on Crime}
+ \scalebox{.9}{
+\begin{threeparttable}	
+\begin{tabular}{rcccccccccc}
+\toprule
+& (1)&(2)&(3)&(4)&(5)&(6)&(7)&(8)&(9)\\
+&\multicolumn{1}{c}{OLS}&\multicolumn{1}{c}{First Stage}&\multicolumn{1}{c}{Crime}&\multicolumn{1}{c}{Homicide}&\multicolumn{1}{c}{Robbery}&\multicolumn{1}{c}{Assault}&\multicolumn{1}{c}{Burglary}&\multicolumn{1}{c}{Larceny}&\multicolumn{1}{c}{Vehicle Theft}\\
+\midrule
+\input{Table2.tex}
+\midrule 
+\input{elast.tex}
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+		\item \footnotesize \textit{Notes}: The dependent variable in columns 1 and 3 is total crime per 100,000 population, in column 2 is military aid, from column 4 the dependent variable is  the category of crime per 100,000 population. Control variables: median income,  poverty rate,  unemployment rate, population,   share of males,  blacks,  and age 15-19,  20-24, 25-29,  30-34. All models include county and interacted state-year fixed effects. The instrument is lagged military expenditure times the probability of receiving military aid. Robust standard errors clustered at the state level reported in parenthesis. Asterisks denote: $*** p<0.01, ** p<0.05, * p<0.1$.
+\end{tablenotes}
+  \end{threeparttable}
+  }
+\label{tab:main}%
+\end{table}
+  \end{landscape}
+  
+  
+  
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+ 
+\begin{landscape}
+\begin{table}[t]
+  \centering
+ \caption{The Effect of Military Aid on Arrest Rates}
+\scalebox{.99}{
+	\begin{threeparttable}
+\begin{tabular}{rcccccc}
+\toprule
+& (1)&(2)&(3)&(4)&(5)&(6)\\
+\input{Table3.tex}
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\item \footnotesize \textit{Notes}: The dependent variable is arrest rate  per category of crime. Control variables: median income,  poverty rate,  unemployment rate, population,   share of males,  blacks,  and age 15-19,  20-24, 25-29,  30-34. All models include county and interacted state-year fixed effects. The instrument is lagged military expenditure times the probability of receiving military aid. Robust standard errors clustered at the state level reported in parenthesis. Asterisks denote: $*** p<0.01, ** p<0.05, * p<0.1$.
+\end{tablenotes}
+\end{threeparttable}
+}
+\label{tab:clearance} 
+\end{table}
+  \end{landscape}
+ 
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ \begin{landscape}
+\begin{table}[t]
+  \centering
+ \caption{The Effect of Military Aid on Police Activities}
+\scalebox{.99}{
+	\begin{threeparttable}
+\begin{tabular}{rcccccccccc}
+\toprule
+& (1)&(2)&(3)&(4)&(5)&(6)&(7)&(8)\\
+&&&\multicolumn{1}{c}{Officers to }&&&\multicolumn{1}{c}{Civil Disorder }&\multicolumn{1}{c}{Offenders }&Citizen\\
+                    &\multicolumn{1}{c}{Officers}&\multicolumn{1}{c}{Employees}&\multicolumn{1}{c}{Employees Ratio}&\multicolumn{1}{c}{Calls}&\multicolumn{1}{c}{Injuries}&\multicolumn{1}{c}{ Assaults}&\multicolumn{1}{c}{ Killed}&Complaints\\
+\midrule
+\input{Table4.tex}
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\item \footnotesize \textit{Notes}: The dependent variable is  the numbers of officers (column 1), of  employees (column 2), their ratio (column 3), the number of calls (column 4), injuries (column 5), assaults (column 6) received by the police,  the number of offenders killed (column 7) and the number of citizen complains (column 8). Control variables: median income,  poverty rate,  unemployment rate, population,   share of males,  blacks,  and age 15-19,  20-24, 25-29,  30-34. All models include county and interacted state-year fixed effects. The instrument is lagged military expenditure times the probability of receiving military aid. Robust standard errors clustered at the state level reported in parenthesis. KP F-Statistic stand for Kleibergen-Paap F-Statistic. Asterisks denote: $*** p<0.01, ** p<0.05, * p<0.1$.
+\end{tablenotes}
+\end{threeparttable}
+}
+\label{tab:activities} 
+\end{table}
+\end{landscape}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%    APPENDIX     %%%%%%%%%%%%%%%%%
+
+\section*{Appendix A}
+\setcounter{table}{0} \renewcommand{\thetable}{A.\arabic{table}}
+\setcounter{figure}{0} \renewcommand{\thefigure}{A.\arabic{figure}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[h]
+\centering 
+\includegraphics[width=0.65\textwidth]{Figure_A1.png} 
+\caption{Total Aid by Year in Monetary Terms}
+\label{fig:aid}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{figure}[!]
+ \centering 
+\includegraphics[width=0.8\textwidth]{Figure_A2.png} 
+\caption{Total Military Aid (in log) and Military Expenditure IV:  First Stage}
+\label{fig:binscatter3}
+\footnotesize Notes: The figure represents a binned scatter plot representation of the first stage in our analysis. Each point of the scatter represents the mean military expenditure and total aid over equally sized bin. The line presents a linear fit.
+\end{figure}
+
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\input{Categories.tex}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{landscape}
+\begin{table}[!]
+  \centering
+ \caption{The Effect of Military Aid on Crime: The Impact of Control Variables}
+ \scalebox{.9}{
+\begin{threeparttable}	
+\begin{tabular}{rccccccccccc}
+\toprule
+& (1)&(2)&(3)&(4)&(5)&(6)&(7)&(8)&(9)&(10)\\
+&Crime&Crime&Crime&Crime&Crime&Crime&Crime&Crime&Crime&Crime\\
+\midrule
+\input{TableA2.tex}
+\midrule
+State*Year FE:&-&x&x& x&x&-&x&x&x&x\\
+Year FE:&x&-&-&-&-&-&-&-&-&-\\
+\bottomrule
+\end{tabular}
+  \end{threeparttable}
+  }
+  \label{tab:control}%
+\end{table}
+\end{landscape}
+
+
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{landscape}
+\begin{table}[t]
+\centering
+ \caption{The Effect of Military Aid on Crime - OLS Results}
+ \scalebox{.9}{
+\begin{threeparttable}	
+\begin{tabular}{rcccccccccc}
+\toprule
+& (1)&(2)&(3)&(4)&(5)&(6)&(7)\\
+&\multicolumn{1}{c}{Crime}&\multicolumn{1}{c}{Homicide}&\multicolumn{1}{c}{Robbery}&\multicolumn{1}{c}{Assault}&\multicolumn{1}{c}{Burglary}&\multicolumn{1}{c}{Larceny}&\multicolumn{1}{c}{Vehicle Theft}\\
+\midrule
+\input{TableA3.tex}
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+		\item \footnotesize \textit{Notes}: The dependent variable is total crime per 100,000 population (column 1) and  the category   of crime per 100,000 population (columns 2 to 7). Control variables: median income,  poverty rate,  unemployment rate, population,   share of males,  blacks,  and age 15-19,  20-24, 25-29,  30-34. All models include county and interacted state-year fixed effects. Robust standard errors clustered at the state level reported in parenthesis. Asterisks denote: $*** p<0.01, ** p<0.05, * p<0.1$.
+\end{tablenotes}
+  \end{threeparttable}
+  }
+\label{tab:OLS_Appendix}
+\end{table}
+  \end{landscape}
+  
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{table}[!]
+  \centering
+  \caption{The Effect of Categories of Military Aid on Crime}
+  \scalebox{.99}{
+  	  	\begin{threeparttable}
+\begin{tabular}{rcccccccccc}
+\toprule
+& (1)&(2)&(3)&(4)&(5)\\
+   &\multicolumn{1}{c}{Crime}&\multicolumn{1}{c}{Robbery}&\multicolumn{1}{c}{Assault}&\multicolumn{1}{c}{Larceny}&\multicolumn{1}{c}{ Vehicle Theft}\\
+\midrule                    
+\input{TableA4Panel1.tex}
+\midrule
+\input{TableA4lweapons_cost.tex}
+\input{testslweapons_cost.tex}
+\midrule
+\input{TableA4lgears_cost.tex}
+\input{testslgears_cost.tex}
+\midrule
+\input{TableA4lvehicles_cost.tex}
+\input{testslvehicles_cost.tex}
+\midrule
+\input{TableA4lother_cost.tex}
+\input{testslother_cost.tex}
+
+\bottomrule
+\end{tabular}	
+\begin{tablenotes}
+		\item \footnotesize \textit{Notes}:  The dependent variable is total crime per 100,000 population (column 1) and  the category  of crime per 100,000 population (columns 2 to 5).  Control variables: median income,  poverty rate,  unemployment rate, population,   share of males,  blacks,  and age 15-19,  20-24, 25-29,  30-34. All models include county and interacted state-year fixed effects. The instrument is lagged military expenditure times the probability of receiving military aid. Each p-value represents the Wald test for difference in the coefficient of the row variable with the coefficient on Total Lagged Aid, where the dependent variable is on the top of the column. Robust standard errors clustered at the state level reported in parenthesis. Asterisks denote: $*** p<0.01, ** p<0.05, * p<0.1$.
+\end{tablenotes}
+\end{threeparttable}
+  }
+\label{tab:type}
+\end{table}
+
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{landscape}
+\begin{table}[!]
+  \centering
+  \caption{Robustness Checks on the Effect of  Military Aid on Crime}
+  \scalebox{.8}{
+  	  	\begin{threeparttable}
+\begin{tabular}{rccccccccc}
+\toprule
+& (1)&(2)&(3)&(4)&(5)&(6)&(7)\\
+&\multicolumn{1}{c}{Crime}&\multicolumn{1}{c}{Homicide}&\multicolumn{1}{c}{Robbery}&\multicolumn{1}{c}{Assault}&\multicolumn{1}{c}{Burglary}&\multicolumn{1}{c}{Larceny}&\multicolumn{1}{c}{Vehicle Theft}\\
+\midrule
+\multicolumn{3}{l}{\textit{Panel A. Population $<$ 250000 }}&&&&&&&\\
+\input{TableA5_pop.tex}
+\midrule
+
+\multicolumn{3}{l}{\textit{Panel B. Unempl Rate$>$7} }&&&&&&&\\
+\input{TableA5_unempl.tex}
+ \midrule
+\multicolumn{3}{l}{\textit{Panel C. Poverty Rate$>$16} }&&&&&&&\\
+\input{TableA5_poverty.tex}
+ \midrule
+\multicolumn{3}{l}{\textit{Panel D. Median Income$>$40 000} }&&&&&&&\\
+\input{TableA5_income.tex}
+ \midrule
+\multicolumn{3}{l}{\textit{Panel E. Share of blacks$>$0.06} }&&&&\\
+\input{TableA5_black.tex}
+\bottomrule
+\end{tabular}
+
+\begin{tablenotes}
+		\item \footnotesize \textit{Notes}:  The dependent variable is total crime per 100,000 population (column 1) and  the category   of crime per 100,000 population (columns 2 to 6).  Control variables: median income,  poverty rate,  unemployment rate, population,   share of males,  blacks,  and age 15-19,  20-24, 25-29,  30-34. All models include county and interacted state-year fixed effects. Robust standard errors clustered at the state level reported in parenthesis. KP F-Statistic stand for Kleibergen-Paap F-Statistic. Asterisks denote: $*** p<0.01, ** p<0.05, * p<0.1$. 
+\end{tablenotes}
+\end{threeparttable}
+  }
+\label{tab:robust1}%
+\end{table}%
+\end{landscape}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{landscape}
+\begin{table}[!]
+  \centering
+  \caption{Robustness Checks on the Effect of  Military Aid on Crime}
+  \scalebox{.9}{
+  	  	\begin{threeparttable}
+\begin{tabular}{rccccccccc}
+\toprule
+& (1)&(2)&(3)&(4)&(5)&(6)&(7)&(8)\\
+&\multicolumn{1}{c}{First Stage}&\multicolumn{1}{c}{Crime}&\multicolumn{1}{c}{Homicide}&\multicolumn{1}{c}{Robbery}&\multicolumn{1}{c}{Assault}&\multicolumn{1}{c}{Burglary}&\multicolumn{1}{c}{Larceny}&\multicolumn{1}{c}{Vehicle Theft}\\
+\midrule
+\multicolumn{5}{l}{\textit{Panel A. Quantities instead of Monetary Equivalent of Aid} }&&&&&\\
+\input{TableA6_1.tex}
+\midrule
+\multicolumn{5}{l}{\textit{Panel B. US Military Spending in \% of GDP as IV} }&&&&&\\
+\input{TableA6_burden_iv.tex}
+\midrule
+\multicolumn{5}{l}{\textit{Panel C. US Military Fatalities in Afghanistan and Iraq as IV} }&&&&&\\
+\input{TableA6_casualties_iv.tex}
+\midrule
+
+\end{tabular}
+
+\begin{tablenotes}
+		\item \footnotesize \textit{Notes}:  The dependent variable is military aid (column 1), total crime per 100,000 population (column 2) and  the category  of crime per 100,000 population (columns 3 to 8). Control variables: median income,  poverty rate,  unemployment rate, population,   share of males,  blacks,  and age 15-19,  20-24, 25-29,  30-34. All models include county and interacted state-year fixed effects. In Panels A   the instrument is lagged military expenditure times the probability of receiving military aid. In Panels B  and C we replace military expenditure with military burden or the number of US fatalities, respectively.    Robust standard errors clustered at the state level reported in parenthesis. KP F-Statistic stand for Kleibergen-Paap F-Statistic. Asterisks denote: $*** p<0.01, ** p<0.05, * p<0.1$.
+\end{tablenotes}
+\end{threeparttable}
+  }
+\label{tab:robust2}%
+\end{table}%
+\end{landscape}
+\clearpage
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\begin{landscape}
+\begin{table}[!]
+  \centering
+  \caption{Robustness Checks on the Effect of Military Aid on Crime}
+  \scalebox{.9}{
+  	  	\begin{threeparttable}
+\begin{tabular}{rccccccccc}
+\toprule
+& (1)&(2)&(3)&(4)&(5)&(6)&(7)&(8)\\
+&\multicolumn{1}{c}{First Stage}&\multicolumn{1}{c}{Crime}&\multicolumn{1}{c}{Homicide}&\multicolumn{1}{c}{Robbery}&\multicolumn{1}{c}{Assault}&\multicolumn{1}{c}{Burglary}&\multicolumn{1}{c}{Larceny}&\multicolumn{1}{c}{Vehicle Theft}\\
+\midrule
+\multicolumn{6}{l}{\textit{Panel A. Population Weights} }&&\\
+\input{TableA7_1.tex}
+\midrule
+\multicolumn{6}{l}{\textit{Panel B. Total Aid per Capita} }&&\\
+\input{TableA7_2.tex}
+\midrule
+
+\multicolumn{6}{l}{\textit{Panel C. Full Coverage} }&&\\
+\input{TableA7_3.tex}
+\bottomrule
+\end{tabular}
+
+\begin{tablenotes}
+		\item \footnotesize \textit{Notes}:  The dependent variable is military aid (column 1), total crime per 100,000 population (column 2) and  the category   of crime per 100,000 population (columns 3 to 8). Control variables: median income,  poverty rate,  unemployment rate, population,   share of males,  blacks,  and age 15-19,  20-24, 25-29,  30-34. All models include county and interacted state-year fixed effects. Robust standard errors clustered at the state level reported in parenthesis. KP F-Statistic stand for Kleibergen-Paap F-Statistic. Asterisks denote: $*** p<0.01, ** p<0.05, * p<0.1$.  
+\end{tablenotes}
+\end{threeparttable}
+  }
+\label{tab:robust3}
+\end{table}
+\end{landscape}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{landscape}
+\begin{table}[!]
+  \centering
+  \caption{Specification Robustness Checks on the Effect of  Military Aid on Crime}
+  \scalebox{.9}{
+  	  	\begin{threeparttable}
+\begin{tabular}{rccccccccc}
+\toprule
+& (1)&(2)&(3)&(4)&(5)&(6)&(7)&(8)\\
+&\multicolumn{1}{c}{First Stage}&\multicolumn{1}{c}{Crime}&\multicolumn{1}{c}{Homicide}&\multicolumn{1}{c}{Robbery}&\multicolumn{1}{c}{Assault}&\multicolumn{1}{c}{Burglary}&\multicolumn{1}{c}{Larceny}&\multicolumn{1}{c}{Vehicle Theft}\\
+\midrule
+\multicolumn{6}{l}{\textit{Panel A. Including Year Fixed Effects Instead of State*Year Fixed Effects} }&&\\
+\input{TableA8_1.tex}
+\midrule
+\multicolumn{6}{l}{\textit{Panel B. Including County Linear Trends} }&&\\
+\input{TableA8_2.tex}
+\midrule
+\multicolumn{6}{l}{\textit{Panel C. Excluding Counties with no Aid and Aid in All Years} }&&\\
+\input{TableA8_3.tex}
+\bottomrule
+\end{tabular}
+
+\begin{tablenotes}
+		\item \footnotesize \textit{Notes}:  The dependent variable is military aid (column 1), total crime per 100,000 population (column 2) and  the category  of crime per 100,000 population (columns 3 to 8). Control variables: median income,  poverty rate,  unemployment rate, population,   share of males,  blacks,  and age 15-19,  20-24, 25-29,  30-34.   Robust standard errors clustered at the state level reported in parenthesis. KP F-Statistic stand for Kleibergen-Paap F-Statistic. Asterisks denote: $*** p<0.01, ** p<0.05, * p<0.1$.  
+\end{tablenotes}
+\end{threeparttable}
+  }
+\label{tab:robust4}
+\end{table}
+\end{landscape}
+
+
+
+
+
+
+
+
+
+\end{document}

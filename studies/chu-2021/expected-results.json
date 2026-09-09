@@ -1,0 +1,27 @@
+[
+  {
+    "id": "hometown-audit",
+    "est": -0.471,
+    "se": 0.143
+  },
+  {
+    "id": "post2013-hometown",
+    "est": 0.199,
+    "se": 0.222
+  },
+  {
+    "id": "firstyear-homwtown",
+    "est": 0.215,
+    "se": 0.170
+  },
+  {
+    "id": "tenure-hometown",
+    "est": -0.040,
+    "se": 0.032
+  },
+  {
+    "id": "tenure2-hometown",
+    "est": 0.003,
+    "se": 0.009
+  }
+]

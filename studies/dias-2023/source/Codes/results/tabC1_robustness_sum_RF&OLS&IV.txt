@@ -1,0 +1,24 @@
+		(1)	(2)	(3)	(4)	(5)	(6)	(7)	(8)	(9)
+VARIABLES	LABELS	Reduced Form	Reduced Form	Reduced Form	OLS	OLS	OLS	IV	IV	IV
+										
+sum_pot	Potential Sum Up-Down	-3.271	-3.265	-2.700						
+		(1.475)**	(1.438)**	(1.656)						
+potentialUpstream	Instrument: Upstream	8.592	8.609	8.101						
+		(2.611)***	(2.561)***	(2.914)***						
+potentialAMC	Instrument: Direct Effect		0.979	0.568		1.353	1.016		1.289	0.915
+			(3.229)	(2.652)		(3.445)	(2.972)		(3.192)	(2.667)
+sum_glyph	Glyphosate Sum Up-Down				-27.808	-27.959	-25.786	-21.089	-21.072	-18.354
+					(4.142)***	(4.133)***	(4.352)***	(7.001)***	(6.802)***	(8.414)**
+glyph_soy_upstream	Glyphosate Upstream				52.273	52.557	49.945	57.999	58.254	57.293
+					(10.888)***	(11.103)***	(11.085)***	(17.667)***	(17.601)***	(19.553)***
+										
+Observations		12,309	12,309	12,309	12,309	12,309	12,309	12,309	12,309	12,309
+R-squared		0.101	0.101	0.104	0.103	0.103	0.105			
+Number of AMC		1,119	1,119	1,119	1,119	1,119	1,119	1,119	1,119	1,119
+AMC FE		Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes
+UF-Year FE		Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes
+Controls		No	No	Yes	No	No	Yes	No	No	Yes
+IMR_baseline_mean		18.00	18.00	18.00	18.00	18.00	18.00	18.00	18.00	18.00
+F-stat								12.15	12.20	14.81
+Robust standard errors in parentheses										
+*** p<0.01, ** p<0.05, * p<0.1										

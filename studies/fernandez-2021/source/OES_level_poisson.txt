@@ -1,0 +1,14 @@
+		(1)	(2)	(3)	(4)	(5)	(6)
+VARIABLES	LABELS	All Healthcare Providers	Family Medicine	Internal Medicine	Pediatrics	Other Physicians & Surgeons	Registered Nurses
+							
+treat	Act14/Hurricane Maria	-0.0651***	-0.175***	-0.0369	-0.620***	-0.0843**	0.0275***
+		(0.00340)	(0.0463)	(0.0530)	(0.0446)	(0.0338)	(0.00748)
+treat_2014	Junk Bond Status	0.00905	-0.369***	1.270***	0.438***	-0.119***	-0.0576***
+		(0.00671)	(0.0433)	(0.101)	(0.0525)	(0.0257)	(0.00726)
+							
+Observations		1,092	1,063	976	945	867	1,092
+Number of state_fips		52	52	52	52	52	52
+State FE		YES	YES	YES	YES	YES	YES
+Year FE		YES	YES	YES	YES	YES	YES
+Robust standard errors in parentheses							
+*** p<0.01, ** p<0.05, * p<0.1							

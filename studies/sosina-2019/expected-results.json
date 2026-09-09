@@ -1,0 +1,22 @@
+[
+  {
+    "id": "segragation-bw",
+    "est": 639.65,
+    "se": 2909.14
+  },
+  {
+    "id": "racial-bw",
+    "est": -4986.22,
+    "se": 2192.57
+  },
+  {
+    "id": "segragation-hw",
+    "est": -1011.22,
+    "se": 2539.78
+  },
+  {
+    "id": "racial-hw-infra",
+    "est": -1293.35,
+    "se": 474.23
+  }
+]

@@ -1,0 +1,19 @@
+		(1)	(2)
+		Low Exposure	Low Exposure
+VARIABLES	LABELS	IV	IV
+			
+glyph_soy_upstream	Glyphosate Upstream	33.080	33.080
+		(16.570)**	(16.570)**
+potentialAMC	Instrument: Direct Effect	0.004	0.004
+		(3.080)	(3.080)
+			
+Observations		12,309	12,309
+Number of AMC		1,119	1,119
+AMC FE		Yes	Yes
+UF-Year FE		Yes	Yes
+Controls		Yes	Yes
+F-stat		51.37	51.37
+Rejection Rate (Lee et al. 2020)		0.0592	0.0592
+IMR_baseline_mean		18.00	18.00
+Robust standard errors in parentheses			
+*** p<0.01, ** p<0.05, * p<0.1			

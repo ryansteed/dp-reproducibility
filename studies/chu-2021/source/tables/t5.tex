@@ -1,0 +1,38 @@
+\begin{table}[p]\centering\captionsetup{width=\textwidth,labelformat=empty}\begin{threeparttable}\footnotesize{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Table 5: The Role of Auditor Tenure}
+\begin{tabular}{l*{3}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         \\
+Dependent Variable & \multicolumn{3}{c}{ log(SuspiciousExpenditures) }  \\
+\hline
+Hometown            &      -0.504\sym{***}&      -0.313         &      -0.259         \\
+                    &     (0.148)         &     (0.209)         &     (0.248)         \\
+FirstYear           &       0.054         &                     &                     \\
+                    &     (0.079)         &                     &                     \\
+FirstYear*Hometown  &       0.215         &                     &                     \\
+                    &     (0.170)         &                     &                     \\
+Tenure              &      -0.057         &      -0.075\sym{**} &      -0.073\sym{**} \\
+                    &     (0.041)         &     (0.031)         &     (0.032)         \\
+Tenure*Hometown     &                     &      -0.040         &      -0.070         \\
+                    &                     &     (0.032)         &     (0.097)         \\
+\(\rm Tenure^2 \)   &       0.006\sym{*}  &       0.008\sym{***}&       0.007\sym{**} \\
+                    &     (0.004)         &     (0.003)         &     (0.003)         \\
+\(\rm Tenure^2*Hometown\)&                     &                     &       0.003         \\
+                    &                     &                     &     (0.009)         \\
+\hline
+Year FEs         & Yes & Yes & Yes \\
+City FEs         & Yes & Yes & Yes \\
+Auditor Controls & Yes & Yes & Yes \\
+City Controls    & Yes & Yes & Yes \\
+\hline
+Observations        &        2939         &        2939         &        2939         \\
+R-Squared           &        .827         &        .827         &        .827         \\
+Mean of Dep. Var.   &        11.7         &        11.7         &        11.7         \\
+\hline\hline
+\end{tabular}}
+\captionsetup{justification=justified,labelformat=empty}
+\begin{tablenotes}
+\item Notes: Standard errors clustered by city in parentheses. The sample covers the period from 2006 to 2016. The dependent variable in all columns is $ log(SuspiciousExpenditures) $, which denotes the logarithm of total questionable expenditures found during the audit. $ Hometown $ is an indicator variable denoting that the provincial chief auditor was born in city $ c $. Auditor Controls include $ Gender $, $ Age $, $ Tenure $, $ Tenure^2 $, $ Education $, $ EduFinance $, $ PastAuditor $, $ PastFinance $, $ PastDiscipline $, and $ PastCityLeader $. City controls include $ Log(GDP pc) $, $ IndustrialRatio $, $ Log(Population) $, $ Log(GovRev) $, $ GovBalance $, $ FDI/GDP $, and $ AvgEdu $. The coefficients and standard errors of the control variables are suppressed to conserve space. See the notes to Table 1 for detailed definitions of the control variables.   \\  Significance: * significant at 10\%; ** significant at 5\%; *** significant at 1\%.
+\end{tablenotes}
+\end{threeparttable}\end{table}

@@ -1,0 +1,18 @@
+		(1)	(2)	(3)
+VARIABLES	LABELS	Glyphosate Upstream	Glyphosate Upstream	Glyphosate Upstream
+				
+potentialUpstream	Instrument: Upstream	0.118	0.119	0.118
+		(0.016)***	(0.016)***	(0.016)***
+potentialAMC	Instrument: Direct Effect		0.001	0.001
+			(0.011)	(0.011)
+				
+Observations		12,309	12,309	12,309
+R-squared		0.763	0.763	0.765
+Number of AMC		1,119	1,119	1,119
+AMC FE		Yes	Yes	Yes
+UF-Year FE		Yes	Yes	Yes
+Controls		No	No	Yes
+Partial-F		52.88	52.44	51.36
+glyph_up_baseline_mean		0.0157	0.0157	0.0157
+Robust standard errors in parentheses				
+*** p<0.01, ** p<0.05, * p<0.1				

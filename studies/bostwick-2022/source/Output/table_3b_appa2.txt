@@ -1,0 +1,18 @@
+	(1)	(2)	(3)	(4)	(5)	(6)	(7)	(8)	(9)	(10)	(11)	(12)	(13)	(14)
+VARIABLES	gradrate6yr	womengradrate6yr	mengradrate6yr	urmgradrate6yr	nonurmgradrate6yr	gradrate6yr	gradrate6yr	gradrate6yr	womengradrate6yr	mengradrate6yr	urmgradrate6yr	nonurmgradrate6yr	gradrate6yr	gradrate6yr
+														
+block1	-0.011	-0.009	-0.012	-0.025*	0.000	-0.011	-0.005	-0.011	-0.009	-0.012	-0.025*	0.000	-0.011	-0.005
+	(0.008)	(0.009)	(0.009)	(0.013)	(0.011)	(0.011)	(0.011)	(0.008)	(0.009)	(0.009)	(0.013)	(0.011)	(0.011)	(0.011)
+block2	-0.005	-0.004	-0.003	-0.028*	0.004	-0.000	-0.009	-0.005	-0.004	-0.003	-0.028*	0.004	-0.000	-0.009
+	(0.011)	(0.013)	(0.013)	(0.017)	(0.020)	(0.014)	(0.014)	(0.011)	(0.013)	(0.013)	(0.017)	(0.020)	(0.014)	(0.014)
+Constant	-0.604	1.503	-2.216*	-4.119**	-0.689	-0.156	0.111	-0.604	1.503	-2.216*	-4.119**	-0.689	-0.156	0.111
+	(1.148)	(1.223)	(1.212)	(1.918)	(1.377)	(1.504)	(2.140)	(1.148)	(1.223)	(1.212)	(1.918)	(1.377)	(1.504)	(2.140)
+														
+Observations	13,889	13,865	13,824	13,883	13,799	6,365	7,524	13,889	13,865	13,824	13,883	13,799	6,365	7,524
+R-squared	0.963	0.944	0.940	0.855	0.910	0.968	0.947	0.963	0.944	0.940	0.855	0.910	0.968	0.947
+School FE	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes
+Year FE	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes
+Controls	Yes	No	No	No	No	No	No	Yes	No	No	No	No	No	No
+Time Trends	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes
+Robust standard errors in parentheses														
+*** p<0.01, ** p<0.05, * p<0.1														

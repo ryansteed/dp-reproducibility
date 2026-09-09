@@ -1,0 +1,356 @@
+--------------------------------------------------------------------------------
+Codebook for NHGIS data file 'nhgis0082_ds244_20195_sd_uni'
+--------------------------------------------------------------------------------
+ 
+Contents
+    - Data Summary
+    - Data Dictionary
+    - Citation and Use
+ 
+Additional documentation on NHGIS data sources is available at: 
+    https://www.nhgis.org/documentation/tabular-data 
+ 
+--------------------------------------------------------------------------------
+Data Summary
+--------------------------------------------------------------------------------
+ 
+Year:             2015-2019
+Geographic level: School District (Unified)/Remainder (by State)
+Dataset:          2019 American Community Survey: 5-Year Data [2015-2019, Block Groups & Larger Areas]
+   NHGIS code:    2015_2019_ACS5a
+   NHGIS ID:      ds244
+Breakdown(s):     Geographic Component:
+                     Total area (00)
+Data type(s):     (E) Estimates
+                  (M) Margins of error
+ 
+Tables:
+ 
+1. Own Children Under 18 Years by Family Type and Age
+   Universe:    Own children under 18 years
+   Source code: B09002
+   NHGIS code:  ALU4
+ 
+2. Educational Attainment for the Population 25 Years and Over
+   Universe:    Population 25 years and over
+   Source code: B15003
+   NHGIS code:  ALWG
+ 
+3. Ratio of Income to Poverty Level in the Past 12 Months
+   Universe:    Population for whom poverty status is determined
+   Source code: C17002
+   NHGIS code:  ALWV
+ 
+4. Median Household Income in the Past 12 Months (in 2019 Inflation-Adjusted Dollars)
+   Universe:    Households
+   Source code: B19013
+   NHGIS code:  ALW1
+ 
+5. Family Size by Cash Public Assistance Income or Households Receiving Food Stamps/SNAP Benefits in the Past 12 Months
+   Universe:    Families
+   Source code: B19123
+   NHGIS code:  ALX0
+ 
+--------------------------------------------------------------------------------
+Data Dictionary
+--------------------------------------------------------------------------------
+ 
+Context Fields 
+        GISJOIN:     GIS Join Match Code
+        YEAR:        Data File Year
+        STUSAB:      State Postal Abbreviation
+        REGIONA:     Region Code
+        DIVISIONA:   Division Code
+        STATE:       State Name
+        STATEA:      State Code
+        COUNTYA:     County Code
+        COUSUBA:     County Subdivision Code
+        PLACEA:      Place Code
+        TRACTA:      Census Tract Code
+        BLKGRPA:     Block Group Code
+        CONCITA:     Consolidated City Code
+        AIANHHA:     American Indian Area/Alaska Native Area/Hawaiian Home Land Code
+        RES_ONLYA:   American Indian Area/Alaska Native Area (Reservation or Statistical Entity Only) Code
+        TRUSTA:      American Indian Area (Off-Reservation Trust Land Only)/Hawaiian Home Land Code
+        AIHHTLI:     American Indian Trust Land/ Hawaiian Home Land Indicator
+        AITSCEA:     Tribal Subdivision/Remainder Code
+        ANRCA:       Alaska Native Regional Corporation Code
+        CBSAA:       Metropolitan Statistical Area/Micropolitan Statistical Area Code
+        CSAA:        Combined Statistical Area Code
+        METDIVA:     Metropolitan Division Code
+        NECTAA:      New England City and Town Area Code
+        CNECTAA:     Combined New England City and Town Area Code
+        NECTADIVA:   New England City and Town Area Division Code
+        UAA:         Urban Area Code
+        CDCURRA:     Congressional District (2019-2021, 116th Congress) Code
+        SLDUA:       State Legislative District (Upper Chamber) Code
+        SLDLA:       State Legislative District (Lower Chamber) Code
+        ZCTA5A:      5-Digit ZIP Code Tabulation Area Code
+        SUBMCDA:     Subminor Civil Division Code
+        SDELMA:      School District (Elementary)/Remainder Code
+        SDSECA:      School District (Secondary)/Remainder Code
+        SDUNI:       School District (Unified)/Remainder Name
+        SDUNIA:      School District (Unified)/Remainder Code
+        PCI:         Principal City Indicator
+        PUMAA:       Public Use Microdata Area Code
+        GEOID:       Census Geographic Identifier
+        BTTRA:       Tribal Census Tract Code
+        BTBGA:       Tribal Block Group Code
+ 
+Data Type (E):
+    Estimates
+ 
+        NAME_E:      Area Name
+ 
+    Table 1:     Own Children Under 18 Years by Family Type and Age
+    Universe:    Own children under 18 years
+    Source code: B09002
+    NHGIS code:  ALU4
+        ALU4E001:    Total
+        ALU4E002:    In married-couple families
+        ALU4E003:    In married-couple families: Under 3 years
+        ALU4E004:    In married-couple families: 3 and 4 years
+        ALU4E005:    In married-couple families: 5 years
+        ALU4E006:    In married-couple families: 6 to 11 years
+        ALU4E007:    In married-couple families: 12 to 17 years
+        ALU4E008:    In other families
+        ALU4E009:    In other families: Male householder, no spouse present
+        ALU4E010:    In other families: Male householder, no spouse present: Under 3 years
+        ALU4E011:    In other families: Male householder, no spouse present: 3 and 4 years
+        ALU4E012:    In other families: Male householder, no spouse present: 5 years
+        ALU4E013:    In other families: Male householder, no spouse present: 6 to 11 years
+        ALU4E014:    In other families: Male householder, no spouse present: 12 to 17 years
+        ALU4E015:    In other families: Female householder, no spouse present
+        ALU4E016:    In other families: Female householder, no spouse present: Under 3 years
+        ALU4E017:    In other families: Female householder, no spouse present: 3 and 4 years
+        ALU4E018:    In other families: Female householder, no spouse present: 5 years
+        ALU4E019:    In other families: Female householder, no spouse present: 6 to 11 years
+        ALU4E020:    In other families: Female householder, no spouse present: 12 to 17 years
+ 
+    Table 2:     Educational Attainment for the Population 25 Years and Over
+    Universe:    Population 25 years and over
+    Source code: B15003
+    NHGIS code:  ALWG
+        ALWGE001:    Total
+        ALWGE002:    No schooling completed
+        ALWGE003:    Nursery school
+        ALWGE004:    Kindergarten
+        ALWGE005:    1st grade
+        ALWGE006:    2nd grade
+        ALWGE007:    3rd grade
+        ALWGE008:    4th grade
+        ALWGE009:    5th grade
+        ALWGE010:    6th grade
+        ALWGE011:    7th grade
+        ALWGE012:    8th grade
+        ALWGE013:    9th grade
+        ALWGE014:    10th grade
+        ALWGE015:    11th grade
+        ALWGE016:    12th grade, no diploma
+        ALWGE017:    Regular high school diploma
+        ALWGE018:    GED or alternative credential
+        ALWGE019:    Some college, less than 1 year
+        ALWGE020:    Some college, 1 or more years, no degree
+        ALWGE021:    Associate's degree
+        ALWGE022:    Bachelor's degree
+        ALWGE023:    Master's degree
+        ALWGE024:    Professional school degree
+        ALWGE025:    Doctorate degree
+ 
+    Table 3:     Ratio of Income to Poverty Level in the Past 12 Months
+    Universe:    Population for whom poverty status is determined
+    Source code: C17002
+    NHGIS code:  ALWV
+        ALWVE001:    Total
+        ALWVE002:    Under .50
+        ALWVE003:    .50 to .99
+        ALWVE004:    1.00 to 1.24
+        ALWVE005:    1.25 to 1.49
+        ALWVE006:    1.50 to 1.84
+        ALWVE007:    1.85 to 1.99
+        ALWVE008:    2.00 and over
+ 
+    Table 4:     Median Household Income in the Past 12 Months (in 2019 Inflation-Adjusted Dollars)
+    Universe:    Households
+    Source code: B19013
+    NHGIS code:  ALW1
+        ALW1E001:    Median household income in the past 12 months (in 2019 inflation-adjusted dollars)
+ 
+    Table 5:     Family Size by Cash Public Assistance Income or Households Receiving Food Stamps/SNAP Benefits in the Past 12 Months
+    Universe:    Families
+    Source code: B19123
+    NHGIS code:  ALX0
+        ALX0E001:    Total
+        ALX0E002:    With cash public assistance income or households receiving Food Stamps/SNAP benefits in the past 12 months
+        ALX0E003:    No cash public assistance income or household Food Stamps/SNAP benefits in the past 12 months
+        ALX0E004:    2-person families
+        ALX0E005:    2-person families: With cash public assistance income or households receiving Food Stamps/SNAP benefits in the past 12 months
+        ALX0E006:    2-person families: No cash public assistance income or household Food Stamps/SNAP benefits in the past 12 months
+        ALX0E007:    3-person families
+        ALX0E008:    3-person families: With cash public assistance income or households receiving Food Stamps/SNAP benefits in the past 12 months
+        ALX0E009:    3-person families: No cash public assistance income or household Food Stamps/SNAP benefits in the past 12 months
+        ALX0E010:    4-person families
+        ALX0E011:    4-person families: With cash public assistance income or households receiving Food Stamps/SNAP benefits in the past 12 months
+        ALX0E012:    4-person families: No cash public assistance income or household Food Stamps/SNAP benefits in the past 12 months
+        ALX0E013:    5-person families
+        ALX0E014:    5-person families: With cash public assistance income or households receiving Food Stamps/SNAP benefits in the past 12 months
+        ALX0E015:    5-person families: No cash public assistance income or household Food Stamps/SNAP benefits in the past 12 months
+        ALX0E016:    6-person families
+        ALX0E017:    6-person families: With cash public assistance income or households receiving Food Stamps/SNAP benefits in the past 12 months
+        ALX0E018:    6-person families: No cash public assistance income or household Food Stamps/SNAP benefits in the past 12 months
+        ALX0E019:    7-or-more-person families
+        ALX0E020:    7-or-more-person families: With cash public assistance income or households receiving Food Stamps/SNAP benefits in the past 12 months
+        ALX0E021:    7-or-more-person families: No cash public assistance income or household Food Stamps/SNAP benefits in the past 12 months
+ 
+Data Type (M):
+    Margins of error
+ 
+        NAME_M:      Area Name
+ 
+    Table 1:     Own Children Under 18 Years by Family Type and Age
+    Universe:    Own children under 18 years
+    Source code: B09002
+    NHGIS code:  ALU4
+        ALU4M001:    Total
+        ALU4M002:    In married-couple families
+        ALU4M003:    In married-couple families: Under 3 years
+        ALU4M004:    In married-couple families: 3 and 4 years
+        ALU4M005:    In married-couple families: 5 years
+        ALU4M006:    In married-couple families: 6 to 11 years
+        ALU4M007:    In married-couple families: 12 to 17 years
+        ALU4M008:    In other families
+        ALU4M009:    In other families: Male householder, no spouse present
+        ALU4M010:    In other families: Male householder, no spouse present: Under 3 years
+        ALU4M011:    In other families: Male householder, no spouse present: 3 and 4 years
+        ALU4M012:    In other families: Male householder, no spouse present: 5 years
+        ALU4M013:    In other families: Male householder, no spouse present: 6 to 11 years
+        ALU4M014:    In other families: Male householder, no spouse present: 12 to 17 years
+        ALU4M015:    In other families: Female householder, no spouse present
+        ALU4M016:    In other families: Female householder, no spouse present: Under 3 years
+        ALU4M017:    In other families: Female householder, no spouse present: 3 and 4 years
+        ALU4M018:    In other families: Female householder, no spouse present: 5 years
+        ALU4M019:    In other families: Female householder, no spouse present: 6 to 11 years
+        ALU4M020:    In other families: Female householder, no spouse present: 12 to 17 years
+ 
+    Table 2:     Educational Attainment for the Population 25 Years and Over
+    Universe:    Population 25 years and over
+    Source code: B15003
+    NHGIS code:  ALWG
+        ALWGM001:    Total
+        ALWGM002:    No schooling completed
+        ALWGM003:    Nursery school
+        ALWGM004:    Kindergarten
+        ALWGM005:    1st grade
+        ALWGM006:    2nd grade
+        ALWGM007:    3rd grade
+        ALWGM008:    4th grade
+        ALWGM009:    5th grade
+        ALWGM010:    6th grade
+        ALWGM011:    7th grade
+        ALWGM012:    8th grade
+        ALWGM013:    9th grade
+        ALWGM014:    10th grade
+        ALWGM015:    11th grade
+        ALWGM016:    12th grade, no diploma
+        ALWGM017:    Regular high school diploma
+        ALWGM018:    GED or alternative credential
+        ALWGM019:    Some college, less than 1 year
+        ALWGM020:    Some college, 1 or more years, no degree
+        ALWGM021:    Associate's degree
+        ALWGM022:    Bachelor's degree
+        ALWGM023:    Master's degree
+        ALWGM024:    Professional school degree
+        ALWGM025:    Doctorate degree
+ 
+    Table 3:     Ratio of Income to Poverty Level in the Past 12 Months
+    Universe:    Population for whom poverty status is determined
+    Source code: C17002
+    NHGIS code:  ALWV
+        ALWVM001:    Total
+        ALWVM002:    Under .50
+        ALWVM003:    .50 to .99
+        ALWVM004:    1.00 to 1.24
+        ALWVM005:    1.25 to 1.49
+        ALWVM006:    1.50 to 1.84
+        ALWVM007:    1.85 to 1.99
+        ALWVM008:    2.00 and over
+ 
+    Table 4:     Median Household Income in the Past 12 Months (in 2019 Inflation-Adjusted Dollars)
+    Universe:    Households
+    Source code: B19013
+    NHGIS code:  ALW1
+        ALW1M001:    Median household income in the past 12 months (in 2019 inflation-adjusted dollars)
+ 
+    Table 5:     Family Size by Cash Public Assistance Income or Households Receiving Food Stamps/SNAP Benefits in the Past 12 Months
+    Universe:    Families
+    Source code: B19123
+    NHGIS code:  ALX0
+        ALX0M001:    Total
+        ALX0M002:    With cash public assistance income or households receiving Food Stamps/SNAP benefits in the past 12 months
+        ALX0M003:    No cash public assistance income or household Food Stamps/SNAP benefits in the past 12 months
+        ALX0M004:    2-person families
+        ALX0M005:    2-person families: With cash public assistance income or households receiving Food Stamps/SNAP benefits in the past 12 months
+        ALX0M006:    2-person families: No cash public assistance income or household Food Stamps/SNAP benefits in the past 12 months
+        ALX0M007:    3-person families
+        ALX0M008:    3-person families: With cash public assistance income or households receiving Food Stamps/SNAP benefits in the past 12 months
+        ALX0M009:    3-person families: No cash public assistance income or household Food Stamps/SNAP benefits in the past 12 months
+        ALX0M010:    4-person families
+        ALX0M011:    4-person families: With cash public assistance income or households receiving Food Stamps/SNAP benefits in the past 12 months
+        ALX0M012:    4-person families: No cash public assistance income or household Food Stamps/SNAP benefits in the past 12 months
+        ALX0M013:    5-person families
+        ALX0M014:    5-person families: With cash public assistance income or households receiving Food Stamps/SNAP benefits in the past 12 months
+        ALX0M015:    5-person families: No cash public assistance income or household Food Stamps/SNAP benefits in the past 12 months
+        ALX0M016:    6-person families
+        ALX0M017:    6-person families: With cash public assistance income or households receiving Food Stamps/SNAP benefits in the past 12 months
+        ALX0M018:    6-person families: No cash public assistance income or household Food Stamps/SNAP benefits in the past 12 months
+        ALX0M019:    7-or-more-person families
+        ALX0M020:    7-or-more-person families: With cash public assistance income or households receiving Food Stamps/SNAP benefits in the past 12 months
+        ALX0M021:    7-or-more-person families: No cash public assistance income or household Food Stamps/SNAP benefits in the past 12 months
+ 
+--------------------------------------------------------------------------------
+Citation and Use of NHGIS Data
+--------------------------------------------------------------------------------
+ 
+All persons are granted a limited license to use this documentation and the
+accompanying data, subject to the following conditions:
+
+* REDISTRIBUTION: You will not redistribute the data without permission.
+
+  You may publish a subset of the data to meet journal requirements for accessing 
+  data related to a particular publication. Contact us for permission for any other 
+  redistribution; we will consider requests for free and commercial redistribution.
+
+* CITATION: You will cite NHGIS appropriately.
+
+    * Publications and research reports employing NHGIS data (either tabular or GIS) 
+      should include the following citation:
+
+        Steven Manson, Jonathan Schroeder, David Van Riper, Katherine Knowles, Tracy Kugler, Finn Roberts, and Steven Ruggles.
+        IPUMS National Historical Geographic Information System: Version 18.0 
+        [dataset]. Minneapolis, MN: IPUMS. 2023.
+        http://doi.org/10.18128/D050.V18.0
+
+    * For policy briefs, online resources, or articles in the popular press, we 
+      recommend that you cite the use of NHGIS data as follows:
+
+        IPUMS NHGIS, University of Minnesota, www.nhgis.org.
+
+These terms of use are a legally binding agreement. You can use the data only in 
+accordance with these terms, and any other use is a violation of the agreement. 
+Violations may result in revocation of the agreement and prohibition from using other 
+IPUMS data. If IPUMS or our partners are harmed from your violation, you are 
+responsible for all damages, including reasonable attorney's fees and expenses.
+        
+In addition, we request that users send us a copy of any publications, research
+reports, or educational material making use of the data or documentation.
+
+Send electronic material to: nhgis@umn.edu
+
+Printed matter should be sent to:
+
+    IPUMS NHGIS
+    Institute for Social Research and Data Innovation
+    University of Minnesota
+    50 Willey Hall
+    225 19th Ave S
+    Minneapolis, MN 55455

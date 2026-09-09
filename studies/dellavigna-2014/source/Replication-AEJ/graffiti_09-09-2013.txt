@@ -1,0 +1,47 @@
+		(1)	(2)	(3)	(4)	(5)	(6)	(7)
+VARIABLES	LABELS	Ethnically offensive graffiti	Ethnically offensive graffiti	Ethnically offensive graffiti	Ethnically offensive graffiti	Ethnically offensive graffiti	Ethnically offensive graffiti	Ethnically offensive graffiti
+								
+radio1	At least 1 RTS radio available	0.364***	0.355**	0.361**	0.311			
+		[0.139]	[0.171]	[0.161]	[0.245]			
+radio2	At least 2 RTS radios available				0.076			
+					[0.294]			
+log_distance_full	Distance to Serbia, logged	-0.041	-0.040	-0.011	-0.010	-0.016	-0.023	0.014
+		[0.056]	[0.050]	[0.054]	[0.055]	[0.057]	[0.050]	[0.053]
+logpop	Population (logged)		0.124***	0.078**	0.077**		0.107***	0.049
+			[0.040]	[0.037]	[0.037]		[0.039]	[0.041]
+male_share	% of male population		0.629	0.780	0.802		-0.264	-0.193
+			[2.633]	[2.363]	[2.393]		[2.550]	[2.409]
+z2	% of aged 21-40		-3.625	-3.308*	-3.319*		-4.560**	-3.913*
+			[2.276]	[1.986]	[1.975]		[2.171]	[2.059]
+z3	% of aged 41-60		-0.584	0.145	0.193		-0.688	0.241
+			[1.401]	[1.231]	[1.205]		[1.271]	[1.201]
+z6	% of aged 61+		-0.778	-0.424	-0.423		-1.217	-0.741
+			[1.116]	[1.001]	[0.996]		[1.052]	[0.973]
+Croats	% of Croats		-0.195	-0.090	-0.077		-0.133	-0.001
+			[0.205]	[0.248]	[0.230]		[0.192]	[0.226]
+higher_educ	higher_educ		0.377	-0.128	-0.015		1.409	0.847
+			[2.107]	[2.195]	[2.160]		[2.160]	[2.215]
+ec_active	Economically active population, %		-0.618	-0.952	-1.008		-0.523	-0.978
+			[1.723]	[1.746]	[1.791]		[1.736]	[1.728]
+disable_share2	Disabled after the war of independence, %		3.710	1.997	2.013		1.609	-1.104
+			[3.776]	[3.735]	[3.729]		[3.794]	[3.946]
+war	Was important during the war			0.020	0.016			0.098
+				[0.171]	[0.172]			[0.192]
+monument	Monument in the honor of died defendants of the town			0.201**	0.203**			0.227**
+				[0.094]	[0.094]			[0.100]
+name_of_the_streets_cyrillic	Names of the streets in Cyrillic script			0.084	0.091			0.056
+				[0.202]	[0.205]			[0.170]
+name_of_the_streets_in_hungarian	Names of the streets in Hungarian			-0.121**	-0.127***			-0.096
+				[0.053]	[0.048]			[0.065]
+pivo_Serb	Serbian beer in bars			0.087	0.090			0.071
+				[0.171]	[0.171]			[0.165]
+r1	county==County of Osijek-Baranja	-0.282***	-0.246**	-0.249**	-0.250**	-0.137	-0.157	-0.146
+		[0.082]	[0.106]	[0.113]	[0.114]	[0.111]	[0.129]	[0.134]
+bliz_forest	Large forest nearby			0.084	0.086			0.052
+				[0.093]	[0.092]			[0.095]
+s1	Maximum signal strength of all RTS radios					10.883**	8.559*	10.288**
+						[4.975]	[4.589]	[5.109]
+								
+Observations		139	139	139	139	139	139	139
+Robust standard errors in brackets								
+*** p<0.01, ** p<0.05, * p<0.1								

@@ -1,0 +1,47 @@
+[
+  {
+    "id": "reform-applicate2007",
+    "est": 0.0407,
+    "se": 0.0198
+  },
+  {
+    "id": "reform-applicate2008",
+    "est": 0.0800,
+    "se": 0.0152
+  },
+  {
+    "id": "reform-applicate2009",
+    "est": 0.0148,
+    "se": 0.0560
+  },
+  {
+    "id": "reform-highcounty08",
+    "est": 0.133,
+    "se": 0.0393
+  },
+  {
+    "id": "reform-lowcounty07",
+    "est": -0.0617,
+    "se": 0.0048
+  },
+  {
+    "id": "reform-lowcounty08",
+    "est": -0.0610,
+    "se": 0.0090
+  },
+  {
+    "id": "reform-lowssi07",
+    "est": -0.0665,
+    "se": 0.0121
+  },
+  {
+    "id": "reform-lowssi08",
+    "est": -0.1060,
+    "se": 0.0073
+  },
+  {
+    "id": "reform-lowssdi08",
+    "est": 0.0448,
+    "se": 0.0108
+  }
+]

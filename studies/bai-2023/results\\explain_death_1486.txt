@@ -1,0 +1,71 @@
+		(1)
+VARIABLES	LABELS	Log Proportion of Deaths
+		
+lnpnapop1964	Ln. Percent of non-agri population, 1964	0.008*
+		(0.004)
+ln_slp	Ln. Average Terrain Slope	0.002**
+		(0.001)
+ln_provdist	Ln. Distance to Province Border	-0.002
+		(0.002)
+ln_dist_pcap	Ln. Distance to Provincial Capital	0.002
+		(0.003)
+13.provgb	Province Code = 13	-0.033***
+		(0.006)
+14.provgb	Province Code = 14	-0.052***
+		(0.004)
+15.provgb	Province Code = 15	-0.023***
+		(0.006)
+21.provgb	Province Code = 21	-0.051***
+		(0.004)
+22.provgb	Province Code = 22	-0.031***
+		(0.005)
+23.provgb	Province Code = 23	-0.055***
+		(0.006)
+31.provgb	Province Code = 31	0.008
+		(0.009)
+32.provgb	Province Code = 32	-0.062***
+		(0.005)
+33.provgb	Province Code = 33	-0.070***
+		(0.003)
+34.provgb	Province Code = 34	-0.070***
+		(0.004)
+35.provgb	Province Code = 35	-0.062***
+		(0.003)
+36.provgb	Province Code = 36	-0.049***
+		(0.004)
+37.provgb	Province Code = 37	-0.063***
+		(0.006)
+41.provgb	Province Code = 41	-0.064***
+		(0.006)
+42.provgb	Province Code = 42	-0.070***
+		(0.005)
+43.provgb	Province Code = 43	-0.038***
+		(0.005)
+44.provgb	Province Code = 44	-0.001
+		(0.004)
+45.provgb	Province Code = 45	0.279***
+		(0.005)
+51.provgb	Province Code = 51	-0.062***
+		(0.006)
+52.provgb	Province Code = 52	-0.068***
+		(0.004)
+53.provgb	Province Code = 53	-0.033***
+		(0.005)
+61.provgb	Province Code = 61	-0.030***
+		(0.004)
+62.provgb	Province Code = 62	-0.033***
+		(0.004)
+63.provgb	Province Code = 63	-0.074***
+		(0.004)
+64.provgb	Province Code = 64	-0.033***
+		(0.002)
+65.provgb	Province Code = 65	-0.030***
+		(0.008)
+Constant	Constant	0.050*
+		(0.028)
+		
+Observations		1,486
+R-squared		0.398
+Province FE		Yes
+Robust standard errors in parentheses		
+*** p<0.01, ** p<0.05, * p<0.1		

@@ -1,0 +1,60 @@
+		(1)	(2)	(3)	(4)
+VARIABLES	LABELS	At least 1 RTS radio available	At least 1 RTS radio available	Maximum signal strength of all RTS radios	Maximum signal strength of all RTS radios
+					
+s1	Maximum signal strength of all RTS radios		9.183**		
+			[3.637]		
+log_distance_full	Distance to Serbia, logged	-0.156**	-0.021	-0.0051***	-0.006***
+		[0.068]	[0.032]	[0.001]	[0.001]
+logpop	Population (logged)	-0.065*	-0.034	0.0013	0.001
+		[0.038]	[0.029]	[0.001]	[0.001]
+male_share	% of male population	-0.949	-1.585	0.0163	-0.024
+		[1.787]	[1.142]	[0.035]	[0.023]
+z2	% of aged 21-40	-5.757	-2.273	0.0899	0.007
+		[4.392]	[1.936]	[0.059]	[0.023]
+z3	% of aged 41-60	-1.095	-0.916	-0.0470	-0.072***
+		[2.370]	[1.091]	[0.032]	[0.026]
+z6	% of aged 61+	-3.802	-1.138	0.0106	-0.018
+		[2.389]	[0.886]	[0.028]	[0.011]
+Croats	% of Croats	0.140	-0.053	0.0034	0.004
+		[0.198]	[0.184]	[0.007]	[0.005]
+higher_educ	higher_educ	2.905	3.543**	-0.0079	-0.007
+		[2.808]	[1.424]	[0.055]	[0.044]
+ec_active	Economically active population, %	0.053	-0.209	0.0220	0.032**
+		[1.377]	[0.959]	[0.037]	[0.016]
+disable_share2	Disabled after the war of independence, %	-3.016	-3.714	0.2206**	0.210**
+		[4.226]	[2.877]	[0.106]	[0.088]
+war	Was important during the war	-0.148	0.100	-0.0037	
+		[0.176]	[0.121]	[0.003]	
+monument	Monument in the honor of died defendants of the town	0.127	0.079	0.0002	
+		[0.087]	[0.076]	[0.001]	
+name_of_the_streets_cyrillic	Names of the streets in Cyrillic script	-0.197	-0.152	0.0048	
+		[0.196]	[0.134]	[0.003]	
+name_of_the_streets_in_hungarian	Names of the streets in Hungarian	0.093	0.051	0.0019	
+		[0.092]	[0.059]	[0.003]	
+pivo_Serb	Serbian beer in bars	0.067	-0.024	0.0035	
+		[0.071]	[0.120]	[0.002]	
+o.r2	county==County of Požega-Slavonia = o,	-	-	-	
+					
+o.r3	county==County of Slavonski Brod-Posavina = o,	-	-	-	
+					
+o.r4	county==County of Virovitica-Podravina = o,	-	-	-	-
+					
+o.r5	county==County of Vukovar-Sirmium = o,	-	-	-	
+					
+bliz_forest	Large forest nearby	-0.137*	-0.123*	0.0006	
+		[0.069]	[0.065]	[0.002]	
+r3	county==County of Slavonski Brod-Posavina				0.003
+					[0.003]
+r5	county==County of Vukovar-Sirmium				0.009***
+					[0.003]
+					
+Observations		139	139	139	417
+R-squared		0.223	0.213	0.665	0.724
+p-value of F-stat for other controls		0.0534	0.254	0.0747	1.94e-05
+F-stat for other controls		1.905	1.283	1.778	5.014
+p-value of F-stat for signal strength			0.00467		
+F-stat for signal strength			8.906		
+p-value of F-stat for signal strength and forest			0.00982		
+F-stat for signal strength and forest			5.158		
+Robust standard errors in brackets					
+*** p<0.01, ** p<0.05, * p<0.1					

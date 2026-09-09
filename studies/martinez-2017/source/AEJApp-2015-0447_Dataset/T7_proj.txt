@@ -1,0 +1,13 @@
+	(1)	(2)	(3)	(4)	(5)	(6)	(7)	(8)	(9)	(10)	(11)	(12)	(13)	(14)
+	numproj	num_Vmanag	numproj_vil	numproj_Inpres	numproj_gov	numproj	num_Vmanag	numproj_vil	numproj_Inpres	numproj_gov	projdur	projdur	projdur	projdur
+VARIABLES	OLSrur	OLSrur	OLSrur	OLSrur	OLSrur	IV	IV	IV	IV	IV	OLSperccontr	OLStypeperc	IVperccontr	IVtypeperc
+														
+yrsedu	0.0148	0.0258**	0.0245**	-0.0127*	0.0041	0.1694	0.2127**	0.2384**	-0.0937	0.0418	-0.0396***	-0.0364***	-0.2446***	-0.1747**
+	(0.013)	(0.012)	(0.012)	(0.006)	(0.006)	(0.108)	(0.095)	(0.107)	(0.060)	(0.052)	(0.013)	(0.013)	(0.071)	(0.069)
+														
+Observations	9,855	9,855	9,855	9,855	9,855	9,855	9,855	9,855	9,855	9,855	7,637	7,637	7,637	7,637
+R-squared	0.123	0.075	0.093	0.054	0.104	0.097	0.025	0.013	0.028	0.092	0.008	0.076	-0.059	0.046
+DepVar Mean	5.656	4.561	2.384	1.482	1.487						3.556	3.556		
+Cragg-Donald F-Stat													58.05	55.73
+Robust standard errors in parentheses														
+*** p<0.01, ** p<0.05, * p<0.1														

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "lynchcapitamob-Blackrate_regvoters",
+    "est": -0.469,
+    "se": 0.144
+  },
+  {
+    "id": "lynchcapitawhite-Whiterate_regvoters",
+    "est": -0.015,
+    "se": 0.138
+  },
+  {
+    "id": "lynchcapitamob-Blackrate_regvoters2",
+    "est": -0.434,
+    "se": 0.133
+  }
+]

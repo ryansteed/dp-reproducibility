@@ -1,0 +1,26 @@
+StataFileTM:00001:01100:GREC:                          :
+00004:00004:00001:
+*! classname: twowaygraph_g
+*! family: twoway
+*! date: 25 Dec 2015
+*! time: 16:13:27
+*! graph_scheme: s2color
+*! naturallywhite: 1
+*! end
+
+// File created by Graph Editor Recorder.
+// Edit only if you know what you are doing.
+
+.title.text = {}
+// title edits
+
+.legend.Edit , style(rows(1)) style(cols(0)) keepstyles 
+// legend edits
+
+// legend edits
+
+.legend.Edit, style(labelstyle(size(small)))
+// legend size
+
+
+// <end>

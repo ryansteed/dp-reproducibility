@@ -1,0 +1,3 @@
+jupyterlab
+semanticscholar
+stata_setup

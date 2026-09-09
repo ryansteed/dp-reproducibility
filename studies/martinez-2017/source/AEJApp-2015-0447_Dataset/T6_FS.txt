@@ -1,0 +1,28 @@
+	(1)	(2)	(3)	(4)	(5)	(6)
+	RF	RF	RF	RF	yrsedu	yrsedu
+VARIABLES	yrsedu	yrsedu	yrsedu	yrsedu	youngINPR	youngINPR
+						
+1.post92	0.433***	0.429***	0.367***	0.364***		
+	(0.089)	(0.088)	(0.087)	(0.087)		
+1.post92#c.num_dev		0.110*				
+		(0.057)				
+1.post92#1.inp_pos			0.095			
+			(0.075)			
+1.post92#1.num_PSINPRES1980				0.029		
+				(0.076)		
+1.post92#2.num_PSINPRES1980				0.238**		
+				(0.119)		
+post92					0.299***	0.294***
+					(0.092)	(0.090)
+post92_young					1.125***	1.129***
+					(0.126)	(0.125)
+post92_numdev						0.113*
+						(0.062)
+post92_numdev_young						0.035
+						(0.118)
+						
+Observations	59,130	59,130	59,130	59,130	59,105	59,105
+R-squared	0.583	0.583	0.583	0.583	0.588	0.588
+DepVar Mean	9.870	9.870	9.870	9.870	9.869	9.869
+Robust standard errors in parentheses						
+*** p<0.01, ** p<0.05, * p<0.1						

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "spend-dropout",
+    "est": -0.08,
+    "se": 0.07
+  },
+  {
+    "id": "spend-score",
+    "est": 3.29,
+    "se": 1.62
+  },
+  {
+    "id": "spend-postenroll",
+    "est": 0.12,
+    "se": 0.04
+  }
+]

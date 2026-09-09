@@ -1,0 +1,22 @@
+		(1)	(2)	(3)	(4)	(5)	(6)	(7)	(8)
+		birth_rate	birth_rate	birth_rate	birth_rate	IMR	IMR	IMR	IMR
+VARIABLES	LABELS	Reduced Form	Reduced Form	IV	IV	Reduced Form	Reduced Form	IV	IV
+									
+potentialUpstream	Instrument: Upstream	0.008	0.002			4.315	3.635		
+		(0.003)***	(0.002)			(1.711)**	(1.592)**		
+glyph_soy_upstream	Glyphosate Upstream			0.066	0.017			37.473	31.402
+				(0.021)***	(0.012)			(16.777)**	(15.374)**
+									
+Observations		12,309	12,309	12,309	12,309	12,309	12,309	12,309	12,309
+R-squared		0.628	0.684			0.111	0.112		
+Number of AMC		1,119	1,119	1,119	1,119	1,119	1,119	1,119	1,119
+AMC FE		Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes
+UF-Year FE		Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes
+Controls		Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes
+Baseline Birth Rate Trend		No	Yes	No	Yes	No	Yes	No	Yes
+Baseline SES Trends		Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes
+y_baseline_mean		0.0526	0.0526	0.0526	0.0526	18.00	18.00	18.00	18.00
+F-stat				45.42	44.92			45.42	44.92
+Rejection Rate (Lee et al. 2020)				0.0169	0.121			0.0467	0.0587
+Robust standard errors in parentheses									
+*** p<0.01, ** p<0.05, * p<0.1									

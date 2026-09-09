@@ -1,0 +1,22 @@
+[
+  {
+    "id": "runoff-candidate",
+    "est": 1.220,
+    "se": 0.375
+  },
+  {
+    "id": "runoff-outcome",
+    "est": 1.159,
+    "se": 0.300
+  },
+  {
+    "id": "runoff-timevar",
+    "est": -0.450,
+    "se": 0.170
+  },
+  {
+    "id": "runoff-crossvar",
+    "est": -0.627,
+    "se": 0.276
+  }
+]

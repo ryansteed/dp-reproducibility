@@ -1,0 +1,22 @@
+{\rtf1\fs24
+\trowd\trgaph75\trleft-75\intbl\trqc\clbrdrt\brdrs\cellx3168\clbrdrt\brdrs\cellx6912\clbrdrt\brdrs\cellx10512
+\ql \cell\qc (1)\cell\qc (2)\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx3168\cellx6912\cellx10512
+\trowd\trgaph75\trleft-75\trqc\clbrdrb\brdrs\cellx3168\clbrdrb\brdrs\cellx6912\clbrdrb\brdrs\cellx10512
+\ql VARIABLES\cell\qc Physicians Office - Level\cell\qc Physicians Office - Rate\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx3168\cellx6912\cellx10512
+\ql \cell\qc \cell\qc \cell\row
+\ql Act14/Hurricane Maria\cell\qc -0.0253***\cell\qc 0.0573***\cell\row
+\ql \cell\qc (0.00773)\cell\qc (0.00810)\cell\row
+\ql Junk Bond Status\cell\qc -0.000411\cell\qc 0.124***\cell\row
+\ql \cell\qc (0.0146)\cell\qc (0.0111)\cell\row
+\ql \cell\qc \cell\qc \cell\row
+\ql Observations\cell\qc 236,015\cell\qc 236,015\cell\row
+\ql Number of area_fips\cell\qc 3,102\cell\qc 3,102\cell\row
+\ql State FE\cell\qc YES\cell\qc YES\cell\row
+\trowd\trgaph75\trleft-75\trqc\trbrdrb\brdrs\clbrdrb\brdrs\cellx3168\clbrdrb\brdrs\cellx6912\clbrdrb\brdrs\cellx10512
+\ql Year FE\cell\qc YES\cell\qc YES\cell\row
+\pard\qc
+Robust standard errors in parentheses\par
+*** p<0.01, ** p<0.05, * p<0.1\par
+}

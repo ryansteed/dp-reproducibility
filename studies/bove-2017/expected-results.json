@@ -1,0 +1,17 @@
+[
+  {
+    "id": "military-crime",
+    "est": -59.293,
+    "se": 14.040
+  },
+  {
+    "id": "military-larceny",
+    "est": -27.429,
+    "se": 7.218
+  },
+  {
+    "id": "military-vehicle",
+    "est": -11.644,
+    "se": 2.807
+  }
+]

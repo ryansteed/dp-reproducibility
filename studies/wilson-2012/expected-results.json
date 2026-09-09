@@ -1,0 +1,12 @@
+[
+  {
+    "id": "ann_lessDOL_mill_cap-ivreg_T_Emp_Rate_Ann__cer",
+    "est": 8.075,
+    "se": 3.540
+  },
+  {
+    "id": "pay_lessDOL_mill_cap-ivreg_T_Emp_Rate_Pay__cer",
+    "est": 22.163,
+    "se": 8.622
+  }
+]

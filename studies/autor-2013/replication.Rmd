@@ -1,0 +1,150 @@
+---
+title: "Replication --- Autor et al., 2013"
+output: html_notebook
+---
+
+```{r}
+source("studies/autor-2013/replicate.R")
+source("R/overimputation.R")
+```
+
+```{r no-noise}
+data_original <- load("data/autor-2013/workfile_china__sim=1.dta")
+model_original <- replicate(data_original, print_table = TRUE)
+```
+
+```{r with-noise}
+dp_treatments <- list(
+  "low" = "data/autor-2013/workfile_china_epsilon=0.1_mechanism=laplace_sim=0.dta",
+  "med" = "data/autor-2013/workfile_china_epsilon=0.01_mechanism=laplace_sim=0.dta",
+  "high" = "data/autor-2013/workfile_china_epsilon=0.001_mechanism=laplace_sim=0.dta"
+)
+models_dp_naive <- lapply(dp_treatments, function(x) load(x) %>% replicate(print_table = TRUE))
+# treatments = list.files(path="data/autor-2013", pattern="*.dta", full.names=T)
+# for (treatment in treatments) {
+#   print(treatment)
+#   print(replicate(load(treatment)))
+# }
+```
+
+## Evans & King (2023)
+```{r privacy-unbiased}
+pacman::p_load_gh("georgieevans/PrivacyUnbiased")
+
+data_private <- load("data/autor-2013/workfile_china__sim=1.dta")
+data_dp <- load(
+  "data/autor-2013/workfile_china_epsilon=0.01_mechanism=laplace_sim=0.dta"
+)
+# can't replicate exactly b/c Evans & King doesn't support IV...
+form <- d_sh_empl_mfg ~
+  d_tradeusch_pw + t2 + l_shind_manuf_cbp + l_sh_popedu_c + l_sh_popfborn +
+    l_sh_empl_f + l_sh_routine33 + l_task_outsource
+reg_naive <- function(data) {
+  naive <- lm(form, data = data)
+  summary(naive)
+}
+reg_naive(data_private)
+reg_naive(data_dp)
+
+reg_corrected <- function(data) {
+  corrected <- PrivacyUnbiased::lmdp(form, data = data)
+  summary(corrected)
+}
+reg_corrected(data_private)
+reg_corrected(data_dp)
+```
+
+## Blackwell et al. (2017)
+```{r blackwell}
+# fully specified version — including time, cross section
+noised_vars <- c(
+  "l_popcount",
+  "l_no_workers_totcbp",
+  "l_shind_manuf_cbp",
+  "l_sh_popedu_c",
+  "l_sh_popfborn",
+  "l_sh_empl_f",
+  "l_sh_routine33",
+  "d_tradeusch_pw",
+  "d_tradeotch_pw_lag"
+)
+other_vars <- c(
+  "d_sh_empl_mfg", "reg_midatl", "reg_encen", "reg_wncen",
+  "reg_satl", "reg_escen", "reg_wscen", "reg_mount", "reg_pacif",
+  "l_task_outsource", "timepwt48", "yr", "czone",
+  "t2"
+)
+# 1. generate imputations
+m <- 10
+imps_original <- mo(
+  data_original, noised_vars, other_vars, m = m,
+  idvars = c("city", "statefip"),
+  noms = c("t2"),
+  ts = "yr",
+  cs = "czone"
+)
+saveRDS(imps_original, "data/imputations/imps_original.rds")
+for (t in names(dp_treatments)) {
+  path <- dp_rds_path(t)
+  print(path)
+  imps_dp <- mo(
+    load(dp_treatments[[t]]),
+    noised_vars, other_vars,
+    m = m, qui = TRUE,
+    # stop_after = 100,
+    data_original = data_original,
+    idvars = c("city", "statefip"),
+    noms = c("t2"),
+    ts = "yr",
+    cs = "czone"
+  )
+  saveRDS(imps_dp, path)
+}
+```
+```{r load-imps}
+imps_original <- readRDS("data/imputations/imps_original.rds")
+imps_dp <- lapply(names(dp_treatments), function(t) readRDS(dp_rds_path(t)))
+names(imps_dp) <- names(dp_treatments)
+imps_dp
+```
+
+```{r replicate-imps}
+# plot(imps_dp, which.vars = noised_vars[1:2], overimpute = TRUE)
+# 2. run reg on each imputation
+# models_dp <- lapply(
+#   imps_dp$imputations, replicate
+# )
+combine <- function(imps) {
+  models_dp <- lapply(imps$imputations, function(imp) replicate(imp))
+  print(reg_table(models_dp))
+  models_dp_coeftest <- lapply(
+    imps$imputations,
+    function(imp) with(imp, replicate(imp) %>% coeftest())
+  )
+  model_imp_dp <- Amelia::mi.combine(models_dp_coeftest)
+  print(model_imp_dp)
+  model_imp_dp_cleaned <- model_imp_dp %>%
+    mutate(
+      p.value = min(p.value, 1) # for some reason MI outputs p-values > 1
+    )
+  model_imp_dp_cleaned
+}
+models_dp_combined <- lapply(imps_dp, combine)
+models_dp_combined
+```
+
+```{r imp-comparison}
+# 3. compare with original
+names(models_dp_naive) <- paste0(names(dp_treatments), " (naive)")
+names(models_dp_combined) <- paste0(names(dp_treatments), " (corr.)")
+table <- reg_table(c(
+  list(
+    "Orig." = model_original,
+    "Orig. (corr)" = combine(imps_original)
+  ),
+  models_dp_naive,
+  models_dp_combined
+))
+capture.output(table %>% print_html(), file = "studies/autor-2013/blackwell-comp.html")
+table
+```

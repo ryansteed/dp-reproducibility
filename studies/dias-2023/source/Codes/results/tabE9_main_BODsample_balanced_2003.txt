@@ -1,0 +1,19 @@
+		(1)	(2)	(3)	(4)	(5)	(6)	(7)	(8)	(9)	(10)	(11)	(12)
+		Reduced Form	Reduced Form	Reduced Form	Reduced Form	Reduced Form	Reduced Form	Reduced Form	Reduced Form	Reduced Form	Reduced Form	Reduced Form	Reduced Form
+		IMR	IMR	IMR	IMR	IMR	IMR	IMR	IMR	IMR	IMR	IMR	IMR
+VARIABLES	LABELS	sample: bod1	sample: bod2	sample: bod3	sample: ammonia_nitrogen1	sample: ammonia_nitrogen2	sample: ammonia_nitrogen3	sample: bod1	sample: bod2	sample: bod3	sample: ammonia_nitrogen1	sample: ammonia_nitrogen2	sample: ammonia_nitrogen3
+													
+potentialUpstream	Instrument: Upstream	14.135	17.315	17.047	3.748	9.111	7.055	14.135	17.315	17.047	3.748	9.111	7.055
+		(7.383)*	(6.915)**	(6.979)**	(17.045)	(16.073)	(17.269)	(7.383)*	(6.915)**	(6.979)**	(17.045)	(16.073)	(17.269)
+potentialAMC	Instrument: Direct Effect	4.232	1.338	1.229	5.999	7.789	8.333	4.232	1.338	1.229	5.999	7.789	8.333
+		(10.015)	(11.556)	(11.532)	(15.551)	(19.484)	(19.496)	(10.015)	(11.556)	(11.532)	(15.551)	(19.484)	(19.496)
+													
+Observations		1,023	847	814	671	572	539	1,023	847	814	671	572	539
+R-squared		0.304	0.347	0.348	0.347	0.392	0.395	0.304	0.347	0.348	0.347	0.392	0.395
+Number of AMC		93	77	74	61	52	49	93	77	74	61	52	49
+AMC FE		Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes
+UF-Year FE		Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes
+Controls		Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes
+y_baseline_mean		20.78	20.75	21.06	22.25	22.10	22.65	20.78	20.75	21.06	22.25	22.10	22.65
+Robust standard errors in parentheses													
+*** p<0.01, ** p<0.05, * p<0.1													

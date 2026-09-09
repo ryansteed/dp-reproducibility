@@ -1,0 +1,17 @@
+[
+  {
+    "id": "dmigr-concern",
+    "est": 13.58,
+    "se": 5.32
+  },
+  {
+    "id": "dmigr-crime",
+    "est": 11.44,
+    "se": 4.04
+  },
+  {
+    "id": "media-crime",
+    "est": 3.39,
+    "se": 1.52
+  }
+]

@@ -1,0 +1,124 @@
+studies:
+  - autor-2013
+  - guidetti-2021
+  - charles-2019
+  - wilson-2012
+  - cascio-2010
+  - crane-2024
+  - williams-2022
+  - bell-2022
+  - jack-2023
+  - dieterle-2020
+  - martinez-2014
+  - dias-2023
+  - kofi-2018
+  - boulware-2019
+  - bernecker-2021
+  - mocan-2010
+  - dickstein-2015
+  - maestas-2014
+  - perez-2018
+  - luca-2015
+  - bellego-2024
+  - guzman-2022
+  - topalova-2010
+  - glenn-2009
+  - allison-2023
+  - duquette-2018
+  - dhaliwal-2020
+  - buonanno-2013
+  - strain-2023
+  - ajzenman-2023
+  - iyer-2012
+  - sosina-2019
+  - bove-2017
+  - jain-2017
+  - brinkman-2018
+  - slattery-2020
+  - chalfin-2015
+  - ferraz-2011
+  - barbanchon-2021
+  - chu-2021
+  - campante-2019
+  - fitzpatrick-2014
+  - chodorow-2012
+  - saiz-2011
+  - baker-2015
+  - hoang-2021
+  - howard-2021
+  - drago-2014
+  - beach-2017
+  - anderson-2014
+  - snow-2019
+  - dorn-2013
+  - eriksen-2015
+  - charles-2018
+  - acconcia-2014
+  - bordignon-2016
+  - lundqvist-2014
+  - brollo-2013
+  - caselli-2013
+  - egger-2010
+  - redding-2008
+  - forman-2012
+  - wang-2022
+  - furtado-2024
+  - fortin-2006
+  - antecol-2018
+  - cunningham-2018
+  - sviatschi-2019
+  - combs-2021
+  - bohn-2015
+  - dellavigna-2014
+  - fernandez-2021
+  - evans-2024
+  - nguyen-2019
+  - gonzalez-2025
+  - abouk-2013
+  - weber-2025
+  - kumar-2024
+  - martinez-2017
+  - shores-2019
+  - he-2017
+  - grier-2024
+  - gonzalez-2013
+  - bostwick-2022
+  - bai-2023
+  - ortagus-2024
+  - jacob-2024
+  - anderson-2015
+  - baron-2022
+  - fisman-2017
+  - jensenius-2015
+  - ahmed-2024
+  - pandey-2010
+
+imputation-exclude:
+  ## borderline
+  - baker-2015
+  - dias-2023
+  - allison-2023
+  ## too slow
+  - guidetti-2021
+  - bell-2022
+  - martinez-2014
+  - kofi-2018
+  - guzman-2022
+  - bove-2017
+  - saiz-2011
+  - anderson-2014
+  ## error
+  - ferraz-2011
+  ## not yet implemented
+  # - autor-2013
+  # - bernecker-2021
+  # - mocan-2010
+  # - luca-2015
+  # - duquette-2018
+  # - dhaliwal-2020
+  # - strain-2023
+  # - iyer-2012
+  # - sosina-2019
+  # - chalfin-2015
+  # - hoang-2021
+  # - drago-2014

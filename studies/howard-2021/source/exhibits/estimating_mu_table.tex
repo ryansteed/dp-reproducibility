@@ -1,0 +1,33 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{6}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}&\multicolumn{1}{c}{(6)}\\
+                    &\multicolumn{1}{c}{Rent}&\multicolumn{1}{c}{Rent}&\multicolumn{1}{c}{Rent}&\multicolumn{1}{c}{Raw Rent}&\multicolumn{1}{c}{Raw Rent}&\multicolumn{1}{c}{Raw Rent}\\
+\hline
+Income Change       &       0.792\sym{***}&                     &                     &       0.780\sym{***}&                     &                     \\
+                    &     (0.121)         &                     &                     &     (0.179)         &                     &                     \\
+[1em]
+Income Change by Elasticity&      0.0898         &                     &                     &     -0.0414         &                     &                     \\
+                    &    (0.0767)         &                     &                     &     (0.150)         &                     &                     \\
+[1em]
+Manufacturing Share &                     &      -0.734\sym{***}&                     &                     &      -0.821\sym{***}&                     \\
+                    &                     &     (0.158)         &                     &                     &     (0.232)         &                     \\
+[1em]
+Manufacturing Share by Elasticity&                     &      -0.109         &                     &                     &      -0.229         &                     \\
+                    &                     &     (0.107)         &                     &                     &     (0.151)         &                     \\
+[1em]
+Bartik Shock        &                     &                     &       3.440\sym{***}&                     &                     &       4.033\sym{***}\\
+                    &                     &                     &     (0.624)         &                     &                     &     (0.989)         \\
+[1em]
+Bartik by Elast.    &                     &                     &       0.742         &                     &                     &       0.680         \\
+                    &                     &                     &     (0.466)         &                     &                     &     (0.717)         \\
+\hline
+Observations        &         269         &         269         &         269         &         217         &         217         &         217         \\
+Controls            &           X         &           X         &           X         &           X         &           X         &           X         \\
+\hline\hline
+\multicolumn{7}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{7}{l}{\footnotesize Robust standard errors. Specifications include controls for deciles of elasticity and a linear control.}\\
+\multicolumn{7}{l}{\footnotesize \sym{*} \(p<.1\), \sym{**} \(p<.05\), \sym{***} \(p<.01\)}\\
+\end{tabular}
+}

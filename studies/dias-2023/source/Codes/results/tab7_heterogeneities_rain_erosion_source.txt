@@ -1,0 +1,26 @@
+		(1)	(2)	(3)
+VARIABLES	LABELS	Reduced Form	Reduced Form	Reduced Form
+				
+potentialUpstream	Instrument: Upstream	-2.274	-0.768	4.133
+		(2.536)	(2.157)	(1.597)**
+rainOctMar_quartile2_instr	Rain OctMar Quartile 2 * Instrument	6.873		
+		(2.159)***		
+rainOctMar_quartile3_instr	Rain OctMar Quartile 3 * Instrument	8.717		
+		(2.540)***		
+rainOctMar_quartile4_instr	Rain OctMar Quartile 4 * Instrument	6.142		
+		(2.857)**		
+potentialAMC	Instrument: Direct Effect	0.825	1.846	0.557
+		(2.838)	(3.124)	(2.945)
+int_pneP_c5_subbasin	% PNE>1600 Upstream * Instrument		42.635	
+			(15.872)***	
+surface_instr	Surface water * instrument			2.051
+				(1.506)
+				
+Observations		12,309	12,309	12,265
+R-squared		0.105	0.104	0.104
+Number of AMC		1,119	1,119	1,115
+Rain		Oct-Mar		
+UF-Year FE		Yes	Yes	Yes
+Controls		Yes	Yes	Yes
+Robust standard errors in parentheses				
+*** p<0.01, ** p<0.05, * p<0.1				

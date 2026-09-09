@@ -1,0 +1,12 @@
+[
+  {
+    "id": "misde-poverty",
+    "est": -0.017,
+    "se": 0.002
+  },
+  {
+    "id": "misde-immigrant",
+    "est": -0.04,
+    "se": 0.005
+  }
+]

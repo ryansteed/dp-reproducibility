@@ -1,0 +1,27 @@
+		(1)	(2)	(3)	(4)	(5)	(6)	(7)
+		IV	IV					
+VARIABLES	LABELS	Full Sample	with 50km 100km 150km 200km	IV	IV	IV	IV	IV
+								
+glyph_soy_upstream	Glyphosate Upstream	39.012	34.532					
+		(14.814)***	(18.089)*					
+potentialAMC	Instrument: Direct Effect	0.511	2.470	0.329	1.518	2.549	2.310	0.013
+		(2.557)	(3.328)	(2.947)	(3.223)	(3.628)	(3.740)	(3.451)
+glyph_up50km	Glyphosate: Upstream, dist<=50km			32.813				17.516
+				(14.184)**				(21.649)
+glyph_up100km	Glyphosate: Upstream, 50km<dist<=100km				32.051			30.502
+					(13.358)**			(32.564)
+glyph_up150km	Glyphosate: Upstream, 100km<dist<=150km					20.710		-35.342
+						(12.509)*		(44.911)
+glyph_up200km	Glyphosate: Upstream, 150km<dist<=200km						19.563	19.951
+							(11.777)*	(24.062)
+								
+Observations		12,309	8,415	8,415	8,415	8,415	8,415	8,415
+Number of AMC		1,119	765	765	765	765	765	765
+AMC FE		Yes	Yes	Yes	Yes	Yes	Yes	Yes
+UF-Year FE		Yes	Yes	Yes	Yes	Yes	Yes	Yes
+Controls		Yes	Yes	Yes	Yes	Yes	Yes	Yes
+F-stat		51.37	35.44	20.77	54.53	51.42	56.78	2.037
+Rejection Rate (Lee et al. 2020)		0.0271	0.0742	0.0625	0.0351	0.0893	0.0867	
+IMR_baseline_mean		18.00	18.02	18.02	18.02	18.02	18.02	18.02
+Robust standard errors in parentheses								
+*** p<0.01, ** p<0.05, * p<0.1								

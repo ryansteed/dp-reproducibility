@@ -1,0 +1,151 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/home/rsteed/git/private-research/studies/dickstein-2015/source/Logs-and-do-files/County_tables_all_counties.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}29 Jan 2025, 09:20:32
+{txt}
+{com}. 
+. *** EDIT by Donna
+. use county_data_P-P.dta , clear
+{txt}
+{com}. label var dedS51 "Deductible"
+{txt}
+{com}. 
+. *** EDIT by Donna
+. * capture{c -(}
+. * "regression of premium on controls, state FE, and group indicators (clustering st.err. at the region level)"
+. eststo: areg SP51 i.Gr ded  , a(state) cl(region_post)
+{res}
+{txt}{col 1}Linear regression, absorbing indicators{col 51}{lalign 17:Number of obs}{col 68} = {res}{ralign 8:1,157}
+{txt}{col 1}Absorbed variable: {res:state}{col 51}{lalign 17:No. of categories}{col 68} = {res}{ralign 8:30}
+{txt}{col 51}{lalign 17:F({res:3}, {res:238})}{col 68} = {res}{ralign 8:2.84}
+{txt}{col 51}{lalign 17:Prob > F}{col 68} = {res}{ralign 8:0.0386}
+{txt}{col 51}{lalign 17:R-squared}{col 68} = {res}{ralign 8:0.7331}
+{txt}{col 51}{lalign 17:Adj R-squared}{col 68} = {res}{ralign 8:0.7255}
+{txt}{col 51}{lalign 17:Root MSE}{col 68} = {res}{ralign 8:436.2704}
+
+{txt}{ralign 78:(Std. err. adjusted for {res:239} clusters in {res:region_post})}
+{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}        SP51{col 14}{c |} Coefficient{col 26}  std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 10}Gr {c |}
+Intermedi~e  {c |}{col 14}{res}{space 2}-78.60476{col 26}{space 2} 86.67621{col 37}{space 1}   -0.91{col 46}{space 3}0.365{col 54}{space 4}-249.3553{col 67}{space 3} 92.14578
+{txt}{space 4}Bundled  {c |}{col 14}{res}{space 2}-300.6728{col 26}{space 2} 108.1862{col 37}{space 1}   -2.78{col 46}{space 3}0.006{col 54}{space 4}-513.7977{col 67}{space 3}-87.54792
+{txt}{space 12} {c |}
+{space 6}dedS51 {c |}{col 14}{res}{space 2} .0120286{col 26}{space 2} .0505472{col 37}{space 1}    0.24{col 46}{space 3}0.812{col 54}{space 4}-.0875485{col 67}{space 3} .1116056
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}  4996.72{col 26}{space 2} 146.8211{col 37}{space 1}   34.03{col 46}{space 3}0.000{col 54}{space 4} 4707.485{col 67}{space 3} 5285.955
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+({res}est1{txt} stored)
+
+{com}. est store r0
+{txt}
+{com}. eststo: areg SP51 i.Gr ded  Median Inc_25k_100k  GAF relold   smallem    hosp, a(state) cl(region_post)
+{res}
+{txt}{col 1}Linear regression, absorbing indicators{col 51}{lalign 17:Number of obs}{col 68} = {res}{ralign 8:1,157}
+{txt}{col 1}Absorbed variable: {res:state}{col 51}{lalign 17:No. of categories}{col 68} = {res}{ralign 8:30}
+{txt}{col 51}{lalign 17:F({res:9}, {res:238})}{col 68} = {res}{ralign 8:2.75}
+{txt}{col 51}{lalign 17:Prob > F}{col 68} = {res}{ralign 8:0.0044}
+{txt}{col 51}{lalign 17:R-squared}{col 68} = {res}{ralign 8:0.7399}
+{txt}{col 51}{lalign 17:Adj R-squared}{col 68} = {res}{ralign 8:0.7310}
+{txt}{col 51}{lalign 17:Root MSE}{col 68} = {res}{ralign 8:431.8461}
+
+{txt}{ralign 78:(Std. err. adjusted for {res:239} clusters in {res:region_post})}
+{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}        SP51{col 14}{c |} Coefficient{col 26}  std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 10}Gr {c |}
+Intermedi~e  {c |}{col 14}{res}{space 2}-82.31612{col 26}{space 2} 86.22617{col 37}{space 1}   -0.95{col 46}{space 3}0.341{col 54}{space 4}-252.1801{col 67}{space 3} 87.54784
+{txt}{space 4}Bundled  {c |}{col 14}{res}{space 2}-242.4697{col 26}{space 2} 105.5659{col 37}{space 1}   -2.30{col 46}{space 3}0.022{col 54}{space 4}-450.4327{col 67}{space 3}-34.50677
+{txt}{space 12} {c |}
+{space 6}dedS51 {c |}{col 14}{res}{space 2}  .015639{col 26}{space 2} .0502865{col 37}{space 1}    0.31{col 46}{space 3}0.756{col 54}{space 4}-.0834245{col 67}{space 3} .1147024
+{txt}{space 6}Median {c |}{col 14}{res}{space 2}-7.513782{col 26}{space 2} 2.789608{col 37}{space 1}   -2.69{col 46}{space 3}0.008{col 54}{space 4}-13.00926{col 67}{space 3}-2.018306
+{txt}Inc_25k_100k {c |}{col 14}{res}{space 2}-67.83106{col 26}{space 2} 278.3888{col 37}{space 1}   -0.24{col 46}{space 3}0.808{col 54}{space 4}-616.2519{col 67}{space 3} 480.5898
+{txt}{space 9}GAF {c |}{col 14}{res}{space 2}-7171.233{col 26}{space 2}   2686.9{col 37}{space 1}   -2.67{col 46}{space 3}0.008{col 54}{space 4}-12464.38{col 67}{space 3}-1878.091
+{txt}{space 6}relold {c |}{col 14}{res}{space 2}-956.4251{col 26}{space 2} 530.4954{col 37}{space 1}   -1.80{col 46}{space 3}0.073{col 54}{space 4}-2001.491{col 67}{space 3} 88.64109
+{txt}{space 5}smallem {c |}{col 14}{res}{space 2} 6.916052{col 26}{space 2} 3.988484{col 37}{space 1}    1.73{col 46}{space 3}0.084{col 54}{space 4}-.9411881{col 67}{space 3} 14.77329
+{txt}{space 7}hosps {c |}{col 14}{res}{space 2}-15.99276{col 26}{space 2} 23.86264{col 37}{space 1}   -0.67{col 46}{space 3}0.503{col 54}{space 4}-63.00172{col 67}{space 3}  31.0162
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 12442.64{col 26}{space 2}  2598.64{col 37}{space 1}    4.79{col 46}{space 3}0.000{col 54}{space 4} 7323.362{col 67}{space 3} 17561.91
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+({res}est2{txt} stored)
+
+{com}. est store r1
+{txt}
+{com}. 
+. * "regression of N. insurers on controls, state FE, and group indicators (clustering st.err. at the region level)"
+. eststo: areg Nins i.Gr  , a(state) cl(region_post)
+{res}
+{txt}{col 1}Linear regression, absorbing indicators{col 53}{lalign 17:Number of obs}{col 70} = {res}{ralign 6:1,157}
+{txt}{col 1}Absorbed variable: {res:state}{col 53}{lalign 17:No. of categories}{col 70} = {res}{ralign 6:30}
+{txt}{col 53}{lalign 17:F({res:2}, {res:238})}{col 70} = {res}{ralign 6:7.37}
+{txt}{col 53}{lalign 17:Prob > F}{col 70} = {res}{ralign 6:0.0008}
+{txt}{col 53}{lalign 17:R-squared}{col 70} = {res}{ralign 6:0.6003}
+{txt}{col 53}{lalign 17:Adj R-squared}{col 70} = {res}{ralign 6:0.5893}
+{txt}{col 53}{lalign 17:Root MSE}{col 70} = {res}{ralign 6:0.6208}
+
+{txt}{ralign 78:(Std. err. adjusted for {res:239} clusters in {res:region_post})}
+{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}        Nins{col 14}{c |} Coefficient{col 26}  std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 10}Gr {c |}
+Intermedi~e  {c |}{col 14}{res}{space 2} .2320038{col 26}{space 2} .1178134{col 37}{space 1}    1.97{col 46}{space 3}0.050{col 54}{space 4}-.0000864{col 67}{space 3} .4640941
+{txt}{space 4}Bundled  {c |}{col 14}{res}{space 2}   .78958{col 26}{space 2} .2058545{col 37}{space 1}    3.84{col 46}{space 3}0.000{col 54}{space 4} .3840505{col 67}{space 3} 1.195109
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2} 2.074756{col 26}{space 2}  .087653{col 37}{space 1}   23.67{col 46}{space 3}0.000{col 54}{space 4} 1.902081{col 67}{space 3} 2.247431
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+({res}est3{txt} stored)
+
+{com}. est store r2
+{txt}
+{com}. eststo: areg Nins i.Gr  Median    Inc_25k_100k  GAF relold   smallem    hosp, a(state) cl(region_post)
+{res}
+{txt}{col 1}Linear regression, absorbing indicators{col 53}{lalign 17:Number of obs}{col 70} = {res}{ralign 6:1,157}
+{txt}{col 1}Absorbed variable: {res:state}{col 53}{lalign 17:No. of categories}{col 70} = {res}{ralign 6:30}
+{txt}{col 53}{lalign 17:F({res:8}, {res:238})}{col 70} = {res}{ralign 6:7.32}
+{txt}{col 53}{lalign 17:Prob > F}{col 70} = {res}{ralign 6:0.0000}
+{txt}{col 53}{lalign 17:R-squared}{col 70} = {res}{ralign 6:0.6153}
+{txt}{col 53}{lalign 17:Adj R-squared}{col 70} = {res}{ralign 6:0.6026}
+{txt}{col 53}{lalign 17:Root MSE}{col 70} = {res}{ralign 6:0.6107}
+
+{txt}{ralign 78:(Std. err. adjusted for {res:239} clusters in {res:region_post})}
+{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}        Nins{col 14}{c |} Coefficient{col 26}  std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 10}Gr {c |}
+Intermedi~e  {c |}{col 14}{res}{space 2} .2242418{col 26}{space 2} .1182067{col 37}{space 1}    1.90{col 46}{space 3}0.059{col 54}{space 4}-.0086233{col 67}{space 3} .4571068
+{txt}{space 4}Bundled  {c |}{col 14}{res}{space 2} .6675236{col 26}{space 2} .2095452{col 37}{space 1}    3.19{col 46}{space 3}0.002{col 54}{space 4} .2547233{col 67}{space 3} 1.080324
+{txt}{space 12} {c |}
+{space 6}Median {c |}{col 14}{res}{space 2} .0140539{col 26}{space 2} .0048268{col 37}{space 1}    2.91{col 46}{space 3}0.004{col 54}{space 4} .0045452{col 67}{space 3} .0235626
+{txt}Inc_25k_100k {c |}{col 14}{res}{space 2} .7499975{col 26}{space 2} .3537179{col 37}{space 1}    2.12{col 46}{space 3}0.035{col 54}{space 4} .0531798{col 67}{space 3} 1.446815
+{txt}{space 9}GAF {c |}{col 14}{res}{space 2} 7.607561{col 26}{space 2} 3.203192{col 37}{space 1}    2.37{col 46}{space 3}0.018{col 54}{space 4} 1.297333{col 67}{space 3} 13.91779
+{txt}{space 6}relold {c |}{col 14}{res}{space 2} .1530571{col 26}{space 2} .6280233{col 37}{space 1}    0.24{col 46}{space 3}0.808{col 54}{space 4}-1.084137{col 67}{space 3} 1.390251
+{txt}{space 5}smallem {c |}{col 14}{res}{space 2}-.0039312{col 26}{space 2} .0061787{col 37}{space 1}   -0.64{col 46}{space 3}0.525{col 54}{space 4}-.0161032{col 67}{space 3} .0082408
+{txt}{space 7}hosps {c |}{col 14}{res}{space 2} .0653803{col 26}{space 2} .0305445{col 37}{space 1}    2.14{col 46}{space 3}0.033{col 54}{space 4} .0052082{col 67}{space 3} .1255524
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-6.012295{col 26}{space 2} 3.120355{col 37}{space 1}   -1.93{col 46}{space 3}0.055{col 54}{space 4}-12.15934{col 67}{space 3} .1347469
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+({res}est4{txt} stored)
+
+{com}. est store r3
+{txt}
+{com}. * {c )-}
+. 
+. * est tab r* ,   se stats(N r2_a)   label
+. 
+. estout using "../../results/county.csv", cells(`"b() se() t() p()"') stats(N r2 df_m df_r df_b df) notype abbrev begin(`"""') delimiter(`"",""') end(`"""') replace
+{txt}(tabulating estimates stored by eststo; specify "." to tabulate the active results)
+{res}{txt}(output written to {browse  `"../../results/county.csv"'})
+
+{com}. 
+. 
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}/home/rsteed/git/private-research/studies/dickstein-2015/source/Logs-and-do-files/County_tables_all_counties.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}29 Jan 2025, 09:20:33
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

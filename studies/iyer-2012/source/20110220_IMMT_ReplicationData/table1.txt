@@ -1,0 +1,33 @@
+--------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /home/zhiwenz/private-research/studies/iyer-2012/source/20110220_IMMT_Replicati
+> onData/table1.txt
+  log type:  text
+ opened on:   4 Nov 2024, 13:12:06
+
+. use tables1to5.dta, clear
+
+. tab year if yearofres==1 & majstate==1
+
+       year |      Freq.     Percent        Cum.
+------------+-----------------------------------
+       1987 |          1        5.88        5.88
+       1991 |          1        5.88       11.76
+       1992 |          2       11.76       23.53
+       1993 |          1        5.88       29.41
+       1994 |          2       11.76       41.18
+       1995 |          5       29.41       70.59
+       1996 |          1        5.88       76.47
+       2001 |          2       11.76       88.24
+       2002 |          1        5.88       94.12
+       2006 |          1        5.88      100.00
+------------+-----------------------------------
+      Total |         17      100.00
+
+. log close
+      name:  <unnamed>
+       log:  /home/zhiwenz/private-research/studies/iyer-2012/source/20110220_IMMT_Replicati
+> onData/table1.txt
+  log type:  text
+ closed on:   4 Nov 2024, 13:12:06
+--------------------------------------------------------------------------------------------

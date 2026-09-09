@@ -1,0 +1,52 @@
+[
+  {
+    "id": "landlord-governance1",
+    "est": -0.51,
+    "se": 0.21
+  },
+  {
+    "id": "landlord-governance2",
+    "est": -1.06,
+    "se": 0.32
+  },
+  {
+    "id": "landlord-governance3",
+    "est": -1.11,
+    "se": 0.23
+  },
+  {
+    "id": "landlord-governance4",
+    "est": -0.42,
+    "se": 0.10
+  },
+  {
+    "id": "landlord-teacherattend",
+    "est": -0.17,
+    "se": 0.03
+  },
+  {
+    "id": "landlord-teacheractivity",
+    "est": -0.22,
+    "se": 0.04
+  },
+  {
+    "id": "landlord-studentscore",
+    "est": -0.46,
+    "se": 0.14
+  },
+  {
+    "id": "landlord-studentattend",
+    "est": -0.13,
+    "se": 0.06
+  },
+  {
+    "id": "landlord-studentinfra",
+    "est": -0.82,
+    "se": 0.16 
+  },
+  {
+    "id": "landlord-stipend",
+    "est": -126,
+    "se": 21
+  }
+]

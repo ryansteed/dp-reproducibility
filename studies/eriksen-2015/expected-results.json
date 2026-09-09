@@ -1,0 +1,27 @@
+[
+  {
+    "id": "voucher-rent",
+    "est": 0.007,
+    "se": 0.015
+  },
+  {
+    "id": "voucher-cheap",
+    "est": -0.095,
+    "se": 0.036
+  },
+  {
+    "id": "voucher-expensive",
+    "est": 0.039,
+    "se": 0.016
+  },
+  {
+    "id": "voucher-fmr",
+    "est": -0.140,
+    "se": 0.044
+  },
+  {
+    "id": "elasticity-effect",
+    "est": -0.254,
+    "se": 0.086
+  }
+]

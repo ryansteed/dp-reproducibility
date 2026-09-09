@@ -1,0 +1,64 @@
+		(1)	(2)	(3)	(4)	(5)	(6)
+VARIABLES	LABELS	Vote share of HSP et al.	Vote share of HSP et al.	Vote share of HSP et al.	Vote share of HSP et al.	Vote share of HSP et al.	Vote share of HSP et al.
+							
+radio_hung	radio_hung	0.002					
+		[0.017]					
+radio1	At least 1 RTS radio available	0.014		0.012		-0.0016	
+		[0.015]		[0.015]		[0.016]	
+log_distance_full	Distance to Serbia, logged	-0.022	-0.020	-0.023	-0.018	-0.0055	-0.0060
+		[0.014]	[0.014]	[0.015]	[0.014]	[0.011]	[0.011]
+logpop	Population (logged)	0.007	0.006	0.006	0.005	0.0043	0.0041
+		[0.005]	[0.005]	[0.005]	[0.005]	[0.005]	[0.005]
+male_share	% of male population	-0.115	-0.170	-0.103	-0.167	-0.0647	-0.0905
+		[0.165]	[0.160]	[0.179]	[0.184]	[0.153]	[0.152]
+z2	% of aged 21-40	0.150	0.118	0.136	0.101	0.1286	0.1245
+		[0.138]	[0.141]	[0.140]	[0.150]	[0.150]	[0.151]
+z3	% of aged 41-60	-0.265	-0.202	-0.249	-0.194	-0.2210	-0.1892
+		[0.186]	[0.178]	[0.180]	[0.169]	[0.166]	[0.164]
+z6	% of aged 61+	-0.094	-0.059	-0.092	-0.078	-0.1056	-0.0885
+		[0.095]	[0.091]	[0.095]	[0.096]	[0.090]	[0.097]
+Croats	% of Croats	0.030	0.052	0.035	0.049	0.0464	0.0524
+		[0.033]	[0.033]	[0.034]	[0.035]	[0.035]	[0.036]
+higher_educ	higher_educ	-0.165	-0.287	-0.193	-0.253	-0.2323	-0.2818
+		[0.352]	[0.349]	[0.361]	[0.356]	[0.333]	[0.341]
+ec_active	Economically active population, %	0.855**	0.847***	0.877***	0.864***	0.8459***	0.8496***
+		[0.319]	[0.291]	[0.325]	[0.302]	[0.286]	[0.285]
+disable_share2	Disabled after the war of independence, %	2.173***	1.500**	1.954***	1.708**	1.3709**	1.3083**
+		[0.776]	[0.713]	[0.674]	[0.677]	[0.631]	[0.615]
+war	Was important during the war	-0.026	-0.020	-0.027	-0.019	-0.0184	-0.0168
+		[0.027]	[0.027]	[0.027]	[0.027]	[0.028]	[0.028]
+monument	Monument in the honor of died defendants of the town	-0.009	-0.010	-0.010	-0.008	-0.0079	-0.0078
+		[0.012]	[0.012]	[0.013]	[0.013]	[0.011]	[0.012]
+name_of_the_streets_cyrillic	Names of the streets in Cyrillic script	-0.019	-0.024	-0.021	-0.020	-0.0078	-0.0090
+		[0.020]	[0.021]	[0.021]	[0.021]	[0.022]	[0.022]
+name_of_the_streets_in_hungarian	Names of the streets in Hungarian	0.029	0.027	0.028	0.029	0.0299	0.0293
+		[0.020]	[0.022]	[0.021]	[0.022]	[0.020]	[0.021]
+pivo_Serb	Serbian beer in bars	-0.015	-0.021	-0.016	-0.017	-0.0159	-0.0168
+		[0.015]	[0.015]	[0.015]	[0.014]	[0.014]	[0.014]
+o.r2	county==County of Požega-Slavonia = o,	-	-	-	-	-	-
+							
+o.r3	county==County of Slavonski Brod-Posavina = o,	-	-	-	-	-	-
+							
+o.r4	county==County of Virovitica-Podravina = o,	-	-	-	-	-	-
+							
+o.r5	county==County of Vukovar-Sirmium = o,	-	-	-	-	-	-
+							
+bliz_forest	Large forest nearby	0.006	0.003	0.006	0.004	0.0068	0.0064
+		[0.013]	[0.013]	[0.013]	[0.012]	[0.013]	[0.012]
+hung1	Maximum signal strength of  hungarian radios		1.056				
+			[1.118]				
+s1	Maximum signal strength of all RTS radios		1.680*		1.337		0.5706
+			[0.947]		[0.881]		[0.953]
+eloss5050powerHKR	Signal strength of Croatian Catholic radio			0.000	-0.000		
+				[0.001]	[0.001]		
+eloss5050powerHR1	Signal strength of Croatian HR radio			-0.000	-0.000		
+				[0.001]	[0.001]		
+floss_1	floss_1					0.0132***	0.0112**
+						[0.005]	[0.005]
+							
+Observations		139	139	139	139	139	139
+R-squared		0.425	0.449	0.428	0.442	0.463	0.466
+Persuasion rates		0.00472	0.0189	0.0232	0.0150	-0.00304	0.00639
+ATT		0.0454	0.0327	0.0392	0.0261	-0.00513	0.0111
+Robust standard errors in brackets							
+*** p<0.01, ** p<0.05, * p<0.1							

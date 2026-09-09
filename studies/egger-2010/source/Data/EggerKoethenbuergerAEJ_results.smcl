@@ -1,0 +1,2604 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/home/rsteed/git/private-research/studies/egger-2010/source/Data/EggerKoethenbuergerAEJ_results.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}25 Jun 2025, 09:34:50
+{txt}
+{com}. use EggerKoethenbuerger_AEJ_Data.dta.dta, clear
+{txt}
+{com}. 
+. ****** Results Table 2 ******
+. gen exppc=exptot/pop
+{txt}
+{com}. table rcsize, c(count exptot m exptot m exppc)
+
+{txt}{hline 10}{c TT}{hline 41}
+   rcsize {c |}    N(exptot)  mean(exptot)   mean(exppc)
+{hline 10}{c +}{hline 41}
+        8 {c |}        {res}4,032       1281427      1511.106
+       {txt}12 {c |}       {res}13,671       2281393      1516.249
+       {txt}14 {c |}        {res}7,304       3840014      1504.631
+       {txt}16 {c |}        {res}8,115       6114286      1531.171
+       {txt}20 {c |}        {res}6,033      1.13e+07      1589.506
+       {txt}24 {c |}        {res}2,850      2.28e+07      1621.282
+       {txt}30 {c |}          {res}492      3.81e+07      1571.052
+       {txt}40 {c |}          {res}318      7.89e+07      1981.204
+       {txt}44 {c |}          {res}210      1.42e+08      2254.154
+       {txt}50 {c |}           {res}87      3.01e+08      2562.877
+       {txt}60 {c |}           {res}21      5.59e+08      2185.355
+       {txt}69 {c |}           {res}21      1.33e+09      2729.532
+       {txt}80 {c |}           {res}21      4.19e+09      3404.979
+{txt}{hline 10}{c BT}{hline 41}
+
+{com}. 
+. collapse exptot exppers expsach expsachinv debt tratea trateb tratep wpop rcsize, by(id phase)
+{res}{txt}
+{com}. foreach X in exptot exppers expsach expsachinv debt tratea trateb tratep wpop rcsize {c -(}
+{txt}  2{com}. g l`X'=ln(`X')
+{txt}  3{com}. {c )-}
+{txt}(97 missing values generated)
+
+{com}. foreach pp in 1 2 3 4 5 {c -(}
+{txt}  2{com}. g lwpop_`pp'=lwpop^`pp'
+{txt}  3{com}. {c )-}
+{txt}
+{com}. foreach t in 1000 2000 3000 5000 10000 20000 30000 50000 100000 200000 {c -(}
+{txt}  2{com}. preserve
+{txt}  3{com}. gen T`t'=(wpop>=0.65*`t'&wpop<=1.35*(`t'+1))
+{txt}  4{com}. gen window05=(lwpop>=ln(`t')-0.05&lwpop<=ln(`t'+1)+0.05)
+{txt}  5{com}. gen window10=(lwpop>=ln(`t')-0.1&lwpop<=ln(`t'+1)+0.1)
+{txt}  6{com}. gen window15=(lwpop>=ln(`t')-0.15&lwpop<=ln(`t'+1)+0.15)
+{txt}  7{com}. gen window20=(lwpop>=ln(`t')-0.2&lwpop<=ln(`t'+1)+0.2)
+{txt}  8{com}. gen window25=(lwpop>=ln(`t')-0.25&lwpop<=ln(`t'+1)+0.25)
+{txt}  9{com}. gen window30=(lwpop>=ln(`t')-0.3&lwpop<=ln(`t'+1)+0.3)
+{txt} 10{com}. gen window35=(lwpop>=ln(`t')-0.35&lwpop<=ln(`t'+1)+0.35)
+{txt} 11{com}. keep if T`t'==1
+{txt} 12{com}. gen right=lwpop>ln(`t')
+{txt} 13{com}. save phase_T`t', replace
+{txt} 14{com}. restore
+{txt} 15{com}. {c )-}
+{txt}(6,453 observations deleted)
+{p 0 4 2}
+(file {bf}
+phase_T1000.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+phase_T1000.dta{rm}
+saved
+{p_end}
+(5,529 observations deleted)
+{p 0 4 2}
+(file {bf}
+phase_T2000.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+phase_T2000.dta{rm}
+saved
+{p_end}
+(5,708 observations deleted)
+{p 0 4 2}
+(file {bf}
+phase_T3000.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+phase_T3000.dta{rm}
+saved
+{p_end}
+(6,299 observations deleted)
+{p 0 4 2}
+(file {bf}
+phase_T5000.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+phase_T5000.dta{rm}
+saved
+{p_end}
+(7,308 observations deleted)
+{p 0 4 2}
+(file {bf}
+phase_T10000.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+phase_T10000.dta{rm}
+saved
+{p_end}
+(7,874 observations deleted)
+{p 0 4 2}
+(file {bf}
+phase_T20000.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+phase_T20000.dta{rm}
+saved
+{p_end}
+(8,079 observations deleted)
+{p 0 4 2}
+(file {bf}
+phase_T30000.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+phase_T30000.dta{rm}
+saved
+{p_end}
+(8,145 observations deleted)
+{p 0 4 2}
+(file {bf}
+phase_T50000.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+phase_T50000.dta{rm}
+saved
+{p_end}
+(8,194 observations deleted)
+{p 0 4 2}
+(file {bf}
+phase_T100000.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+phase_T100000.dta{rm}
+saved
+{p_end}
+(8,219 observations deleted)
+{p 0 4 2}
+(file {bf}
+phase_T200000.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+phase_T200000.dta{rm}
+saved
+{p_end}
+
+{com}. 
+. use phase_T1000, clear
+{txt}
+{com}. gen thresh=1000
+{txt}
+{com}. foreach t in 2000 3000 5000 10000 20000 30000 50000 100000 200000 {c -(}
+{txt}  2{com}. append using phase_T`t'
+{txt}  3{com}. replace thresh=`t' if thresh==.
+{txt}  4{com}. {c )-}
+{txt}(2,695 real changes made)
+(2,516 real changes made)
+(1,925 real changes made)
+(916 real changes made)
+(350 real changes made)
+(145 real changes made)
+(79 real changes made)
+(30 real changes made)
+(5 real changes made)
+
+{com}. save phase_TALL.dta, replace
+{txt}{p 0 4 2}
+(file {bf}
+phase_TALL.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+phase_TALL.dta{rm}
+saved
+{p_end}
+
+{com}. 
+. *** WPOP CENTRED AROUND THRESHOLD ***
+. use EggerKoethenbuerger_AEJ_Data.dta.dta, clear
+{txt}
+{com}. collapse exptot exppers expsach expsachinv debt tratea trateb tratep wpop rcsize, by(id phase)
+{res}{txt}
+{com}. foreach X in exptot exppers expsach expsachinv debt tratea trateb tratep wpop rcsize {c -(}
+{txt}  2{com}. g l`X'=ln(`X')
+{txt}  3{com}. {c )-}
+{txt}(97 missing values generated)
+
+{com}. foreach t in 1000 2000 3000 5000 10000 20000 30000 50000 100000 200000 {c -(}
+{txt}  2{com}. preserve
+{txt}  3{com}. gen T`t'=(lwpop>=ln(`t')-0.35&lwpop<=ln(`t')+0.35)
+{txt}  4{com}. replace lwpop=lwpop-ln(`t')
+{txt}  5{com}. gen window05=(lwpop>=-0.05&lwpop<=0.05)
+{txt}  6{com}. gen window10=(lwpop>=-0.1&lwpop<=0.1)
+{txt}  7{com}. gen window15=(lwpop>=-0.15&lwpop<=0.15)
+{txt}  8{com}. gen window20=(lwpop>=-0.2&lwpop<=0.2)
+{txt}  9{com}. gen window25=(lwpop>=-0.25&lwpop<=0.25)
+{txt} 10{com}. gen window30=(lwpop>=-0.3&lwpop<=0.3)
+{txt} 11{com}. gen window35=(lwpop>=-0.35&lwpop<=0.35)
+{txt} 12{com}. keep if T`t'==1
+{txt} 13{com}. gen right=lwpop>0
+{txt} 14{com}. foreach pp in 1 2 3 4 5 {c -(}
+{txt} 15{com}. g lwpop_`pp'=lwpop^`pp'
+{txt} 16{com}. {c )-}
+{txt} 17{com}. save phase_T`t'_wpopdem, replace
+{txt} 18{com}. restore
+{txt} 19{com}. {c )-}
+{txt}(8,224 real changes made)
+(6,303 observations deleted)
+{p 0 4 2}
+(file {bf}
+phase_T1000_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+phase_T1000_wpopdem.dta{rm}
+saved
+{p_end}
+(8,224 real changes made)
+(5,699 observations deleted)
+{p 0 4 2}
+(file {bf}
+phase_T2000_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+phase_T2000_wpopdem.dta{rm}
+saved
+{p_end}
+(8,224 real changes made)
+(5,867 observations deleted)
+{p 0 4 2}
+(file {bf}
+phase_T3000_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+phase_T3000_wpopdem.dta{rm}
+saved
+{p_end}
+(8,224 real changes made)
+(6,501 observations deleted)
+{p 0 4 2}
+(file {bf}
+phase_T5000_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+phase_T5000_wpopdem.dta{rm}
+saved
+{p_end}
+(8,224 real changes made)
+(7,412 observations deleted)
+{p 0 4 2}
+(file {bf}
+phase_T10000_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+phase_T10000_wpopdem.dta{rm}
+saved
+{p_end}
+(8,224 real changes made)
+(7,925 observations deleted)
+{p 0 4 2}
+(file {bf}
+phase_T20000_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+phase_T20000_wpopdem.dta{rm}
+saved
+{p_end}
+(8,224 real changes made)
+(8,102 observations deleted)
+{p 0 4 2}
+(file {bf}
+phase_T30000_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+phase_T30000_wpopdem.dta{rm}
+saved
+{p_end}
+(8,224 real changes made)
+(8,144 observations deleted)
+{p 0 4 2}
+(file {bf}
+phase_T50000_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+phase_T50000_wpopdem.dta{rm}
+saved
+{p_end}
+(8,224 real changes made)
+(8,199 observations deleted)
+{p 0 4 2}
+(file {bf}
+phase_T100000_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+phase_T100000_wpopdem.dta{rm}
+saved
+{p_end}
+(8,224 real changes made)
+(8,220 observations deleted)
+{p 0 4 2}
+(file {bf}
+phase_T200000_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+phase_T200000_wpopdem.dta{rm}
+saved
+{p_end}
+
+{com}. 
+. use phase_T1000_wpopdem, clear
+{txt}
+{com}. gen thresh=1000
+{txt}
+{com}. foreach t in 2000 3000 5000 10000 20000 30000 50000 100000 200000 {c -(}
+{txt}  2{com}. append using phase_T`t'_wpopdem
+{txt}  3{com}. replace thresh=`t' if thresh==.
+{txt}  4{com}. {c )-}
+{txt}(2,525 real changes made)
+(2,357 real changes made)
+(1,723 real changes made)
+(812 real changes made)
+(299 real changes made)
+(122 real changes made)
+(80 real changes made)
+(25 real changes made)
+(4 real changes made)
+
+{com}. save phase_TALL_wpopdem.dta, replace
+{txt}{p 0 4 2}
+(file {bf}
+phase_TALL_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+phase_TALL_wpopdem.dta{rm}
+saved
+{p_end}
+
+{com}. 
+. 
+. *** WPOP CENTRED AROUND THRESHOLD ***
+. foreach t in 1000 2000 3000 5000 10000 20000 30000 50000 100000 200000 {c -(}
+{txt}  2{com}. foreach w in 15 20 25 30 {c -(}
+{txt}  3{com}. use EggerKoethenbuerger_AEJ_Data.dta.dta, clear
+{txt}  4{com}. keep exptot exppers expsach expsachinv debt tratea trateb tratep wpop rcsize id phase
+{txt}  5{com}. foreach X in exptot exppers expsach expsachinv debt tratea trateb tratep wpop rcsize {c -(}
+{txt}  6{com}. g l`X'=ln(`X')
+{txt}  7{com}. {c )-}
+{txt}  8{com}. replace lwpop=lwpop-ln(`t'+1)
+{txt}  9{com}. sum lwpop
+{txt} 10{com}. capture drop window*
+{txt} 11{com}. keep if (lwpop>=-0.`w'&lwpop<=0.`w')
+{txt} 12{com}. sum lwpop
+{txt} 13{com}. save window`w'_thresh`t'_TALL_wpopdem.dta, replace
+{txt} 14{com}. {c )-}
+{txt} 15{com}. {c )-}
+{txt}(1 missing value generated)
+(8 missing values generated)
+(14 missing values generated)
+(909 missing values generated)
+(43,175 real changes made)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     43,175    1.030399     .908138  -1.640897   7.156986
+{txt}(38,423 observations deleted)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}      4,752    .0176997    .0839222  -.1494994   .1491433
+{txt}{p 0 4 2}
+(file {bf}
+window15_thresh1000_TALL_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+window15_thresh1000_TALL_wpopdem.dta{rm}
+saved
+{p_end}
+(1 missing value generated)
+(8 missing values generated)
+(14 missing values generated)
+(909 missing values generated)
+(43,175 real changes made)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     43,175    1.030399     .908138  -1.640897   7.156986
+{txt}(37,103 observations deleted)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}      6,072    .0292075      .10744  -.1994504   .1994892
+{txt}{p 0 4 2}
+(file {bf}
+window20_thresh1000_TALL_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+window20_thresh1000_TALL_wpopdem.dta{rm}
+saved
+{p_end}
+(1 missing value generated)
+(8 missing values generated)
+(14 missing values generated)
+(909 missing values generated)
+(43,175 real changes made)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     43,175    1.030399     .908138  -1.640897   7.156986
+{txt}(35,678 observations deleted)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}      7,497    .0424942    .1335557  -.2494607   .2497592
+{txt}{p 0 4 2}
+(file {bf}
+window25_thresh1000_TALL_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+window25_thresh1000_TALL_wpopdem.dta{rm}
+saved
+{p_end}
+(1 missing value generated)
+(8 missing values generated)
+(14 missing values generated)
+(909 missing values generated)
+(43,175 real changes made)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     43,175    1.030399     .908138  -1.640897   7.156986
+{txt}(34,241 observations deleted)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}      8,934    .0585394     .158858  -.2994055   .2998458
+{txt}{p 0 4 2}
+(file {bf}
+window30_thresh1000_TALL_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+window30_thresh1000_TALL_wpopdem.dta{rm}
+saved
+{p_end}
+(1 missing value generated)
+(8 missing values generated)
+(14 missing values generated)
+(909 missing values generated)
+(43,175 real changes made)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     43,175     .337751    .9081381  -2.333544   6.464338
+{txt}(37,410 observations deleted)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}      5,765    -.001572    .0865051    -.14958   .1496429
+{txt}{p 0 4 2}
+(file {bf}
+window15_thresh2000_TALL_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+window15_thresh2000_TALL_wpopdem.dta{rm}
+saved
+{p_end}
+(1 missing value generated)
+(8 missing values generated)
+(14 missing values generated)
+(909 missing values generated)
+(43,175 real changes made)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     43,175     .337751    .9081381  -2.333544   6.464338
+{txt}(35,499 observations deleted)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}      7,676   -.0033833    .1145289  -.1995607   .1999888
+{txt}{p 0 4 2}
+(file {bf}
+window20_thresh2000_TALL_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+window20_thresh2000_TALL_wpopdem.dta{rm}
+saved
+{p_end}
+(1 missing value generated)
+(8 missing values generated)
+(14 missing values generated)
+(909 missing values generated)
+(43,175 real changes made)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     43,175     .337751    .9081381  -2.333544   6.464338
+{txt}(33,570 observations deleted)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}      9,605   -.0078968    .1437041  -.2496024   .2498698
+{txt}{p 0 4 2}
+(file {bf}
+window25_thresh2000_TALL_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+window25_thresh2000_TALL_wpopdem.dta{rm}
+saved
+{p_end}
+(1 missing value generated)
+(8 missing values generated)
+(14 missing values generated)
+(909 missing values generated)
+(43,175 real changes made)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     43,175     .337751    .9081381  -2.333544   6.464338
+{txt}(31,803 observations deleted)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     11,372   -.0064841    .1711756  -.2989059   .2999749
+{txt}{p 0 4 2}
+(file {bf}
+window30_thresh2000_TALL_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+window30_thresh2000_TALL_wpopdem.dta{rm}
+saved
+{p_end}
+(1 missing value generated)
+(8 missing values generated)
+(14 missing values generated)
+(909 missing values generated)
+(43,175 real changes made)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     43,175   -.0675475     .908138  -2.738843    6.05904
+{txt}(37,835 observations deleted)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}      5,340    .0011505    .0873382  -.1492198   .1498095
+{txt}{p 0 4 2}
+(file {bf}
+window15_thresh3000_TALL_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+window15_thresh3000_TALL_wpopdem.dta{rm}
+saved
+{p_end}
+(1 missing value generated)
+(8 missing values generated)
+(14 missing values generated)
+(909 missing values generated)
+(43,175 real changes made)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     43,175   -.0675475     .908138  -2.738843    6.05904
+{txt}(36,116 observations deleted)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}      7,059    .0015687    .1152525  -.1995977   .1998831
+{txt}{p 0 4 2}
+(file {bf}
+window20_thresh3000_TALL_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+window20_thresh3000_TALL_wpopdem.dta{rm}
+saved
+{p_end}
+(1 missing value generated)
+(8 missing values generated)
+(14 missing values generated)
+(909 missing values generated)
+(43,175 real changes made)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     43,175   -.0675475     .908138  -2.738843    6.05904
+{txt}(34,355 observations deleted)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}      8,820    .0003425     .144095  -.2496499   .2496468
+{txt}{p 0 4 2}
+(file {bf}
+window25_thresh3000_TALL_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+window25_thresh3000_TALL_wpopdem.dta{rm}
+saved
+{p_end}
+(1 missing value generated)
+(8 missing values generated)
+(14 missing values generated)
+(909 missing values generated)
+(43,175 real changes made)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     43,175   -.0675475     .908138  -2.738843    6.05904
+{txt}(32,597 observations deleted)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     10,578   -.0028016    .1728801  -.2996381    .299771
+{txt}{p 0 4 2}
+(file {bf}
+window30_thresh3000_TALL_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+window30_thresh3000_TALL_wpopdem.dta{rm}
+saved
+{p_end}
+(1 missing value generated)
+(8 missing values generated)
+(14 missing values generated)
+(909 missing values generated)
+(43,175 real changes made)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     43,175   -.5782398     .908138  -3.249535   5.548347
+{txt}(39,440 observations deleted)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}      3,735   -.0021831    .0844836   -.149396   .1483926
+{txt}{p 0 4 2}
+(file {bf}
+window15_thresh5000_TALL_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+window15_thresh5000_TALL_wpopdem.dta{rm}
+saved
+{p_end}
+(1 missing value generated)
+(8 missing values generated)
+(14 missing values generated)
+(909 missing values generated)
+(43,175 real changes made)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     43,175   -.5782398     .908138  -3.249535   5.548347
+{txt}(38,243 observations deleted)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}      4,932    -.012338    .1133025   -.199627   .1999616
+{txt}{p 0 4 2}
+(file {bf}
+window20_thresh5000_TALL_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+window20_thresh5000_TALL_wpopdem.dta{rm}
+saved
+{p_end}
+(1 missing value generated)
+(8 missing values generated)
+(14 missing values generated)
+(909 missing values generated)
+(43,175 real changes made)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     43,175   -.5782398     .908138  -3.249535   5.548347
+{txt}(36,893 observations deleted)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}      6,282   -.0211531    .1437215  -.2484046    .249936
+{txt}{p 0 4 2}
+(file {bf}
+window25_thresh5000_TALL_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+window25_thresh5000_TALL_wpopdem.dta{rm}
+saved
+{p_end}
+(1 missing value generated)
+(8 missing values generated)
+(14 missing values generated)
+(909 missing values generated)
+(43,175 real changes made)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     43,175   -.5782398     .908138  -3.249535   5.548347
+{txt}(35,633 observations deleted)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}      7,542   -.0318975    .1708396  -.2999545   .2988672
+{txt}{p 0 4 2}
+(file {bf}
+window30_thresh5000_TALL_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+window30_thresh5000_TALL_wpopdem.dta{rm}
+saved
+{p_end}
+(1 missing value generated)
+(8 missing values generated)
+(14 missing values generated)
+(909 missing values generated)
+(43,175 real changes made)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     43,175   -1.271287    .9081381  -3.942582     4.8553
+{txt}(41,315 observations deleted)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}      1,860   -.0023532    .0854665  -.1492965   .1497844
+{txt}{p 0 4 2}
+(file {bf}
+window15_thresh10000_TALL_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+window15_thresh10000_TALL_wpopdem.dta{rm}
+saved
+{p_end}
+(1 missing value generated)
+(8 missing values generated)
+(14 missing values generated)
+(909 missing values generated)
+(43,175 real changes made)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     43,175   -1.271287    .9081381  -3.942582     4.8553
+{txt}(40,709 observations deleted)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}      2,466   -.0049452     .114864  -.1997716   .1984227
+{txt}{p 0 4 2}
+(file {bf}
+window20_thresh10000_TALL_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+window20_thresh10000_TALL_wpopdem.dta{rm}
+saved
+{p_end}
+(1 missing value generated)
+(8 missing values generated)
+(14 missing values generated)
+(909 missing values generated)
+(43,175 real changes made)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     43,175   -1.271287    .9081381  -3.942582     4.8553
+{txt}(40,172 observations deleted)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}      3,003   -.0173194    .1395921   -.249973   .2484773
+{txt}{p 0 4 2}
+(file {bf}
+window25_thresh10000_TALL_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+window25_thresh10000_TALL_wpopdem.dta{rm}
+saved
+{p_end}
+(1 missing value generated)
+(8 missing values generated)
+(14 missing values generated)
+(909 missing values generated)
+(43,175 real changes made)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     43,175   -1.271287    .9081381  -3.942582     4.8553
+{txt}(39,575 observations deleted)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}      3,600    -.026266    .1684569  -.2994497   .2985967
+{txt}{p 0 4 2}
+(file {bf}
+window30_thresh10000_TALL_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+window30_thresh10000_TALL_wpopdem.dta{rm}
+saved
+{p_end}
+(1 missing value generated)
+(8 missing values generated)
+(14 missing values generated)
+(909 missing values generated)
+(43,175 real changes made)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     43,175   -1.964384     .908138   -4.63568   4.162203
+{txt}(42,434 observations deleted)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}        741   -.0296222     .077751  -.1488398   .1499207
+{txt}{p 0 4 2}
+(file {bf}
+window15_thresh20000_TALL_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+window15_thresh20000_TALL_wpopdem.dta{rm}
+saved
+{p_end}
+(1 missing value generated)
+(8 missing values generated)
+(14 missing values generated)
+(909 missing values generated)
+(43,175 real changes made)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     43,175   -1.964384     .908138   -4.63568   4.162203
+{txt}(42,215 observations deleted)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}        960   -.0408972    .1053049   -.199477   .1995384
+{txt}{p 0 4 2}
+(file {bf}
+window20_thresh20000_TALL_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+window20_thresh20000_TALL_wpopdem.dta{rm}
+saved
+{p_end}
+(1 missing value generated)
+(8 missing values generated)
+(14 missing values generated)
+(909 missing values generated)
+(43,175 real changes made)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     43,175   -1.964384     .908138   -4.63568   4.162203
+{txt}(42,017 observations deleted)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}      1,158   -.0523846    .1278182  -.2492807   .2445023
+{txt}{p 0 4 2}
+(file {bf}
+window25_thresh20000_TALL_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+window25_thresh20000_TALL_wpopdem.dta{rm}
+saved
+{p_end}
+(1 missing value generated)
+(8 missing values generated)
+(14 missing values generated)
+(909 missing values generated)
+(43,175 real changes made)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     43,175   -1.964384     .908138   -4.63568   4.162203
+{txt}(41,849 observations deleted)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}      1,326   -.0635511    .1491267  -.2992647   .2969019
+{txt}{p 0 4 2}
+(file {bf}
+window30_thresh20000_TALL_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+window30_thresh20000_TALL_wpopdem.dta{rm}
+saved
+{p_end}
+(1 missing value generated)
+(8 missing values generated)
+(14 missing values generated)
+(909 missing values generated)
+(43,175 real changes made)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     43,175   -2.369833     .908138  -5.041128   3.756755
+{txt}(42,986 observations deleted)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}        189   -.0222667    .0846666  -.1493457    .135226
+{txt}{p 0 4 2}
+(file {bf}
+window15_thresh30000_TALL_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+window15_thresh30000_TALL_wpopdem.dta{rm}
+saved
+{p_end}
+(1 missing value generated)
+(8 missing values generated)
+(14 missing values generated)
+(909 missing values generated)
+(43,175 real changes made)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     43,175   -2.369833     .908138  -5.041128   3.756755
+{txt}(42,884 observations deleted)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}        291   -.0267413    .1230209  -.1983626   .1847569
+{txt}{p 0 4 2}
+(file {bf}
+window20_thresh30000_TALL_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+window20_thresh30000_TALL_wpopdem.dta{rm}
+saved
+{p_end}
+(1 missing value generated)
+(8 missing values generated)
+(14 missing values generated)
+(909 missing values generated)
+(43,175 real changes made)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     43,175   -2.369833     .908138  -5.041128   3.756755
+{txt}(42,776 observations deleted)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}        399   -.0250931    .1574191  -.2472136   .2484405
+{txt}{p 0 4 2}
+(file {bf}
+window25_thresh30000_TALL_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+window25_thresh30000_TALL_wpopdem.dta{rm}
+saved
+{p_end}
+(1 missing value generated)
+(8 missing values generated)
+(14 missing values generated)
+(909 missing values generated)
+(43,175 real changes made)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     43,175   -2.369833     .908138  -5.041128   3.756755
+{txt}(42,713 observations deleted)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}        462   -.0268394    .1780786   -.297272    .299009
+{txt}{p 0 4 2}
+(file {bf}
+window30_thresh30000_TALL_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+window30_thresh30000_TALL_wpopdem.dta{rm}
+saved
+{p_end}
+(1 missing value generated)
+(8 missing values generated)
+(14 missing values generated)
+(909 missing values generated)
+(43,175 real changes made)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     43,175   -2.880645    .9081381   -5.55194   3.245942
+{txt}(43,013 observations deleted)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}        162   -.0089679    .0943444  -.1474302   .1388723
+{txt}{p 0 4 2}
+(file {bf}
+window15_thresh50000_TALL_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+window15_thresh50000_TALL_wpopdem.dta{rm}
+saved
+{p_end}
+(1 missing value generated)
+(8 missing values generated)
+(14 missing values generated)
+(909 missing values generated)
+(43,175 real changes made)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     43,175   -2.880645    .9081381   -5.55194   3.245942
+{txt}(42,932 observations deleted)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}        243   -.0204384    .1239188  -.1994713   .1875708
+{txt}{p 0 4 2}
+(file {bf}
+window20_thresh50000_TALL_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+window20_thresh50000_TALL_wpopdem.dta{rm}
+saved
+{p_end}
+(1 missing value generated)
+(8 missing values generated)
+(14 missing values generated)
+(909 missing values generated)
+(43,175 real changes made)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     43,175   -2.880645    .9081381   -5.55194   3.245942
+{txt}(42,887 observations deleted)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}        288   -.0295838    .1416914  -.2422951   .2207367
+{txt}{p 0 4 2}
+(file {bf}
+window25_thresh50000_TALL_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+window25_thresh50000_TALL_wpopdem.dta{rm}
+saved
+{p_end}
+(1 missing value generated)
+(8 missing values generated)
+(14 missing values generated)
+(909 missing values generated)
+(43,175 real changes made)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     43,175   -2.880645    .9081381   -5.55194   3.245942
+{txt}(42,839 observations deleted)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}        336    -.054416    .1605826  -.2865828   .2842266
+{txt}{p 0 4 2}
+(file {bf}
+window30_thresh50000_TALL_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+window30_thresh50000_TALL_wpopdem.dta{rm}
+saved
+{p_end}
+(1 missing value generated)
+(8 missing values generated)
+(14 missing values generated)
+(909 missing values generated)
+(43,175 real changes made)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     43,175   -3.573782    .9081381  -6.245078   2.552805
+{txt}(43,115 observations deleted)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}         60    .0182455     .056642  -.0993775    .112157
+{txt}{p 0 4 2}
+(file {bf}
+window15_thresh100000_TALL_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+window15_thresh100000_TALL_wpopdem.dta{rm}
+saved
+{p_end}
+(1 missing value generated)
+(8 missing values generated)
+(14 missing values generated)
+(909 missing values generated)
+(43,175 real changes made)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     43,175   -3.573782    .9081381  -6.245078   2.552805
+{txt}(43,106 observations deleted)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}         69    .0377352    .0732725  -.0993775   .1753456
+{txt}{p 0 4 2}
+(file {bf}
+window20_thresh100000_TALL_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+window20_thresh100000_TALL_wpopdem.dta{rm}
+saved
+{p_end}
+(1 missing value generated)
+(8 missing values generated)
+(14 missing values generated)
+(909 missing values generated)
+(43,175 real changes made)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     43,175   -3.573782    .9081381  -6.245078   2.552805
+{txt}(43,085 observations deleted)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}         90    .0835965    .1053615  -.0993775   .2444488
+{txt}{p 0 4 2}
+(file {bf}
+window25_thresh100000_TALL_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+window25_thresh100000_TALL_wpopdem.dta{rm}
+saved
+{p_end}
+(1 missing value generated)
+(8 missing values generated)
+(14 missing values generated)
+(909 missing values generated)
+(43,175 real changes made)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     43,175   -3.573782    .9081381  -6.245078   2.552805
+{txt}(43,070 observations deleted)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}        105    .1094394    .1164637  -.0993775   .2777883
+{txt}{p 0 4 2}
+(file {bf}
+window30_thresh100000_TALL_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+window30_thresh100000_TALL_wpopdem.dta{rm}
+saved
+{p_end}
+(1 missing value generated)
+(8 missing values generated)
+(14 missing values generated)
+(909 missing values generated)
+(43,175 real changes made)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     43,175   -4.266924     .908138   -6.93822   1.859663
+{txt}(43,175 observations deleted)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}          0
+{txt}(dataset contains 0 observations)
+{p 0 4 2}
+(file {bf}
+window15_thresh200000_TALL_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+window15_thresh200000_TALL_wpopdem.dta{rm}
+saved
+{p_end}
+(1 missing value generated)
+(8 missing values generated)
+(14 missing values generated)
+(909 missing values generated)
+(43,175 real changes made)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     43,175   -4.266924     .908138   -6.93822   1.859663
+{txt}(43,175 observations deleted)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}          0
+{txt}(dataset contains 0 observations)
+{p 0 4 2}
+(file {bf}
+window20_thresh200000_TALL_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+window20_thresh200000_TALL_wpopdem.dta{rm}
+saved
+{p_end}
+(1 missing value generated)
+(8 missing values generated)
+(14 missing values generated)
+(909 missing values generated)
+(43,175 real changes made)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     43,175   -4.266924     .908138   -6.93822   1.859663
+{txt}(43,160 observations deleted)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}         15    .2196729    .0141729   .2097978   .2464608
+{txt}{p 0 4 2}
+(file {bf}
+window25_thresh200000_TALL_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+window25_thresh200000_TALL_wpopdem.dta{rm}
+saved
+{p_end}
+(1 missing value generated)
+(8 missing values generated)
+(14 missing values generated)
+(909 missing values generated)
+(43,175 real changes made)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     43,175   -4.266924     .908138   -6.93822   1.859663
+{txt}(43,154 observations deleted)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}         21     .232923    .0245249   .2097978   .2660484
+{txt}{p 0 4 2}
+(file {bf}
+window30_thresh200000_TALL_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+window30_thresh200000_TALL_wpopdem.dta{rm}
+saved
+{p_end}
+
+{com}. 
+. 
+. foreach w in 15 20 25 30 {c -(}
+{txt}  2{com}. foreach t in 2000 3000 5000 10000 20000 30000 50000 100000 200000 {c -(}
+{txt}  3{com}. use  window`w'_thresh1000_TALL_wpopdem.dta, replace
+{txt}  4{com}. append using  window`w'_thresh`t'_TALL_wpopdem.dta
+{txt}  5{com}. {c )-}
+{txt}  6{com}. gen right=lwpop>0
+{txt}  7{com}. sum lwpop
+{txt}  8{com}. gen clwpop=(int(150*lwpop))/150
+{txt}  9{com}. egen class=group(clwpop)
+{txt} 10{com}. collapse lexptot lexppers lexpsach lexpsachinv ldebt tratea trateb tratep lwpop clwpop, by(class right)
+{txt} 11{com}. save  window`w'_TALL_wpopdem.dta, replace
+{txt} 12{com}. {c )-}
+
+{txt}    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}      4,752    .0176997    .0839222  -.1494994   .1491433
+{txt}{p 0 4 2}
+(file {bf}
+window15_TALL_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+window15_TALL_wpopdem.dta{rm}
+saved
+{p_end}
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}      6,072    .0292075      .10744  -.1994504   .1994892
+{txt}{p 0 4 2}
+(file {bf}
+window20_TALL_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+window20_TALL_wpopdem.dta{rm}
+saved
+{p_end}
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}      7,512     .042848    .1336579  -.2494607   .2497592
+{txt}{p 0 4 2}
+(file {bf}
+window25_TALL_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+window25_TALL_wpopdem.dta{rm}
+saved
+{p_end}
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}      8,955    .0589483    .1588999  -.2994055   .2998458
+{txt}{p 0 4 2}
+(file {bf}
+window30_TALL_wpopdem.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+window30_TALL_wpopdem.dta{rm}
+saved
+{p_end}
+
+{com}. 
+. ****** Results Table 3 ******
+. 
+. foreach w in 15 20 25 30  {c -(}
+{txt}  2{com}. use  window`w'_thresh1000_TALL_wpopdem.dta, replace
+{txt}  3{com}. gen thresh=1000
+{txt}  4{com}. foreach t in 2000 3000 5000 10000 20000 30000 50000 100000 200000 {c -(}
+{txt}  5{com}. 
+. append using  window`w'_thresh`t'_TALL_wpopdem.dta
+{txt}  6{com}. replace thresh=`t' if thresh==.
+{txt}  7{com}. {c )-}
+{txt}  8{com}. gen right=lwpop>0
+{txt}  9{com}. sum lwpop
+{txt} 10{com}. gen lwpop_2=lwpop^2
+{txt} 11{com}. gen lwpop_3=lwpop^3
+{txt} 12{com}. gen lwpop_r1=lwpop*right
+{txt} 13{com}. gen lwpop_r2=lwpop_2*right
+{txt} 14{com}. gen lwpop_r3=lwpop_3*right
+{txt} 15{com}. tab right
+{txt} 16{com}. table right, c(m rcsize) row
+{txt} 17{com}. 
+. di as red "All" " " "window=`w'"
+{txt} 18{com}. eststo w`w': reg lexptot right lwpop lwpop_2 lwpop_3 lwpop_r1 lwpop_r2 lwpop_r3, robust
+{txt} 19{com}. test lwpop lwpop_r1 lwpop_2 lwpop_r2 lwpop_3 lwpop_r3
+{txt} 20{com}. test lwpop_2 lwpop_r2 lwpop_3 lwpop_r3
+{txt} 21{com}. test lwpop_3 lwpop_r3
+{txt} 22{com}. {c )-}
+{txt}(5,765 real changes made)
+(5,340 real changes made)
+(3,735 real changes made)
+(1,860 real changes made)
+(741 real changes made)
+(189 real changes made)
+(162 real changes made)
+(60 real changes made)
+(0 real changes made)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     22,604    .0018644    .0860149    -.14958   .1499207
+
+      {txt}right {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}     10,914       48.28       48.28
+{txt}          1 {c |}{res}     11,690       51.72      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}     22,604      100.00
+
+{txt}{hline 10}{c TT}{hline 13}
+    right {c |} mean(rcsize)
+{hline 10}{c +}{hline 13}
+        0 {c |}     {res}14.08081
+        {txt}1 {c |}     {res}16.64482
+          {txt}{c |} 
+    Total {c |}     {res}15.40683
+{txt}{hline 10}{c BT}{hline 13}
+{err}All window=15
+
+{txt}Linear regression                               Number of obs     = {res}    22,604
+                                                {txt}F(7, 22596)       =  {res}     3.40
+                                                {txt}Prob > F          = {res}    0.0012
+                                                {txt}R-squared         = {res}    0.0011
+                                                {txt}Root MSE          =    {res} .95766
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}     lexptot{col 14}{c |} Coefficient{col 26}  std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 7}right {c |}{col 14}{res}{space 2} .1082145{col 26}{space 2} .0519579{col 37}{space 1}    2.08{col 46}{space 3}0.037{col 54}{space 4} .0063735{col 67}{space 3} .2100554
+{txt}{space 7}lwpop {c |}{col 14}{res}{space 2}-.2355936{col 26}{space 2} 2.147785{col 37}{space 1}   -0.11{col 46}{space 3}0.913{col 54}{space 4}  -4.4454{col 67}{space 3} 3.974212
+{txt}{space 5}lwpop_2 {c |}{col 14}{res}{space 2}  10.4661{col 26}{space 2} 33.54685{col 37}{space 1}    0.31{col 46}{space 3}0.755{col 54}{space 4}-55.28805{col 67}{space 3} 76.22024
+{txt}{space 5}lwpop_3 {c |}{col 14}{res}{space 2}  72.7497{col 26}{space 2} 148.3149{col 37}{space 1}    0.49{col 46}{space 3}0.624{col 54}{space 4}-217.9578{col 67}{space 3} 363.4572
+{txt}{space 4}lwpop_r1 {c |}{col 14}{res}{space 2} 1.006708{col 26}{space 2} 2.961151{col 37}{space 1}    0.34{col 46}{space 3}0.734{col 54}{space 4}-4.797353{col 67}{space 3} 6.810768
+{txt}{space 4}lwpop_r2 {c |}{col 14}{res}{space 2}-51.66224{col 26}{space 2} 45.93964{col 37}{space 1}   -1.12{col 46}{space 3}0.261{col 54}{space 4}-141.7071{col 67}{space 3} 38.38263
+{txt}{space 4}lwpop_r3 {c |}{col 14}{res}{space 2} 176.7453{col 26}{space 2} 202.0289{col 37}{space 1}    0.87{col 46}{space 3}0.382{col 54}{space 4}-219.2453{col 67}{space 3}  572.736
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 15.21179{col 26}{space 2} .0375919{col 37}{space 1}  404.66{col 46}{space 3}0.000{col 54}{space 4} 15.13811{col 67}{space 3} 15.28547
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} lwpop = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} lwpop_r1 = 0{p_end}
+{p 0 7}{space 1}{text:( 3)}{space 1} lwpop_2 = 0{p_end}
+{p 0 7}{space 1}{text:( 4)}{space 1} lwpop_r2 = 0{p_end}
+{p 0 7}{space 1}{text:( 5)}{space 1} lwpop_3 = 0{p_end}
+{p 0 7}{space 1}{text:( 6)}{space 1} lwpop_r3 = 0{p_end}
+
+{txt}       F(  6, 22596) ={res}    2.97
+{txt}{col 13}Prob > F ={res}    0.0067
+
+{p 0 7}{space 1}{text:( 1)}{space 1} lwpop_2 = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} lwpop_r2 = 0{p_end}
+{p 0 7}{space 1}{text:( 3)}{space 1} lwpop_3 = 0{p_end}
+{p 0 7}{space 1}{text:( 4)}{space 1} lwpop_r3 = 0{p_end}
+
+{txt}       F(  4, 22596) ={res}    3.18
+{txt}{col 13}Prob > F ={res}    0.0127
+
+{p 0 7}{space 1}{text:( 1)}{space 1} lwpop_3 = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} lwpop_r3 = 0{p_end}
+
+{txt}       F(  2, 22596) ={res}    1.77
+{txt}{col 13}Prob > F ={res}    0.1696
+{txt}(7,676 real changes made)
+(7,059 real changes made)
+(4,932 real changes made)
+(2,466 real changes made)
+(960 real changes made)
+(291 real changes made)
+(243 real changes made)
+(69 real changes made)
+(0 real changes made)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     29,768    .0013437    .1140938  -.1997716   .1999888
+
+      {txt}right {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}     14,499       48.71       48.71
+{txt}          1 {c |}{res}     15,269       51.29      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}     29,768      100.00
+
+{txt}{hline 10}{c TT}{hline 13}
+    right {c |} mean(rcsize)
+{hline 10}{c +}{hline 13}
+        0 {c |}     {res}14.26816
+        {txt}1 {c |}     {res}16.59035
+          {txt}{c |} 
+    Total {c |}     {res}15.45928
+{txt}{hline 10}{c BT}{hline 13}
+{err}All window=20
+
+{txt}Linear regression                               Number of obs     = {res}    29,768
+                                                {txt}F(7, 29760)       =  {res}    13.75
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.0029
+                                                {txt}Root MSE          =    {res} .95422
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}     lexptot{col 14}{c |} Coefficient{col 26}  std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 7}right {c |}{col 14}{res}{space 2} .1207901{col 26}{space 2} .0452258{col 37}{space 1}    2.67{col 46}{space 3}0.008{col 54}{space 4} .0321456{col 67}{space 3} .2094346
+{txt}{space 7}lwpop {c |}{col 14}{res}{space 2}-1.625871{col 26}{space 2}  1.38426{col 37}{space 1}   -1.17{col 46}{space 3}0.240{col 54}{space 4}-4.339081{col 67}{space 3}  1.08734
+{txt}{space 5}lwpop_2 {c |}{col 14}{res}{space 2}-14.65046{col 26}{space 2} 16.10138{col 37}{space 1}   -0.91{col 46}{space 3}0.363{col 54}{space 4}-46.20986{col 67}{space 3} 16.90895
+{txt}{space 5}lwpop_3 {c |}{col 14}{res}{space 2}-46.10258{col 26}{space 2} 53.20608{col 37}{space 1}   -0.87{col 46}{space 3}0.386{col 54}{space 4}-150.3888{col 67}{space 3} 58.18366
+{txt}{space 4}lwpop_r1 {c |}{col 14}{res}{space 2} 2.263945{col 26}{space 2} 1.926262{col 37}{space 1}    1.18{col 46}{space 3}0.240{col 54}{space 4}-1.511612{col 67}{space 3} 6.039503
+{txt}{space 4}lwpop_r2 {c |}{col 14}{res}{space 2}-16.35198{col 26}{space 2} 22.29026{col 37}{space 1}   -0.73{col 46}{space 3}0.463{col 54}{space 4}-60.04185{col 67}{space 3}  27.3379
+{txt}{space 4}lwpop_r3 {c |}{col 14}{res}{space 2} 211.5936{col 26}{space 2} 73.20745{col 37}{space 1}    2.89{col 46}{space 3}0.004{col 54}{space 4}  68.1038{col 67}{space 3} 355.0834
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 15.19594{col 26}{space 2} .0324502{col 37}{space 1}  468.28{col 46}{space 3}0.000{col 54}{space 4} 15.13234{col 67}{space 3} 15.25955
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} lwpop = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} lwpop_r1 = 0{p_end}
+{p 0 7}{space 1}{text:( 3)}{space 1} lwpop_2 = 0{p_end}
+{p 0 7}{space 1}{text:( 4)}{space 1} lwpop_r2 = 0{p_end}
+{p 0 7}{space 1}{text:( 5)}{space 1} lwpop_3 = 0{p_end}
+{p 0 7}{space 1}{text:( 6)}{space 1} lwpop_r3 = 0{p_end}
+
+{txt}       F(  6, 29760) ={res}   13.78
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{p 0 7}{space 1}{text:( 1)}{space 1} lwpop_2 = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} lwpop_r2 = 0{p_end}
+{p 0 7}{space 1}{text:( 3)}{space 1} lwpop_3 = 0{p_end}
+{p 0 7}{space 1}{text:( 4)}{space 1} lwpop_r3 = 0{p_end}
+
+{txt}       F(  4, 29760) ={res}   16.73
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{p 0 7}{space 1}{text:( 1)}{space 1} lwpop_3 = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} lwpop_r3 = 0{p_end}
+
+{txt}       F(  2, 29760) ={res}    5.79
+{txt}{col 13}Prob > F ={res}    0.0031
+{txt}(9,605 real changes made)
+(8,820 real changes made)
+(6,282 real changes made)
+(3,003 real changes made)
+(1,158 real changes made)
+(399 real changes made)
+(288 real changes made)
+(90 real changes made)
+(15 real changes made)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     37,157   -.0002023    .1431865   -.249973    .249936
+
+      {txt}right {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}     18,288       49.22       49.22
+{txt}          1 {c |}{res}     18,869       50.78      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}     37,157      100.00
+
+{txt}{hline 10}{c TT}{hline 13}
+    right {c |} mean(rcsize)
+{hline 10}{c +}{hline 13}
+        0 {c |}      {res}14.3481
+        {txt}1 {c |}      {res}16.5499
+          {txt}{c |} 
+    Total {c |}     {res}15.46621
+{txt}{hline 10}{c BT}{hline 13}
+{err}All window=25
+
+{txt}Linear regression                               Number of obs     = {res}    37,157
+                                                {txt}F(7, 37149)       =  {res}    19.20
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.0036
+                                                {txt}Root MSE          =    {res} .95417
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}     lexptot{col 14}{c |} Coefficient{col 26}  std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 7}right {c |}{col 14}{res}{space 2} .1490488{col 26}{space 2} .0405317{col 37}{space 1}    3.68{col 46}{space 3}0.000{col 54}{space 4} .0696055{col 67}{space 3} .2284921
+{txt}{space 7}lwpop {c |}{col 14}{res}{space 2}  .534446{col 26}{space 2} .9790247{col 37}{space 1}    0.55{col 46}{space 3}0.585{col 54}{space 4} -1.38447{col 67}{space 3} 2.453362
+{txt}{space 5}lwpop_2 {c |}{col 14}{res}{space 2} 14.31979{col 26}{space 2}  8.96725{col 37}{space 1}    1.60{col 46}{space 3}0.110{col 54}{space 4}-3.256271{col 67}{space 3} 31.89585
+{txt}{space 5}lwpop_3 {c |}{col 14}{res}{space 2} 54.83628{col 26}{space 2} 23.32106{col 37}{space 1}    2.35{col 46}{space 3}0.019{col 54}{space 4} 9.126361{col 67}{space 3} 100.5462
+{txt}{space 4}lwpop_r1 {c |}{col 14}{res}{space 2}-4.289535{col 26}{space 2} 1.383955{col 37}{space 1}   -3.10{col 46}{space 3}0.002{col 54}{space 4}-7.002126{col 67}{space 3}-1.576944
+{txt}{space 4}lwpop_r2 {c |}{col 14}{res}{space 2} 16.92074{col 26}{space 2} 12.81892{col 37}{space 1}    1.32{col 46}{space 3}0.187{col 54}{space 4} -8.20469{col 67}{space 3} 42.04618
+{txt}{space 4}lwpop_r3 {c |}{col 14}{res}{space 2}  -117.35{col 26}{space 2} 33.69237{col 37}{space 1}   -3.48{col 46}{space 3}0.000{col 54}{space 4}-183.3879{col 67}{space 3}-51.31198
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 15.22872{col 26}{space 2} .0288254{col 37}{space 1}  528.31{col 46}{space 3}0.000{col 54}{space 4} 15.17222{col 67}{space 3} 15.28521
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} lwpop = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} lwpop_r1 = 0{p_end}
+{p 0 7}{space 1}{text:( 3)}{space 1} lwpop_2 = 0{p_end}
+{p 0 7}{space 1}{text:( 4)}{space 1} lwpop_r2 = 0{p_end}
+{p 0 7}{space 1}{text:( 5)}{space 1} lwpop_3 = 0{p_end}
+{p 0 7}{space 1}{text:( 6)}{space 1} lwpop_r3 = 0{p_end}
+
+{txt}       F(  6, 37149) ={res}   14.49
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{p 0 7}{space 1}{text:( 1)}{space 1} lwpop_2 = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} lwpop_r2 = 0{p_end}
+{p 0 7}{space 1}{text:( 3)}{space 1} lwpop_3 = 0{p_end}
+{p 0 7}{space 1}{text:( 4)}{space 1} lwpop_r3 = 0{p_end}
+
+{txt}       F(  4, 37149) ={res}   14.57
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{p 0 7}{space 1}{text:( 1)}{space 1} lwpop_3 = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} lwpop_r3 = 0{p_end}
+
+{txt}       F(  2, 37149) ={res}    6.07
+{txt}{col 13}Prob > F ={res}    0.0023
+{txt}(11,372 real changes made)
+(10,578 real changes made)
+(7,542 real changes made)
+(3,600 real changes made)
+(1,326 real changes made)
+(462 real changes made)
+(336 real changes made)
+(105 real changes made)
+(21 real changes made)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     44,276    -.000318    .1714531  -.2999545   .2999749
+
+      {txt}right {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}     21,858       49.37       49.37
+{txt}          1 {c |}{res}     22,418       50.63      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}     44,276      100.00
+
+{txt}{hline 10}{c TT}{hline 13}
+    right {c |} mean(rcsize)
+{hline 10}{c +}{hline 13}
+        0 {c |}     {res}14.42685
+        {txt}1 {c |}     {res}16.44384
+          {txt}{c |} 
+    Total {c |}      {res}15.4481
+{txt}{hline 10}{c BT}{hline 13}
+{err}All window=30
+
+{txt}Linear regression                               Number of obs     = {res}    44,276
+                                                {txt}F(7, 44268)       =  {res}    26.09
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.0042
+                                                {txt}Root MSE          =    {res} .94968
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}     lexptot{col 14}{c |} Coefficient{col 26}  std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 7}right {c |}{col 14}{res}{space 2} .2021424{col 26}{space 2} .0369546{col 37}{space 1}    5.47{col 46}{space 3}0.000{col 54}{space 4} .1297108{col 67}{space 3}  .274574
+{txt}{space 7}lwpop {c |}{col 14}{res}{space 2}-1.825218{col 26}{space 2} .7464123{col 37}{space 1}   -2.45{col 46}{space 3}0.014{col 54}{space 4}-3.288199{col 67}{space 3}-.3622364
+{txt}{space 5}lwpop_2 {c |}{col 14}{res}{space 2}-11.29776{col 26}{space 2} 5.688908{col 37}{space 1}   -1.99{col 46}{space 3}0.047{col 54}{space 4}-22.44812{col 67}{space 3}-.1474018
+{txt}{space 5}lwpop_3 {c |}{col 14}{res}{space 2}-17.50615{col 26}{space 2} 12.33338{col 37}{space 1}   -1.42{col 46}{space 3}0.156{col 54}{space 4} -41.6798{col 67}{space 3} 6.667498
+{txt}{space 4}lwpop_r1 {c |}{col 14}{res}{space 2}-2.426729{col 26}{space 2}  1.04948{col 37}{space 1}   -2.31{col 46}{space 3}0.021{col 54}{space 4} -4.48373{col 67}{space 3}-.3697294
+{txt}{space 4}lwpop_r2 {c |}{col 14}{res}{space 2} 47.95142{col 26}{space 2} 8.066209{col 37}{space 1}    5.94{col 46}{space 3}0.000{col 54}{space 4}  32.1415{col 67}{space 3} 63.76133
+{txt}{space 4}lwpop_r3 {c |}{col 14}{res}{space 2}-60.25105{col 26}{space 2} 17.58602{col 37}{space 1}   -3.43{col 46}{space 3}0.001{col 54}{space 4}-94.71996{col 67}{space 3}-25.78214
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}  15.1846{col 26}{space 2} .0262292{col 37}{space 1}  578.92{col 46}{space 3}0.000{col 54}{space 4} 15.13319{col 67}{space 3} 15.23601
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} lwpop = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} lwpop_r1 = 0{p_end}
+{p 0 7}{space 1}{text:( 3)}{space 1} lwpop_2 = 0{p_end}
+{p 0 7}{space 1}{text:( 4)}{space 1} lwpop_r2 = 0{p_end}
+{p 0 7}{space 1}{text:( 5)}{space 1} lwpop_3 = 0{p_end}
+{p 0 7}{space 1}{text:( 6)}{space 1} lwpop_r3 = 0{p_end}
+
+{txt}       F(  6, 44268) ={res}   15.95
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{p 0 7}{space 1}{text:( 1)}{space 1} lwpop_2 = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} lwpop_r2 = 0{p_end}
+{p 0 7}{space 1}{text:( 3)}{space 1} lwpop_3 = 0{p_end}
+{p 0 7}{space 1}{text:( 4)}{space 1} lwpop_r3 = 0{p_end}
+
+{txt}       F(  4, 44268) ={res}   13.96
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{p 0 7}{space 1}{text:( 1)}{space 1} lwpop_3 = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} lwpop_r3 = 0{p_end}
+
+{txt}       F(  2, 44268) ={res}   20.24
+{txt}{col 13}Prob > F ={res}    0.0000
+{txt}
+{com}. 
+. *** EDITED by Donna
+. estout using "../../results/table1.csv", cells(`"b() se() t() p()"') stats(N r2 df_m df_r df_b df) notype abbrev begin(`"""') delimiter(`"",""') end(`"""') replace
+{res}{txt}(output written to {browse  `"../../results/table1.csv"'})
+
+{com}. save final.dta, replace
+{txt}{p 0 4 2}
+(file {bf}
+final.dta{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+final.dta{rm}
+saved
+{p_end}
+
+{com}. 
+. ***** Results Table 4: PLACEBO REGRESSIONS *****
+. 
+. foreach w in 20 {c -(}
+{txt}  2{com}. use  window`w'_thresh1000_TALL_wpopdem.dta, replace
+{txt}  3{com}. gen thresh=1000
+{txt}  4{com}. foreach t in 2000 3000 5000 10000 20000 30000 50000 100000 200000 {c -(}
+{txt}  5{com}. append using  window`w'_thresh`t'_TALL_wpopdem.dta
+{txt}  6{com}. replace thresh=`t' if thresh==.
+{txt}  7{com}. {c )-}
+{txt}  8{com}. 
+. gen lwpop_2=lwpop^2
+{txt}  9{com}. gen lwpop_3=lwpop^3
+{txt} 10{com}. sum lwpop
+{txt} 11{com}. 
+. foreach tt in 35 6 {c -(}
+{txt} 12{com}. gen right`tt'=lwpop>0.0`tt'
+{txt} 13{com}. gen lwpop_r1`tt'=lwpop*right`tt'
+{txt} 14{com}. gen lwpop_r2`tt'=lwpop_2*right`tt'
+{txt} 15{com}. gen lwpop_r3`tt'=lwpop_3*right`tt'
+{txt} 16{com}. tab right`tt'
+{txt} 17{com}. table right`tt', c(m rcsize) row
+{txt} 18{com}. 
+. di as red "All" " " "window=`w'" " " "placebo threshold=0.0`tt'
+{txt} 19{com}. reg lexptot right`tt' lwpop lwpop_2 lwpop_3 lwpop_r1`tt' lwpop_r2`tt' lwpop_r3`tt', robust
+{txt} 20{com}. test lwpop lwpop_r1`tt' lwpop_2 lwpop_r2`tt' lwpop_3 lwpop_r3`tt'
+{txt} 21{com}. test lwpop_2 lwpop_r2`tt' lwpop_3 lwpop_r3`tt'
+{txt} 22{com}. test lwpop_3 lwpop_r3`tt'
+{txt} 23{com}. 
+. gen rightm`tt'=lwpop>-0.0`tt'
+{txt} 24{com}. gen lwpop_r1m`tt'=lwpop*rightm`tt'
+{txt} 25{com}. gen lwpop_r2m`tt'=lwpop_2*rightm`tt'
+{txt} 26{com}. gen lwpop_r3m`tt'=lwpop_3*rightm`tt'
+{txt} 27{com}. tab rightm`tt'
+{txt} 28{com}. table rightm`tt', c(m rcsize) row
+{txt} 29{com}. 
+. di as red "All" " " "window=`w'" " " "placebo threshold=-0.0`tt'
+{txt} 30{com}. reg lexptot rightm`tt' lwpop lwpop_2 lwpop_3 lwpop_r1m`tt' lwpop_r2m`tt' lwpop_r3m`tt', robust
+{txt} 31{com}. test lwpop lwpop_r1m`tt' lwpop_2 lwpop_r2m`tt' lwpop_3 lwpop_r3m`tt'
+{txt} 32{com}. test lwpop_2 lwpop_r2m`tt' lwpop_3 lwpop_r3m`tt'
+{txt} 33{com}. test lwpop_3 lwpop_r3m`tt'
+{txt} 34{com}. {c )-}
+{txt} 35{com}. {c )-}
+{txt}(7,676 real changes made)
+(7,059 real changes made)
+(4,932 real changes made)
+(2,466 real changes made)
+(960 real changes made)
+(291 real changes made)
+(243 real changes made)
+(69 real changes made)
+(0 real changes made)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     29,768    .0013437    .1140938  -.1997716   .1999888
+
+    {txt}right35 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}     17,382       58.39       58.39
+{txt}          1 {c |}{res}     12,386       41.61      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}     29,768      100.00
+
+{txt}{hline 10}{c TT}{hline 13}
+  right35 {c |} mean(rcsize)
+{hline 10}{c +}{hline 13}
+        0 {c |}     {res}14.75872
+        {txt}1 {c |}     {res}16.44243
+          {txt}{c |} 
+    Total {c |}     {res}15.45928
+{txt}{hline 10}{c BT}{hline 13}
+{err}All window=20 placebo threshold=0.035
+
+{txt}Linear regression                               Number of obs     = {res}    29,768
+                                                {txt}F(7, 29760)       =  {res}    12.44
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.0026
+                                                {txt}Root MSE          =    {res} .95438
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}     lexptot{col 14}{c |} Coefficient{col 26}  std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 5}right35 {c |}{col 14}{res}{space 2} .0949539{col 26}{space 2} .1221084{col 37}{space 1}    0.78{col 46}{space 3}0.437{col 54}{space 4}-.1443839{col 67}{space 3} .3342916
+{txt}{space 7}lwpop {c |}{col 14}{res}{space 2} .8408894{col 26}{space 2} .4800986{col 37}{space 1}    1.75{col 46}{space 3}0.080{col 54}{space 4}-.1001249{col 67}{space 3} 1.781904
+{txt}{space 5}lwpop_2 {c |}{col 14}{res}{space 2} 8.782524{col 26}{space 2} 7.646419{col 37}{space 1}    1.15{col 46}{space 3}0.251{col 54}{space 4}-6.204791{col 67}{space 3} 23.76984
+{txt}{space 5}lwpop_3 {c |}{col 14}{res}{space 2} 19.76833{col 26}{space 2} 30.29408{col 37}{space 1}    0.65{col 46}{space 3}0.514{col 54}{space 4}-39.60938{col 67}{space 3} 79.14604
+{txt}{space 2}lwpop_r135 {c |}{col 14}{res}{space 2}-1.309595{col 26}{space 2} 3.767951{col 37}{space 1}   -0.35{col 46}{space 3}0.728{col 54}{space 4}-8.694943{col 67}{space 3} 6.075754
+{txt}{space 2}lwpop_r235 {c |}{col 14}{res}{space 2}-31.19437{col 26}{space 2} 35.25593{col 37}{space 1}   -0.88{col 46}{space 3}0.376{col 54}{space 4}-100.2975{col 67}{space 3}  37.9088
+{txt}{space 2}lwpop_r335 {c |}{col 14}{res}{space 2} 124.4998{col 26}{space 2} 101.6254{col 37}{space 1}    1.23{col 46}{space 3}0.221{col 54}{space 4} -74.6904{col 67}{space 3}   323.69
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 15.26685{col 26}{space 2} .0129192{col 37}{space 1} 1181.72{col 46}{space 3}0.000{col 54}{space 4} 15.24153{col 67}{space 3} 15.29218
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} lwpop = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} lwpop_r135 = 0{p_end}
+{p 0 7}{space 1}{text:( 3)}{space 1} lwpop_2 = 0{p_end}
+{p 0 7}{space 1}{text:( 4)}{space 1} lwpop_r235 = 0{p_end}
+{p 0 7}{space 1}{text:( 5)}{space 1} lwpop_3 = 0{p_end}
+{p 0 7}{space 1}{text:( 6)}{space 1} lwpop_r335 = 0{p_end}
+
+{txt}       F(  6, 29760) ={res}   13.28
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{p 0 7}{space 1}{text:( 1)}{space 1} lwpop_2 = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} lwpop_r235 = 0{p_end}
+{p 0 7}{space 1}{text:( 3)}{space 1} lwpop_3 = 0{p_end}
+{p 0 7}{space 1}{text:( 4)}{space 1} lwpop_r335 = 0{p_end}
+
+{txt}       F(  4, 29760) ={res}   14.33
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{p 0 7}{space 1}{text:( 1)}{space 1} lwpop_3 = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} lwpop_r335 = 0{p_end}
+
+{txt}       F(  2, 29760) ={res}    1.32
+{txt}{col 13}Prob > F ={res}    0.2675
+
+   {txt}rightm35 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}     11,955       40.16       40.16
+{txt}          1 {c |}{res}     17,813       59.84      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}     29,768      100.00
+
+{txt}{hline 10}{c TT}{hline 13}
+ rightm35 {c |} mean(rcsize)
+{hline 10}{c +}{hline 13}
+        0 {c |}     {res}14.40903
+        {txt}1 {c |}     {res}16.16415
+          {txt}{c |} 
+    Total {c |}     {res}15.45928
+{txt}{hline 10}{c BT}{hline 13}
+{err}All window=20 placebo threshold=-0.035
+
+{txt}Linear regression                               Number of obs     = {res}    29,768
+                                                {txt}F(7, 29760)       =  {res}    14.13
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.0030
+                                                {txt}Root MSE          =    {res} .95419
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}     lexptot{col 14}{c |} Coefficient{col 26}  std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 4}rightm35 {c |}{col 14}{res}{space 2}-.0291137{col 26}{space 2} .1291645{col 37}{space 1}   -0.23{col 46}{space 3}0.822{col 54}{space 4}-.2822818{col 67}{space 3} .2240544
+{txt}{space 7}lwpop {c |}{col 14}{res}{space 2} .9560052{col 26}{space 2} 3.964235{col 37}{space 1}    0.24{col 46}{space 3}0.809{col 54}{space 4}-6.814068{col 67}{space 3} 8.726078
+{txt}{space 5}lwpop_2 {c |}{col 14}{res}{space 2} 4.040791{col 26}{space 2} 36.60943{col 37}{space 1}    0.11{col 46}{space 3}0.912{col 54}{space 4}-67.71529{col 67}{space 3} 75.79687
+{txt}{space 5}lwpop_3 {c |}{col 14}{res}{space 2}-3.316011{col 26}{space 2} 103.7118{col 37}{space 1}   -0.03{col 46}{space 3}0.974{col 54}{space 4}-206.5957{col 67}{space 3} 199.9637
+{txt}{space 1}lwpop_r1m35 {c |}{col 14}{res}{space 2} 1.212068{col 26}{space 2} 3.991909{col 37}{space 1}    0.30{col 46}{space 3}0.761{col 54}{space 4}-6.612247{col 67}{space 3} 9.036383
+{txt}{space 1}lwpop_r2m35 {c |}{col 14}{res}{space 2}-50.51872{col 26}{space 2}  37.3469{col 37}{space 1}   -1.35{col 46}{space 3}0.176{col 54}{space 4}-123.7203{col 67}{space 3} 22.68283
+{txt}{space 1}lwpop_r3m35 {c |}{col 14}{res}{space 2} 214.2062{col 26}{space 2} 107.6218{col 37}{space 1}    1.99{col 46}{space 3}0.047{col 54}{space 4} 3.262696{col 67}{space 3} 425.1497
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 15.30629{col 26}{space 2} .1285295{col 37}{space 1}  119.09{col 46}{space 3}0.000{col 54}{space 4} 15.05437{col 67}{space 3} 15.55821
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} lwpop = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} lwpop_r1m35 = 0{p_end}
+{p 0 7}{space 1}{text:( 3)}{space 1} lwpop_2 = 0{p_end}
+{p 0 7}{space 1}{text:( 4)}{space 1} lwpop_r2m35 = 0{p_end}
+{p 0 7}{space 1}{text:( 5)}{space 1} lwpop_3 = 0{p_end}
+{p 0 7}{space 1}{text:( 6)}{space 1} lwpop_r3m35 = 0{p_end}
+
+{txt}       F(  6, 29760) ={res}   16.16
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{p 0 7}{space 1}{text:( 1)}{space 1} lwpop_2 = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} lwpop_r2m35 = 0{p_end}
+{p 0 7}{space 1}{text:( 3)}{space 1} lwpop_3 = 0{p_end}
+{p 0 7}{space 1}{text:( 4)}{space 1} lwpop_r3m35 = 0{p_end}
+
+{txt}       F(  4, 29760) ={res}   17.08
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{p 0 7}{space 1}{text:( 1)}{space 1} lwpop_3 = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} lwpop_r3m35 = 0{p_end}
+
+{txt}       F(  2, 29760) ={res}   26.91
+{txt}{col 13}Prob > F ={res}    0.0000
+
+     {txt}right6 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}     19,319       64.90       64.90
+{txt}          1 {c |}{res}     10,449       35.10      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}     29,768      100.00
+
+{txt}{hline 10}{c TT}{hline 13}
+   right6 {c |} mean(rcsize)
+{hline 10}{c +}{hline 13}
+        0 {c |}     {res}14.99415
+        {txt}1 {c |}     {res}16.31927
+          {txt}{c |} 
+    Total {c |}     {res}15.45928
+{txt}{hline 10}{c BT}{hline 13}
+{err}All window=20 placebo threshold=0.06
+
+{txt}Linear regression                               Number of obs     = {res}    29,768
+                                                {txt}F(7, 29760)       =  {res}    13.25
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.0028
+                                                {txt}Root MSE          =    {res}  .9543
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}     lexptot{col 14}{c |} Coefficient{col 26}  std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}right6 {c |}{col 14}{res}{space 2}-.4647266{col 26}{space 2}  .341267{col 37}{space 1}   -1.36{col 46}{space 3}0.173{col 54}{space 4}-1.133625{col 67}{space 3} .2041715
+{txt}{space 7}lwpop {c |}{col 14}{res}{space 2} .7982296{col 26}{space 2} .2334272{col 37}{space 1}    3.42{col 46}{space 3}0.001{col 54}{space 4} .3407021{col 67}{space 3} 1.255757
+{txt}{space 5}lwpop_2 {c |}{col 14}{res}{space 2} 8.120407{col 26}{space 2} 4.679701{col 37}{space 1}    1.74{col 46}{space 3}0.083{col 54}{space 4}-1.052012{col 67}{space 3} 17.29283
+{txt}{space 5}lwpop_3 {c |}{col 14}{res}{space 2} 17.37147{col 26}{space 2} 21.48454{col 37}{space 1}    0.81{col 46}{space 3}0.419{col 54}{space 4}-24.73918{col 67}{space 3} 59.48212
+{txt}{space 3}lwpop_r16 {c |}{col 14}{res}{space 2} 12.16466{col 26}{space 2} 8.651797{col 37}{space 1}    1.41{col 46}{space 3}0.160{col 54}{space 4}-4.793237{col 67}{space 3} 29.12256
+{txt}{space 3}lwpop_r26 {c |}{col 14}{res}{space 2}-132.3156{col 26}{space 2} 69.36215{col 37}{space 1}   -1.91{col 46}{space 3}0.056{col 54}{space 4}-268.2684{col 67}{space 3} 3.637283
+{txt}{space 3}lwpop_r36 {c |}{col 14}{res}{space 2} 372.7359{col 26}{space 2}  177.204{col 37}{space 1}    2.10{col 46}{space 3}0.035{col 54}{space 4}  25.4082{col 67}{space 3} 720.0635
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 15.26674{col 26}{space 2} .0123759{col 37}{space 1} 1233.59{col 46}{space 3}0.000{col 54}{space 4} 15.24249{col 67}{space 3}   15.291
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} lwpop = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} lwpop_r16 = 0{p_end}
+{p 0 7}{space 1}{text:( 3)}{space 1} lwpop_2 = 0{p_end}
+{p 0 7}{space 1}{text:( 4)}{space 1} lwpop_r26 = 0{p_end}
+{p 0 7}{space 1}{text:( 5)}{space 1} lwpop_3 = 0{p_end}
+{p 0 7}{space 1}{text:( 6)}{space 1} lwpop_r36 = 0{p_end}
+
+{txt}       F(  6, 29760) ={res}   14.94
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{p 0 7}{space 1}{text:( 1)}{space 1} lwpop_2 = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} lwpop_r26 = 0{p_end}
+{p 0 7}{space 1}{text:( 3)}{space 1} lwpop_3 = 0{p_end}
+{p 0 7}{space 1}{text:( 4)}{space 1} lwpop_r36 = 0{p_end}
+
+{txt}       F(  4, 29760) ={res}    9.39
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{p 0 7}{space 1}{text:( 1)}{space 1} lwpop_3 = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} lwpop_r36 = 0{p_end}
+
+{txt}       F(  2, 29760) ={res}    2.79
+{txt}{col 13}Prob > F ={res}    0.0617
+
+    {txt}rightm6 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}     10,134       34.04       34.04
+{txt}          1 {c |}{res}     19,634       65.96      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}     29,768      100.00
+
+{txt}{hline 10}{c TT}{hline 13}
+  rightm6 {c |} mean(rcsize)
+{hline 10}{c +}{hline 13}
+        0 {c |}     {res}14.48786
+        {txt}1 {c |}     {res}15.96068
+          {txt}{c |} 
+    Total {c |}     {res}15.45928
+{txt}{hline 10}{c BT}{hline 13}
+{err}All window=20 placebo threshold=-0.06
+
+{txt}Linear regression                               Number of obs     = {res}    29,768
+                                                {txt}F(7, 29760)       =  {res}    12.44
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.0027
+                                                {txt}Root MSE          =    {res} .95435
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}     lexptot{col 14}{c |} Coefficient{col 26}  std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 5}rightm6 {c |}{col 14}{res}{space 2} .1436034{col 26}{space 2} .3415809{col 37}{space 1}    0.42{col 46}{space 3}0.674{col 54}{space 4}-.5259101{col 67}{space 3} .8131168
+{txt}{space 7}lwpop {c |}{col 14}{res}{space 2}-4.074325{col 26}{space 2}  8.87497{col 37}{space 1}   -0.46{col 46}{space 3}0.646{col 54}{space 4}-21.46965{col 67}{space 3}   13.321
+{txt}{space 5}lwpop_2 {c |}{col 14}{res}{space 2}-41.50304{col 26}{space 2} 72.22089{col 37}{space 1}   -0.57{col 46}{space 3}0.566{col 54}{space 4}-183.0591{col 67}{space 3} 100.0531
+{txt}{space 5}lwpop_3 {c |}{col 14}{res}{space 2}-127.3699{col 26}{space 2} 185.9743{col 37}{space 1}   -0.68{col 46}{space 3}0.493{col 54}{space 4}-491.8876{col 67}{space 3} 237.1478
+{txt}{space 2}lwpop_r1m6 {c |}{col 14}{res}{space 2} 4.632837{col 26}{space 2} 8.877942{col 37}{space 1}    0.52{col 46}{space 3}0.602{col 54}{space 4}-12.76832{col 67}{space 3} 22.03399
+{txt}{space 2}lwpop_r2m6 {c |}{col 14}{res}{space 2} 17.08347{col 26}{space 2}  72.3614{col 37}{space 1}    0.24{col 46}{space 3}0.813{col 54}{space 4} -124.748{col 67}{space 3}  158.915
+{txt}{space 2}lwpop_r3m6 {c |}{col 14}{res}{space 2} 262.3518{col 26}{space 2} 187.0725{col 37}{space 1}    1.40{col 46}{space 3}0.161{col 54}{space 4}-104.3186{col 67}{space 3} 629.0222
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 15.14926{col 26}{space 2}  .341357{col 37}{space 1}   44.38{col 46}{space 3}0.000{col 54}{space 4} 14.48019{col 67}{space 3} 15.81834
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} lwpop = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} lwpop_r1m6 = 0{p_end}
+{p 0 7}{space 1}{text:( 3)}{space 1} lwpop_2 = 0{p_end}
+{p 0 7}{space 1}{text:( 4)}{space 1} lwpop_r2m6 = 0{p_end}
+{p 0 7}{space 1}{text:( 5)}{space 1} lwpop_3 = 0{p_end}
+{p 0 7}{space 1}{text:( 6)}{space 1} lwpop_r3m6 = 0{p_end}
+
+{txt}       F(  6, 29760) ={res}   14.42
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{p 0 7}{space 1}{text:( 1)}{space 1} lwpop_2 = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} lwpop_r2m6 = 0{p_end}
+{p 0 7}{space 1}{text:( 3)}{space 1} lwpop_3 = 0{p_end}
+{p 0 7}{space 1}{text:( 4)}{space 1} lwpop_r3m6 = 0{p_end}
+
+{txt}       F(  4, 29760) ={res}   14.14
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{p 0 7}{space 1}{text:( 1)}{space 1} lwpop_3 = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} lwpop_r3m6 = 0{p_end}
+
+{txt}       F(  2, 29760) ={res}   22.47
+{txt}{col 13}Prob > F ={res}    0.0000
+{txt}
+{com}. 
+. 
+. ****** Results Tables 5 and 6 *****
+. 
+. foreach w in 15 {c -(}
+{txt}  2{com}. use  window`w'_thresh1000_TALL_wpopdem.dta, replace
+{txt}  3{com}. gen thresh=1000
+{txt}  4{com}. foreach t in 2000 3000 5000 10000 20000 30000 50000 100000 200000 {c -(}
+{txt}  5{com}. append using  window`w'_thresh`t'_TALL_wpopdem.dta
+{txt}  6{com}. replace thresh=`t' if thresh==.
+{txt}  7{com}. {c )-}
+{txt}  8{com}. gen right=lwpop>0
+{txt}  9{com}. sum lwpop
+{txt} 10{com}. gen lwpop_2=lwpop^2
+{txt} 11{com}. gen lwpop_3=lwpop^3
+{txt} 12{com}. gen lwpop_r1=lwpop*right
+{txt} 13{com}. gen lwpop_r2=lwpop_2*right
+{txt} 14{com}. gen lwpop_r3=lwpop_3*right
+{txt} 15{com}. tab right
+{txt} 16{com}. table right, c(m rcsize) row
+{txt} 17{com}. reg lexppers right lwpop lwpop_2 lwpop_3 lwpop_r1 lwpop_r2 lwpop_r3, robust
+{txt} 18{com}. test lwpop lwpop_r1 lwpop_2 lwpop_r2 lwpop_3 lwpop_r3
+{txt} 19{com}. test lwpop_2 lwpop_r2 lwpop_3 lwpop_r3
+{txt} 20{com}. test lwpop_3 lwpop_r3
+{txt} 21{com}. reg lexpsach right lwpop lwpop_2 lwpop_3 lwpop_r1 lwpop_r2 lwpop_r3, robust
+{txt} 22{com}. test lwpop lwpop_r1 lwpop_2 lwpop_r2 lwpop_3 lwpop_r3
+{txt} 23{com}. test lwpop_2 lwpop_r2 lwpop_3 lwpop_r3
+{txt} 24{com}. test lwpop_3 lwpop_r3
+{txt} 25{com}. reg lexpsachinv right lwpop lwpop_2 lwpop_3 lwpop_r1 lwpop_r2 lwpop_r3, robust
+{txt} 26{com}. test lwpop lwpop_r1 lwpop_2 lwpop_r2 lwpop_3 lwpop_r3
+{txt} 27{com}. test lwpop_2 lwpop_r2 lwpop_3 lwpop_r3
+{txt} 28{com}. test lwpop_3 lwpop_r3
+{txt} 29{com}. reg ldebt right lwpop lwpop_2 lwpop_3 lwpop_r1 lwpop_r2 lwpop_r3, robust
+{txt} 30{com}. test lwpop lwpop_r1 lwpop_2 lwpop_r2 lwpop_3 lwpop_r3
+{txt} 31{com}. test lwpop_2 lwpop_r2 lwpop_3 lwpop_r3
+{txt} 32{com}. test lwpop_3 lwpop_r3
+{txt} 33{com}. reg ltratea right lwpop lwpop_2 lwpop_3 lwpop_r1 lwpop_r2 lwpop_r3, robust
+{txt} 34{com}. test lwpop lwpop_r1 lwpop_2 lwpop_r2 lwpop_3 lwpop_r3
+{txt} 35{com}. test lwpop_2 lwpop_r2 lwpop_3 lwpop_r3
+{txt} 36{com}. test lwpop_3 lwpop_r3
+{txt} 37{com}. reg ltrateb right lwpop lwpop_2 lwpop_3 lwpop_r1 lwpop_r2 lwpop_r3, robust
+{txt} 38{com}. test lwpop lwpop_r1 lwpop_2 lwpop_r2 lwpop_3 lwpop_r3
+{txt} 39{com}. test lwpop_2 lwpop_r2 lwpop_3 lwpop_r3
+{txt} 40{com}. test lwpop_3 lwpop_r3
+{txt} 41{com}. reg ltratep right lwpop lwpop_2 lwpop_3 lwpop_r1 lwpop_r2 lwpop_r3, robust
+{txt} 42{com}. test lwpop lwpop_r1 lwpop_2 lwpop_r2 lwpop_3 lwpop_r3
+{txt} 43{com}. test lwpop_2 lwpop_r2 lwpop_3 lwpop_r3
+{txt} 44{com}. test lwpop_3 lwpop_r3
+{txt} 45{com}. {c )-}
+{txt}(5,765 real changes made)
+(5,340 real changes made)
+(3,735 real changes made)
+(1,860 real changes made)
+(741 real changes made)
+(189 real changes made)
+(162 real changes made)
+(60 real changes made)
+(0 real changes made)
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}lwpop {c |}{res}     22,604    .0018644    .0860149    -.14958   .1499207
+
+      {txt}right {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}     10,914       48.28       48.28
+{txt}          1 {c |}{res}     11,690       51.72      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}     22,604      100.00
+
+{txt}{hline 10}{c TT}{hline 13}
+    right {c |} mean(rcsize)
+{hline 10}{c +}{hline 13}
+        0 {c |}     {res}14.08081
+        {txt}1 {c |}     {res}16.64482
+          {txt}{c |} 
+    Total {c |}     {res}15.40683
+{txt}{hline 10}{c BT}{hline 13}
+
+Linear regression                               Number of obs     = {res}    22,604
+                                                {txt}F(7, 22596)       =  {res}     3.88
+                                                {txt}Prob > F          = {res}    0.0003
+                                                {txt}R-squared         = {res}    0.0013
+                                                {txt}Root MSE          =    {res} 1.1181
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}    lexppers{col 14}{c |} Coefficient{col 26}  std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 7}right {c |}{col 14}{res}{space 2} .1660342{col 26}{space 2} .0593085{col 37}{space 1}    2.80{col 46}{space 3}0.005{col 54}{space 4} .0497854{col 67}{space 3}  .282283
+{txt}{space 7}lwpop {c |}{col 14}{res}{space 2}-.3423942{col 26}{space 2} 2.482596{col 37}{space 1}   -0.14{col 46}{space 3}0.890{col 54}{space 4}-5.208453{col 67}{space 3} 4.523665
+{txt}{space 5}lwpop_2 {c |}{col 14}{res}{space 2} 19.57989{col 26}{space 2} 39.22244{col 37}{space 1}    0.50{col 46}{space 3}0.618{col 54}{space 4}-57.29881{col 67}{space 3} 96.45858
+{txt}{space 5}lwpop_3 {c |}{col 14}{res}{space 2}  141.913{col 26}{space 2} 174.8542{col 37}{space 1}    0.81{col 46}{space 3}0.417{col 54}{space 4}-200.8132{col 67}{space 3} 484.6393
+{txt}{space 4}lwpop_r1 {c |}{col 14}{res}{space 2}-.2103229{col 26}{space 2} 3.416959{col 37}{space 1}   -0.06{col 46}{space 3}0.951{col 54}{space 4}-6.907798{col 67}{space 3} 6.487152
+{txt}{space 4}lwpop_r2 {c |}{col 14}{res}{space 2}-45.26679{col 26}{space 2} 53.44529{col 37}{space 1}   -0.85{col 46}{space 3}0.397{col 54}{space 4}-150.0232{col 67}{space 3} 59.48966
+{txt}{space 4}lwpop_r3 {c |}{col 14}{res}{space 2} 46.96118{col 26}{space 2} 236.5267{col 37}{space 1}    0.20{col 46}{space 3}0.843{col 54}{space 4}-416.6474{col 67}{space 3} 510.5698
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 13.10722{col 26}{space 2} .0427851{col 37}{space 1}  306.35{col 46}{space 3}0.000{col 54}{space 4} 13.02336{col 67}{space 3} 13.19108
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} lwpop = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} lwpop_r1 = 0{p_end}
+{p 0 7}{space 1}{text:( 3)}{space 1} lwpop_2 = 0{p_end}
+{p 0 7}{space 1}{text:( 4)}{space 1} lwpop_r2 = 0{p_end}
+{p 0 7}{space 1}{text:( 5)}{space 1} lwpop_3 = 0{p_end}
+{p 0 7}{space 1}{text:( 6)}{space 1} lwpop_r3 = 0{p_end}
+
+{txt}       F(  6, 22596) ={res}    3.57
+{txt}{col 13}Prob > F ={res}    0.0016
+
+{p 0 7}{space 1}{text:( 1)}{space 1} lwpop_2 = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} lwpop_r2 = 0{p_end}
+{p 0 7}{space 1}{text:( 3)}{space 1} lwpop_3 = 0{p_end}
+{p 0 7}{space 1}{text:( 4)}{space 1} lwpop_r3 = 0{p_end}
+
+{txt}       F(  4, 22596) ={res}    3.18
+{txt}{col 13}Prob > F ={res}    0.0127
+
+{p 0 7}{space 1}{text:( 1)}{space 1} lwpop_3 = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} lwpop_r3 = 0{p_end}
+
+{txt}       F(  2, 22596) ={res}    1.03
+{txt}{col 13}Prob > F ={res}    0.3562
+
+{txt}Linear regression                               Number of obs     = {res}    22,599
+                                                {txt}F(7, 22591)       =  {res}     3.01
+                                                {txt}Prob > F          = {res}    0.0037
+                                                {txt}R-squared         = {res}    0.0010
+                                                {txt}Root MSE          =    {res}  1.092
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}    lexpsach{col 14}{c |} Coefficient{col 26}  std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 7}right {c |}{col 14}{res}{space 2} .1414589{col 26}{space 2}   .05947{col 37}{space 1}    2.38{col 46}{space 3}0.017{col 54}{space 4} .0248936{col 67}{space 3} .2580241
+{txt}{space 7}lwpop {c |}{col 14}{res}{space 2}-.6809973{col 26}{space 2}  2.45776{col 37}{space 1}   -0.28{col 46}{space 3}0.782{col 54}{space 4}-5.498377{col 67}{space 3} 4.136382
+{txt}{space 5}lwpop_2 {c |}{col 14}{res}{space 2} 9.492784{col 26}{space 2} 38.49632{col 37}{space 1}    0.25{col 46}{space 3}0.805{col 54}{space 4}-65.96267{col 67}{space 3} 84.94823
+{txt}{space 5}lwpop_3 {c |}{col 14}{res}{space 2} 75.93123{col 26}{space 2} 170.6422{col 37}{space 1}    0.44{col 46}{space 3}0.656{col 54}{space 4}-258.5393{col 67}{space 3} 410.4018
+{txt}{space 4}lwpop_r1 {c |}{col 14}{res}{space 2} .3374288{col 26}{space 2} 3.391015{col 37}{space 1}    0.10{col 46}{space 3}0.921{col 54}{space 4}-6.309194{col 67}{space 3} 6.984052
+{txt}{space 4}lwpop_r2 {c |}{col 14}{res}{space 2}-36.02114{col 26}{space 2} 52.62448{col 37}{space 1}   -0.68{col 46}{space 3}0.494{col 54}{space 4}-139.1688{col 67}{space 3} 67.12647
+{txt}{space 4}lwpop_r3 {c |}{col 14}{res}{space 2} 115.9959{col 26}{space 2} 231.8376{col 37}{space 1}    0.50{col 46}{space 3}0.617{col 54}{space 4}-338.4218{col 67}{space 3} 570.4136
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 12.93541{col 26}{space 2} .0426874{col 37}{space 1}  303.03{col 46}{space 3}0.000{col 54}{space 4} 12.85174{col 67}{space 3} 13.01908
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} lwpop = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} lwpop_r1 = 0{p_end}
+{p 0 7}{space 1}{text:( 3)}{space 1} lwpop_2 = 0{p_end}
+{p 0 7}{space 1}{text:( 4)}{space 1} lwpop_r2 = 0{p_end}
+{p 0 7}{space 1}{text:( 5)}{space 1} lwpop_3 = 0{p_end}
+{p 0 7}{space 1}{text:( 6)}{space 1} lwpop_r3 = 0{p_end}
+
+{txt}       F(  6, 22591) ={res}    3.22
+{txt}{col 13}Prob > F ={res}    0.0037
+
+{p 0 7}{space 1}{text:( 1)}{space 1} lwpop_2 = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} lwpop_r2 = 0{p_end}
+{p 0 7}{space 1}{text:( 3)}{space 1} lwpop_3 = 0{p_end}
+{p 0 7}{space 1}{text:( 4)}{space 1} lwpop_r3 = 0{p_end}
+
+{txt}       F(  4, 22591) ={res}    2.62
+{txt}{col 13}Prob > F ={res}    0.0329
+
+{p 0 7}{space 1}{text:( 1)}{space 1} lwpop_3 = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} lwpop_r3 = 0{p_end}
+
+{txt}       F(  2, 22591) ={res}    0.85
+{txt}{col 13}Prob > F ={res}    0.4288
+
+{txt}Linear regression                               Number of obs     = {res}    22,596
+                                                {txt}F(7, 22588)       =  {res}     2.39
+                                                {txt}Prob > F          = {res}    0.0193
+                                                {txt}R-squared         = {res}    0.0008
+                                                {txt}Root MSE          =    {res} 1.1396
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1} lexpsachinv{col 14}{c |} Coefficient{col 26}  std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 7}right {c |}{col 14}{res}{space 2} .1018872{col 26}{space 2} .0611032{col 37}{space 1}    1.67{col 46}{space 3}0.095{col 54}{space 4}-.0178793{col 67}{space 3} .2216537
+{txt}{space 7}lwpop {c |}{col 14}{res}{space 2} 1.316008{col 26}{space 2} 2.571602{col 37}{space 1}    0.51{col 46}{space 3}0.609{col 54}{space 4}-3.724509{col 67}{space 3} 6.356524
+{txt}{space 5}lwpop_2 {c |}{col 14}{res}{space 2} 33.16299{col 26}{space 2} 40.09111{col 37}{space 1}    0.83{col 46}{space 3}0.408{col 54}{space 4}-45.41835{col 67}{space 3} 111.7443
+{txt}{space 5}lwpop_3 {c |}{col 14}{res}{space 2} 172.8576{col 26}{space 2}   176.77{col 37}{space 1}    0.98{col 46}{space 3}0.328{col 54}{space 4}-173.6238{col 67}{space 3} 519.3389
+{txt}{space 4}lwpop_r1 {c |}{col 14}{res}{space 2}-2.111556{col 26}{space 2} 3.512957{col 37}{space 1}   -0.60{col 46}{space 3}0.548{col 54}{space 4}-8.997195{col 67}{space 3} 4.774082
+{txt}{space 4}lwpop_r2 {c |}{col 14}{res}{space 2}-39.41824{col 26}{space 2} 54.69991{col 37}{space 1}   -0.72{col 46}{space 3}0.471{col 54}{space 4}-146.6338{col 67}{space 3} 67.79735
+{txt}{space 4}lwpop_r3 {c |}{col 14}{res}{space 2}-103.9886{col 26}{space 2} 241.1449{col 37}{space 1}   -0.43{col 46}{space 3}0.666{col 54}{space 4}-576.6492{col 67}{space 3}  368.672
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 13.74416{col 26}{space 2} .0447409{col 37}{space 1}  307.19{col 46}{space 3}0.000{col 54}{space 4} 13.65646{col 67}{space 3} 13.83185
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} lwpop = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} lwpop_r1 = 0{p_end}
+{p 0 7}{space 1}{text:( 3)}{space 1} lwpop_2 = 0{p_end}
+{p 0 7}{space 1}{text:( 4)}{space 1} lwpop_r2 = 0{p_end}
+{p 0 7}{space 1}{text:( 5)}{space 1} lwpop_3 = 0{p_end}
+{p 0 7}{space 1}{text:( 6)}{space 1} lwpop_r3 = 0{p_end}
+
+{txt}       F(  6, 22588) ={res}    1.06
+{txt}{col 13}Prob > F ={res}    0.3866
+
+{p 0 7}{space 1}{text:( 1)}{space 1} lwpop_2 = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} lwpop_r2 = 0{p_end}
+{p 0 7}{space 1}{text:( 3)}{space 1} lwpop_3 = 0{p_end}
+{p 0 7}{space 1}{text:( 4)}{space 1} lwpop_r3 = 0{p_end}
+
+{txt}       F(  4, 22588) ={res}    0.98
+{txt}{col 13}Prob > F ={res}    0.4179
+
+{p 0 7}{space 1}{text:( 1)}{space 1} lwpop_3 = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} lwpop_r3 = 0{p_end}
+
+{txt}       F(  2, 22588) ={res}    0.57
+{txt}{col 13}Prob > F ={res}    0.5677
+
+{txt}Linear regression                               Number of obs     = {res}    22,136
+                                                {txt}F(7, 22128)       =  {res}     5.04
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.0016
+                                                {txt}Root MSE          =    {res} 1.4195
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}       ldebt{col 14}{c |} Coefficient{col 26}  std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 7}right {c |}{col 14}{res}{space 2}  .135532{col 26}{space 2} .0739567{col 37}{space 1}    1.83{col 46}{space 3}0.067{col 54}{space 4}-.0094285{col 67}{space 3} .2804924
+{txt}{space 7}lwpop {c |}{col 14}{res}{space 2} 5.490376{col 26}{space 2} 3.209499{col 37}{space 1}    1.71{col 46}{space 3}0.087{col 54}{space 4}-.8004701{col 67}{space 3} 11.78122
+{txt}{space 5}lwpop_2 {c |}{col 14}{res}{space 2} 97.24257{col 26}{space 2} 50.25271{col 37}{space 1}    1.94{col 46}{space 3}0.053{col 54}{space 4} -1.25633{col 67}{space 3} 195.7415
+{txt}{space 5}lwpop_3 {c |}{col 14}{res}{space 2} 451.3845{col 26}{space 2} 222.7332{col 37}{space 1}    2.03{col 46}{space 3}0.043{col 54}{space 4} 14.81155{col 67}{space 3} 887.9574
+{txt}{space 4}lwpop_r1 {c |}{col 14}{res}{space 2}-12.10852{col 26}{space 2} 4.325821{col 37}{space 1}   -2.80{col 46}{space 3}0.005{col 54}{space 4}-20.58744{col 67}{space 3}-3.629603
+{txt}{space 4}lwpop_r2 {c |}{col 14}{res}{space 2}-26.30109{col 26}{space 2} 67.60688{col 37}{space 1}   -0.39{col 46}{space 3}0.697{col 54}{space 4}-158.8154{col 67}{space 3} 106.2132
+{txt}{space 4}lwpop_r3 {c |}{col 14}{res}{space 2}-640.8825{col 26}{space 2} 299.0915{col 37}{space 1}   -2.14{col 46}{space 3}0.032{col 54}{space 4}-1227.123{col 67}{space 3}-54.64186
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}  7.10182{col 26}{space 2} .0542735{col 37}{space 1}  130.85{col 46}{space 3}0.000{col 54}{space 4} 6.995441{col 67}{space 3}   7.2082
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} lwpop = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} lwpop_r1 = 0{p_end}
+{p 0 7}{space 1}{text:( 3)}{space 1} lwpop_2 = 0{p_end}
+{p 0 7}{space 1}{text:( 4)}{space 1} lwpop_r2 = 0{p_end}
+{p 0 7}{space 1}{text:( 5)}{space 1} lwpop_3 = 0{p_end}
+{p 0 7}{space 1}{text:( 6)}{space 1} lwpop_r3 = 0{p_end}
+
+{txt}       F(  6, 22128) ={res}    3.16
+{txt}{col 13}Prob > F ={res}    0.0042
+
+{p 0 7}{space 1}{text:( 1)}{space 1} lwpop_2 = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} lwpop_r2 = 0{p_end}
+{p 0 7}{space 1}{text:( 3)}{space 1} lwpop_3 = 0{p_end}
+{p 0 7}{space 1}{text:( 4)}{space 1} lwpop_r3 = 0{p_end}
+
+{txt}       F(  4, 22128) ={res}    4.64
+{txt}{col 13}Prob > F ={res}    0.0010
+
+{p 0 7}{space 1}{text:( 1)}{space 1} lwpop_3 = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} lwpop_r3 = 0{p_end}
+
+{txt}       F(  2, 22128) ={res}    2.50
+{txt}{col 13}Prob > F ={res}    0.0818
+
+{txt}Linear regression                               Number of obs     = {res}    22,604
+                                                {txt}F(7, 22596)       =  {res}    10.16
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.0033
+                                                {txt}Root MSE          =    {res} .16618
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}     ltratea{col 14}{c |} Coefficient{col 26}  std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 7}right {c |}{col 14}{res}{space 2} .0551553{col 26}{space 2}  .008916{col 37}{space 1}    6.19{col 46}{space 3}0.000{col 54}{space 4} .0376793{col 67}{space 3} .0726312
+{txt}{space 7}lwpop {c |}{col 14}{res}{space 2}-1.059767{col 26}{space 2} .3708619{col 37}{space 1}   -2.86{col 46}{space 3}0.004{col 54}{space 4}-1.786682{col 67}{space 3}-.3328519
+{txt}{space 5}lwpop_2 {c |}{col 14}{res}{space 2}-16.25047{col 26}{space 2} 5.702209{col 37}{space 1}   -2.85{col 46}{space 3}0.004{col 54}{space 4}-27.42719{col 67}{space 3}-5.073747
+{txt}{space 5}lwpop_3 {c |}{col 14}{res}{space 2}-72.56512{col 26}{space 2} 24.86032{col 37}{space 1}   -2.92{col 46}{space 3}0.004{col 54}{space 4}-121.2931{col 67}{space 3}-23.83718
+{txt}{space 4}lwpop_r1 {c |}{col 14}{res}{space 2}-.6769915{col 26}{space 2} .5120964{col 37}{space 1}   -1.32{col 46}{space 3}0.186{col 54}{space 4}-1.680736{col 67}{space 3} .3267527
+{txt}{space 4}lwpop_r2 {c |}{col 14}{res}{space 2} 42.56388{col 26}{space 2} 7.943407{col 37}{space 1}    5.36{col 46}{space 3}0.000{col 54}{space 4} 26.99425{col 67}{space 3}  58.1335
+{txt}{space 4}lwpop_r3 {c |}{col 14}{res}{space 2}-35.06029{col 26}{space 2} 34.91213{col 37}{space 1}   -1.00{col 46}{space 3}0.315{col 54}{space 4}-103.4905{col 67}{space 3} 33.36988
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 5.706772{col 26}{space 2} .0064629{col 37}{space 1}  883.00{col 46}{space 3}0.000{col 54}{space 4} 5.694104{col 67}{space 3} 5.719439
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} lwpop = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} lwpop_r1 = 0{p_end}
+{p 0 7}{space 1}{text:( 3)}{space 1} lwpop_2 = 0{p_end}
+{p 0 7}{space 1}{text:( 4)}{space 1} lwpop_r2 = 0{p_end}
+{p 0 7}{space 1}{text:( 5)}{space 1} lwpop_3 = 0{p_end}
+{p 0 7}{space 1}{text:( 6)}{space 1} lwpop_r3 = 0{p_end}
+
+{txt}       F(  6, 22596) ={res}    6.81
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{p 0 7}{space 1}{text:( 1)}{space 1} lwpop_2 = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} lwpop_r2 = 0{p_end}
+{p 0 7}{space 1}{text:( 3)}{space 1} lwpop_3 = 0{p_end}
+{p 0 7}{space 1}{text:( 4)}{space 1} lwpop_r3 = 0{p_end}
+
+{txt}       F(  4, 22596) ={res}    8.54
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{p 0 7}{space 1}{text:( 1)}{space 1} lwpop_3 = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} lwpop_r3 = 0{p_end}
+
+{txt}       F(  2, 22596) ={res}   13.90
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{txt}Linear regression                               Number of obs     = {res}    22,604
+                                                {txt}F(7, 22596)       =  {res}    13.93
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.0046
+                                                {txt}Root MSE          =    {res} .14191
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}     ltrateb{col 14}{c |} Coefficient{col 26}  std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 7}right {c |}{col 14}{res}{space 2} .0587655{col 26}{space 2} .0078439{col 37}{space 1}    7.49{col 46}{space 3}0.000{col 54}{space 4} .0433909{col 67}{space 3} .0741402
+{txt}{space 7}lwpop {c |}{col 14}{res}{space 2}-.7547439{col 26}{space 2}  .324375{col 37}{space 1}   -2.33{col 46}{space 3}0.020{col 54}{space 4}-1.390541{col 67}{space 3}-.1189466
+{txt}{space 5}lwpop_2 {c |}{col 14}{res}{space 2}  -12.053{col 26}{space 2} 4.921121{col 37}{space 1}   -2.45{col 46}{space 3}0.014{col 54}{space 4}-21.69874{col 67}{space 3}-2.407268
+{txt}{space 5}lwpop_3 {c |}{col 14}{res}{space 2}-54.27872{col 26}{space 2} 21.19768{col 37}{space 1}   -2.56{col 46}{space 3}0.010{col 54}{space 4}-95.82763{col 67}{space 3}-12.72982
+{txt}{space 4}lwpop_r1 {c |}{col 14}{res}{space 2}-1.325888{col 26}{space 2} .4427649{col 37}{space 1}   -2.99{col 46}{space 3}0.003{col 54}{space 4}-2.193738{col 67}{space 3}-.4580386
+{txt}{space 4}lwpop_r2 {c |}{col 14}{res}{space 2}  41.2296{col 26}{space 2} 6.830346{col 37}{space 1}    6.04{col 46}{space 3}0.000{col 54}{space 4} 27.84165{col 67}{space 3} 54.61755
+{txt}{space 4}lwpop_r3 {c |}{col 14}{res}{space 2}-61.22399{col 26}{space 2}  29.9233{col 37}{space 1}   -2.05{col 46}{space 3}0.041{col 54}{space 4}-119.8757{col 67}{space 3}-2.572261
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 5.697424{col 26}{space 2} .0058064{col 37}{space 1}  981.23{col 46}{space 3}0.000{col 54}{space 4} 5.686043{col 67}{space 3} 5.708805
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} lwpop = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} lwpop_r1 = 0{p_end}
+{p 0 7}{space 1}{text:( 3)}{space 1} lwpop_2 = 0{p_end}
+{p 0 7}{space 1}{text:( 4)}{space 1} lwpop_r2 = 0{p_end}
+{p 0 7}{space 1}{text:( 5)}{space 1} lwpop_3 = 0{p_end}
+{p 0 7}{space 1}{text:( 6)}{space 1} lwpop_r3 = 0{p_end}
+
+{txt}       F(  6, 22596) ={res}   10.13
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{p 0 7}{space 1}{text:( 1)}{space 1} lwpop_2 = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} lwpop_r2 = 0{p_end}
+{p 0 7}{space 1}{text:( 3)}{space 1} lwpop_3 = 0{p_end}
+{p 0 7}{space 1}{text:( 4)}{space 1} lwpop_r3 = 0{p_end}
+
+{txt}       F(  4, 22596) ={res}   14.23
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{p 0 7}{space 1}{text:( 1)}{space 1} lwpop_3 = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} lwpop_r3 = 0{p_end}
+
+{txt}       F(  2, 22596) ={res}   18.23
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{txt}Linear regression                               Number of obs     = {res}    22,604
+                                                {txt}F(7, 22596)       =  {res}     3.80
+                                                {txt}Prob > F          = {res}    0.0004
+                                                {txt}R-squared         = {res}    0.0012
+                                                {txt}Root MSE          =    {res} .06838
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}     ltratep{col 14}{c |} Coefficient{col 26}  std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 7}right {c |}{col 14}{res}{space 2} .0085548{col 26}{space 2} .0040027{col 37}{space 1}    2.14{col 46}{space 3}0.033{col 54}{space 4} .0007092{col 67}{space 3} .0164004
+{txt}{space 7}lwpop {c |}{col 14}{res}{space 2} .1908725{col 26}{space 2} .1594177{col 37}{space 1}    1.20{col 46}{space 3}0.231{col 54}{space 4}-.1215972{col 67}{space 3} .5033422
+{txt}{space 5}lwpop_2 {c |}{col 14}{res}{space 2} 3.072353{col 26}{space 2} 2.376262{col 37}{space 1}    1.29{col 46}{space 3}0.196{col 54}{space 4}-1.585284{col 67}{space 3} 7.729991
+{txt}{space 5}lwpop_3 {c |}{col 14}{res}{space 2} 12.19184{col 26}{space 2} 10.17687{col 37}{space 1}    1.20{col 46}{space 3}0.231{col 54}{space 4}-7.755534{col 67}{space 3} 32.13921
+{txt}{space 4}lwpop_r1 {c |}{col 14}{res}{space 2}-.7221995{col 26}{space 2} .2191765{col 37}{space 1}   -3.30{col 46}{space 3}0.001{col 54}{space 4}-1.151801{col 67}{space 3}-.2925985
+{txt}{space 4}lwpop_r2 {c |}{col 14}{res}{space 2} 4.796102{col 26}{space 2} 3.326049{col 37}{space 1}    1.44{col 46}{space 3}0.149{col 54}{space 4}-1.723182{col 67}{space 3} 11.31539
+{txt}{space 4}lwpop_r3 {c |}{col 14}{res}{space 2}-43.90403{col 26}{space 2} 14.41763{col 37}{space 1}   -3.05{col 46}{space 3}0.002{col 54}{space 4}-72.16358{col 67}{space 3}-15.64448
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 5.757159{col 26}{space 2} .0029735{col 37}{space 1} 1936.17{col 46}{space 3}0.000{col 54}{space 4}  5.75133{col 67}{space 3} 5.762987
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} lwpop = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} lwpop_r1 = 0{p_end}
+{p 0 7}{space 1}{text:( 3)}{space 1} lwpop_2 = 0{p_end}
+{p 0 7}{space 1}{text:( 4)}{space 1} lwpop_r2 = 0{p_end}
+{p 0 7}{space 1}{text:( 5)}{space 1} lwpop_3 = 0{p_end}
+{p 0 7}{space 1}{text:( 6)}{space 1} lwpop_r3 = 0{p_end}
+
+{txt}       F(  6, 22596) ={res}    3.10
+{txt}{col 13}Prob > F ={res}    0.0049
+
+{p 0 7}{space 1}{text:( 1)}{space 1} lwpop_2 = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} lwpop_r2 = 0{p_end}
+{p 0 7}{space 1}{text:( 3)}{space 1} lwpop_3 = 0{p_end}
+{p 0 7}{space 1}{text:( 4)}{space 1} lwpop_r3 = 0{p_end}
+
+{txt}       F(  4, 22596) ={res}    3.81
+{txt}{col 13}Prob > F ={res}    0.0043
+
+{p 0 7}{space 1}{text:( 1)}{space 1} lwpop_3 = 0{p_end}
+{p 0 7}{space 1}{text:( 2)}{space 1} lwpop_r3 = 0{p_end}
+
+{txt}       F(  2, 22596) ={res}    5.54
+{txt}{col 13}Prob > F ={res}    0.0039
+{txt}
+{com}. 
+. 
+. 
+. ***** Polynomial Plots *****
+. 
+. ***** Figures 1 and 2 *****
+. 
+. use  window15_TALL_wpopdem.dta, clear
+{txt}
+{com}. replace lexptot=lexptot-14.08
+{txt}(46 real changes made)
+
+{com}. graph twoway scatter lexptot clwpop if (right==0), mc(black)  ||  scatter  lexptot clwpop if (right==1), mc(black) || lpoly lexptot clwpop if (right==0), mc(black) deg(1) ||  lpoly  lexptot clwpop if (right==1), mc(black) deg(1) legend(off) ytitle( "Log total expenditures" " ") xtitle( "Log population" )  title( "Figure 1 - Log expenditures and log population" "around normalized thresholds" "window=15%, Epanechnikov kernel") scheme(s1color) saving( fig_W15_coll_allphases_paper.gph, replace)
+{res}{txt}file {bf:fig_W15_coll_allphases_paper.gph} saved
+
+{com}. 
+. use  window30_TALL_wpopdem.dta, clear
+{txt}
+{com}. replace lexptot=lexptot-14.08
+{txt}(90 real changes made)
+
+{com}. graph twoway scatter lexptot clwpop if (right==0), mc(black)  ||  scatter  lexptot clwpop if (right==1), mc(black) || lpoly lexptot clwpop if (right==0), mc(black) deg(1) ||  lpoly  lexptot clwpop if (right==1), mc(black) deg(1) legend(off) ytitle( "Log total expenditures" " ") xtitle( "Log population" )  title( "Figure 2 - Log expenditures and log population" "around normalized thresholds" "window=30%, Epanechnikov kernel") scheme(s1color) saving( fig_W30_coll_allphases_paper.gph, replace)
+{res}{txt}file {bf:fig_W30_coll_allphases_paper.gph} saved
+
+{com}. 
+. 
+. ***** Appendix: Figures 1 and 2 (Data Plots) *****
+. 
+. use  EggerKoethenbuerger_AEJ_Data.dta.dta, clear
+{txt}
+{com}. sort id
+{txt}
+{com}. 
+. gen logpop=ln(pop)
+{txt}
+{com}. gen logexptot=ln(exptot)
+{txt}
+{com}. gen exppc=exptot/pop
+{txt}
+{com}. gen logexppc=ln(exppc)
+{txt}
+{com}. graph twoway scatter logexptot logpop, mc(black) legend(off) ytitle( "Log expenditure") xtitle( "Log population" )  title( "Figure 1 - Log expenditure and log population") scheme(s1color) saving( fig_logexptot_logpop.gph, replace)
+{res}{txt}file {bf:fig_logexptot_logpop.gph} saved
+
+{com}. graph twoway scatter logexppc logpop, mc(black) legend(off) ytitle( "Log per-capita expenditure") xtitle( "Log population" ) title( "Figure 2 - Log per-capita expenditure and log population") scheme(s1color) saving( fig_logexppc_logpop.gph, replace)
+{res}{txt}file {bf:fig_logexppc_logpop.gph} saved
+
+{com}. 
+. 
+. ***** Appendix: Figure 4,5 and 6 *****
+. 
+. use  window20_TALL_wpopdem.dta, clear
+{txt}
+{com}. replace lexptot=lexptot-14.08
+{txt}(60 real changes made)
+
+{com}. graph twoway scatter lexptot clwpop if (right==0), mc(black)  ||  scatter  lexptot clwpop if (right==1), mc(black) || lpoly lexptot clwpop if (right==0), mc(black) deg(1) ||  lpoly  lexptot clwpop if (right==1), mc(black) deg(1) legend(off) ytitle( "Log total expenditures" " ") xtitle( "Log population" )  title( "Figure 4 - Log expenditures and log population" "around normalized thresholds" "window=20%, Epanechnikov kernel") scheme(s1color) saving( fig_W20_coll_allphases.gph, replace)
+{res}{txt}file {bf:fig_W20_coll_allphases.gph} saved
+
+{com}. 
+. use  window25_TALL_wpopdem.dta, clear
+{txt}
+{com}. replace lexptot=lexptot-14.08
+{txt}(76 real changes made)
+
+{com}. graph twoway scatter lexptot clwpop if (right==0), mc(black)  ||  scatter  lexptot clwpop if (right==1), mc(black) || lpoly lexptot clwpop if (right==0), mc(black) deg(1) ||  lpoly  lexptot clwpop if (right==1), mc(black) deg(1) legend(off) ytitle( "Log total expenditures" " ") xtitle( "Log population" )  title( "Figure 5 - Log expenditures and log population" "around normalized thresholds" "window=25%, Epanechnikov kernel") scheme(s1color) saving( fig_W25_coll_allphases.gph, replace)
+{res}{txt}file {bf:fig_W25_coll_allphases.gph} saved
+
+{com}. 
+. use  window30_TALL_wpopdem.dta, clear
+{txt}
+{com}. replace lexptot=lexptot-14.08
+{txt}(90 real changes made)
+
+{com}. graph twoway scatter lexptot clwpop if (right==0), mc(black)  ||  scatter  lexptot clwpop if (right==1), mc(black) || lpoly lexptot clwpop if (right==0), mc(black) deg(1) ||  lpoly  lexptot clwpop if (right==1), mc(black) deg(1) legend(off) ytitle( "Log total expenditures" " ") xtitle( "Log population" )  title( "Figure 6 - Log expenditures and log population" "around normalized thresholds" "window=30%, Epanechnikov kernel") scheme(s1color) saving( fig_W30_coll_allphases_paper.gph, replace)
+{res}{txt}file {bf:fig_W30_coll_allphases_paper.gph} saved
+
+{com}. 
+. 
+. ***** Appendix: Figure 7,8 and 9 *****
+. 
+. use  window15_TALL_wpopdem.dta, clear
+{txt}
+{com}. replace lexptot=lexptot-14.08
+{txt}(46 real changes made)
+
+{com}. graph twoway scatter lexptot clwpop if (right==0), mc(black)  ||  scatter  lexptot clwpop if (right==1), mc(black) || lpoly lexptot clwpop if (right==0), mc(black) deg(1) kernel(gaussian) ||  lpoly  lexptot clwpop if (right==1), mc(black) deg(1) kernel(gaussian) legend(off) ytitle( "Log total expenditures" " ") xtitle( "Log population" )  title( "Figure 7 - Log expenditures and log population" "around normalized thresholds" "window=15%, Gaussian kernel") scheme(s1color) saving( fig_W15_coll_allphases_kgaussian.gph, replace)
+{res}{txt}file {bf:fig_W15_coll_allphases_kgaussian.gph} saved
+
+{com}. graph twoway scatter lexptot clwpop if (right==0), mc(black)  ||  scatter  lexptot clwpop if (right==1), mc(black) || lpoly lexptot clwpop if (right==0), mc(black) deg(1) kernel(parzen) ||  lpoly  lexptot clwpop if (right==1), mc(black) deg(1) kernel(parzen) legend(off) ytitle( "Log total expenditures" " ") xtitle( "Log population" )  title( "Figure 8 - Log expenditures and log population" "around normalized thresholds" "window=15%, Parzen kernel") scheme(s1color) saving( fig_W15_coll_allphases_kparzen.gph, replace)
+{res}{txt}file {bf:fig_W15_coll_allphases_kparzen.gph} saved
+
+{com}. graph twoway scatter lexptot clwpop if (right==0), mc(black)  ||  scatter  lexptot clwpop if (right==1), mc(black) || lpoly lexptot clwpop if (right==0), mc(black) deg(1) kernel(triangle) ||  lpoly  lexptot clwpop if (right==1), mc(black) deg(1) kernel(triangle) legend(off) ytitle( "Log total expenditures" " ") xtitle( "Log population" )  title( "Figure 9 - Log expenditures and log population" "around normalized thresholds" "window=15%, Triangular kernel") scheme(s1color) saving( fig_W15_coll_allphases_ktriangle.gph, replace)
+{res}{txt}file {bf:fig_W15_coll_allphases_ktriangle.gph} saved
+
+{com}. 
+. 
+. ***** Appendix: Figure 10,11 and 12
+. 
+. use  window15_TALL_wpopdem.dta, clear
+{txt}
+{com}. replace lexptot=lexptot-14.08
+{txt}(46 real changes made)
+
+{com}. graph twoway scatter lexptot clwpop if (right==0), mc(black)  ||  scatter  lexptot clwpop if (right==1), mc(black) || lpoly lexptot clwpop if (right==0), mc(black) deg(1) bwidth(0.1) ||  lpoly  lexptot clwpop if (right==1), mc(black) deg(1) bwidth(0.1) legend(off) ytitle( "Log total expenditures" " ") xtitle( "Log population" )  title( "Figure 10 - Log expenditures and log population" "around normalized thresholds" "window=15%, bandwidth=0.10") scheme(s1color) saving( fig_W15_coll_allphases_bw10.gph, replace)
+{res}{txt}file {bf:fig_W15_coll_allphases_bw10.gph} saved
+
+{com}. graph twoway scatter lexptot clwpop if (right==0), mc(black)  ||  scatter  lexptot clwpop if (right==1), mc(black) || lpoly lexptot clwpop if (right==0), mc(black) deg(1) bwidth(0.05) ||  lpoly  lexptot clwpop if (right==1), mc(black) deg(1) bwidth(0.05) legend(off) ytitle( "Log total expenditures" " ") xtitle( "Log population" )  title( "Figure 11 - Log expenditures and log population" "around normalized thresholds" "window=15%, bandwidth=0.05") scheme(s1color) saving( fig_W15_coll_allphases_bw05.gph, replace)
+{res}{txt}file {bf:fig_W15_coll_allphases_bw05.gph} saved
+
+{com}. graph twoway scatter lexptot clwpop if (right==0), mc(black)  ||  scatter  lexptot clwpop if (right==1), mc(black) || lpoly lexptot clwpop if (right==0), mc(black) deg(1) bwidth(0.02) ||  lpoly  lexptot clwpop if (right==1), mc(black) deg(1) bwidth(0.02) legend(off) ytitle( "Log total expenditures" " ") xtitle( "Log population" )  title( "Figure 12 - Log expenditures and log population" "around normalized thresholds" "window=15%, bandwidth=0.02") scheme(s1color) saving( fig_W15_coll_allphases_bw02.gph, replace)
+{res}{txt}file {bf:fig_W15_coll_allphases_bw02.gph} saved
+
+{com}. 
+. 
+. ***** Appendix: Figure 13 - 16 (Placebo Effects) *****
+. 
+. use  window15_TALL_wpopdem.dta, clear
+{txt}
+{com}. replace lexptot=lexptot-14.08
+{txt}(46 real changes made)
+
+{com}. graph twoway scatter lexptot clwpop if (right==0&clwpop>-0.12&clwpop<=-0.06), mc(black)  ||  scatter  lexptot clwpop if (right==0&clwpop>-0.06), mc(black) || lpoly lexptot clwpop if (right==0&clwpop>-0.12&clwpop<=-0.06), mc(black) deg(1) ||  lpoly  lexptot clwpop if (right==0&clwpop>-0.06), mc(black) deg(1) legend(off) ytitle( "Log total expenditures" " ") xtitle( "Log population" )  title( "Figure 13 - Log expenditures and log population" "placebo treatment to the left of normalized" "thresholds (-0.06) - Epanechnikov kernel") scheme(s1color) saving( fig_placa_W15_coll_allphases.gph, replace)
+{res}{txt}file {bf:fig_placa_W15_coll_allphases.gph} saved
+
+{com}. graph twoway scatter lexptot clwpop if (right==1&clwpop>0&clwpop<=0.06), mc(black)  ||  scatter  lexptot clwpop if (right==1&clwpop>0.06&clwpop<0.12), mc(black) || lpoly lexptot clwpop if (right==1&clwpop>0&clwpop<=0.06), mc(black) deg(1) ||  lpoly  lexptot clwpop if (right==1&clwpop>0.06&clwpop<0.12), mc(black) deg(1) legend(off) ytitle( "Log total expenditures" " ") xtitle( "Log population" )  title( "Figure 14 - Log expenditures and log population" "placebo treatment to the right of normalized" "thresholds (+0.06) - Epanechnikov kernel") scheme(s1color) saving( fig_placb_W15_coll_allphases.gph, replace)
+{res}{txt}file {bf:fig_placb_W15_coll_allphases.gph} saved
+
+{com}. graph twoway scatter lexptot clwpop if (right==0&clwpop>-0.075&clwpop<=-0.03), mc(black)  ||  scatter  lexptot clwpop if (right==0&clwpop>=-0.035), mc(black) || lpoly lexptot clwpop if (right==0&clwpop>-0.075&clwpop<=-0.03), mc(black) deg(1) ||  lpoly  lexptot clwpop if (right==0&clwpop>=-0.035), mc(black) deg(1) legend(off) ytitle( "Log total expenditures" " ") xtitle( "Log population" )  title( "Figure 15 - Log expenditures and log population" "placebo treatment to the left of normalized" "thresholds (-0.035) - Epanechnikov kernel") scheme(s1color) saving( fig_placc_W15_coll_allphases.gph, replace)
+{res}{txt}file {bf:fig_placc_W15_coll_allphases.gph} saved
+
+{com}. graph twoway scatter lexptot clwpop if (right==1&clwpop<=0.035), mc(black)  ||  scatter  lexptot clwpop if (right==1&clwpop>0.035&clwpop<0.075), mc(black) || lpoly lexptot clwpop if (right==1&clwpop<0.035), mc(black) deg(1) ||  lpoly  lexptot clwpop if (right==1&clwpop>0.03&clwpop<0.075), mc(black) deg(1) legend(off) ytitle( "Log total expenditures" " ") xtitle( "Log population" )  title( "Figure 16 - Log expenditures and log population" "placebo treatment to the right of normalized" "thresholds (+0.035) - Epanechnikov kernel") scheme(s1color) saving( fig_placd_W15_coll_allphases.gph, replace)
+{res}{txt}file {bf:fig_placd_W15_coll_allphases.gph} saved
+
+{com}. 
+. 
+. exit
+
+{txt}end of do-file

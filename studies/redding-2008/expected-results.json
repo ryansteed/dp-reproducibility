@@ -1,0 +1,12 @@
+[
+  {
+    "id": "division-growth",
+    "est": -0.746,
+    "se": 0.182
+  },
+  {
+    "id": "division-growth-small",
+    "est": -1.097,
+    "se": 0.260
+  }
+]

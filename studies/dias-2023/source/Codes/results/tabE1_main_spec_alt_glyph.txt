@@ -1,0 +1,28 @@
+		(1)	(2)	(3)	(4)	(5)
+				0 until 2003		0 until 2003
+VARIABLES	LABELS	Main Measure	Alternate Imputation	marg glyph distr w/ soy	total glyph distr w/ soy	total glyph distr w/ soy
+						
+glyph_soy_upstream	Glyphosate Upstream	39.012				
+		(14.814)***				
+potentialAMC	Instrument: Direct Effect	0.511	0.509	0.525	0.530	0.489
+		(2.557)	(2.554)	(2.578)	(2.553)	(2.541)
+glyph_soy_upstream_herbicides	Glyph Up: Imputation using herbicides		37.455			
+			(14.244)***			
+glyph_soy_upstream_0until2003	Glyph Up: 0 until 2003, marginal glyph allocated using soy			48.691		
+				(18.820)***		
+glyph_soy_upstream_distrsoy	Glyph Up: total glyph allocated using soy				39.117	
+					(15.399)**	
+glyph_soy_up_0til03distsoy	Glyph Up: 0 until 2003, total glyph allocated using soy					19.634
+						(7.602)***
+						
+Observations		12,309	12,309	12,309	12,309	12,309
+Number of AMC		1,119	1,119	1,119	1,119	1,119
+AMC FE		Yes	Yes	Yes	Yes	Yes
+UF-Year FE		Yes	Yes	Yes	Yes	Yes
+Controls		Yes	Yes	Yes	Yes	Yes
+F-stat		51.37	50.96	45.93	44.23	44.93
+Rejection Rate (Lee et al. 2020)		0.0271	0.0273	0.0306	0.0330	0.0311
+IMR_baseline_mean		18.00	18.00	18.00	18.00	18.00
+effect		0.881	0.880	0.864	0.540	0.860
+Robust standard errors in parentheses						
+*** p<0.01, ** p<0.05, * p<0.1						

@@ -1,0 +1,32 @@
+Average probability of conflict - cross-cells		
+	(1)	(2)
+VARIABLES	With full controls	Placebo: dist LNC
+		
+avg_logcapdist	-0.00139	
+	[0.00952]	
+avg_loggcppc	-0.0142*	-0.0165
+	[0.00808]	[0.0168]
+avg_logpop	0.00233**	0.00800**
+	[0.00111]	[0.00378]
+imr	4.15e-05*	3.37e-05
+	[2.46e-05]	[2.22e-05]
+logttime	-0.00540	-0.0155**
+	[0.00376]	[0.00740]
+logcellarea	-0.00838	0.00698
+	[0.00619]	[0.00930]
+avg_logdist_LNC	0.00325	0.00590
+	[0.00568]	[0.00692]
+mountain2000	0.00308	-0.0191
+	[0.00741]	[0.0191]
+ycoord	-0.000334	-0.00342
+	[0.000427]	[0.00304]
+avg_degtemper	-0.000982	-0.00371*
+	[0.000595]	[0.00189]
+avg_prec	4.82e-06	-1.24e-05
+	[9.30e-06]	[3.63e-05]
+		
+Observations	54,177	14,676
+R-squared	0.828	0.865
+Country FEs	Yes	Yes
+Robust standard errors in brackets		
+*** p<0.01, ** p<0.05, * p<0.1		

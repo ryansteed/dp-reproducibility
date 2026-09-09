@@ -1,0 +1,1328 @@
+Table 5, column 1, panels A and B, Log murders per 1000 pop
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres           -0.148           -0.128 *  
+                  [0.105]          [0.062]    
+                                              
+r2                   0.76             0.87    
+N                     391              391    
+Table 5, columns 2 and 3
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.068            0.195    
+                  [0.175]          [0.125]    
+                                              
+r2                   0.78             0.81    
+N                      32               32    
+Table 5, columns 4 and 5, panels A and B, dep var: lpmurder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.089           -0.049    
+                  [0.089]          [0.098]    
+                                              
+r2                   0.89             0.91    
+N                     315              315    
+Table 5, columns 4 and 5, panels A and B, dep var: sh_murder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.013            0.003    
+                  [0.009]          [0.008]    
+                                              
+r2                   0.76             0.81    
+N                     337              337    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_f
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.055            0.060    
+                  [0.070]          [0.073]    
+                                              
+r2                   0.96             0.97    
+N                     390              390    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_m
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.069            0.068    
+                  [0.054]          [0.063]    
+                                              
+r2                   0.97             0.97    
+N                     390              390    
+Table 5, column 1, panels A and B, Log murders per 1000 pop
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres           -0.148           -0.128 *  
+                  [0.105]          [0.062]    
+                                              
+r2                   0.76             0.87    
+N                     391              391    
+Table 5, columns 2 and 3
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.068            0.195    
+                  [0.175]          [0.125]    
+                                              
+r2                   0.78             0.81    
+N                      32               32    
+Table 5, columns 4 and 5, panels A and B, dep var: lpmurder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.089           -0.049    
+                  [0.089]          [0.098]    
+                                              
+r2                   0.89             0.91    
+N                     315              315    
+Table 5, columns 4 and 5, panels A and B, dep var: sh_murder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.013            0.003    
+                  [0.009]          [0.008]    
+                                              
+r2                   0.76             0.81    
+N                     337              337    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_f
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.055            0.060    
+                  [0.070]          [0.073]    
+                                              
+r2                   0.96             0.97    
+N                     390              390    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_m
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.069            0.068    
+                  [0.054]          [0.063]    
+                                              
+r2                   0.97             0.97    
+N                     390              390    
+Table 5, column 1, panels A and B, Log murders per 1000 pop
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres           -0.148           -0.128 *  
+                  [0.105]          [0.062]    
+                                              
+r2                   0.76             0.87    
+N                     391              391    
+Table 5, columns 2 and 3
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.068            0.195    
+                  [0.175]          [0.125]    
+                                              
+r2                   0.78             0.81    
+N                      32               32    
+Table 5, columns 4 and 5, panels A and B, dep var: lpmurder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.089           -0.049    
+                  [0.089]          [0.098]    
+                                              
+r2                   0.89             0.91    
+N                     315              315    
+Table 5, columns 4 and 5, panels A and B, dep var: sh_murder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.013            0.003    
+                  [0.009]          [0.008]    
+                                              
+r2                   0.76             0.81    
+N                     337              337    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_f
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.055            0.060    
+                  [0.070]          [0.073]    
+                                              
+r2                   0.96             0.97    
+N                     390              390    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_m
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.069            0.068    
+                  [0.054]          [0.063]    
+                                              
+r2                   0.97             0.97    
+N                     390              390    
+Table 5, column 1, panels A and B, Log murders per 1000 pop
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres           -0.148           -0.128 *  
+                  [0.105]          [0.062]    
+                                              
+r2                   0.76             0.87    
+N                     391              391    
+Table 5, columns 2 and 3
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.068            0.195    
+                  [0.175]          [0.125]    
+                                              
+r2                   0.78             0.81    
+N                      32               32    
+Table 5, columns 4 and 5, panels A and B, dep var: lpmurder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.089           -0.049    
+                  [0.089]          [0.098]    
+                                              
+r2                   0.89             0.91    
+N                     315              315    
+Table 5, columns 4 and 5, panels A and B, dep var: sh_murder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.013            0.003    
+                  [0.009]          [0.008]    
+                                              
+r2                   0.76             0.81    
+N                     337              337    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_f
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.055            0.060    
+                  [0.070]          [0.073]    
+                                              
+r2                   0.96             0.97    
+N                     390              390    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_m
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.069            0.068    
+                  [0.054]          [0.063]    
+                                              
+r2                   0.97             0.97    
+N                     390              390    
+Table 5, column 1, panels A and B, Log murders per 1000 pop
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres           -0.148           -0.128 *  
+                  [0.105]          [0.062]    
+                                              
+r2                   0.76             0.87    
+N                     391              391    
+Table 5, columns 2 and 3
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.068            0.195    
+                  [0.175]          [0.125]    
+                                              
+r2                   0.78             0.81    
+N                      32               32    
+Table 5, columns 4 and 5, panels A and B, dep var: lpmurder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.089           -0.049    
+                  [0.089]          [0.098]    
+                                              
+r2                   0.89             0.91    
+N                     315              315    
+Table 5, columns 4 and 5, panels A and B, dep var: sh_murder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.013            0.003    
+                  [0.009]          [0.008]    
+                                              
+r2                   0.76             0.81    
+N                     337              337    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_f
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.055            0.060    
+                  [0.070]          [0.073]    
+                                              
+r2                   0.96             0.97    
+N                     390              390    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_m
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.069            0.068    
+                  [0.054]          [0.063]    
+                                              
+r2                   0.97             0.97    
+N                     390              390    
+Table 5, column 1, panels A and B, Log murders per 1000 pop
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres           -0.148           -0.128 *  
+                  [0.105]          [0.062]    
+                                              
+r2                   0.76             0.87    
+N                     391              391    
+Table 5, columns 2 and 3
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.068            0.195    
+                  [0.175]          [0.125]    
+                                              
+r2                   0.78             0.81    
+N                      32               32    
+Table 5, columns 4 and 5, panels A and B, dep var: lpmurder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.089           -0.049    
+                  [0.089]          [0.098]    
+                                              
+r2                   0.89             0.91    
+N                     315              315    
+Table 5, columns 4 and 5, panels A and B, dep var: sh_murder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.013            0.003    
+                  [0.009]          [0.008]    
+                                              
+r2                   0.76             0.81    
+N                     337              337    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_f
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.055            0.060    
+                  [0.070]          [0.073]    
+                                              
+r2                   0.96             0.97    
+N                     390              390    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_m
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.069            0.068    
+                  [0.054]          [0.063]    
+                                              
+r2                   0.97             0.97    
+N                     390              390    
+Table 5, column 1, panels A and B, Log murders per 1000 pop
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres           -0.148           -0.128 *  
+                  [0.105]          [0.062]    
+                                              
+r2                   0.76             0.87    
+N                     391              391    
+Table 5, columns 2 and 3
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.068            0.195    
+                  [0.175]          [0.125]    
+                                              
+r2                   0.78             0.81    
+N                      32               32    
+Table 5, columns 4 and 5, panels A and B, dep var: lpmurder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.089           -0.049    
+                  [0.089]          [0.098]    
+                                              
+r2                   0.89             0.91    
+N                     315              315    
+Table 5, columns 4 and 5, panels A and B, dep var: sh_murder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.013            0.003    
+                  [0.009]          [0.008]    
+                                              
+r2                   0.76             0.81    
+N                     337              337    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_f
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.055            0.060    
+                  [0.070]          [0.073]    
+                                              
+r2                   0.96             0.97    
+N                     390              390    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_m
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.069            0.068    
+                  [0.054]          [0.063]    
+                                              
+r2                   0.97             0.97    
+N                     390              390    
+Table 5, column 1, panels A and B, Log murders per 1000 pop
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres           -0.148           -0.128 *  
+                  [0.105]          [0.062]    
+                                              
+r2                   0.76             0.87    
+N                     391              391    
+Table 5, columns 2 and 3
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.068            0.195    
+                  [0.175]          [0.125]    
+                                              
+r2                   0.78             0.81    
+N                      32               32    
+Table 5, columns 4 and 5, panels A and B, dep var: lpmurder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.089           -0.049    
+                  [0.089]          [0.098]    
+                                              
+r2                   0.89             0.91    
+N                     315              315    
+Table 5, columns 4 and 5, panels A and B, dep var: sh_murder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.013            0.003    
+                  [0.009]          [0.008]    
+                                              
+r2                   0.76             0.81    
+N                     337              337    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_f
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.055            0.060    
+                  [0.070]          [0.073]    
+                                              
+r2                   0.96             0.97    
+N                     390              390    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_m
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.069            0.068    
+                  [0.054]          [0.063]    
+                                              
+r2                   0.97             0.97    
+N                     390              390    
+Table 5, column 1, panels A and B, Log murders per 1000 pop
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres           -0.148           -0.128 *  
+                  [0.105]          [0.062]    
+                                              
+r2                   0.76             0.87    
+N                     391              391    
+Table 5, columns 2 and 3
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.068            0.195    
+                  [0.175]          [0.125]    
+                                              
+r2                   0.78             0.81    
+N                      32               32    
+Table 5, columns 4 and 5, panels A and B, dep var: lpmurder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.089           -0.049    
+                  [0.089]          [0.098]    
+                                              
+r2                   0.89             0.91    
+N                     315              315    
+Table 5, columns 4 and 5, panels A and B, dep var: sh_murder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.013            0.003    
+                  [0.009]          [0.008]    
+                                              
+r2                   0.76             0.81    
+N                     337              337    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_f
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.055            0.060    
+                  [0.070]          [0.073]    
+                                              
+r2                   0.96             0.97    
+N                     390              390    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_m
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.069            0.068    
+                  [0.054]          [0.063]    
+                                              
+r2                   0.97             0.97    
+N                     390              390    
+Table 5, column 1, panels A and B, Log murders per 1000 pop
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres           -0.148           -0.128 *  
+                  [0.105]          [0.062]    
+                                              
+r2                   0.76             0.87    
+N                     391              391    
+Table 5, columns 2 and 3
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.068            0.195    
+                  [0.175]          [0.125]    
+                                              
+r2                   0.78             0.81    
+N                      32               32    
+Table 5, columns 4 and 5, panels A and B, dep var: lpmurder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.089           -0.049    
+                  [0.089]          [0.098]    
+                                              
+r2                   0.89             0.91    
+N                     315              315    
+Table 5, columns 4 and 5, panels A and B, dep var: sh_murder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.013            0.003    
+                  [0.009]          [0.008]    
+                                              
+r2                   0.76             0.81    
+N                     337              337    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_f
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.055            0.060    
+                  [0.070]          [0.073]    
+                                              
+r2                   0.96             0.97    
+N                     390              390    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_m
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.069            0.068    
+                  [0.054]          [0.063]    
+                                              
+r2                   0.97             0.97    
+N                     390              390    
+Table 5, column 1, panels A and B, Log murders per 1000 pop
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres           -0.148           -0.128 *  
+                  [0.105]          [0.062]    
+                                              
+r2                   0.76             0.87    
+N                     391              391    
+Table 5, columns 2 and 3
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.068            0.195    
+                  [0.175]          [0.125]    
+                                              
+r2                   0.78             0.81    
+N                      32               32    
+Table 5, columns 4 and 5, panels A and B, dep var: lpmurder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.089           -0.049    
+                  [0.089]          [0.098]    
+                                              
+r2                   0.89             0.91    
+N                     315              315    
+Table 5, columns 4 and 5, panels A and B, dep var: sh_murder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.013            0.003    
+                  [0.009]          [0.008]    
+                                              
+r2                   0.76             0.81    
+N                     337              337    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_f
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.055            0.060    
+                  [0.070]          [0.073]    
+                                              
+r2                   0.96             0.97    
+N                     390              390    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_m
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.069            0.068    
+                  [0.054]          [0.063]    
+                                              
+r2                   0.97             0.97    
+N                     390              390    
+Table 5, column 1, panels A and B, Log murders per 1000 pop
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres           -0.148           -0.128 *  
+                  [0.105]          [0.062]    
+                                              
+r2                   0.76             0.87    
+N                     391              391    
+Table 5, columns 2 and 3
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.068            0.195    
+                  [0.175]          [0.125]    
+                                              
+r2                   0.78             0.81    
+N                      32               32    
+Table 5, columns 4 and 5, panels A and B, dep var: lpmurder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.089           -0.049    
+                  [0.089]          [0.098]    
+                                              
+r2                   0.89             0.91    
+N                     315              315    
+Table 5, columns 4 and 5, panels A and B, dep var: sh_murder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.013            0.003    
+                  [0.009]          [0.008]    
+                                              
+r2                   0.76             0.81    
+N                     337              337    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_f
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.055            0.060    
+                  [0.070]          [0.073]    
+                                              
+r2                   0.96             0.97    
+N                     390              390    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_m
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.069            0.068    
+                  [0.054]          [0.063]    
+                                              
+r2                   0.97             0.97    
+N                     390              390    
+Table 5, column 1, panels A and B, Log murders per 1000 pop
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres           -0.148           -0.128 *  
+                  [0.105]          [0.062]    
+                                              
+r2                   0.76             0.87    
+N                     391              391    
+Table 5, columns 2 and 3
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.068            0.195    
+                  [0.175]          [0.125]    
+                                              
+r2                   0.78             0.81    
+N                      32               32    
+Table 5, columns 4 and 5, panels A and B, dep var: lpmurder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.089           -0.049    
+                  [0.089]          [0.098]    
+                                              
+r2                   0.89             0.91    
+N                     315              315    
+Table 5, columns 4 and 5, panels A and B, dep var: sh_murder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.013            0.003    
+                  [0.009]          [0.008]    
+                                              
+r2                   0.76             0.81    
+N                     337              337    
+Table 5, column 1, panels A and B, Log murders per 1000 pop
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres           -0.148           -0.128 *  
+                  [0.105]          [0.062]    
+                                              
+r2                   0.76             0.87    
+N                     391              391    
+Table 5, columns 2 and 3
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.068            0.195    
+                  [0.175]          [0.125]    
+                                              
+r2                   0.78             0.81    
+N                      32               32    
+Table 5, columns 4 and 5, panels A and B, dep var: lpmurder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.089           -0.049    
+                  [0.089]          [0.098]    
+                                              
+r2                   0.89             0.91    
+N                     315              315    
+Table 5, columns 4 and 5, panels A and B, dep var: sh_murder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.013            0.003    
+                  [0.009]          [0.008]    
+                                              
+r2                   0.76             0.81    
+N                     337              337    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_f
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.055            0.060    
+                  [0.070]          [0.073]    
+                                              
+r2                   0.96             0.97    
+N                     390              390    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_m
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.069            0.068    
+                  [0.054]          [0.063]    
+                                              
+r2                   0.97             0.97    
+N                     390              390    
+Table 5, column 1, panels A and B, Log murders per 1000 pop
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres           -0.148           -0.128 *  
+                  [0.105]          [0.062]    
+                                              
+r2                   0.76             0.87    
+N                     391              391    
+Table 5, columns 2 and 3
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.068            0.195    
+                  [0.175]          [0.125]    
+                                              
+r2                   0.78             0.81    
+N                      32               32    
+Table 5, columns 4 and 5, panels A and B, dep var: lpmurder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.089           -0.049    
+                  [0.089]          [0.098]    
+                                              
+r2                   0.89             0.91    
+N                     315              315    
+Table 5, columns 4 and 5, panels A and B, dep var: sh_murder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.013            0.003    
+                  [0.009]          [0.008]    
+                                              
+r2                   0.76             0.81    
+N                     337              337    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_f
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.055            0.060    
+                  [0.070]          [0.073]    
+                                              
+r2                   0.96             0.97    
+N                     390              390    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_m
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.069            0.068    
+                  [0.054]          [0.063]    
+                                              
+r2                   0.97             0.97    
+N                     390              390    
+Table 5, column 1, panels A and B, Log murders per 1000 pop
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres           -0.148           -0.128 *  
+                  [0.105]          [0.062]    
+                                              
+r2                   0.76             0.87    
+N                     391              391    
+Table 5, columns 2 and 3
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.068            0.195    
+                  [0.175]          [0.125]    
+                                              
+r2                   0.78             0.81    
+N                      32               32    
+Table 5, columns 4 and 5, panels A and B, dep var: lpmurder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.089           -0.049    
+                  [0.089]          [0.098]    
+                                              
+r2                   0.89             0.91    
+N                     315              315    
+Table 5, columns 4 and 5, panels A and B, dep var: sh_murder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.013            0.003    
+                  [0.009]          [0.008]    
+                                              
+r2                   0.76             0.81    
+N                     337              337    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_f
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.055            0.060    
+                  [0.070]          [0.073]    
+                                              
+r2                   0.96             0.97    
+N                     390              390    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_m
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.069            0.068    
+                  [0.054]          [0.063]    
+                                              
+r2                   0.97             0.97    
+N                     390              390    
+Table 5, column 1, panels A and B, Log murders per 1000 pop
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres           -0.148           -0.128 *  
+                  [0.105]          [0.062]    
+                                              
+r2                   0.76             0.87    
+N                     391              391    
+Table 5, columns 2 and 3
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.068            0.195    
+                  [0.175]          [0.125]    
+                                              
+r2                   0.78             0.81    
+N                      32               32    
+Table 5, columns 4 and 5, panels A and B, dep var: lpmurder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.089           -0.049    
+                  [0.089]          [0.098]    
+                                              
+r2                   0.89             0.91    
+N                     315              315    
+Table 5, columns 4 and 5, panels A and B, dep var: sh_murder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.013            0.003    
+                  [0.009]          [0.008]    
+                                              
+r2                   0.76             0.81    
+N                     337              337    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_f
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.055            0.060    
+                  [0.070]          [0.073]    
+                                              
+r2                   0.96             0.97    
+N                     390              390    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_m
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.069            0.068    
+                  [0.054]          [0.063]    
+                                              
+r2                   0.97             0.97    
+N                     390              390    
+Table 5, column 1, panels A and B, Log murders per 1000 pop
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres           -0.148           -0.128 *  
+                  [0.105]          [0.062]    
+                                              
+r2                   0.76             0.87    
+N                     391              391    
+Table 5, columns 2 and 3
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.068            0.195    
+                  [0.175]          [0.125]    
+                                              
+r2                   0.78             0.81    
+N                      32               32    
+Table 5, columns 4 and 5, panels A and B, dep var: lpmurder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.089           -0.049    
+                  [0.089]          [0.098]    
+                                              
+r2                   0.89             0.91    
+N                     315              315    
+Table 5, columns 4 and 5, panels A and B, dep var: sh_murder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.013            0.003    
+                  [0.009]          [0.008]    
+                                              
+r2                   0.76             0.81    
+N                     337              337    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_f
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.055            0.060    
+                  [0.070]          [0.073]    
+                                              
+r2                   0.96             0.97    
+N                     390              390    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_m
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.069            0.068    
+                  [0.054]          [0.063]    
+                                              
+r2                   0.97             0.97    
+N                     390              390    
+Table 5, column 1, panels A and B, Log murders per 1000 pop
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres           -0.148           -0.128 *  
+                  [0.105]          [0.062]    
+                                              
+r2                   0.76             0.87    
+N                     391              391    
+Table 5, columns 2 and 3
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.068            0.195    
+                  [0.175]          [0.125]    
+                                              
+r2                   0.78             0.81    
+N                      32               32    
+Table 5, columns 4 and 5, panels A and B, dep var: lpmurder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.089           -0.049    
+                  [0.089]          [0.098]    
+                                              
+r2                   0.89             0.91    
+N                     315              315    
+Table 5, columns 4 and 5, panels A and B, dep var: sh_murder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.013            0.003    
+                  [0.009]          [0.008]    
+                                              
+r2                   0.76             0.81    
+N                     337              337    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_f
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.055            0.060    
+                  [0.070]          [0.073]    
+                                              
+r2                   0.96             0.97    
+N                     390              390    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_m
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.069            0.068    
+                  [0.054]          [0.063]    
+                                              
+r2                   0.97             0.97    
+N                     390              390    
+Table 5, column 1, panels A and B, Log murders per 1000 pop
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres           -0.148           -0.128 *  
+                  [0.105]          [0.062]    
+                                              
+r2                   0.76             0.87    
+N                     391              391    
+Table 5, columns 2 and 3
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.068            0.195    
+                  [0.175]          [0.125]    
+                                              
+r2                   0.78             0.81    
+N                      32               32    
+Table 5, columns 4 and 5, panels A and B, dep var: lpmurder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.089           -0.049    
+                  [0.089]          [0.098]    
+                                              
+r2                   0.89             0.91    
+N                     315              315    
+Table 5, columns 4 and 5, panels A and B, dep var: sh_murder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.013            0.003    
+                  [0.009]          [0.008]    
+                                              
+r2                   0.76             0.81    
+N                     337              337    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_f
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.055            0.060    
+                  [0.070]          [0.073]    
+                                              
+r2                   0.96             0.97    
+N                     390              390    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_m
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.069            0.068    
+                  [0.054]          [0.063]    
+                                              
+r2                   0.97             0.97    
+N                     390              390    
+Table 5, column 1, panels A and B, Log murders per 1000 pop
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres           -0.148           -0.128 *  
+                  [0.105]          [0.062]    
+                                              
+r2                   0.76             0.87    
+N                     391              391    
+Table 5, columns 2 and 3
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.068            0.195    
+                  [0.175]          [0.125]    
+                                              
+r2                   0.78             0.81    
+N                      32               32    
+Table 5, columns 4 and 5, panels A and B, dep var: lpmurder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.089           -0.049    
+                  [0.089]          [0.098]    
+                                              
+r2                   0.89             0.91    
+N                     315              315    
+Table 5, columns 4 and 5, panels A and B, dep var: sh_murder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.013            0.003    
+                  [0.009]          [0.008]    
+                                              
+r2                   0.76             0.81    
+N                     337              337    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_f
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.055            0.060    
+                  [0.070]          [0.073]    
+                                              
+r2                   0.96             0.97    
+N                     390              390    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_m
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.069            0.068    
+                  [0.054]          [0.063]    
+                                              
+r2                   0.97             0.97    
+N                     390              390    
+Table 5, column 1, panels A and B, Log murders per 1000 pop
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres           -0.148           -0.128 *  
+                  [0.105]          [0.062]    
+                                              
+r2                   0.76             0.87    
+N                     391              391    
+Table 5, columns 2 and 3
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.068            0.195    
+                  [0.175]          [0.125]    
+                                              
+r2                   0.78             0.81    
+N                      32               32    
+Table 5, columns 4 and 5, panels A and B, dep var: lpmurder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.089           -0.049    
+                  [0.089]          [0.098]    
+                                              
+r2                   0.89             0.91    
+N                     315              315    
+Table 5, columns 4 and 5, panels A and B, dep var: sh_murder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.013            0.003    
+                  [0.009]          [0.008]    
+                                              
+r2                   0.76             0.81    
+N                     337              337    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_f
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.055            0.060    
+                  [0.070]          [0.073]    
+                                              
+r2                   0.96             0.97    
+N                     390              390    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_m
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.069            0.068    
+                  [0.054]          [0.063]    
+                                              
+r2                   0.97             0.97    
+N                     390              390    
+Table 5, column 1, panels A and B, Log murders per 1000 pop
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres           -0.148           -0.128 *  
+                  [0.105]          [0.062]    
+                                              
+r2                   0.76             0.87    
+N                     391              391    
+Table 5, columns 2 and 3
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.068            0.195    
+                  [0.175]          [0.125]    
+                                              
+r2                   0.78             0.81    
+N                      32               32    
+Table 5, columns 4 and 5, panels A and B, dep var: lpmurder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.089           -0.049    
+                  [0.089]          [0.098]    
+                                              
+r2                   0.89             0.91    
+N                     315              315    
+Table 5, columns 4 and 5, panels A and B, dep var: sh_murder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.013            0.003    
+                  [0.009]          [0.008]    
+                                              
+r2                   0.76             0.81    
+N                     337              337    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_f
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.055            0.060    
+                  [0.070]          [0.073]    
+                                              
+r2                   0.96             0.97    
+N                     390              390    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_m
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.069            0.068    
+                  [0.054]          [0.063]    
+                                              
+r2                   0.97             0.97    
+N                     390              390    
+Table 5, column 1, panels A and B, Log murders per 1000 pop
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres           -0.148           -0.128 *  
+                  [0.105]          [0.062]    
+                                              
+r2                   0.76             0.87    
+N                     391              391    
+Table 5, columns 2 and 3
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.068            0.195    
+                  [0.175]          [0.125]    
+                                              
+r2                   0.78             0.81    
+N                      32               32    
+Table 5, columns 4 and 5, panels A and B, dep var: lpmurder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.089           -0.049    
+                  [0.089]          [0.098]    
+                                              
+r2                   0.89             0.91    
+N                     315              315    
+Table 5, columns 4 and 5, panels A and B, dep var: sh_murder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.013            0.003    
+                  [0.009]          [0.008]    
+                                              
+r2                   0.76             0.81    
+N                     337              337    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_f
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.055            0.060    
+                  [0.070]          [0.073]    
+                                              
+r2                   0.96             0.97    
+N                     390              390    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_m
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.069            0.068    
+                  [0.054]          [0.063]    
+                                              
+r2                   0.97             0.97    
+N                     390              390    
+Table 5, column 1, panels A and B, Log murders per 1000 pop
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres           -0.148           -0.128 *  
+                  [0.105]          [0.062]    
+                                              
+r2                   0.76             0.87    
+N                     391              391    
+Table 5, columns 2 and 3
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.068            0.195    
+                  [0.175]          [0.125]    
+                                              
+r2                   0.78             0.81    
+N                      32               32    
+Table 5, columns 4 and 5, panels A and B, dep var: lpmurder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.089           -0.049    
+                  [0.089]          [0.098]    
+                                              
+r2                   0.89             0.91    
+N                     315              315    
+Table 5, columns 4 and 5, panels A and B, dep var: sh_murder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.013            0.003    
+                  [0.009]          [0.008]    
+                                              
+r2                   0.76             0.81    
+N                     337              337    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_f
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.055            0.060    
+                  [0.070]          [0.073]    
+                                              
+r2                   0.96             0.97    
+N                     390              390    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_m
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.069            0.068    
+                  [0.054]          [0.063]    
+                                              
+r2                   0.97             0.97    
+N                     390              390    
+Table 5, column 1, panels A and B, Log murders per 1000 pop
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres           -0.148           -0.128 *  
+                  [0.105]          [0.062]    
+                                              
+r2                   0.76             0.87    
+N                     391              391    
+Table 5, columns 2 and 3
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.068            0.195    
+                  [0.175]          [0.125]    
+                                              
+r2                   0.78             0.81    
+N                      32               32    
+Table 5, columns 4 and 5, panels A and B, dep var: lpmurder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.089           -0.049    
+                  [0.089]          [0.098]    
+                                              
+r2                   0.89             0.91    
+N                     315              315    
+Table 5, columns 4 and 5, panels A and B, dep var: sh_murder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.013            0.003    
+                  [0.009]          [0.008]    
+                                              
+r2                   0.76             0.81    
+N                     337              337    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_f
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.055            0.060    
+                  [0.070]          [0.073]    
+                                              
+r2                   0.96             0.97    
+N                     390              390    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_m
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.069            0.068    
+                  [0.054]          [0.063]    
+                                              
+r2                   0.97             0.97    
+N                     390              390    
+Table 5, column 1, panels A and B, Log murders per 1000 pop
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres           -0.148           -0.128 *  
+                  [0.105]          [0.062]    
+                                              
+r2                   0.76             0.87    
+N                     391              391    
+Table 5, columns 2 and 3
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.068            0.195    
+                  [0.175]          [0.125]    
+                                              
+r2                   0.78             0.81    
+N                      32               32    
+Table 5, columns 4 and 5, panels A and B, dep var: lpmurder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.089           -0.049    
+                  [0.089]          [0.098]    
+                                              
+r2                   0.89             0.91    
+N                     315              315    
+Table 5, columns 4 and 5, panels A and B, dep var: sh_murder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.013            0.003    
+                  [0.009]          [0.008]    
+                                              
+r2                   0.76             0.81    
+N                     337              337    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_f
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.055            0.060    
+                  [0.070]          [0.073]    
+                                              
+r2                   0.96             0.97    
+N                     390              390    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_m
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.069            0.068    
+                  [0.054]          [0.063]    
+                                              
+r2                   0.97             0.97    
+N                     390              390    
+Table 5, column 1, panels A and B, Log murders per 1000 pop
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres           -0.148           -0.128 *  
+                  [0.105]          [0.062]    
+                                              
+r2                   0.76             0.87    
+N                     391              391    
+Table 5, columns 2 and 3
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.068            0.195    
+                  [0.175]          [0.125]    
+                                              
+r2                   0.78             0.81    
+N                      32               32    
+Table 5, columns 4 and 5, panels A and B, dep var: lpmurder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.089           -0.049    
+                  [0.089]          [0.098]    
+                                              
+r2                   0.89             0.91    
+N                     315              315    
+Table 5, columns 4 and 5, panels A and B, dep var: sh_murder_love
+                       m3               m4    
+               b/se/blank       b/se/blank    
+postwres            0.013            0.003    
+                  [0.009]          [0.008]    
+                                              
+r2                   0.76             0.81    
+N                     337              337    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_f
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.055            0.060    
+                  [0.070]          [0.073]    
+                                              
+r2                   0.96             0.97    
+N                     390              390    
+Table 5, columns 6 and 7, panels A and B, dep var: lpsuic_m
+                       m5               m6    
+               b/se/blank       b/se/blank    
+postwres            0.069            0.068    
+                  [0.054]          [0.063]    
+                                              
+r2                   0.97             0.97    
+N                     390              390    

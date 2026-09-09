@@ -1,0 +1,22 @@
+[
+  {
+    "id": "unemp-medicaid",
+    "est": 0.4793,
+    "se": 0.0723
+  },
+  {
+    "id": "unemp-medicaidandrecession",
+    "est": 0.0262,
+    "se": 0.2045
+  },
+  {
+    "id": "interact_unemprecess",
+    "est": 0.2207,
+    "se": 0.2038
+  },
+  {
+    "id": "interact_unemppost",
+    "est": 0.0634,
+    "se": 0.2518
+  }
+]

@@ -1,0 +1,45 @@
+                    &\multicolumn{3}{c}{COVID outcomes in rates}                      &\multicolumn{3}{c}{COVID outcomes in level}                      \\\cmidrule(lr) {2-4}\cmidrule(lr) {5-7}
+                    &\multicolumn{1}{c}{\shortstack{(1)}}&\multicolumn{1}{c}{\shortstack{(2)}}&\multicolumn{1}{c}{\shortstack{(3)}}&\multicolumn{1}{c}{\shortstack{(4)}}&\multicolumn{1}{c}{\shortstack{(5)}}&\multicolumn{1}{c}{\shortstack{(6)}}\\
+\midrule \\ \multicolumn{7}{c}{\emph{\textbf{\textcolor{red}{Government policy: National Emergency Declaration}}}} \\ \multicolumn{7}{c}{\emph{\textbf{Panel A: Covid-19 cases}}} \\
+Post Federal emergency declaration&      152.10\sym{***}&        0.00         &        0.00         &      320.53\sym{***}&        0.00         &        0.00         \\
+                    &     (15.49)         &         (.)         &         (.)         &     (92.21)         &         (.)         &         (.)         \\
+2.seg               &       47.02\sym{***}&      -22.17\sym{*}  &        0.00         &      315.91\sym{***}&     -226.98\sym{**} &        0.00         \\
+                    &     (13.19)         &     (11.76)         &         (.)         &    (110.44)         &    (100.09)         &         (.)         \\
+Post Federal emergency declaration $\times$ 2.seg&                     &       75.25\sym{***}&       74.58\sym{***}&                     &      506.07\sym{***}&      500.98\sym{***}\\
+                    &                     &     (21.04)         &     (20.92)         &                     &    (176.86)         &    (175.19)         \\
+\addlinespace
+Observations        &     385,158         &     380,328         &     385,158         &     385,158         &     380,328         &     385,158         \\
+\addlinespace
+\addlinespace \multicolumn{7}{c}{\emph{\textbf{Panel B: Covid-19 deaths}}} \\
+Post Federal emergency declaration&        6.26\sym{***}&        0.00         &        0.00         &       17.74\sym{***}&        0.00         &        0.00         \\
+                    &      (1.01)         &         (.)         &         (.)         &      (6.40)         &         (.)         &         (.)         \\
+2.seg               &        2.59\sym{***}&       -1.78\sym{**} &        0.00         &       19.16\sym{**} &      -14.89\sym{**} &        0.00         \\
+                    &      (0.82)         &      (0.74)         &         (.)         &      (7.78)         &      (7.40)         &         (.)         \\
+Post Federal emergency declaration $\times$ 2.seg&                     &        4.14\sym{***}&        4.11\sym{***}&                     &       30.69\sym{**} &       30.38\sym{**} \\
+                    &                     &      (1.32)         &      (1.31)         &                     &     (12.47)         &     (12.34)         \\
+\addlinespace
+Observations        &     385,158         &     380,328         &     385,158         &     385,158         &     380,328         &     385,158         \\
+\addlinespace
+\addlinespace \multicolumn{7}{c}{\emph{\textbf{\textcolor{red}{Government policy: County Emergency Declaration}}}} \\ \multicolumn{7}{c}{\emph{\textbf{Panel C: Covid-19 cases }}} \\
+Post county emergency&      164.15\sym{***}&      -22.83         &      -17.63         &      570.81\sym{***}&     -848.46\sym{***}&     -977.93\sym{***}\\
+                    &     (23.42)         &     (35.35)         &     (38.10)         &    (146.91)         &    (269.10)         &    (269.36)         \\
+2.seg               &       40.45\sym{**} &      -13.62         &        0.00         &      472.01\sym{***}&     -301.18\sym{**} &        0.00         \\
+                    &     (20.04)         &     (18.91)         &         (.)         &    (157.21)         &    (148.10)         &         (.)         \\
+Post county emergency $\times$ 2.seg&                     &       64.60\sym{*}  &       66.43\sym{*}  &                     &      762.34\sym{***}&      731.34\sym{***}\\
+                    &                     &     (33.12)         &     (34.71)         &                     &    (251.36)         &    (247.67)         \\
+\addlinespace
+Observations        &     112,056         &     111,090         &     112,056         &     112,056         &     111,090         &     112,056         \\
+\addlinespace
+\addlinespace \multicolumn{7}{c}{\emph{\textbf{Panel D: Covid-19 deaths}}} \\
+Post county emergency&        6.69\sym{***}&       -1.82         &       -1.81         &       26.56\sym{***}&      -41.81\sym{***}&      -47.88\sym{***}\\
+                    &      (1.29)         &      (2.28)         &      (2.32)         &      (7.48)         &     (14.20)         &     (13.88)         \\
+2.seg               &        1.70         &       -1.19         &        0.00         &       23.61\sym{***}&      -15.65\sym{*}  &        0.00         \\
+                    &      (1.22)         &      (0.75)         &         (.)         &      (8.05)         &      (7.97)         &         (.)         \\
+Post county emergency $\times$ 2.seg&                     &        2.68         &        2.52         &                     &       38.05\sym{***}&       36.63\sym{***}\\
+                    &                     &      (2.03)         &      (2.12)         &                     &     (12.77)         &     (12.73)         \\
+\addlinespace
+Observations        &     112,056         &     111,090         &     112,056         &     112,056         &     111,090         &     112,056         \\
+\midrule State FE   &                     &  \checkmark         &                     &                     &  \checkmark         &                     \\
+County FE           &                     &                     &  \checkmark         &                     &                     &  \checkmark         \\
+Day FE              &                     &  \checkmark         &  \checkmark         &                     &  \checkmark         &  \checkmark         \\
+Controls            &                     &  \checkmark         &                     &                     &  \checkmark         &                     \\

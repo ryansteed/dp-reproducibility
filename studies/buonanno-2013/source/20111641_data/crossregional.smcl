@@ -1,0 +1,1216 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/home/zhiwenz/private-research/studies/buonanno-2013/source/20111641_data/crossregional.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 6 Nov 2024, 00:25:05
+{txt}
+{com}. ***EDIT by Donna
+. local crimes "1 2 3 4 5 6 7 8 9 10 11 12"
+{txt}
+{com}. foreach val of local crimes {c -(}
+{txt}  2{com}. use regionnational
+{txt}  3{com}. keep if crecode==`val'
+{txt}  4{com}. tab crecode
+{txt}  5{com}. keep if ymonth== 7 | ymonth==9
+{txt}  6{com}. tsset idprov ymonth
+{txt}  7{com}. gen cdiff2= crate-l2.crate
+{txt}  8{com}. eststo: reg cdiff2 pardonrate [aweight=population]
+{txt}  9{com}. estout using "../../results/table6.csv", cells(`"b() se() t() p()"') stats(N r2 df_m df_r df_b df) notype abbrev begin(`"""') delimiter(`"",""') end(`"""') replace
+{txt} 10{com}. clear all
+{txt} 11{com}. 
+. use regionnational
+{txt} 12{com}. keep if crecode==`val'
+{txt} 13{com}. keep if ymonth==6|ymonth==7|ymonth==9|ymonth==10
+{txt} 14{com}. gen after=ymonth>8
+{txt} 15{com}. sort idprov after
+{txt} 16{com}. collapse (mean) crate pardonrate population, by(idprov after)
+{txt} 17{com}. tsset idprov after
+{txt} 18{com}. gen cdiff2= crate-l.crate
+{txt} 19{com}. reg cdiff2 pardonrate [aweight=population]
+{txt} 20{com}. clear all
+{txt} 21{com}. 
+. use regionnational
+{txt} 22{com}. keep if crecode==`val'
+{txt} 23{com}. keep if ymonth==5 |ymonth==6|ymonth==7|ymonth==9|ymonth==10|ymonth==11
+{txt} 24{com}. gen after=ymonth>8
+{txt} 25{com}. sort idprov after
+{txt} 26{com}. collapse (mean) crate pardonrate population, by(idprov after)
+{txt} 27{com}. tsset idprov after
+{txt} 28{com}. gen cdiff2= crate-l.crate
+{txt} 29{com}. reg cdiff2 pardonrate [aweight=population]
+{txt} 30{com}. clear all
+{txt} 31{com}. 
+. use regionnational
+{txt} 32{com}. keep if crecode==`val'
+{txt} 33{com}. keep if ymonth==4 | ymonth==5 |ymonth==6|ymonth==7|ymonth==9|ymonth==10|ymonth==11|ymonth==12
+{txt} 34{com}. gen after=ymonth>8
+{txt} 35{com}. sort idprov after
+{txt} 36{com}. collapse (mean) crate pardonrate population, by(idprov after)
+{txt} 37{com}. tsset idprov after
+{txt} 38{com}. gen cdiff2= crate-l.crate
+{txt} 39{com}. reg cdiff2 pardonrate [aweight=population]
+{txt} 40{com}. clear all
+{txt} 41{com}. {c )-}
+{txt}(27,192 observations deleted)
+
+    crecode {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}      2,472      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}      2,472      100.00
+{txt}(2,266 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:ymonth}{txt:, }{res:{bind:7}}{txt: to }{res:{bind:9}}{txt:, but with gaps}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}     1.70
+{txt}       Model {c |} {res} 90.4825504         1  90.4825504   {txt}Prob > F        ={res}    0.1956
+{txt}    Residual {c |} {res} 5383.27663       101  53.2997687   {txt}R-squared       ={res}    0.0165
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.0068
+{txt}       Total {c |} {res} 5473.75919       102  53.6643057   {txt}Root MSE        =   {res} 7.3007
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2}  .040692{col 26}{space 2} .0312313{col 37}{space 1}    1.30{col 46}{space 3}0.196{col 54}{space 4}-.0212624{col 67}{space 3} .1026464
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-7.531387{col 26}{space 2} 1.536521{col 37}{space 1}   -4.90{col 46}{space 3}0.000{col 54}{space 4}-10.57943{col 67}{space 3}-4.483343
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}({res}est1{txt} stored)
+{res}{txt}(output written to {browse  `"../../results/table6.csv"'})
+{res}{txt}(27,192 observations deleted)
+(2,060 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:after}{txt:, }{res:{bind:0}}{txt: to }{res:{bind:1}}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}     5.02
+{txt}       Model {c |} {res} 146.892458         1  146.892458   {txt}Prob > F        ={res}    0.0273
+{txt}    Residual {c |} {res} 2956.83706       101  29.2756144   {txt}R-squared       ={res}    0.0473
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.0379
+{txt}       Total {c |} {res} 3103.72952       102  30.4287207   {txt}Root MSE        =   {res} 5.4107
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2} .0518473{col 26}{space 2} .0231462{col 37}{space 1}    2.24{col 46}{space 3}0.027{col 54}{space 4} .0059315{col 67}{space 3} .0977632
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-5.973448{col 26}{space 2} 1.138751{col 37}{space 1}   -5.25{col 46}{space 3}0.000{col 54}{space 4}-8.232424{col 67}{space 3}-3.714472
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(27,192 observations deleted)
+(1,854 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:after}{txt:, }{res:{bind:0}}{txt: to }{res:{bind:1}}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}     5.65
+{txt}       Model {c |} {res} 99.6707851         1  99.6707851   {txt}Prob > F        ={res}    0.0193
+{txt}    Residual {c |} {res}  1780.3623       101  17.6273495   {txt}R-squared       ={res}    0.0530
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.0436
+{txt}       Total {c |} {res} 1880.03309       102  18.4316969   {txt}Root MSE        =   {res} 4.1985
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2} .0427081{col 26}{space 2} .0179606{col 37}{space 1}    2.38{col 46}{space 3}0.019{col 54}{space 4} .0070792{col 67}{space 3} .0783371
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-5.400642{col 26}{space 2} .8836277{col 37}{space 1}   -6.11{col 46}{space 3}0.000{col 54}{space 4}-7.153522{col 67}{space 3}-3.647762
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(27,192 observations deleted)
+(1,648 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:after}{txt:, }{res:{bind:0}}{txt: to }{res:{bind:1}}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}     4.30
+{txt}       Model {c |} {res} 59.1405215         1  59.1405215   {txt}Prob > F        ={res}    0.0408
+{txt}    Residual {c |} {res} 1390.50826       101  13.7674085   {txt}R-squared       ={res}    0.0408
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.0313
+{txt}       Total {c |} {res} 1449.64878       102   14.212243   {txt}Root MSE        =   {res} 3.7104
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2}  .032898{col 26}{space 2} .0158728{col 37}{space 1}    2.07{col 46}{space 3}0.041{col 54}{space 4} .0014107{col 67}{space 3} .0643853
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-4.749256{col 26}{space 2} .7809117{col 37}{space 1}   -6.08{col 46}{space 3}0.000{col 54}{space 4}-6.298374{col 67}{space 3}-3.200137
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(27,192 observations deleted)
+
+    crecode {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          2 {c |}{res}      2,472      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}      2,472      100.00
+{txt}(2,266 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:ymonth}{txt:, }{res:{bind:7}}{txt: to }{res:{bind:9}}{txt:, but with gaps}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}     5.36
+{txt}       Model {c |} {res} 1.64210925         1  1.64210925   {txt}Prob > F        ={res}    0.0226
+{txt}    Residual {c |} {res} 30.9291731       101  .306229436   {txt}R-squared       ={res}    0.0504
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.0410
+{txt}       Total {c |} {res} 32.5712823       102  .319326297   {txt}Root MSE        =   {res} .55338
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2}-.0054819{col 26}{space 2} .0023673{col 37}{space 1}   -2.32{col 46}{space 3}0.023{col 54}{space 4}-.0101779{col 67}{space 3}-.0007858
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .0338545{col 26}{space 2}  .116466{col 37}{space 1}    0.29{col 46}{space 3}0.772{col 54}{space 4}-.1971827{col 67}{space 3} .2648918
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}({res}est1{txt} stored)
+{res}{txt}(output written to {browse  `"../../results/table6.csv"'})
+{res}{txt}(27,192 observations deleted)
+(2,060 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:after}{txt:, }{res:{bind:0}}{txt: to }{res:{bind:1}}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}     0.01
+{txt}       Model {c |} {res}  .00154661         1   .00154661   {txt}Prob > F        ={res}    0.9116
+{txt}    Residual {c |} {res}  12.607496       101  .124826693   {txt}R-squared       ={res}    0.0001
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}   -0.0098
+{txt}       Total {c |} {res} 12.6090426       102  .123618065   {txt}Root MSE        =   {res} .35331
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2} .0001682{col 26}{space 2} .0015114{col 37}{space 1}    0.11{col 46}{space 3}0.912{col 54}{space 4}  -.00283{col 67}{space 3} .0031665
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-.1555474{col 26}{space 2} .0743583{col 37}{space 1}   -2.09{col 46}{space 3}0.039{col 54}{space 4}-.3030543{col 67}{space 3}-.0080405
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(27,192 observations deleted)
+(1,854 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:after}{txt:, }{res:{bind:0}}{txt: to }{res:{bind:1}}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}     0.31
+{txt}       Model {c |} {res} .032340862         1  .032340862   {txt}Prob > F        ={res}    0.5778
+{txt}    Residual {c |} {res}  10.477977       101  .103742347   {txt}R-squared       ={res}    0.0031
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}   -0.0068
+{txt}       Total {c |} {res} 10.5103179       102  .103042332   {txt}Root MSE        =   {res} .32209
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2} .0007693{col 26}{space 2} .0013779{col 37}{space 1}    0.56{col 46}{space 3}0.578{col 54}{space 4} -.001964{col 67}{space 3} .0035026
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-.1589604{col 26}{space 2} .0677882{col 37}{space 1}   -2.34{col 46}{space 3}0.021{col 54}{space 4}-.2934339{col 67}{space 3}-.0244869
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(27,192 observations deleted)
+(1,648 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:after}{txt:, }{res:{bind:0}}{txt: to }{res:{bind:1}}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}     0.51
+{txt}       Model {c |} {res} .036627025         1  .036627025   {txt}Prob > F        ={res}    0.4759
+{txt}    Residual {c |} {res} 7.22294524       101  .071514309   {txt}R-squared       ={res}    0.0050
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}   -0.0048
+{txt}       Total {c |} {res} 7.25957226       102  .071172277   {txt}Root MSE        =   {res} .26742
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2} .0008187{col 26}{space 2}  .001144{col 37}{space 1}    0.72{col 46}{space 3}0.476{col 54}{space 4}-.0014507{col 67}{space 3} .0030881
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} -.147619{col 26}{space 2} .0562824{col 37}{space 1}   -2.62{col 46}{space 3}0.010{col 54}{space 4}-.2592681{col 67}{space 3}-.0359699
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(27,192 observations deleted)
+
+    crecode {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          3 {c |}{res}      2,472      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}      2,472      100.00
+{txt}(2,266 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:ymonth}{txt:, }{res:{bind:7}}{txt: to }{res:{bind:9}}{txt:, but with gaps}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}     8.86
+{txt}       Model {c |} {res}   20675.42         1    20675.42   {txt}Prob > F        ={res}    0.0036
+{txt}    Residual {c |} {res} 235559.897       101  2332.27621   {txt}R-squared       ={res}    0.0807
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.0716
+{txt}       Total {c |} {res} 256235.317       102  2512.11096   {txt}Root MSE        =   {res} 48.294
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2} .6151117{col 26}{space 2} .2065936{col 37}{space 1}    2.98{col 46}{space 3}0.004{col 54}{space 4} .2052856{col 67}{space 3} 1.024938
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-13.05746{col 26}{space 2} 10.16403{col 37}{space 1}   -1.28{col 46}{space 3}0.202{col 54}{space 4}-33.22016{col 67}{space 3} 7.105234
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}({res}est1{txt} stored)
+{res}{txt}(output written to {browse  `"../../results/table6.csv"'})
+{res}{txt}(27,192 observations deleted)
+(2,060 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:after}{txt:, }{res:{bind:0}}{txt: to }{res:{bind:1}}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}    14.97
+{txt}       Model {c |} {res} 24124.4247         1  24124.4247   {txt}Prob > F        ={res}    0.0002
+{txt}    Residual {c |} {res} 162786.977       101  1611.75224   {txt}R-squared       ={res}    0.1291
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.1204
+{txt}       Total {c |} {res} 186911.401       102  1832.46472   {txt}Root MSE        =   {res} 40.147
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2} .6644393{col 26}{space 2} .1717418{col 37}{space 1}    3.87{col 46}{space 3}0.000{col 54}{space 4} .3237498{col 67}{space 3} 1.005129
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 1.940387{col 26}{space 2} 8.449382{col 37}{space 1}    0.23{col 46}{space 3}0.819{col 54}{space 4}-14.82091{col 67}{space 3} 18.70169
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(27,192 observations deleted)
+(1,854 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:after}{txt:, }{res:{bind:0}}{txt: to }{res:{bind:1}}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}    13.61
+{txt}       Model {c |} {res} 15784.0149         1  15784.0149   {txt}Prob > F        ={res}    0.0004
+{txt}    Residual {c |} {res} 117097.817       101  1159.38432   {txt}R-squared       ={res}    0.1188
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.1101
+{txt}       Total {c |} {res} 132881.832       102  1302.76305   {txt}Root MSE        =   {res}  34.05
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2} .5374469{col 26}{space 2} .1456601{col 37}{space 1}    3.69{col 46}{space 3}0.000{col 54}{space 4} .2484965{col 67}{space 3} .8263973
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 9.519398{col 26}{space 2}  7.16621{col 37}{space 1}    1.33{col 46}{space 3}0.187{col 54}{space 4}-4.696435{col 67}{space 3} 23.73523
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(27,192 observations deleted)
+(1,648 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:after}{txt:, }{res:{bind:0}}{txt: to }{res:{bind:1}}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}    14.32
+{txt}       Model {c |} {res} 13280.3189         1  13280.3189   {txt}Prob > F        ={res}    0.0003
+{txt}    Residual {c |} {res} 93654.8627       101  927.275868   {txt}R-squared       ={res}    0.1242
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.1155
+{txt}       Total {c |} {res} 106935.182       102  1048.38413   {txt}Root MSE        =   {res} 30.451
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2}  .492982{col 26}{space 2} .1302661{col 37}{space 1}    3.78{col 46}{space 3}0.000{col 54}{space 4} .2345692{col 67}{space 3} .7513948
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 14.92954{col 26}{space 2} 6.408853{col 37}{space 1}    2.33{col 46}{space 3}0.022{col 54}{space 4} 2.216099{col 67}{space 3} 27.64298
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(27,192 observations deleted)
+
+    crecode {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          4 {c |}{res}      2,472      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}      2,472      100.00
+{txt}(2,266 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:ymonth}{txt:, }{res:{bind:7}}{txt: to }{res:{bind:9}}{txt:, but with gaps}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}    89.09
+{txt}       Model {c |} {res} 251.735073         1  251.735073   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 285.401583       101  2.82575825   {txt}R-squared       ={res}    0.4687
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.4634
+{txt}       Total {c |} {res} 537.136656       102  5.26604565   {txt}Root MSE        =   {res}  1.681
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2} .0678733{col 26}{space 2} .0071911{col 37}{space 1}    9.44{col 46}{space 3}0.000{col 54}{space 4} .0536081{col 67}{space 3} .0821384
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-1.171874{col 26}{space 2} .3537882{col 37}{space 1}   -3.31{col 46}{space 3}0.001{col 54}{space 4}-1.873694{col 67}{space 3}-.4700533
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}({res}est1{txt} stored)
+{res}{txt}(output written to {browse  `"../../results/table6.csv"'})
+{res}{txt}(27,192 observations deleted)
+(2,060 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:after}{txt:, }{res:{bind:0}}{txt: to }{res:{bind:1}}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}   129.05
+{txt}       Model {c |} {res} 375.421933         1  375.421933   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 293.830106       101  2.90920897   {txt}R-squared       ={res}    0.5610
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.5566
+{txt}       Total {c |} {res} 669.252039       102   6.5612945   {txt}Root MSE        =   {res} 1.7056
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2}  .082887{col 26}{space 2} .0072965{col 37}{space 1}   11.36{col 46}{space 3}0.000{col 54}{space 4} .0684128{col 67}{space 3} .0973613
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-1.412245{col 26}{space 2} .3589742{col 37}{space 1}   -3.93{col 46}{space 3}0.000{col 54}{space 4}-2.124354{col 67}{space 3}-.7001369
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(27,192 observations deleted)
+(1,854 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:after}{txt:, }{res:{bind:0}}{txt: to }{res:{bind:1}}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}   128.83
+{txt}       Model {c |} {res} 277.677279         1  277.677279   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 217.687421       101    2.155321   {txt}R-squared       ={res}    0.5606
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.5562
+{txt}       Total {c |} {res}   495.3647       102  4.85651666   {txt}Root MSE        =   {res} 1.4681
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2} .0712848{col 26}{space 2} .0062803{col 37}{space 1}   11.35{col 46}{space 3}0.000{col 54}{space 4} .0588263{col 67}{space 3} .0837433
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-.8175541{col 26}{space 2}  .308981{col 37}{space 1}   -2.65{col 46}{space 3}0.009{col 54}{space 4}-1.430489{col 67}{space 3}-.2046189
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(27,192 observations deleted)
+(1,648 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:after}{txt:, }{res:{bind:0}}{txt: to }{res:{bind:1}}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}   134.65
+{txt}       Model {c |} {res}  246.37486         1   246.37486   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 184.800611       101  1.82970901   {txt}R-squared       ={res}    0.5714
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.5672
+{txt}       Total {c |} {res}  431.17547       102  4.22721049   {txt}Root MSE        =   {res} 1.3527
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2} .0671467{col 26}{space 2} .0057865{col 37}{space 1}   11.60{col 46}{space 3}0.000{col 54}{space 4} .0556678{col 67}{space 3} .0786257
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-.5303174{col 26}{space 2} .2846865{col 37}{space 1}   -1.86{col 46}{space 3}0.065{col 54}{space 4}-1.095059{col 67}{space 3} .0344239
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(27,192 observations deleted)
+
+    crecode {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          5 {c |}{res}      2,472      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}      2,472      100.00
+{txt}(2,266 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:ymonth}{txt:, }{res:{bind:7}}{txt: to }{res:{bind:9}}{txt:, but with gaps}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}    23.33
+{txt}       Model {c |} {res} 12.1917712         1  12.1917712   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 52.7788637       101  .522563007   {txt}R-squared       ={res}    0.1877
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.1796
+{txt}       Total {c |} {res} 64.9706348       102  .636967008   {txt}Root MSE        =   {res} .72289
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2} .0149369{col 26}{space 2} .0030924{col 37}{space 1}    4.83{col 46}{space 3}0.000{col 54}{space 4} .0088024{col 67}{space 3} .0210714
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-.4602309{col 26}{space 2} .1521406{col 37}{space 1}   -3.03{col 46}{space 3}0.003{col 54}{space 4}-.7620369{col 67}{space 3}-.1584249
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}({res}est1{txt} stored)
+{res}{txt}(output written to {browse  `"../../results/table6.csv"'})
+{res}{txt}(27,192 observations deleted)
+(2,060 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:after}{txt:, }{res:{bind:0}}{txt: to }{res:{bind:1}}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}    23.64
+{txt}       Model {c |} {res} 5.78480583         1  5.78480583   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 24.7194367       101  .244746898   {txt}R-squared       ={res}    0.1896
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.1816
+{txt}       Total {c |} {res} 30.5042425       102  .299061201   {txt}Root MSE        =   {res} .49472
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2}  .010289{col 26}{space 2} .0021163{col 37}{space 1}    4.86{col 46}{space 3}0.000{col 54}{space 4} .0060907{col 67}{space 3} .0144872
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-.3101365{col 26}{space 2} .1041201{col 37}{space 1}   -2.98{col 46}{space 3}0.004{col 54}{space 4}-.5166827{col 67}{space 3}-.1035903
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(27,192 observations deleted)
+(1,854 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:after}{txt:, }{res:{bind:0}}{txt: to }{res:{bind:1}}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}    17.63
+{txt}       Model {c |} {res} 2.68419221         1  2.68419221   {txt}Prob > F        ={res}    0.0001
+{txt}    Residual {c |} {res} 15.3749242       101  .152226973   {txt}R-squared       ={res}    0.1486
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.1402
+{txt}       Total {c |} {res} 18.0591164       102  .177050161   {txt}Root MSE        =   {res} .39016
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2} .0070086{col 26}{space 2} .0016691{col 37}{space 1}    4.20{col 46}{space 3}0.000{col 54}{space 4} .0036977{col 67}{space 3} .0103196
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-.2297202{col 26}{space 2} .0821148{col 37}{space 1}   -2.80{col 46}{space 3}0.006{col 54}{space 4}-.3926139{col 67}{space 3}-.0668264
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(27,192 observations deleted)
+(1,648 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:after}{txt:, }{res:{bind:0}}{txt: to }{res:{bind:1}}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}    18.81
+{txt}       Model {c |} {res} 1.91463925         1  1.91463925   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 10.2796069       101  .101778286   {txt}R-squared       ={res}    0.1570
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.1487
+{txt}       Total {c |} {res} 12.1942462       102  .119551433   {txt}Root MSE        =   {res} .31903
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2} .0059193{col 26}{space 2} .0013648{col 37}{space 1}    4.34{col 46}{space 3}0.000{col 54}{space 4}  .003212{col 67}{space 3} .0086266
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-.2300704{col 26}{space 2} .0671434{col 37}{space 1}   -3.43{col 46}{space 3}0.001{col 54}{space 4}-.3632648{col 67}{space 3}-.0968759
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(27,192 observations deleted)
+
+    crecode {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          6 {c |}{res}      2,472      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}      2,472      100.00
+{txt}(2,266 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:ymonth}{txt:, }{res:{bind:7}}{txt: to }{res:{bind:9}}{txt:, but with gaps}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}     0.06
+{txt}       Model {c |} {res} .005798179         1  .005798179   {txt}Prob > F        ={res}    0.8096
+{txt}    Residual {c |} {res} 10.0345366       101  .099351848   {txt}R-squared       ={res}    0.0006
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}   -0.0093
+{txt}       Total {c |} {res} 10.0403348       102  .098434655   {txt}Root MSE        =   {res}  .3152
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2}-.0003257{col 26}{space 2} .0013484{col 37}{space 1}   -0.24{col 46}{space 3}0.810{col 54}{space 4}-.0030006{col 67}{space 3} .0023491
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .0175687{col 26}{space 2} .0663382{col 37}{space 1}    0.26{col 46}{space 3}0.792{col 54}{space 4}-.1140285{col 67}{space 3} .1491659
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}({res}est1{txt} stored)
+{res}{txt}(output written to {browse  `"../../results/table6.csv"'})
+{res}{txt}(27,192 observations deleted)
+(2,060 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:after}{txt:, }{res:{bind:0}}{txt: to }{res:{bind:1}}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}     0.01
+{txt}       Model {c |} {res} .000493784         1  .000493784   {txt}Prob > F        ={res}    0.9161
+{txt}    Residual {c |} {res}  4.4741988       101  .044298998   {txt}R-squared       ={res}    0.0001
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}   -0.0098
+{txt}       Total {c |} {res} 4.47469259       102  .043869535   {txt}Root MSE        =   {res} .21047
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2} .0000951{col 26}{space 2} .0009004{col 37}{space 1}    0.11{col 46}{space 3}0.916{col 54}{space 4} -.001691{col 67}{space 3} .0018812
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} -.010096{col 26}{space 2} .0442968{col 37}{space 1}   -0.23{col 46}{space 3}0.820{col 54}{space 4} -.097969{col 67}{space 3}  .077777
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(27,192 observations deleted)
+(1,854 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:after}{txt:, }{res:{bind:0}}{txt: to }{res:{bind:1}}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}     0.30
+{txt}       Model {c |} {res} .008435354         1  .008435354   {txt}Prob > F        ={res}    0.5823
+{txt}    Residual {c |} {res} 2.79825157       101  .027705461   {txt}R-squared       ={res}    0.0030
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}   -0.0069
+{txt}       Total {c |} {res} 2.80668693       102  .027516539   {txt}Root MSE        =   {res} .16645
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2} .0003929{col 26}{space 2}  .000712{col 37}{space 1}    0.55{col 46}{space 3}0.582{col 54}{space 4}-.0010196{col 67}{space 3} .0018054
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-.0108331{col 26}{space 2} .0350315{col 37}{space 1}   -0.31{col 46}{space 3}0.758{col 54}{space 4}-.0803262{col 67}{space 3} .0586599
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(27,192 observations deleted)
+(1,648 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:after}{txt:, }{res:{bind:0}}{txt: to }{res:{bind:1}}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}     1.20
+{txt}       Model {c |} {res} .026452474         1  .026452474   {txt}Prob > F        ={res}    0.2769
+{txt}    Residual {c |} {res} 2.23563313       101  .022134981   {txt}R-squared       ={res}    0.0117
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.0019
+{txt}       Total {c |} {res}  2.2620856       102   .02217731   {txt}Root MSE        =   {res} .14878
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2} .0006958{col 26}{space 2} .0006365{col 37}{space 1}    1.09{col 46}{space 3}0.277{col 54}{space 4}-.0005668{col 67}{space 3} .0019583
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-.0055414{col 26}{space 2} .0313123{col 37}{space 1}   -0.18{col 46}{space 3}0.860{col 54}{space 4}-.0676567{col 67}{space 3} .0565738
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(27,192 observations deleted)
+
+    crecode {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          7 {c |}{res}      2,472      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}      2,472      100.00
+{txt}(2,266 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:ymonth}{txt:, }{res:{bind:7}}{txt: to }{res:{bind:9}}{txt:, but with gaps}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}     0.24
+{txt}       Model {c |} {res} 1.80425947         1  1.80425947   {txt}Prob > F        ={res}    0.6225
+{txt}    Residual {c |} {res} 747.281126       101  7.39882303   {txt}R-squared       ={res}    0.0024
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}   -0.0075
+{txt}       Total {c |} {res} 749.085385       102  7.34397436   {txt}Root MSE        =   {res} 2.7201
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2} .0057461{col 26}{space 2} .0116361{col 37}{space 1}    0.49{col 46}{space 3}0.623{col 54}{space 4}-.0173368{col 67}{space 3} .0288291
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-.8836305{col 26}{space 2} .5724758{col 37}{space 1}   -1.54{col 46}{space 3}0.126{col 54}{space 4}-2.019268{col 67}{space 3} .2520075
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}({res}est1{txt} stored)
+{res}{txt}(output written to {browse  `"../../results/table6.csv"'})
+{res}{txt}(27,192 observations deleted)
+(2,060 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:after}{txt:, }{res:{bind:0}}{txt: to }{res:{bind:1}}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}     1.10
+{txt}       Model {c |} {res} 3.51669823         1  3.51669823   {txt}Prob > F        ={res}    0.2961
+{txt}    Residual {c |} {res} 322.004511       101  3.18816347   {txt}R-squared       ={res}    0.0108
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.0010
+{txt}       Total {c |} {res} 325.521209       102   3.1913844   {txt}Root MSE        =   {res} 1.7855
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2} .0080222{col 26}{space 2} .0076383{col 37}{space 1}    1.05{col 46}{space 3}0.296{col 54}{space 4}-.0071301{col 67}{space 3} .0231746
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-1.104403{col 26}{space 2} .3757908{col 37}{space 1}   -2.94{col 46}{space 3}0.004{col 54}{space 4}-1.849871{col 67}{space 3}-.3589354
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(27,192 observations deleted)
+(1,854 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:after}{txt:, }{res:{bind:0}}{txt: to }{res:{bind:1}}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}     1.98
+{txt}       Model {c |} {res} 3.06976767         1  3.06976767   {txt}Prob > F        ={res}    0.1620
+{txt}    Residual {c |} {res} 156.225005       101  1.54678222   {txt}R-squared       ={res}    0.0193
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.0096
+{txt}       Total {c |} {res} 159.294772       102  1.56171345   {txt}Root MSE        =   {res} 1.2437
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2} .0074951{col 26}{space 2} .0053204{col 37}{space 1}    1.41{col 46}{space 3}0.162{col 54}{space 4} -.003059{col 67}{space 3} .0180493
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-.8722017{col 26}{space 2} .2617522{col 37}{space 1}   -3.33{col 46}{space 3}0.001{col 54}{space 4}-1.391448{col 67}{space 3}-.3529557
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(27,192 observations deleted)
+(1,648 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:after}{txt:, }{res:{bind:0}}{txt: to }{res:{bind:1}}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}     6.44
+{txt}       Model {c |} {res} 5.23623459         1  5.23623459   {txt}Prob > F        ={res}    0.0127
+{txt}    Residual {c |} {res} 82.0780995       101   .81265445   {txt}R-squared       ={res}    0.0600
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.0507
+{txt}       Total {c |} {res}  87.314334       102  .856022883   {txt}Root MSE        =   {res} .90147
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2}  .009789{col 26}{space 2} .0038564{col 37}{space 1}    2.54{col 46}{space 3}0.013{col 54}{space 4} .0021389{col 67}{space 3}  .017439
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-.9354311{col 26}{space 2} .1897268{col 37}{space 1}   -4.93{col 46}{space 3}0.000{col 54}{space 4}-1.311798{col 67}{space 3}-.5590641
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(27,192 observations deleted)
+
+    crecode {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          8 {c |}{res}      2,472      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}      2,472      100.00
+{txt}(2,266 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:ymonth}{txt:, }{res:{bind:7}}{txt: to }{res:{bind:9}}{txt:, but with gaps}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}     4.63
+{txt}       Model {c |} {res} 429.415341         1  429.415341   {txt}Prob > F        ={res}    0.0339
+{txt}    Residual {c |} {res} 9376.36261       101  92.8352734   {txt}R-squared       ={res}    0.0438
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.0343
+{txt}       Total {c |} {res} 9805.77795       102   96.135078   {txt}Root MSE        =   {res} 9.6351
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2} .0886473{col 26}{space 2} .0412177{col 37}{space 1}    2.15{col 46}{space 3}0.034{col 54}{space 4} .0068826{col 67}{space 3} .1704121
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} -1.48376{col 26}{space 2} 2.027834{col 37}{space 1}   -0.73{col 46}{space 3}0.466{col 54}{space 4}-5.506437{col 67}{space 3} 2.538916
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}({res}est1{txt} stored)
+{res}{txt}(output written to {browse  `"../../results/table6.csv"'})
+{res}{txt}(27,192 observations deleted)
+(2,060 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:after}{txt:, }{res:{bind:0}}{txt: to }{res:{bind:1}}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}     4.48
+{txt}       Model {c |} {res} 226.655192         1  226.655192   {txt}Prob > F        ={res}    0.0368
+{txt}    Residual {c |} {res} 5114.21958       101  50.6358375   {txt}R-squared       ={res}    0.0424
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.0330
+{txt}       Total {c |} {res} 5340.87478       102  52.3615174   {txt}Root MSE        =   {res} 7.1159
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2} .0644035{col 26}{space 2} .0304408{col 37}{space 1}    2.12{col 46}{space 3}0.037{col 54}{space 4} .0040172{col 67}{space 3} .1247898
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .6563916{col 26}{space 2} 1.497631{col 37}{space 1}    0.44{col 46}{space 3}0.662{col 54}{space 4}-2.314505{col 67}{space 3} 3.627289
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(27,192 observations deleted)
+(1,854 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:after}{txt:, }{res:{bind:0}}{txt: to }{res:{bind:1}}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}     5.38
+{txt}       Model {c |} {res} 160.907585         1  160.907585   {txt}Prob > F        ={res}    0.0224
+{txt}    Residual {c |} {res} 3019.65944       101  29.8976183   {txt}R-squared       ={res}    0.0506
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.0412
+{txt}       Total {c |} {res} 3180.56703       102  31.1820297   {txt}Root MSE        =   {res} 5.4679
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2} .0542644{col 26}{space 2} .0233908{col 37}{space 1}    2.32{col 46}{space 3}0.022{col 54}{space 4} .0078633{col 67}{space 3} .1006655
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .8129166{col 26}{space 2} 1.150785{col 37}{space 1}    0.71{col 46}{space 3}0.482{col 54}{space 4}-1.469931{col 67}{space 3} 3.095764
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(27,192 observations deleted)
+(1,648 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:after}{txt:, }{res:{bind:0}}{txt: to }{res:{bind:1}}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}     4.53
+{txt}       Model {c |} {res}  96.510998         1   96.510998   {txt}Prob > F        ={res}    0.0358
+{txt}    Residual {c |} {res} 2152.81562       101  21.3150061   {txt}R-squared       ={res}    0.0429
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.0334
+{txt}       Total {c |} {res} 2249.32662       102  22.0522217   {txt}Root MSE        =   {res} 4.6168
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2} .0420257{col 26}{space 2} .0197501{col 37}{space 1}    2.13{col 46}{space 3}0.036{col 54}{space 4} .0028468{col 67}{space 3} .0812046
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 1.500591{col 26}{space 2} .9716694{col 37}{space 1}    1.54{col 46}{space 3}0.126{col 54}{space 4}-.4269402{col 67}{space 3} 3.428121
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(27,192 observations deleted)
+
+    crecode {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          9 {c |}{res}      2,472      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}      2,472      100.00
+{txt}(2,266 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:ymonth}{txt:, }{res:{bind:7}}{txt: to }{res:{bind:9}}{txt:, but with gaps}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}    16.76
+{txt}       Model {c |} {res} 71.8343091         1  71.8343091   {txt}Prob > F        ={res}    0.0001
+{txt}    Residual {c |} {res} 432.859174       101   4.2857344   {txt}R-squared       ={res}    0.1423
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.1338
+{txt}       Total {c |} {res} 504.693483       102  4.94797533   {txt}Root MSE        =   {res} 2.0702
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2} .0362571{col 26}{space 2}  .008856{col 37}{space 1}    4.09{col 46}{space 3}0.000{col 54}{space 4} .0186891{col 67}{space 3} .0538251
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-1.216707{col 26}{space 2} .4357009{col 37}{space 1}   -2.79{col 46}{space 3}0.006{col 54}{space 4} -2.08102{col 67}{space 3}-.3523938
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}({res}est1{txt} stored)
+{res}{txt}(output written to {browse  `"../../results/table6.csv"'})
+{res}{txt}(27,192 observations deleted)
+(2,060 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:after}{txt:, }{res:{bind:0}}{txt: to }{res:{bind:1}}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}    17.22
+{txt}       Model {c |} {res} 34.7007153         1  34.7007153   {txt}Prob > F        ={res}    0.0001
+{txt}    Residual {c |} {res} 203.582168       101  2.01566503   {txt}R-squared       ={res}    0.1456
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.1372
+{txt}       Total {c |} {res} 238.282883       102   2.3361067   {txt}Root MSE        =   {res} 1.4197
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2} .0251997{col 26}{space 2} .0060735{col 37}{space 1}    4.15{col 46}{space 3}0.000{col 54}{space 4} .0131516{col 67}{space 3} .0372478
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} -.269157{col 26}{space 2}  .298803{col 37}{space 1}   -0.90{col 46}{space 3}0.370{col 54}{space 4}-.8619018{col 67}{space 3} .3235878
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(27,192 observations deleted)
+(1,854 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:after}{txt:, }{res:{bind:0}}{txt: to }{res:{bind:1}}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}    10.87
+{txt}       Model {c |} {res} 16.5265518         1  16.5265518   {txt}Prob > F        ={res}    0.0014
+{txt}    Residual {c |} {res} 153.616716       101  1.52095758   {txt}R-squared       ={res}    0.0971
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.0882
+{txt}       Total {c |} {res} 170.143268       102  1.66807125   {txt}Root MSE        =   {res} 1.2333
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2} .0173907{col 26}{space 2} .0052758{col 37}{space 1}    3.30{col 46}{space 3}0.001{col 54}{space 4}  .006925{col 67}{space 3} .0278564
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-.2238689{col 26}{space 2}  .259558{col 37}{space 1}   -0.86{col 46}{space 3}0.390{col 54}{space 4}-.7387621{col 67}{space 3} .2910242
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(27,192 observations deleted)
+(1,648 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:after}{txt:, }{res:{bind:0}}{txt: to }{res:{bind:1}}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}     5.31
+{txt}       Model {c |} {res}  5.5896722         1   5.5896722   {txt}Prob > F        ={res}    0.0233
+{txt}    Residual {c |} {res}  106.34073       101  1.05287852   {txt}R-squared       ={res}    0.0499
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.0405
+{txt}       Total {c |} {res} 111.930403       102  1.09735689   {txt}Root MSE        =   {res} 1.0261
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2} .0101139{col 26}{space 2} .0043895{col 37}{space 1}    2.30{col 46}{space 3}0.023{col 54}{space 4} .0014063{col 67}{space 3} .0188215
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-.1283106{col 26}{space 2} .2159558{col 37}{space 1}   -0.59{col 46}{space 3}0.554{col 54}{space 4}-.5567088{col 67}{space 3} .3000877
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(27,192 observations deleted)
+
+    crecode {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+         10 {c |}{res}      2,472      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}      2,472      100.00
+{txt}(2,266 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:ymonth}{txt:, }{res:{bind:7}}{txt: to }{res:{bind:9}}{txt:, but with gaps}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}     0.61
+{txt}       Model {c |} {res}  .04943378         1   .04943378   {txt}Prob > F        ={res}    0.4363
+{txt}    Residual {c |} {res} 8.17212399       101  .080912119   {txt}R-squared       ={res}    0.0060
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}   -0.0038
+{txt}       Total {c |} {res} 8.22155777       102  .080603508   {txt}Root MSE        =   {res} .28445
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2}-.0009511{col 26}{space 2} .0012168{col 37}{space 1}   -0.78{col 46}{space 3}0.436{col 54}{space 4} -.003365{col 67}{space 3} .0014628
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-.0012472{col 26}{space 2} .0598663{col 37}{space 1}   -0.02{col 46}{space 3}0.983{col 54}{space 4}-.1200059{col 67}{space 3} .1175115
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}({res}est1{txt} stored)
+{res}{txt}(output written to {browse  `"../../results/table6.csv"'})
+{res}{txt}(27,192 observations deleted)
+(2,060 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:after}{txt:, }{res:{bind:0}}{txt: to }{res:{bind:1}}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}     0.00
+{txt}       Model {c |} {res}   .0000104         1    .0000104   {txt}Prob > F        ={res}    0.9901
+{txt}    Residual {c |} {res} 6.78358945       101  .067164252   {txt}R-squared       ={res}    0.0000
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}   -0.0099
+{txt}       Total {c |} {res} 6.78359985       102  .066505881   {txt}Root MSE        =   {res} .25916
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2} .0000138{col 26}{space 2} .0011087{col 37}{space 1}    0.01{col 46}{space 3}0.990{col 54}{space 4}-.0021855{col 67}{space 3} .0022131
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .0130309{col 26}{space 2} .0545437{col 37}{space 1}    0.24{col 46}{space 3}0.812{col 54}{space 4}-.0951692{col 67}{space 3}  .121231
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(27,192 observations deleted)
+(1,854 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:after}{txt:, }{res:{bind:0}}{txt: to }{res:{bind:1}}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}     0.00
+{txt}       Model {c |} {res} .000057437         1  .000057437   {txt}Prob > F        ={res}    0.9732
+{txt}    Residual {c |} {res} 5.12164281       101  .050709335   {txt}R-squared       ={res}    0.0000
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}   -0.0099
+{txt}       Total {c |} {res} 5.12170025       102  .050212748   {txt}Root MSE        =   {res} .22519
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2}-.0000324{col 26}{space 2} .0009633{col 37}{space 1}   -0.03{col 46}{space 3}0.973{col 54}{space 4}-.0019434{col 67}{space 3} .0018785
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-.0173327{col 26}{space 2} .0473936{col 37}{space 1}   -0.37{col 46}{space 3}0.715{col 54}{space 4}-.1113489{col 67}{space 3} .0766834
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(27,192 observations deleted)
+(1,648 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:after}{txt:, }{res:{bind:0}}{txt: to }{res:{bind:1}}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}     0.50
+{txt}       Model {c |} {res} .018347091         1  .018347091   {txt}Prob > F        ={res}    0.4823
+{txt}    Residual {c |} {res}  3.7252511       101  .036883674   {txt}R-squared       ={res}    0.0049
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}   -0.0050
+{txt}       Total {c |} {res} 3.74359819       102  .036701943   {txt}Root MSE        =   {res} .19205
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2} .0005794{col 26}{space 2} .0008216{col 37}{space 1}    0.71{col 46}{space 3}0.482{col 54}{space 4}-.0010503{col 67}{space 3} .0022092
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-.0584151{col 26}{space 2} .0404197{col 37}{space 1}   -1.45{col 46}{space 3}0.151{col 54}{space 4}-.1385969{col 67}{space 3} .0217667
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(27,192 observations deleted)
+
+    crecode {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+         11 {c |}{res}      2,472      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}      2,472      100.00
+{txt}(2,266 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:ymonth}{txt:, }{res:{bind:7}}{txt: to }{res:{bind:9}}{txt:, but with gaps}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}    18.76
+{txt}       Model {c |} {res} 3880.18214         1  3880.18214   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 20891.2648       101  206.844206   {txt}R-squared       ={res}    0.1566
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.1483
+{txt}       Total {c |} {res}  24771.447       102  242.857323   {txt}Root MSE        =   {res} 14.382
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2} .2664728{col 26}{space 2} .0615246{col 37}{space 1}    4.33{col 46}{space 3}0.000{col 54}{space 4} .1444246{col 67}{space 3} .3885209
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-10.23673{col 26}{space 2} 3.026896{col 37}{space 1}   -3.38{col 46}{space 3}0.001{col 54}{space 4}-16.24128{col 67}{space 3}-4.232183
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}({res}est1{txt} stored)
+{res}{txt}(output written to {browse  `"../../results/table6.csv"'})
+{res}{txt}(27,192 observations deleted)
+(2,060 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:after}{txt:, }{res:{bind:0}}{txt: to }{res:{bind:1}}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}    18.41
+{txt}       Model {c |} {res} 2901.00722         1  2901.00722   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 15916.5422       101  157.589526   {txt}R-squared       ={res}    0.1542
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.1458
+{txt}       Total {c |} {res} 18817.5494       102  184.485778   {txt}Root MSE        =   {res} 12.553
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2} .2304099{col 26}{space 2}  .053702{col 37}{space 1}    4.29{col 46}{space 3}0.000{col 54}{space 4} .1238796{col 67}{space 3} .3369403
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-3.648608{col 26}{space 2} 2.642041{col 37}{space 1}   -1.38{col 46}{space 3}0.170{col 54}{space 4}-8.889706{col 67}{space 3}  1.59249
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(27,192 observations deleted)
+(1,854 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:after}{txt:, }{res:{bind:0}}{txt: to }{res:{bind:1}}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}    16.20
+{txt}       Model {c |} {res} 1623.93552         1  1623.93552   {txt}Prob > F        ={res}    0.0001
+{txt}    Residual {c |} {res} 10127.6284       101  100.273548   {txt}R-squared       ={res}    0.1382
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.1297
+{txt}       Total {c |} {res} 11751.5639       102  115.211411   {txt}Root MSE        =   {res} 10.014
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2} .1723897{col 26}{space 2} .0428371{col 37}{space 1}    4.02{col 46}{space 3}0.000{col 54}{space 4} .0874124{col 67}{space 3} .2573669
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-2.067642{col 26}{space 2} 2.107507{col 37}{space 1}   -0.98{col 46}{space 3}0.329{col 54}{space 4}-6.248369{col 67}{space 3} 2.113085
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(27,192 observations deleted)
+(1,648 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:after}{txt:, }{res:{bind:0}}{txt: to }{res:{bind:1}}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}    11.24
+{txt}       Model {c |} {res} 861.851646         1  861.851646   {txt}Prob > F        ={res}    0.0011
+{txt}    Residual {c |} {res} 7746.75953       101  76.7005894   {txt}R-squared       ={res}    0.1001
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.0912
+{txt}       Total {c |} {res} 8608.61117       102  84.3981488   {txt}Root MSE        =   {res} 8.7579
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2} .1255865{col 26}{space 2}  .037465{col 37}{space 1}    3.35{col 46}{space 3}0.001{col 54}{space 4}  .051266{col 67}{space 3} .1999071
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-.9491901{col 26}{space 2} 1.843211{col 37}{space 1}   -0.51{col 46}{space 3}0.608{col 54}{space 4}-4.605626{col 67}{space 3} 2.707246
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(27,192 observations deleted)
+
+    crecode {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+         12 {c |}{res}      2,472      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}      2,472      100.00
+{txt}(2,266 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:ymonth}{txt:, }{res:{bind:7}}{txt: to }{res:{bind:9}}{txt:, but with gaps}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}    15.84
+{txt}       Model {c |} {res} 69649.4495         1  69649.4495   {txt}Prob > F        ={res}    0.0001
+{txt}    Residual {c |} {res} 444027.086       101  4396.30779   {txt}R-squared       ={res}    0.1356
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.1270
+{txt}       Total {c |} {res} 513676.536       102  5036.04447   {txt}Root MSE        =   {res} 66.305
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2} 1.128978{col 26}{space 2} .2836422{col 37}{space 1}    3.98{col 46}{space 3}0.000{col 54}{space 4} .5663086{col 67}{space 3} 1.691648
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-35.99161{col 26}{space 2} 13.95468{col 37}{space 1}   -2.58{col 46}{space 3}0.011{col 54}{space 4}-63.67394{col 67}{space 3}-8.309276
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}({res}est1{txt} stored)
+{res}{txt}(output written to {browse  `"../../results/table6.csv"'})
+{res}{txt}(27,192 observations deleted)
+(2,060 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:after}{txt:, }{res:{bind:0}}{txt: to }{res:{bind:1}}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}    23.61
+{txt}       Model {c |} {res} 70739.0445         1  70739.0445   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 302622.926       101   2996.2666   {txt}R-squared       ={res}    0.1895
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.1814
+{txt}       Total {c |} {res} 373361.971       102  3660.41148   {txt}Root MSE        =   {res} 54.738
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2} 1.137775{col 26}{space 2} .2341623{col 37}{space 1}    4.86{col 46}{space 3}0.000{col 54}{space 4} .6732599{col 67}{space 3}  1.60229
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-10.27383{col 26}{space 2} 11.52036{col 37}{space 1}   -0.89{col 46}{space 3}0.375{col 54}{space 4}-33.12713{col 67}{space 3} 12.57946
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(27,192 observations deleted)
+(1,854 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:after}{txt:, }{res:{bind:0}}{txt: to }{res:{bind:1}}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}    22.14
+{txt}       Model {c |} {res} 45362.4242         1  45362.4242   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 206951.254       101  2049.02232   {txt}R-squared       ={res}    0.1798
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.1717
+{txt}       Total {c |} {res} 252313.678       102  2473.66351   {txt}Root MSE        =   {res} 45.266
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2} .9111186{col 26}{space 2} .1936423{col 37}{space 1}    4.71{col 46}{space 3}0.000{col 54}{space 4} .5269845{col 67}{space 3} 1.295253
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .5335466{col 26}{space 2} 9.526846{col 37}{space 1}    0.06{col 46}{space 3}0.955{col 54}{space 4}-18.36515{col 67}{space 3} 19.43225
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(27,192 observations deleted)
+(1,648 observations deleted)
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:after}{txt:, }{res:{bind:0}}{txt: to }{res:{bind:1}}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}(103 missing values generated)
+(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}    21.48
+{txt}       Model {c |} {res} 33978.9948         1  33978.9948   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 159753.546       101  1581.71827   {txt}R-squared       ={res}    0.1754
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.1672
+{txt}       Total {c |} {res} 193732.541       102  1899.33863   {txt}Root MSE        =   {res} 39.771
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2} .7885551{col 26}{space 2} .1701341{col 37}{space 1}    4.63{col 46}{space 3}0.000{col 54}{space 4} .4510548{col 67}{space 3} 1.126055
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 8.695975{col 26}{space 2} 8.370287{col 37}{space 1}    1.04{col 46}{space 3}0.301{col 54}{space 4}-7.908424{col 67}{space 3} 25.30037
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}/home/zhiwenz/private-research/studies/buonanno-2013/source/20111641_data/crossregional.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res} 6 Nov 2024, 00:25:15
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

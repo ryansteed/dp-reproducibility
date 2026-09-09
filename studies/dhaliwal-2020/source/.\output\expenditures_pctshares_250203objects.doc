@@ -1,0 +1,28 @@
+{\rtf1\fs24
+\trowd\trgaph75\trleft-75\intbl\trqc\clbrdrt\brdrs\cellx2016\clbrdrt\brdrs\cellx4896\clbrdrt\brdrs\cellx7920\clbrdrt\brdrs\cellx11088\clbrdrt\brdrs\cellx13968\clbrdrt\brdrs\cellx16992\clbrdrt\brdrs\cellx19872
+\ql \cell\qc (1)\cell\qc (2)\cell\qc (3)\cell\qc (4)\cell\qc (5)\cell\qc (6)\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx2016\cellx4896\cellx7920\cellx11088\cellx13968\cellx16992\cellx19872
+\trowd\trgaph75\trleft-75\trqc\clbrdrb\brdrs\cellx2016\clbrdrb\brdrs\cellx4896\clbrdrb\brdrs\cellx7920\clbrdrb\brdrs\cellx11088\clbrdrb\brdrs\cellx13968\clbrdrb\brdrs\cellx16992\clbrdrb\brdrs\cellx19872
+\ql VARIABLES\cell\qc pctsalaries_all_ex1\cell\qc pctsalaries_tchr_ex1\cell\qc pctsalaries_admin_ex1\cell\qc pctbenefits_all_ex1\cell\qc pctcapitaloutlay_ex1\cell\qc pctotherobjects_ex1\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx2016\cellx4896\cellx7920\cellx11088\cellx13968\cellx16992\cellx19872
+\ql \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\row
+\ql rural_distant\cell\qc 3.362\cell\qc 3.670*\cell\qc 0.318\cell\qc 0.0453\cell\qc -5.425\cell\qc 2.017\cell\row
+\ql \cell\qc (3.014)\cell\qc (1.727)\cell\qc (0.412)\cell\qc (1.145)\cell\qc (4.410)\cell\qc (1.598)\cell\row
+\ql rural_fringe\cell\qc 6.318*\cell\qc 6.816***\cell\qc 0.107\cell\qc 0.0657\cell\qc -6.152\cell\qc -0.232\cell\row
+\ql \cell\qc (2.887)\cell\qc (1.666)\cell\qc (0.506)\cell\qc (1.276)\cell\qc (4.253)\cell\qc (1.597)\cell\row
+\ql town_locale\cell\qc 3.298\cell\qc 4.692**\cell\qc -0.440\cell\qc -0.0282\cell\qc -2.533\cell\qc -0.737\cell\row
+\ql \cell\qc (2.872)\cell\qc (1.654)\cell\qc (0.370)\cell\qc (1.098)\cell\qc (4.308)\cell\qc (1.496)\cell\row
+\ql suburb_locale\cell\qc 5.089+\cell\qc 6.620***\cell\qc -0.990**\cell\qc -1.031\cell\qc -3.467\cell\qc -0.591\cell\row
+\ql \cell\qc (2.795)\cell\qc (1.605)\cell\qc (0.359)\cell\qc (1.054)\cell\qc (4.197)\cell\qc (1.509)\cell\row
+\ql urban_locale\cell\qc 2.240\cell\qc 4.260*\cell\qc -1.167**\cell\qc -0.184\cell\qc -2.925\cell\qc 0.870\cell\row
+\ql \cell\qc (2.919)\cell\qc (1.833)\cell\qc (0.378)\cell\qc (1.147)\cell\qc (4.229)\cell\qc (1.670)\cell\row
+\ql Constant\cell\qc 46.10***\cell\qc 23.69***\cell\qc 5.685***\cell\qc 18.91***\cell\qc 12.03**\cell\qc 22.97***\cell\row
+\ql \cell\qc (2.761)\cell\qc (1.572)\cell\qc (0.353)\cell\qc (1.027)\cell\qc (4.172)\cell\qc (1.445)\cell\row
+\ql \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\row
+\ql Observations\cell\qc 890\cell\qc 890\cell\qc 890\cell\qc 890\cell\qc 890\cell\qc 890\cell\row
+\trowd\trgaph75\trleft-75\trqc\trbrdrb\brdrs\clbrdrb\brdrs\cellx2016\clbrdrb\brdrs\cellx4896\clbrdrb\brdrs\cellx7920\clbrdrb\brdrs\cellx11088\clbrdrb\brdrs\cellx13968\clbrdrb\brdrs\cellx16992\clbrdrb\brdrs\cellx19872
+\ql R-squared\cell\qc 0.054\cell\qc 0.071\cell\qc 0.071\cell\qc 0.020\cell\qc 0.008\cell\qc 0.022\cell\row
+\pard\qc
+Robust standard errors in parentheses\par
+*** p<0.001, ** p<0.01, * p<0.05, + p<0.10\par
+}

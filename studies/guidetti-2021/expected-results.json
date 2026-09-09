@@ -1,0 +1,27 @@
+[
+  {
+    "id": "pm10-resp",
+    "est": 4.55,
+    "se": 1.35
+  },
+  {
+    "id": "pm10-epilepsy",
+    "est": -0.28,
+    "se": 0.13
+  },
+  {
+    "id": "pm10-phimosis",
+    "est": -0.84,
+    "se": 0.49
+  },
+  {
+    "id": "pm10-appendicitis",
+    "est": -0.06,
+    "se": 0.09
+  },
+  {
+    "id": "pm10-fracture",
+    "est": 0.0,
+    "se": 0.10
+  }
+]

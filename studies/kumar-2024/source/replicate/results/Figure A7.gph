@@ -1,0 +1,786 @@
+StataFileTM:00001:01000:LiveGPH:                       :
+00007:00007:
+*! classname: twowaygraph_g
+*! family: twoway
+*! command: twoway tsline elasticnet enplacebo*, xline(1997 2003, lp(dash)) xlab(1992(3)2007) legend(off) lp(solid) lc(black) lw(thick) title("SCM Estimates of the Effect of HEL Access on LFPR in Texas vs. Placebo States using Elasticnet", size(small)) saving("results\Figure A7.gph", replace)
+*! command_date: 14 Nov 2023
+*! command_time: 22:42:04
+*! datafile: results\mcpanel.dta
+*! datafile_date: 
+*! scheme: s2color
+*! naturallywhite: 1
+*! xsize: 5.5
+*! ysize: 4
+*! end
+<BeginItem> serset K99697b8 
+<BeginSerset>
+<BeginSeries>
+.name = `"elasticnet"'
+.label = `"Elastic Net"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -3.462535726319032
+.max =  .0807430546106218
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo2"'
+.label = `"enplacebo2"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -1.330654204904619
+.max =  .152781307363469
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo3"'
+.label = `"enplacebo3"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -1.476196595476651
+.max =  .190081066471194
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo4"'
+.label = `"enplacebo4"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -.04421100575221
+.max =  3.841976881108259
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo5"'
+.label = `"enplacebo5"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -2.734827348126224
+.max =  .2012001581565102
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo6"'
+.label = `"enplacebo6"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -.8467151564154847
+.max =  .9167455485944345
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo7"'
+.label = `"enplacebo7"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -2.252763569214707
+.max =  1.178266278688014
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo8"'
+.label = `"enplacebo8"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -3.279530510267762
+.max =  .0535225907107133
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo9"'
+.label = `"enplacebo9"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -6.894638331123105
+.max =  .3941542078748768
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo10"'
+.label = `"enplacebo10"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -.277899428604286
+.max =  1.655227247530306
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo11"'
+.label = `"enplacebo11"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -.0283791941787257
+.max =  2.063484687419347
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo12"'
+.label = `"enplacebo12"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -3.259201001249949
+.max =  .0208307259239149
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo13"'
+.label = `"enplacebo13"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -1.553788563511816
+.max =  .3990387996694977
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo14"'
+.label = `"enplacebo14"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -1.905123828340493
+.max =  1.156416464423287
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo15"'
+.label = `"enplacebo15"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -2.177442243797088
+.max =  .6751992498893031
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo16"'
+.label = `"enplacebo16"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -.6411905429537512
+.max =  3.206399440591611
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo17"'
+.label = `"enplacebo17"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -1.513539681024554
+.max =  1.189965937856869
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo18"'
+.label = `"enplacebo18"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -.4725843580948705
+.max =  1.213838444339935
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo19"'
+.label = `"enplacebo19"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -1.57524478966242
+.max =  1.572052319840175
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo20"'
+.label = `"enplacebo20"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -3.19179136659325
+.max =  2.080555504330434
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo21"'
+.label = `"enplacebo21"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -2.381676050341753
+.max =  .0076641441534946
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo22"'
+.label = `"enplacebo22"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -1.933336590774886
+.max =  .3124927607349406
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo23"'
+.label = `"enplacebo23"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -1.473593407678308
+.max =  2.456191879448554
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo24"'
+.label = `"enplacebo24"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -1.801289119566306
+.max =  1.156948423646526
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo25"'
+.label = `"enplacebo25"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -2.691807894868262
+.max =  .7300466918459918
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo26"'
+.label = `"enplacebo26"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -.5764292933576911
+.max =  1.52002077480843
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo27"'
+.label = `"enplacebo27"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -1.862031970933415
+.max =  1.172724573078042
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo28"'
+.label = `"enplacebo28"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -.1129271414598492
+.max =  1.549857738202846
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo29"'
+.label = `"enplacebo29"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -2.67837043660586
+.max =  .9173415962637961
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo30"'
+.label = `"enplacebo30"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -1.320558885001645
+.max =  .7164275233166819
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo31"'
+.label = `"enplacebo31"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -1.082494323662118
+.max =  .7505937563968246
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo32"'
+.label = `"enplacebo32"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -.9479641044387677
+.max =  .0433676980744551
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo33"'
+.label = `"enplacebo33"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -1.025608842815586
+.max =  1.321101666029961
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo34"'
+.label = `"enplacebo34"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -2.655189177307705
+.max =  .3220541738103151
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo35"'
+.label = `"enplacebo35"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -1.452046212591398
+.max =  6.485263580157607
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo36"'
+.label = `"enplacebo36"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -.1385200103102591
+.max =  1.477381686049696
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo37"'
+.label = `"enplacebo37"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -.01621993844023
+.max =  1.106338889666105
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo38"'
+.label = `"enplacebo38"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -2.887257267173212
+.max =  .2694611617129965
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo39"'
+.label = `"enplacebo39"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -.0547500752251011
+.max =  1.151414796105065
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo40"'
+.label = `"enplacebo40"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -.6416377047148814
+.max =  1.66783676341791
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo41"'
+.label = `"enplacebo41"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -3.367132187083079
+.max =  .4688380049533833
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo42"'
+.label = `"enplacebo42"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -.0537034138385906
+.max =  3.544213184081769
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo43"'
+.label = `"enplacebo43"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -1.355835987737187
+.max =  1.31022290007293
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo44"'
+.label = `"enplacebo44"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -.9725950314813758
+.max =  1.481232633349336
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo45"'
+.label = `"enplacebo45"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -1.364780671302526
+.max =  .6429034550070298
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo46"'
+.label = `"enplacebo46"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -2.784756385394445
+.max =  .2140538512538512
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo47"'
+.label = `"enplacebo47"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -1.910072239303247
+.max =  .4495227124708094
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo48"'
+.label = `"enplacebo48"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -.0386355615455827
+.max =  2.021080481116826
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo49"'
+.label = `"enplacebo49"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -1.849829346462911
+.max =  .0340806488201224
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"enplacebo50"'
+.label = `"enplacebo50"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -.3175788656438954
+.max =  2.247278794165908
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+<BeginSeries>
+.name = `"year"'
+.label = `"year"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  1992
+.max =  2007
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories = (.)
+<EndSeries>
+.weight_id = (.)
+.sortorder = "year"
+<BeginSersetData>
+sersetreadwrite 3      ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿelasticnet inal                                                                                                                                       enplacebo2 e_price                                                                                                                                    enplacebo3 c                                                                                                                                          enplacebo4                                                                                                                                            enplacebo5                                                                                                                                            enplacebo6                                                                                                                                            enplacebo7                                                                                                                                            enplacebo8                                                                                                                                            enplacebo9                                                                                                                                            enplacebo10                                                                                                                                           enplacebo11                                                                                                                                           enplacebo12                                                                                                                                           enplacebo13                                                                                                                                           enplacebo14                                                                                                                                           enplacebo15                                                                                                                                           enplacebo16                                                                                                                                           enplacebo17                                                                                                                                           enplacebo18                                                                                                                                           enplacebo19                                                                                                                                           enplacebo20                                                                                                                                           enplacebo21                                                                                                                                           enplacebo22                                                                                                                                           enplacebo23                                                                                                                                           enplacebo24                                                                                                                                           enplacebo25                                                                                                                                           enplacebo26                                                                                                                                           enplacebo27                                                                                                                                           enplacebo28                                                                                                                                           enplacebo29                                                                                                                                           enplacebo30                                                                                                                                           enplacebo31                                                                                                                                           enplacebo32                                                                                                                                           enplacebo33                                                                                                                                           enplacebo34                                                                                                                                           enplacebo35                                                                                                                                           enplacebo36                                                                                                                                           enplacebo37                                                                                                                                           enplacebo38                                                                                                                                           enplacebo39                                                                                                                                           enplacebo40                                                                                                                                           enplacebo41                                                                                                                                           enplacebo42                                                                                                                                           enplacebo43                                                                                                                                           enplacebo44                                                                                                                                           enplacebo45                                                                                                                                           enplacebo46                                                                                                                                           enplacebo47                                                                                                                                           enplacebo48                                                                                                                                           enplacebo49                                                                                                                                           enplacebo50                                                                                                                                           year                                                                                                                                                  %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                    À,NîE³À€šE\Jõ¿À@R€÷¿ t¨/Ó¢¦¿°D#)íàÀ  :bJë¿à-ûç¨À€¬ş}z<
+Àà¯”À ®[¯ÉÑ¿ °‰{o¿ ¬{ù×
+ÀÀé’eQÜø¿ Ø˜c{ş¿€LĞÖfkÀ µ¢„ä¿ .sbu7ø¿€—§vÒ>Ş¿@¶lá34ù¿ byéÉˆ	À O,¬ÀÀœXYòîş¿ÀEY®Ö“÷¿ÀØ2ŠÒü¿ —Ü“ÒˆÀ€¯mØrâ¿@?4	âÊı¿ œfËè¼¿ ]¾zMmÀ€cxZ!õ¿@Àc‘åQñ¿ KÑ¸Uî¿ fÑähğ¿€ÖÉÒÓ=À€Å5Ï”;÷¿ ä»Á¿ `“¤õ›¿ -VÀ 8­3¬¿€0´ËKˆä¿p¥ ãï
+À ˜=Œ«¿ #¡±õ¿ Şï¿ Q×A$Öõ¿@Å[.GÀ áŒè§ş¿ šR
+È£¿ Ô#¨æ˜ı¿ ØuN6SÔ¿      Ÿ@ ˆîª“«´? zHVÃ? ’
+“TÈ?ĞÈ`^¼@ ºAíÀÉ? ï¾ÂúUí?@Ï½-Úò? @f!Pg«? Ñ’Ò9Ù?ÀsùÏ{ú?`‚B‚ @ paZ¦T•? ™šÚ‰Ù?@ôŒ®€ò?€İu;›å?€ú¿´¦	@ 0'¹
+ó? QÜákó? UU 'ù?`åÄHú¤ @ €Ûpd? ùå¢áÿÓ?`u—íG¦@€‡«YÜ‚ò?@AáŠ\ç?@¯ĞMRø?@_‰×zÃò?@Š° 7Ìø?€ÔfÃÜZí?€.Óiùìæ? Ì‰2İè? |İyJ4¦? £$€;#õ? ‰œÔ? Şšïèğ@@¯”úZ£÷?ÀŠVh³ñ? ^FÚ>Ñ? mÖë1lò?€$šu¯ú? c™qŞ?@wqŒZ@@‰¤I¬öô?À`ı ³÷? ³7Dª’ä? ì[ÙfË? Ä7éúÄÜ?€ØG>,+ @ À7Ğs¡?À~ïMmú@     \Ÿ@ PÍ3#œ¿ —½£ÏÂ¿ ¤~Ãe¿¿ €*ÈŸ3|¿ €ï¼\ôº¿ àe#Bƒ? `g_wÓ¿ @f!Pg«? (vNwµ¿ °c;^[£? P WŸZ’¿ paZ¦T•? @å$kH¦¿ €Pıò1l¿ ÂòÚ“PÄ¿ PúeU¿ ÄWÇú£µ¿ à/‘º·¿ çÚAW²Å? Ş§–?  ,k?  ¼š€a?€F'¨Ü!â¿  «…¿  ¦£Rk¿ à/h ¿ `s}¾Š? 0¡7V”¿ €˜Ôƒ¿ öê?Ü†Ã? ÀgÄXÓ¨? ÀÀáqXh? @NÓ¤f¿ ‰œÔ? Ø5å‡U¤¿ ÀºÆ—~¿  Ê7Aˆb¿ Óò\(¾¿ €
++~‚q? ÀA¨š? ÀoÂ‹¯¿ ˜=Œ«¿ ì©:½K«¿ €f{°ì¿ „ˆG¹Í¿ è=
+‚¤? €m§L}¿ Ğ–÷
+O¿ È‰Ú §¿ ØÄöÁ±?      Ÿ@ ¨:=„³¤¿ ()J×‡£¿ €rnÚìi¿ t¨/Ó¢¦¿ Øôú*‚Á¿ À%^Ü|}¿  §tV? ‰O¢É‘? àÅ³Éî¼? 4¨ª-µÂ¿ ÀÃ)è¿  bŠœÙM¿ ¦ñZÀ¿ €+Àª g? 8ävo¦¿ à1×	G? BZÃ×? ĞzææÆ€¿€ÍY~æ¿ ¸—ğ'‘¿ €û+ux¿ €C›„¡c¿ D <ñ%º¿  Õ(+—i?  ¾°n
+Œ¿ (Pçd§¿ ğÇaNü–¿ Ğ`Z= ¿ Tº¸Æ*Ï? @J/ˆ)ƒ¿ øtrg'É¿ €¬õH6{¿ ï
+i°ˆ? "lŸ³µÆ¿ ÈÁÄf­¿  tÄƒ¿ @D¿àğj? _Mâñ½¿ €Dâ=èp? €Âõd? c™qŞ? €¢v–b¿ ˆæNï°¡¿  8É4€? ÀÖyß¾? x–úá£¿ PS'ƒL–? ¸=Ñ]B“¿ 0âN˜¿—¿ nƒ¹`$Ğ¿     $Ÿ@ ü`©Ğ=²? $ó¦ªÂ¿ ’
+“TÈ? `
+Š­¸ˆ¿ ºAíÀÉ?  /"¦gi? €uZít¿ €ot‚.t? Ñ’Ò9Ù?€»<WçÓ?  Äô¥¶e¿ €\ò|? ºÆÎû/Ä? €3öd‰¿ ä¯<ËV¶? €l¡2~? ¢5ºİ? |¥—`o¨¿ ª=Û˜'·? À!™ş,¿ À¢³‚¿ €T{ÅÉm? ÊyÇPÌ? àÛö¥¬„¿ L3½ ? `wŒ¿  7–Lñ|? @K¤³%~? ÉÛåÿĞ? (·ÁÂ? ğöC-¾¿ à™ k§s?  ÑA7L? $¼¤Ë¿ ØvV“¢? €´ÍÎo?  x<òv? ş[:†WÃ? à±¸",‘¿ À2ğw? àn°÷´?  ´ú¬e¿ `wG+‡? ĞQ ä©˜? Å§©¿ ğ­g¦™? Ğ.@®–¿  V,UèF?  ù/L¯]? X†î•Ì?     (Ÿ@ ˆîª“«´? 4r{À¿? ’ck£Â¿ hEÛƒ¬? @QHpa§? €m,^B€¿ Xt.G­­?  e@ª¿ €z«êb¿  ë…õ™«¿ °‰{o¿ àCX¤_¿ °»w ¿ €¢´¨K`¿ ŠÁR“TÁ? €ôëÙÜ˜¿ ÿˆÜÒ¿ è¨Ç›,¡? ê÷2,¼¿ àç®²X¿ €Ûpd?  H*éà<¿ 4ƒ£)ƒÅ¿  \jş&V? p:’®‡¿ ÀFçŒ™? @vÛªru? Àqá6ƒ¿ ¡Z-TÆÙ¿ À°ñG¨? @–6ó¿ p=“[«? 0ØCn« ¿ r]1×¿ pi‡&«¦¿ €¨†g‘¿ `“¤õ›¿ ØÖ7òÑ¿¿ ÈùYÆ‘¿ Àeô‘? ŠŒ·æ“Ó¿  µÓö­ƒ? €ÖŠ1;? €?³TGl¿ h~®‘Õª? Hî£‰¨¤?  @0$ˆn? šR
+È£¿ @-z¨y? ]J4zÓ?     ,Ÿ@ $}äÆ´¿  Ñ÷¿n©? ğŸmª? €‡rvv? Š¹ItªÄ? @ˆ‚
+;v¿ ˜`Ó`Ç®¿ 	tÃ˜¿ ı.¾»¿ ®[¯ÉÑ¿  ó@ ©€? EN‹§”?  MVˆ‚?  ˜…D_€? À²úé~? €y‚ò ? òÉcMá¿ P6qÒÅ¢¿ QÂÑÃ? ÀJùóÓ™? €E•9¬a¿ àÉcèç¿ `Ú‰€¿ @›e‰G”?  »:ìz? Pƒè¿©?  }¶ŒùX? XÆßX¬¬? ôB¸7„³¿ UGÁã$Ğ¿ ¼(Y±Ç? ğş9€¿ @mi¿ Ã‰®BÑ? ¸Ãn>´? €š=0£Œ? €ÍÁéBd? ÆĞi„Â? ;¬´¯†? ğCL¼†®¿  JÖ‚{¾? 'âbĞš? ¨>¢„Jª? ÀïØÁy¿ Èªñà¦? håªgHª¿  3CQ˜†¿ ¸Û í¢? pûØ¾š? PWd[Ş›¿     0Ÿ@ €S«şg¿ zHVÃ? ğ„ø%p? €£ÈY`? şşCdGÅ¿  Òğ%¼€? °Ÿ¯ûñ•?  „=0? z£‚PÔ¿ \‹bZˆÀ? @Å+`©? `}²’¿ @c±© ¡? `­\„? pBÿœ¿ 0‘ò›Ã¿ XVW†‰µ? ÎÏ³? ÿŸØ? €Ëàì
+? ÀÑ³‚x? €iÎ»ä‰? Ö±óã?  ÷óm¿ À5–®Ü…¿  N@jVˆ? À1.r¿  \²®c¿  ¥Ôç”¿ Kˆß«¿ Ü¼HŒ¯¶?  ,¹®w_¿ Hb eš? ä·²­Å? ĞÕ5!­š? @© »? À“uÕ'}? 8ÅaQ4°? `trKÿ?  é‡á­‡? íËeiÓ¿ ?÷_—?  f°ßÿ‘?  ş±@R}¿ @,·i±? Ğ$ü:‘¿  g˜hG? Xj‘sçœ? À7Ğs¡? ØuN6SÔ¿     4Ÿ@ òÒ	Ê¿ 4·©çâ¿ ’s“=Í¿ ŒÓ•ëú? }ïZ4ğ¿ ì4ĞFĞ?@Ï½-Úò? µà<öæ¿ Xe|ôÜ¿ Ïÿ†ÀÆ? –‚ä"şâ? Š&³FåÈ¿ Ò ²É? ¹=ëWtÔ? ÇÖöÉö¿ ~™÷0Õ¿ 0'¹
+ó? Œ†¨–²? Ô0æ,ñ?€Ên¥Ä¥ô?€‘ëÏ®Íá¿ àâX;X™?À,šÃò? Ãövr½Ñ?À\E|c×ë¿ \}b'µÅ¿ \ È¬İí? œfËè¼¿ ë@bµ—Ô¿ r:ˆÑ? ±Í›|è¿ ô|ŒÛT¾¿ Ÿó‡İÆ¿ ^:ıÖí¿ Á®üäî¿ ä»Á¿ ¾Mj•×? J^ºeÎ? `¦Óµ{©? *½ÿFîÃ? AIßØ¿ Ë‘™ñÓ? Ò'rœ ã¿ ˜|;sÖ¿ ³7Dª’ä? xÑa˜9ß¿ Ä7éúÄÜ?€_Ø?€¦à(Ùwâ¿ c ñà?     8Ÿ@ Ög…séŞ¿À‡Øø±¡ñ¿À8ãã3ñ¿ ¬=ö@ F:÷¿ ÜÍ? ¯-¨&ã?€¥¤Ú4å¿@O°şı¹ò¿ ò—‚=¥Ã?€±…$*óâ?€û˜èã¿€ï½£{ıå¿@ôŒ®€ò?ÀW Ôõñ¿ µ¢„ä¿€åä¹ò?@Ú-	©å?€}o-ş€Ş?`åÄHú¤ @ÀŠö^óò¿ +×M6Ñ¿ ‘(§ÙÃ@ ß:4¦¨Ú?@ÖK†¾±ã¿€¯mØrâ¿@_‰×zÃò? Ò¿˜V[Â? ”ufâº¿€2NIÙã? %ç;Eí¿@xĞ>ã¿ ^ã±ƒ»¿€íEA_Áñ¿€Å5Ï”;÷¿ Êa?lÎ? ühöaÙ? `6“$`†¿ 8­3¬¿€Ñg‘»á? ÀO’Jú¿ÀË¥ëò?  ÿo(L¤¿ Ä¢g$Ë?€ğdúsá? ì[ÙfË? ª%HŸÃ?€Ëjıç?À6êÙ5ù¿ áp¼Gxõ?     <Ÿ@ )/ú?‚ì¿ÀŞ·zâ¿À@R€÷¿ O5’Ã@#['¶ À ï¾ÂúUí? ƒ8ëw¤¿ =š¶ç¿ ÀWõä>×¿€°3uıå?€ÊÉåÅë?€Í­ çè¿Àé’eQÜø¿@‰°¼XPñ? V:
+3ZÎ¿ Äy´s˜Î¿ tb…;sÏ¿ QÜákó? ¶à¯É? €Æ÷òÜ?€VT’óûí¿€íVÙóÊõ¿`u—íG¦@€‡«YÜ‚ò?@AáŠ\ç?  cF]ê¥¿ ó‰råÖ?€–©à? å.xÌß?€.Óiùìæ?@Àc‘åQñ¿€p†j™ëŞ¿@­Û¬ä¿ YğVÇÈá¿ º4=#Ëğ¿€ô?x¬ç? 4ÕH&Ë? ^FÚ>Ñ? :2IOÁ?  1Rw%¿ ÂÈOÈÛ¿Àl8Bªù? Üï¾`7Ì? jXlË ô? Q×A$Öõ¿ oËâšqá¿ ü‚_§ì¿ ÑS:¼;ğ?€+ÊŠ¤õ¿ <ÀĞ¤*ş?     @Ÿ@ ¶õXIUó¿@Ñ;wõŸì¿@CZçæƒö¿  6'ïµ@°= /OÀ q¬Gà%è? 0H¬¤%ú¿ ‚RÂAø¿€3Bà^Wö¿À?£Èê†î?€Š“Ô@wá?€v=jUê¿ şqÎ”Ê¿ ‰ÏhåÔ?€İu;›å?@häßÍ @ .sbu7ø¿À“.ëâ?ÀuqÉá¿ byéÉˆ	À ’Œ êåğ¿ ÛjØ…¸ç¿Àâa÷? …¼3æ¸î?À<( Øç¿ ì$¿ÄLÛ?€ÿ‰ñxğ¿ 5b`6ë?€ÔfÃÜZí? Gª%&Ş? Ã¥Ù®áæ¿ ì.¤¼YĞ¿ fÑähğ¿€ ¢˜îå¿ ¨™º—Û¿@öÿ¥ğ? Å7Èç? X”Èm-ß¿@®†%£Zí?€0´ËKˆä¿0‚5ŞlÀ œU@ {¼(í?À`ı ³÷? Îfíqê¿€,¸	<ò¿ áŒè§ş¿`mj±ù?€œÇÃ$Ãè¿À~ïMmú@     DŸ@ µÛo¦kñ¿€¸ìåç¿€ÎØ)ë\å¿@ƒ EwÀ@ğT0¹–™ À€ÌÖÓw4â?à-ûç¨À€ğ‹l¾ï÷¿À¡{êÀ ¹ãc![Î?@a¾¨“ò? %ûÀ  «%¯c’?@nûsèò¿€©÷ìèá?À‰è48e@€Rí:İë¿€—§vÒ>Ş¿@¶lá34ù¿€GÚMÀ `èË!ò¿ ùå¢áÿÓ? š9WĞÎ¿ 3Ÿ¬[.Ö?Àx´Øh*ö¿€P†Üoéà?@?¬zWZ÷¿ ¸	nƒ¸æ? ë°­Õ¿ ”ËSgÌÈ¿ Ì‰2İè? À{¯Ëj­¿€¶‰ö¥|Ğ¿€‰¸ìÕú¿ €Ià1®?@¯”úZ£÷?ÀŠVh³ñ? !=“Gï¿ mÖë1lò? À,H—?p¥ ãï
+À §gµ–U@@~5×˜ğ?€(|m'0á? ¨ö“ZĞ¿ uO;¤î¿€³p„!:û¿ |½
+4Éş?€ÏL¹(ë¿€%—&}ú?     HŸ@ÀßE³ó¿€Fñï	Üá¿ oáÖƒÚ¿ĞÈ`^¼@°D#)íàÀ 0<¤¥nŸ¿ S—"áÿ¿ÀËKv”ÀP85¾²À€.i¡FĞ¿@öÍ½?û? fNÛëÀ 4”‡c<İ¿ Ø˜c{ş¿ Cé­8ã¿ kütç²İ? 2Ùb©Á¿ ¡VË¿ ›“ñ¿€UÕØùã¿ "Dè9ÿø¿ ÚN0$Ã? Ï²
+Î¶à¿ 	õ|±?€ˆÏ¬Pğ¿€ÔÆìö?@,[„Cîù¿@ğêÙ„ñ?À|ş”8û¿ yç–Zæ¿€±¦;uMæ? |İyJ4¦? x¼âªºº?@B‰09Tñ¿ÀiDÚcú?ÀŠ˜U|ö?€ôê‹Şœí?Àí
+$ûõ¿ÀoÍòU®ê?€à^Êwë?Ğ(^aÌÀ@ì6µğ¬@ Ş.y•çİ?  i÷bïà¿ íXÇŸÓ¿€nH^½ú¿ an E¨õ¿`ÿ×Mó?€ú$äşKá¿ ,‰Ò¼ü?     LŸ@ÀĞ´Ä¹¡ş¿ Tæ1ÕÄ¿€l¿‰æ¿àqf¾@ ·Vf¼mü¿ »µ{M¿Ò¿ §sœÿ À€¬ş}z<
+Àà¯”À  ópº‰?@ÂV=xšı? ¬{ù×
+À ÇsE!UŞ¿À5¦H½™ú¿@eèäİ À  º^†Bª?€»R±ÚÚè? dBoôËª¿ 0¿ lÜ¿ aë6!aó?ÀíúuÀ …u$¸Eä¿ c²A×¿ _™¢Õ Ò¿@Èí©ñ¿@¯ĞMRø? ‚‚şŠõ¿ ³¢P¦ó? ]¾zMmÀ€­İ!lî¿ ¬IÉšØ? Ş8æ5»¿€ˆ^—’‘è? ~YyŒúÿ¿ hÂk@À	|·;ñ?@|ê}¨í? ’äÿO‚À€!ìÓÃ§ï? ;³}Ğ?À$÷clêÀ`-vî@Àoq†:Åê¿ Şï¿ ËB³–Ş¿@Å[.GÀ ÔK¬s„è¿`û½Œk]õ?€5{ô¿Àìâ‹ö?     PŸ@ /kf‡ÀÀ)Šj÷ë¿ lHç;ºÆ¿ è^¦ ? yî*VïÊ¿ rwF³Ş¿ 4ÁvÀ`ğ~÷y	À€/3ÎlÀ@³Ãü_0á?À¢ìÂbı? ò’¡r"À ™šÚ‰Ù?@
+¥rMô¿ ›Jßù¿ &í™¯ñ? ¹¿"àpÖ?€Yª‡í? UU 'ù?€O½³õò? V"Q­À@æÿlL—÷¿ aÉ0–Õ¿ f¶Ğ¥<í¿ »ó­ğ¶ô¿ áÍˆYÓ?ÀèÄÓ’ù¿@.Dµ]àò?€±%‘
+~À }¢™„yì¿ ßY´$Ğ¿ pè«¤ƒ¿ ê8˜;Ùó?@ÁOHhÀ@`b'ÄJ@ ´´¬á? “ÏÀë? -VÀ€…øVšVë? ¨ ÔŠÅğ? DkåÀ@:DqpÔ@ #¡±õ¿ ƒX3
+È×¿ YmÕ¿`İÑ'À€ğ´ã­†à¿€Æ7ÈS;û? Ô#¨æ˜ı¿ ÅÊÿ%Jò?     TŸ@àÚ³²~ÂÀ€šE\Jõ¿ \,|„ß¿ 0¿m€Ÿ? ĞI÷h?  :bJë¿ÀYa»ı¿@“çûsaÀ@š.À@JÒßÎàô?@ï¬Ÿı?ÀïÅàßâı¿  ÖÏ]¡? š4M‰­Û¿@Îñöm÷¿À&&ÈG)@ @‡&ch}¿€U¿¡zQğ? 
+’í¼IÜ?€•Êâ¿€ò}íîëÿ¿Àæ¨ ø¿ Îsmiä¿€æqTù¿ —Ü“ÒˆÀ ÌÿÔƒN¹¿Àª38Æù¿€âëúĞÓë?€ê.€Ôiö¿ÀÛùÍ_ÿñ¿ zÁ(®? 	;Pü×¿ £$€;#õ?@niÆÏ“ À°¡*òÇ[@€ìQúLŠî?€åÅ—Pá?@u²ä@À@BØ‘Ş-å?€$šu¯ú?pä¢À ŞÖÏ7@ '’Àâ? üY´SĞ? -ÍÈ”×?€‘bÓ£õõ¿€-qö0bî¿€ØG>,+ @ ÇsÙKéø¿€xÕæ—ó?     XŸ@À,NîE³ÀÀøkDrYî¿  ØlDßç¿ JFÈßõÄ? ›YU÷¢Ğ¿€¤hÍşä¿`I›Ñ ÀÀ˜	­B«Ààß—ówÚÀÀsùÏ{ú?`‚B‚ @à¿Ñ§äÀ {œm`¥í¿ G¼Ù®Så?€LĞÖfkÀ€ú¿´¦	@ .o'¸¿É?ÀÀ[òíœì? ˜UIÍÜ›¿ 9_¼0¯é¿ O,¬ÀÀœXYòîş¿ÀEY®Ö“÷¿ÀØ2ŠÒü¿À+ïOé¨À èİ¨©¿@?4	âÊı¿@Š° 7Ìø? {_A®ï¿€cxZ!õ¿ \Ãg\é¿ KÑ¸Uî¿Ài“‰úì?€ÖÉÒÓ=À Şšïèğ@  ğô“ªğ?€„‰	îÚ?À‚º“„µÀÀ;ÈÒ!bæ?€rŠÆˆ¿ï?_.†Rn
+À@wqŒZ@@‰¤I¬öô?€ŒL~ğ„å? ª.Eïã¿ à/åĞ³ö¿ ùeœmé¿ õŞHş? *¥ùÚò¿ xóÏ“™ó?     \Ÿ@
+<EndSersetData>
+<EndSerset>
+<EndItem>
+<BeginItem> scheme K12e6a9c8 
+.setscheme , scheme(s2color) naturallywhite(1)
+<EndItem>
+<BeginItem> twowaygraph_g K996d368 <UseScheme> K12e6a9c8
+.sersets[1] = .__Map.K99697b8.ref
+.insert (plotregion1 = .plotregion.new , style(scheme twoway) graph(`.objkey')) at 1 1
+.plotregion1.Declare plot1 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof elasticnet') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p1line) 
+.plotregion1.plot1.style.editstyle line(color(black)) area(linestyle(color(black))) line(width(thick)) area(linestyle(width(thick))) line(pattern(solid)) area(linestyle(pattern(solid))) editcopy
+.plotregion1.Declare plot2 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo2') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p2line) 
+.plotregion1.Declare plot3 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo3') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p3line) 
+.plotregion1.Declare plot4 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo4') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p4line) 
+.plotregion1.Declare plot5 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo5') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p5line) 
+.plotregion1.Declare plot6 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo6') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p6line) 
+.plotregion1.Declare plot7 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo7') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p7line) 
+.plotregion1.Declare plot8 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo8') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p8line) 
+.plotregion1.Declare plot9 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo9') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p9line) 
+.plotregion1.Declare plot10 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo10') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p10line) 
+.plotregion1.Declare plot11 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo11') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p11line) 
+.plotregion1.Declare plot12 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo12') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p12line) 
+.plotregion1.Declare plot13 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo13') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p13line) 
+.plotregion1.Declare plot14 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo14') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p14line) 
+.plotregion1.Declare plot15 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo15') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p15line) 
+.plotregion1.Declare plot16 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo16') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p1line) 
+.plotregion1.Declare plot17 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo17') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p2line) 
+.plotregion1.Declare plot18 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo18') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p3line) 
+.plotregion1.Declare plot19 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo19') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p4line) 
+.plotregion1.Declare plot20 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo20') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p5line) 
+.plotregion1.Declare plot21 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo21') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p6line) 
+.plotregion1.Declare plot22 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo22') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p7line) 
+.plotregion1.Declare plot23 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo23') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p8line) 
+.plotregion1.Declare plot24 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo24') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p9line) 
+.plotregion1.Declare plot25 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo25') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p10line) 
+.plotregion1.Declare plot26 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo26') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p11line) 
+.plotregion1.Declare plot27 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo27') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p12line) 
+.plotregion1.Declare plot28 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo28') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p13line) 
+.plotregion1.Declare plot29 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo29') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p14line) 
+.plotregion1.Declare plot30 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo30') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p15line) 
+.plotregion1.Declare plot31 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo31') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p1line) 
+.plotregion1.Declare plot32 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo32') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p2line) 
+.plotregion1.Declare plot33 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo33') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p3line) 
+.plotregion1.Declare plot34 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo34') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p4line) 
+.plotregion1.Declare plot35 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo35') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p5line) 
+.plotregion1.Declare plot36 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo36') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p6line) 
+.plotregion1.Declare plot37 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo37') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p7line) 
+.plotregion1.Declare plot38 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo38') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p8line) 
+.plotregion1.Declare plot39 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo39') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p9line) 
+.plotregion1.Declare plot40 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo40') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p10line) 
+.plotregion1.Declare plot41 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo41') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p11line) 
+.plotregion1.Declare plot42 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo42') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p12line) 
+.plotregion1.Declare plot43 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo43') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p13line) 
+.plotregion1.Declare plot44 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo44') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p14line) 
+.plotregion1.Declare plot45 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo45') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p15line) 
+.plotregion1.Declare plot46 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo46') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p1line) 
+.plotregion1.Declare plot47 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo47') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p2line) 
+.plotregion1.Declare plot48 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo48') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p3line) 
+.plotregion1.Declare plot49 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo49') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p4line) 
+.plotregion1.Declare plot50 = .yxview.new , type(line) serset(`.sersets[1].objkey') yvariable(`.sersets[1].seriesof enplacebo50') xvariable(`.sersets[1].seriesof year')    plotregion(`.plotregion1.objkey') style(scheme p5line) 
+.plotregion1.clear_scales
+.plotregion1.reset_scales , noclear
+.n_views = 50
+.n_plotregions = 1
+.last_style = 50
+.x_scales = `" "1""'
+.y_scales = `" "1""'
+.create_axes 1 1 "9" "" 9
+.insert (legend = .legend_g.new, graphs(`.objkey') style(scheme)) below plotregion1 , ring(3) 
+.legend.style.editstyle box_alignment(S) editcopy
+.legend.holes = ""
+.legend.style.editstyle  force_draw(no) force_nodraw(yes) editcopy
+.legend.insert (note = .sized_textbox.new, mtextq(`""') style(scheme leg_note) ) below plotregion1 , ring(3) 
+.legend.note.style.editstyle box_alignment(SW) editcopy
+.legend.note.style.editstyle horizontal(left) editcopy
+.legend.insert (caption = .sized_textbox.new, mtextq(`""') style(scheme leg_caption) ) below plotregion1 , ring(5) 
+.legend.caption.style.editstyle box_alignment(SW) editcopy
+.legend.caption.style.editstyle horizontal(left) editcopy
+.legend.insert (subtitle = .sized_textbox.new, mtextq(`""') style(scheme leg_subtitle) ) above plotregion1 , ring(6) 
+.legend.subtitle.style.editstyle box_alignment(N) editcopy
+.legend.subtitle.style.editstyle horizontal(center) editcopy
+.legend.insert (title = .sized_textbox.new, mtextq(`""') style(scheme leg_title) ) above plotregion1 , ring(7) 
+.legend.title.style.editstyle box_alignment(N) editcopy
+.legend.title.style.editstyle horizontal(center) editcopy
+.legend.rebuild
+.legend.repositionkeys
+.xaxis1.major.clear
+.xaxis1.major.range_ticks 1992 2007 3
+.xaxis1.reset_scale reinit
+tempname glsty
+.`glsty' = .gridlinestyle.new, style(scheme)
+.`glsty'.editstyle  linestyle( pattern(dash)) editcopy
+.xaxis1.plotregion.declare_xyline .gridline_g.new 1997 , ordinate(x) plotregion(`.xaxis1.plotregion.objkey') styleref(`glsty') 
+.xaxis1.plotregion.declare_xyline .gridline_g.new 2003 , ordinate(x) plotregion(`.xaxis1.plotregion.objkey') styleref(`glsty') 
+.insert (r1title = .sized_textbox.new, mtextq(`""') style(scheme r1title) orientation(vertical)) rightof plotregion1 , ring(1) 
+.insert (r2title = .sized_textbox.new, mtextq(`""') style(scheme r2title) orientation(vertical)) rightof plotregion1 , ring(2) 
+.insert (l1title = .sized_textbox.new, mtextq(`""') style(scheme l1title) orientation(vertical)) leftof plotregion1 , ring(1) 
+.insert (l2title = .sized_textbox.new, mtextq(`""') style(scheme l2title) orientation(vertical)) leftof plotregion1 , ring(2) 
+.insert (t1title = .sized_textbox.new, mtextq(`""') style(scheme t1title) ) above plotregion1 , ring(1) 
+.insert (t2title = .sized_textbox.new, mtextq(`""') style(scheme t2title) ) above plotregion1 , ring(2) 
+.insert (b1title = .sized_textbox.new, mtextq(`""') style(scheme b1title) ) below plotregion1 , ring(1) 
+.insert (b2title = .sized_textbox.new, mtextq(`""') style(scheme b1title) ) below plotregion1 , ring(2) 
+.insert (note = .sized_textbox.new, mtextq(`""') style(scheme note) ) below plotregion1 , ring(4) 
+.note.style.editstyle box_alignment(SW) editcopy
+.note.style.editstyle horizontal(left) editcopy
+.insert (caption = .sized_textbox.new, mtextq(`""') style(scheme caption) ) below plotregion1 , ring(5) 
+.caption.style.editstyle box_alignment(SW) editcopy
+.caption.style.editstyle horizontal(left) editcopy
+.insert (subtitle = .sized_textbox.new, mtextq(`""') style(scheme subtitle) ) above plotregion1 , ring(6) 
+.subtitle.style.editstyle box_alignment(N) editcopy
+.subtitle.style.editstyle horizontal(center) editcopy
+.insert (title = .sized_textbox.new, mtextq(`""SCM Estimates of the Effect of HEL Access on LFPR in Texas vs. Placebo States using Elasticnet""') style(scheme title) ) above plotregion1 , ring(7) 
+.title.style.editstyle box_alignment(N) editcopy
+.title.style.editstyle horizontal(center) editcopy
+.title.style.editstyle  size(small) editcopy
+.insert (spacert = .spacer.new) above plotregion1 , ring(11)
+.insert (spacerb = .spacer.new) below plotregion1 , ring(11)
+.insert (spacerl = .spacer.new) leftof plotregion1 , ring(11)
+.insert (spacerr = .spacer.new) rightof plotregion1 , ring(11)
+.command = `"twoway tsline elasticnet enplacebo*, xline(1997 2003, lp(dash)) xlab(1992(3)2007) legend(off) lp(solid) lc(black) lw(thick) title("SCM Estimates of the Effect of HEL Access on LFPR in Texas vs. Placebo States using Elasticnet", size(small)) saving("results\Figure A7.gph", replace)"'
+.date = "14 Nov 2023"
+.time = "22:42:04"
+.dta_file = "results\mcpanel.dta"
+.dta_date = ""
+<EndItem>

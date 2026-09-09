@@ -1,0 +1,24 @@
+\begin{table}[p]\centering\footnotesize{
+\captionsetup{width=\textwidth,labelformat=empty}
+\caption{Table 2: Comparison of City Attributes, by Hometown Status}
+\begin{threeparttable}
+\begin{tabular}{l  c c c c c c}
+\hline\hline
+\; & \multicolumn{2}{c}{Hometown = 1} & \multicolumn{2}{c}{Hometown = 0} & \multicolumn{2}{c}{Difference}  \\
+\hline
+Varible Name & Mean & StdDev & Mean & StdDev & Difference & t-statistic  \\
+\hline
+Log(GDP pc)&10.316&0.627&10.268&0.769&0.048&0.472\\
+IndustrialRatio&0.491&0.092&0.494&0.099&-0.004&-0.227\\
+Log(Population)&5.942&0.556&5.890&0.627&0.052&0.470\\
+og(GovRev)&13.507&0.950&13.416&1.098&0.091&0.570\\
+GovBalance&2.681&1.266&2.622&1.468&0.058&0.265\\
+Gov Exp/GDP&0.167&0.076&0.162&0.075&0.005&0.361\\
+FDI/GDP&0.020&0.023&0.020&0.019&0.000&0.054\\
+AvgEdu&8.526&0.661&8.646&0.616&-0.120&-1.053\\
+City Leader Hometown&0.122&0.328&0.097&0.296&0.025&0.522\\
+\hline\hline
+\end{tabular}
+\captionsetup{justification=justified,labelformat=empty}
+\begin{tablenotes}\item Notes: $ Hometown $ is an indicator variable denoting if the provincial chief auditor was born a given city. See the notes to Table 1 for detailed definitions of the variables. T-statistics are calculated based on a regression of each outcome on $ Hometown $, clustering at the city level. \end{tablenotes}
+\end{threeparttable}}\end{table}

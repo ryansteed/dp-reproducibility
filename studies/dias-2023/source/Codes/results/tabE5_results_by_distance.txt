@@ -1,0 +1,26 @@
+		(1)	(2)	(3)	(4)	(5)	(6)	(7)
+		Reduced Form	Reduced Form					
+VARIABLES	LABELS	Full Sample	with 50km 100km 150km 200km	Reduced Form	Reduced Form	Reduced Form	Reduced Form	Reduced Form
+								
+potentialUpstream	Instrument: Upstream	4.587	3.928					
+		(1.548)***	(2.061)*					
+potentialAMC	Instrument: Direct Effect	0.567	2.323	0.687	1.719	2.112	2.104	1.027
+		(2.759)	(3.458)	(3.510)	(3.500)	(3.535)	(3.559)	(3.578)
+potentialUpstream50km	Instrument: Upstream, dist<=50km			3.858				2.111
+				(1.757)**				(2.021)
+potentialUpstream100km	Instrument: Upstream, 50km<dist<=100km				4.222			3.384
+					(1.927)**			(3.634)
+potentialUpstream150km	Instrument: Upstream, 100km<dist<=150km					2.864		-2.732
+						(1.924)		(5.728)
+potentialUpstream200km	Instrument: Upstream, 150km<dist<=200km						2.615	1.802
+							(1.600)	(3.291)
+								
+Observations		12,309	8,415	8,415	8,415	8,415	8,415	8,415
+R-squared		0.103	0.123	0.123	0.123	0.122	0.122	0.123
+Number of AMC		1,119	765	765	765	765	765	765
+AMC FE		Yes	Yes	Yes	Yes	Yes	Yes	Yes
+UF-Year FE		Yes	Yes	Yes	Yes	Yes	Yes	Yes
+Controls		Yes	Yes	Yes	Yes	Yes	Yes	Yes
+IMR_baseline_mean		18.00	18.02	18.02	18.02	18.02	18.02	18.02
+Robust standard errors in parentheses								
+*** p<0.01, ** p<0.05, * p<0.1								

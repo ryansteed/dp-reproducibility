@@ -1,0 +1,32 @@
+[
+  {
+    "id": "unemp-dis-overall",
+    "est": 0.073,
+    "se": 0.006
+  },
+  {
+    "id": "unemp-dis-black",
+    "est": 0.022,
+    "se": 0.005
+  },
+  {
+    "id": "unemp-dis-hisp",
+    "est": 0.016,
+    "se": 0.007
+  },
+  {
+    "id": "blueshare-dis",
+    "est": 5.068,
+    "se": 1.419
+  },
+  {
+    "id": "blackshare-dis",
+    "est": -2.706,
+    "se": 1.126
+  },
+  {
+    "id": "hispshare-dis",
+    "est": -3.364,
+    "se": 0.869
+  }
+]

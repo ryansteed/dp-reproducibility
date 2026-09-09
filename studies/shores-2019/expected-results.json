@@ -1,0 +1,12 @@
+[
+  {
+    "id": "recession-math",
+    "est": -0.026,
+    "se": 0.010
+  },
+  {
+    "id": "recession-english",
+    "est": -0.025,
+    "se": 0.010
+  }
+]

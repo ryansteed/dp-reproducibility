@@ -1,0 +1,39 @@
+		(1)	(2)	(3)	(4)	(5)	(6)	(7)	(8)
+VARIABLES	LABELS	Vote share of HSP et al.	Vote share of HSP et al.	Vote share of HDZ	Vote share of HDZ	Vote share of SDP	Vote share of SDP	Turnout	Turnout
+									
+s1_1	s1_1	0.841	0.457	-2.407**	-2.697**	1.950*	2.044**	-1.208	-1.693**
+		[0.520]	[0.486]	[1.180]	[1.344]	[1.040]	[0.888]	[0.895]	[0.847]
+log_distance_full	Distance to Serbia, logged	-0.015**	-0.016*	-0.019*	-0.036***	-0.007	0.031***	0.019	0.009
+		[0.007]	[0.008]	[0.011]	[0.011]	[0.011]	[0.010]	[0.011]	[0.011]
+logpop	Population (logged)		0.001		-0.010		0.019**		-0.011*
+			[0.003]		[0.007]		[0.007]		[0.006]
+male_share	% of male population		0.067		-0.088		-0.125		0.096
+			[0.060]		[0.229]		[0.173]		[0.154]
+z2	% of aged 21-40		0.044		0.106		0.164		0.122
+			[0.092]		[0.265]		[0.190]		[0.148]
+z3	% of aged 41-60		0.020		-0.314		0.292		0.089
+			[0.062]		[0.218]		[0.179]		[0.092]
+z6	% of aged 61+		-0.005		-0.023		0.150		0.036
+			[0.048]		[0.159]		[0.119]		[0.119]
+Croats	% of Croats		0.031		0.155***		-0.302***		0.138***
+			[0.019]		[0.052]		[0.040]		[0.044]
+higher_educ	higher_educ		0.178		0.176		0.439		0.013
+			[0.234]		[0.485]		[0.288]		[0.338]
+ec_active	Economically active population, %		0.033		-0.476		0.069		0.179
+			[0.095]		[0.288]		[0.193]		[0.194]
+disable_share2	Disabled after the war of independence, %		1.616**		2.991**		-1.761*		3.553***
+			[0.691]		[1.190]		[0.933]		[1.143]
+o.r2	county==County of Požega-Slavonia = o,	-	-	-	-	-	-	-	-
+									
+									
+Observations		417	417	417	417	417	417	417	417
+R-squared		0.130	0.200	0.201	0.320	0.042	0.360	0.086	0.243
+Effect of 1 st. dev. change		0.0145	0.00787	-0.0415	-0.0465	0.0336	0.0352	-0.0208	-0.0292
+Persuasion rates		0.0104	0.00549	-0.0407	-0.0382	0.0298	0.0277	-0.0327	-0.0293
+ATT		0.0164	0.00890	-0.0469	-0.0525	0.0380	0.0398	-0.0235	-0.0330
+F-stat, census			3.876		3.095		9.679		4.036
+p-value for Census			0.000227		0.00205		1.16e-10		0.000145
+F-stat, geographic controls			3.877		10.10		10.35		0.658
+p			0.0521		0.00205		0.00182		0.419
+Robust standard errors in brackets									
+*** p<0.01, ** p<0.05, * p<0.1									

@@ -1,0 +1,12 @@
+[
+  {
+    "id": "distance-conflict",
+    "est": -0.0266,
+    "se": 0.0107
+  },
+  {
+    "id": "distance-misgov",
+    "est": -0.1430,
+    "se": 0.054
+  }
+]

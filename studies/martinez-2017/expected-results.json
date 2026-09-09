@@ -1,0 +1,17 @@
+[
+  {
+    "id": "school-health",
+    "est": 0.012,
+    "se": 0.003
+  },
+  {
+    "id": "school-doctor",
+    "est": 0.006,
+    "se": 0.003
+  },
+  {
+    "id": "school-water",
+    "est": 0.018,
+    "se": 0.007
+  }
+]

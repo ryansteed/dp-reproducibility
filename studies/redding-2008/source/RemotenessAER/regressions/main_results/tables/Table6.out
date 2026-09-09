@@ -1,0 +1,33 @@
+Table 6: Western Economic Integration		
+	(1)	(2)
+	g_pop	
+treat	-0.730***	
+	(0.204)	
+ftreat	0.032	
+	(0.226)	
+bzone	0.045	
+	(0.151)	
+fzone	-0.162	
+	(0.152)	
+treat25		-0.675**
+		(0.297)
+treat2550		-0.756***
+		(0.240)
+treat5075		-0.593
+		(0.403)
+treat75100		0.426
+		(0.372)
+ftreat25		0.421
+		(0.383)
+ftreat2550		0.488*
+		(0.289)
+ftreat5075		-0.375
+		(0.338)
+ftreat75100		-0.140
+		(0.351)
+Constant	1.984***	1.422***
+	(0.139)	(0.174)
+Observations	833	833
+R-squared	0.21	0.23
+Robust standard errors in parentheses		
+* significant at 10%; ** significant at 5%; *** significant at 1%		

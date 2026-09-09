@@ -1,0 +1,22 @@
+[
+  {
+    "id": "fpm-board",
+    "est": 0.014,
+    "se": 0.007
+  },
+  {
+    "id": "fpm-narrow",
+    "est": 0.022,
+    "se": 0.008
+  },
+  {
+    "id": "fpm-college",
+    "est": -0.008,
+    "se": 0.004
+  },
+  {
+    "id": "fpm-school",
+    "est": -0.077,
+    "se": 0.026
+  }
+]

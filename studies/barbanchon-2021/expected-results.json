@@ -1,0 +1,22 @@
+[
+  {
+    "id": "attitude1-select",
+    "est": -0.301,
+    "se": 0.115
+  },
+  {
+    "id": "attitude2-select",
+    "est": -0.332,
+    "se": 0.071
+  },
+  {
+    "id": "gap-vote",
+    "est": -0.079,
+    "se": 0.033
+  },
+  {
+    "id": "contest-select",
+    "est": -0.033,
+    "se": 0.013
+  }
+]

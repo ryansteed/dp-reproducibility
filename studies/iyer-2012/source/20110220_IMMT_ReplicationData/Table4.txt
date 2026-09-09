@@ -1,0 +1,896 @@
+Table 4 - Dependent Variable: lpkidmen
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.005           -0.003           -0.030           -0.134    
+                  [0.135]          [0.105]          [0.113]          [0.123]    
+                                                                                
+r2                   0.66             0.68             0.69             0.79    
+N                     330              330              330              330    
+Table 4 - Dependent Variable: lpcr_prop
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.073            0.025            0.026           -0.034    
+                  [0.073]          [0.051]          [0.050]          [0.034]    
+                                                                                
+r2                   0.82             0.86             0.86             0.94    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_order
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.193 **         0.124            0.116            0.086    
+                  [0.085]          [0.075]          [0.077]          [0.083]    
+                                                                                
+r2                   0.89             0.92             0.92             0.95    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_econ
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.122            0.104            0.103            0.059    
+                  [0.075]          [0.062]          [0.062]          [0.052]    
+                                                                                
+r2                   0.70             0.71             0.71             0.86    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpkidmen
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.005           -0.003           -0.030           -0.134    
+                  [0.135]          [0.105]          [0.113]          [0.123]    
+                                                                                
+r2                   0.66             0.68             0.69             0.79    
+N                     330              330              330              330    
+Table 4 - Dependent Variable: lpcr_prop
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.073            0.025            0.026           -0.034    
+                  [0.073]          [0.051]          [0.050]          [0.034]    
+                                                                                
+r2                   0.82             0.86             0.86             0.94    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_order
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.193 **         0.124            0.116            0.086    
+                  [0.085]          [0.075]          [0.077]          [0.083]    
+                                                                                
+r2                   0.89             0.92             0.92             0.95    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_econ
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.122            0.104            0.103            0.059    
+                  [0.075]          [0.062]          [0.062]          [0.052]    
+                                                                                
+r2                   0.70             0.71             0.71             0.86    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpkidmen
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.005           -0.003           -0.030           -0.134    
+                  [0.135]          [0.105]          [0.113]          [0.123]    
+                                                                                
+r2                   0.66             0.68             0.69             0.79    
+N                     330              330              330              330    
+Table 4 - Dependent Variable: lpcr_prop
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.073            0.025            0.026           -0.034    
+                  [0.073]          [0.051]          [0.050]          [0.034]    
+                                                                                
+r2                   0.82             0.86             0.86             0.94    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_order
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.193 **         0.124            0.116            0.086    
+                  [0.085]          [0.075]          [0.077]          [0.083]    
+                                                                                
+r2                   0.89             0.92             0.92             0.95    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_econ
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.122            0.104            0.103            0.059    
+                  [0.075]          [0.062]          [0.062]          [0.052]    
+                                                                                
+r2                   0.70             0.71             0.71             0.86    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpkidmen
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.005           -0.003           -0.030           -0.134    
+                  [0.135]          [0.105]          [0.113]          [0.123]    
+                                                                                
+r2                   0.66             0.68             0.69             0.79    
+N                     330              330              330              330    
+Table 4 - Dependent Variable: lpcr_prop
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.073            0.025            0.026           -0.034    
+                  [0.073]          [0.051]          [0.050]          [0.034]    
+                                                                                
+r2                   0.82             0.86             0.86             0.94    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_order
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.193 **         0.124            0.116            0.086    
+                  [0.085]          [0.075]          [0.077]          [0.083]    
+                                                                                
+r2                   0.89             0.92             0.92             0.95    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_econ
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.122            0.104            0.103            0.059    
+                  [0.075]          [0.062]          [0.062]          [0.052]    
+                                                                                
+r2                   0.70             0.71             0.71             0.86    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpkidmen
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.005           -0.003           -0.030           -0.134    
+                  [0.135]          [0.105]          [0.113]          [0.123]    
+                                                                                
+r2                   0.66             0.68             0.69             0.79    
+N                     330              330              330              330    
+Table 4 - Dependent Variable: lpcr_prop
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.073            0.025            0.026           -0.034    
+                  [0.073]          [0.051]          [0.050]          [0.034]    
+                                                                                
+r2                   0.82             0.86             0.86             0.94    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_order
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.193 **         0.124            0.116            0.086    
+                  [0.085]          [0.075]          [0.077]          [0.083]    
+                                                                                
+r2                   0.89             0.92             0.92             0.95    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_econ
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.122            0.104            0.103            0.059    
+                  [0.075]          [0.062]          [0.062]          [0.052]    
+                                                                                
+r2                   0.70             0.71             0.71             0.86    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpkidmen
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.005           -0.003           -0.030           -0.134    
+                  [0.135]          [0.105]          [0.113]          [0.123]    
+                                                                                
+r2                   0.66             0.68             0.69             0.79    
+N                     330              330              330              330    
+Table 4 - Dependent Variable: lpcr_prop
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.073            0.025            0.026           -0.034    
+                  [0.073]          [0.051]          [0.050]          [0.034]    
+                                                                                
+r2                   0.82             0.86             0.86             0.94    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_order
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.193 **         0.124            0.116            0.086    
+                  [0.085]          [0.075]          [0.077]          [0.083]    
+                                                                                
+r2                   0.89             0.92             0.92             0.95    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_econ
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.122            0.104            0.103            0.059    
+                  [0.075]          [0.062]          [0.062]          [0.052]    
+                                                                                
+r2                   0.70             0.71             0.71             0.86    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpkidmen
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.005           -0.003           -0.030           -0.134    
+                  [0.135]          [0.105]          [0.113]          [0.123]    
+                                                                                
+r2                   0.66             0.68             0.69             0.79    
+N                     330              330              330              330    
+Table 4 - Dependent Variable: lpcr_prop
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.073            0.025            0.026           -0.034    
+                  [0.073]          [0.051]          [0.050]          [0.034]    
+                                                                                
+r2                   0.82             0.86             0.86             0.94    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_order
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.193 **         0.124            0.116            0.086    
+                  [0.085]          [0.075]          [0.077]          [0.083]    
+                                                                                
+r2                   0.89             0.92             0.92             0.95    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_econ
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.122            0.104            0.103            0.059    
+                  [0.075]          [0.062]          [0.062]          [0.052]    
+                                                                                
+r2                   0.70             0.71             0.71             0.86    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpkidmen
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.005           -0.003           -0.030           -0.134    
+                  [0.135]          [0.105]          [0.113]          [0.123]    
+                                                                                
+r2                   0.66             0.68             0.69             0.79    
+N                     330              330              330              330    
+Table 4 - Dependent Variable: lpcr_prop
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.073            0.025            0.026           -0.034    
+                  [0.073]          [0.051]          [0.050]          [0.034]    
+                                                                                
+r2                   0.82             0.86             0.86             0.94    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_order
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.193 **         0.124            0.116            0.086    
+                  [0.085]          [0.075]          [0.077]          [0.083]    
+                                                                                
+r2                   0.89             0.92             0.92             0.95    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_econ
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.122            0.104            0.103            0.059    
+                  [0.075]          [0.062]          [0.062]          [0.052]    
+                                                                                
+r2                   0.70             0.71             0.71             0.86    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpkidmen
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.005           -0.003           -0.030           -0.134    
+                  [0.135]          [0.105]          [0.113]          [0.123]    
+                                                                                
+r2                   0.66             0.68             0.69             0.79    
+N                     330              330              330              330    
+Table 4 - Dependent Variable: lpcr_prop
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.073            0.025            0.026           -0.034    
+                  [0.073]          [0.051]          [0.050]          [0.034]    
+                                                                                
+r2                   0.82             0.86             0.86             0.94    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_order
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.193 **         0.124            0.116            0.086    
+                  [0.085]          [0.075]          [0.077]          [0.083]    
+                                                                                
+r2                   0.89             0.92             0.92             0.95    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_econ
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.122            0.104            0.103            0.059    
+                  [0.075]          [0.062]          [0.062]          [0.052]    
+                                                                                
+r2                   0.70             0.71             0.71             0.86    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpkidmen
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.005           -0.003           -0.030           -0.134    
+                  [0.135]          [0.105]          [0.113]          [0.123]    
+                                                                                
+r2                   0.66             0.68             0.69             0.79    
+N                     330              330              330              330    
+Table 4 - Dependent Variable: lpcr_prop
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.073            0.025            0.026           -0.034    
+                  [0.073]          [0.051]          [0.050]          [0.034]    
+                                                                                
+r2                   0.82             0.86             0.86             0.94    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_order
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.193 **         0.124            0.116            0.086    
+                  [0.085]          [0.075]          [0.077]          [0.083]    
+                                                                                
+r2                   0.89             0.92             0.92             0.95    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_econ
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.122            0.104            0.103            0.059    
+                  [0.075]          [0.062]          [0.062]          [0.052]    
+                                                                                
+r2                   0.70             0.71             0.71             0.86    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpkidmen
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.005           -0.003           -0.030           -0.134    
+                  [0.135]          [0.105]          [0.113]          [0.123]    
+                                                                                
+r2                   0.66             0.68             0.69             0.79    
+N                     330              330              330              330    
+Table 4 - Dependent Variable: lpcr_prop
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.073            0.025            0.026           -0.034    
+                  [0.073]          [0.051]          [0.050]          [0.034]    
+                                                                                
+r2                   0.82             0.86             0.86             0.94    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_order
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.193 **         0.124            0.116            0.086    
+                  [0.085]          [0.075]          [0.077]          [0.083]    
+                                                                                
+r2                   0.89             0.92             0.92             0.95    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_econ
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.122            0.104            0.103            0.059    
+                  [0.075]          [0.062]          [0.062]          [0.052]    
+                                                                                
+r2                   0.70             0.71             0.71             0.86    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpkidmen
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.005           -0.003           -0.030           -0.134    
+                  [0.135]          [0.105]          [0.113]          [0.123]    
+                                                                                
+r2                   0.66             0.68             0.69             0.79    
+N                     330              330              330              330    
+Table 4 - Dependent Variable: lpcr_prop
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.073            0.025            0.026           -0.034    
+                  [0.073]          [0.051]          [0.050]          [0.034]    
+                                                                                
+r2                   0.82             0.86             0.86             0.94    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_order
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.193 **         0.124            0.116            0.086    
+                  [0.085]          [0.075]          [0.077]          [0.083]    
+                                                                                
+r2                   0.89             0.92             0.92             0.95    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_econ
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.122            0.104            0.103            0.059    
+                  [0.075]          [0.062]          [0.062]          [0.052]    
+                                                                                
+r2                   0.70             0.71             0.71             0.86    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpkidmen
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.005           -0.003           -0.030           -0.134    
+                  [0.135]          [0.105]          [0.113]          [0.123]    
+                                                                                
+r2                   0.66             0.68             0.69             0.79    
+N                     330              330              330              330    
+Table 4 - Dependent Variable: lpcr_prop
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.073            0.025            0.026           -0.034    
+                  [0.073]          [0.051]          [0.050]          [0.034]    
+                                                                                
+r2                   0.82             0.86             0.86             0.94    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_order
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.193 **         0.124            0.116            0.086    
+                  [0.085]          [0.075]          [0.077]          [0.083]    
+                                                                                
+r2                   0.89             0.92             0.92             0.95    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_econ
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.122            0.104            0.103            0.059    
+                  [0.075]          [0.062]          [0.062]          [0.052]    
+                                                                                
+r2                   0.70             0.71             0.71             0.86    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpkidmen
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.005           -0.003           -0.030           -0.134    
+                  [0.135]          [0.105]          [0.113]          [0.123]    
+                                                                                
+r2                   0.66             0.68             0.69             0.79    
+N                     330              330              330              330    
+Table 4 - Dependent Variable: lpcr_prop
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.073            0.025            0.026           -0.034    
+                  [0.073]          [0.051]          [0.050]          [0.034]    
+                                                                                
+r2                   0.82             0.86             0.86             0.94    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_order
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.193 **         0.124            0.116            0.086    
+                  [0.085]          [0.075]          [0.077]          [0.083]    
+                                                                                
+r2                   0.89             0.92             0.92             0.95    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_econ
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.122            0.104            0.103            0.059    
+                  [0.075]          [0.062]          [0.062]          [0.052]    
+                                                                                
+r2                   0.70             0.71             0.71             0.86    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpkidmen
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.005           -0.003           -0.030           -0.134    
+                  [0.135]          [0.105]          [0.113]          [0.123]    
+                                                                                
+r2                   0.66             0.68             0.69             0.79    
+N                     330              330              330              330    
+Table 4 - Dependent Variable: lpcr_prop
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.073            0.025            0.026           -0.034    
+                  [0.073]          [0.051]          [0.050]          [0.034]    
+                                                                                
+r2                   0.82             0.86             0.86             0.94    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_order
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.193 **         0.124            0.116            0.086    
+                  [0.085]          [0.075]          [0.077]          [0.083]    
+                                                                                
+r2                   0.89             0.92             0.92             0.95    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_econ
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.122            0.104            0.103            0.059    
+                  [0.075]          [0.062]          [0.062]          [0.052]    
+                                                                                
+r2                   0.70             0.71             0.71             0.86    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpkidmen
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.005           -0.003           -0.030           -0.134    
+                  [0.135]          [0.105]          [0.113]          [0.123]    
+                                                                                
+r2                   0.66             0.68             0.69             0.79    
+N                     330              330              330              330    
+Table 4 - Dependent Variable: lpcr_prop
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.073            0.025            0.026           -0.034    
+                  [0.073]          [0.051]          [0.050]          [0.034]    
+                                                                                
+r2                   0.82             0.86             0.86             0.94    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_order
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.193 **         0.124            0.116            0.086    
+                  [0.085]          [0.075]          [0.077]          [0.083]    
+                                                                                
+r2                   0.89             0.92             0.92             0.95    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_econ
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.122            0.104            0.103            0.059    
+                  [0.075]          [0.062]          [0.062]          [0.052]    
+                                                                                
+r2                   0.70             0.71             0.71             0.86    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpkidmen
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.005           -0.003           -0.030           -0.134    
+                  [0.135]          [0.105]          [0.113]          [0.123]    
+                                                                                
+r2                   0.66             0.68             0.69             0.79    
+N                     330              330              330              330    
+Table 4 - Dependent Variable: lpcr_prop
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.073            0.025            0.026           -0.034    
+                  [0.073]          [0.051]          [0.050]          [0.034]    
+                                                                                
+r2                   0.82             0.86             0.86             0.94    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_order
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.193 **         0.124            0.116            0.086    
+                  [0.085]          [0.075]          [0.077]          [0.083]    
+                                                                                
+r2                   0.89             0.92             0.92             0.95    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_econ
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.122            0.104            0.103            0.059    
+                  [0.075]          [0.062]          [0.062]          [0.052]    
+                                                                                
+r2                   0.70             0.71             0.71             0.86    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpkidmen
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.005           -0.003           -0.030           -0.134    
+                  [0.135]          [0.105]          [0.113]          [0.123]    
+                                                                                
+r2                   0.66             0.68             0.69             0.79    
+N                     330              330              330              330    
+Table 4 - Dependent Variable: lpcr_prop
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.073            0.025            0.026           -0.034    
+                  [0.073]          [0.051]          [0.050]          [0.034]    
+                                                                                
+r2                   0.82             0.86             0.86             0.94    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_order
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.193 **         0.124            0.116            0.086    
+                  [0.085]          [0.075]          [0.077]          [0.083]    
+                                                                                
+r2                   0.89             0.92             0.92             0.95    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_econ
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.122            0.104            0.103            0.059    
+                  [0.075]          [0.062]          [0.062]          [0.052]    
+                                                                                
+r2                   0.70             0.71             0.71             0.86    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpkidmen
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.005           -0.003           -0.030           -0.134    
+                  [0.135]          [0.105]          [0.113]          [0.123]    
+                                                                                
+r2                   0.66             0.68             0.69             0.79    
+N                     330              330              330              330    
+Table 4 - Dependent Variable: lpcr_prop
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.073            0.025            0.026           -0.034    
+                  [0.073]          [0.051]          [0.050]          [0.034]    
+                                                                                
+r2                   0.82             0.86             0.86             0.94    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_order
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.193 **         0.124            0.116            0.086    
+                  [0.085]          [0.075]          [0.077]          [0.083]    
+                                                                                
+r2                   0.89             0.92             0.92             0.95    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_econ
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.122            0.104            0.103            0.059    
+                  [0.075]          [0.062]          [0.062]          [0.052]    
+                                                                                
+r2                   0.70             0.71             0.71             0.86    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpkidmen
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.005           -0.003           -0.030           -0.134    
+                  [0.135]          [0.105]          [0.113]          [0.123]    
+                                                                                
+r2                   0.66             0.68             0.69             0.79    
+N                     330              330              330              330    
+Table 4 - Dependent Variable: lpcr_prop
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.073            0.025            0.026           -0.034    
+                  [0.073]          [0.051]          [0.050]          [0.034]    
+                                                                                
+r2                   0.82             0.86             0.86             0.94    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_order
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.193 **         0.124            0.116            0.086    
+                  [0.085]          [0.075]          [0.077]          [0.083]    
+                                                                                
+r2                   0.89             0.92             0.92             0.95    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_econ
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.122            0.104            0.103            0.059    
+                  [0.075]          [0.062]          [0.062]          [0.052]    
+                                                                                
+r2                   0.70             0.71             0.71             0.86    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpkidmen
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.005           -0.003           -0.030           -0.134    
+                  [0.135]          [0.105]          [0.113]          [0.123]    
+                                                                                
+r2                   0.66             0.68             0.69             0.79    
+N                     330              330              330              330    
+Table 4 - Dependent Variable: lpcr_prop
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.073            0.025            0.026           -0.034    
+                  [0.073]          [0.051]          [0.050]          [0.034]    
+                                                                                
+r2                   0.82             0.86             0.86             0.94    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_order
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.193 **         0.124            0.116            0.086    
+                  [0.085]          [0.075]          [0.077]          [0.083]    
+                                                                                
+r2                   0.89             0.92             0.92             0.95    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_econ
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.122            0.104            0.103            0.059    
+                  [0.075]          [0.062]          [0.062]          [0.052]    
+                                                                                
+r2                   0.70             0.71             0.71             0.86    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpkidmen
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.005           -0.003           -0.030           -0.134    
+                  [0.135]          [0.105]          [0.113]          [0.123]    
+                                                                                
+r2                   0.66             0.68             0.69             0.79    
+N                     330              330              330              330    
+Table 4 - Dependent Variable: lpcr_prop
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.073            0.025            0.026           -0.034    
+                  [0.073]          [0.051]          [0.050]          [0.034]    
+                                                                                
+r2                   0.82             0.86             0.86             0.94    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_order
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.193 **         0.124            0.116            0.086    
+                  [0.085]          [0.075]          [0.077]          [0.083]    
+                                                                                
+r2                   0.89             0.92             0.92             0.95    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_econ
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.122            0.104            0.103            0.059    
+                  [0.075]          [0.062]          [0.062]          [0.052]    
+                                                                                
+r2                   0.70             0.71             0.71             0.86    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpkidmen
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.005           -0.003           -0.030           -0.134    
+                  [0.135]          [0.105]          [0.113]          [0.123]    
+                                                                                
+r2                   0.66             0.68             0.69             0.79    
+N                     330              330              330              330    
+Table 4 - Dependent Variable: lpcr_prop
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.073            0.025            0.026           -0.034    
+                  [0.073]          [0.051]          [0.050]          [0.034]    
+                                                                                
+r2                   0.82             0.86             0.86             0.94    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_order
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.193 **         0.124            0.116            0.086    
+                  [0.085]          [0.075]          [0.077]          [0.083]    
+                                                                                
+r2                   0.89             0.92             0.92             0.95    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_econ
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.122            0.104            0.103            0.059    
+                  [0.075]          [0.062]          [0.062]          [0.052]    
+                                                                                
+r2                   0.70             0.71             0.71             0.86    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpkidmen
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.005           -0.003           -0.030           -0.134    
+                  [0.135]          [0.105]          [0.113]          [0.123]    
+                                                                                
+r2                   0.66             0.68             0.69             0.79    
+N                     330              330              330              330    
+Table 4 - Dependent Variable: lpcr_prop
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.073            0.025            0.026           -0.034    
+                  [0.073]          [0.051]          [0.050]          [0.034]    
+                                                                                
+r2                   0.82             0.86             0.86             0.94    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_order
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.193 **         0.124            0.116            0.086    
+                  [0.085]          [0.075]          [0.077]          [0.083]    
+                                                                                
+r2                   0.89             0.92             0.92             0.95    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_econ
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.122            0.104            0.103            0.059    
+                  [0.075]          [0.062]          [0.062]          [0.052]    
+                                                                                
+r2                   0.70             0.71             0.71             0.86    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpkidmen
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.005           -0.003           -0.030           -0.134    
+                  [0.135]          [0.105]          [0.113]          [0.123]    
+                                                                                
+r2                   0.66             0.68             0.69             0.79    
+N                     330              330              330              330    
+Table 4 - Dependent Variable: lpcr_prop
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.073            0.025            0.026           -0.034    
+                  [0.073]          [0.051]          [0.050]          [0.034]    
+                                                                                
+r2                   0.82             0.86             0.86             0.94    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_order
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.193 **         0.124            0.116            0.086    
+                  [0.085]          [0.075]          [0.077]          [0.083]    
+                                                                                
+r2                   0.89             0.92             0.92             0.95    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_econ
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.122            0.104            0.103            0.059    
+                  [0.075]          [0.062]          [0.062]          [0.052]    
+                                                                                
+r2                   0.70             0.71             0.71             0.86    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpkidmen
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.005           -0.003           -0.030           -0.134    
+                  [0.135]          [0.105]          [0.113]          [0.123]    
+                                                                                
+r2                   0.66             0.68             0.69             0.79    
+N                     330              330              330              330    
+Table 4 - Dependent Variable: lpcr_prop
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.073            0.025            0.026           -0.034    
+                  [0.073]          [0.051]          [0.050]          [0.034]    
+                                                                                
+r2                   0.82             0.86             0.86             0.94    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_order
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.193 **         0.124            0.116            0.086    
+                  [0.085]          [0.075]          [0.077]          [0.083]    
+                                                                                
+r2                   0.89             0.92             0.92             0.95    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_econ
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.122            0.104            0.103            0.059    
+                  [0.075]          [0.062]          [0.062]          [0.052]    
+                                                                                
+r2                   0.70             0.71             0.71             0.86    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpkidmen
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.005           -0.003           -0.030           -0.134    
+                  [0.135]          [0.105]          [0.113]          [0.123]    
+                                                                                
+r2                   0.66             0.68             0.69             0.79    
+N                     330              330              330              330    
+Table 4 - Dependent Variable: lpcr_prop
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.073            0.025            0.026           -0.034    
+                  [0.073]          [0.051]          [0.050]          [0.034]    
+                                                                                
+r2                   0.82             0.86             0.86             0.94    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_order
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.193 **         0.124            0.116            0.086    
+                  [0.085]          [0.075]          [0.077]          [0.083]    
+                                                                                
+r2                   0.89             0.92             0.92             0.95    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_econ
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.122            0.104            0.103            0.059    
+                  [0.075]          [0.062]          [0.062]          [0.052]    
+                                                                                
+r2                   0.70             0.71             0.71             0.86    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_prop
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.073            0.025            0.026           -0.034    
+                  [0.073]          [0.051]          [0.050]          [0.034]    
+                                                                                
+r2                   0.82             0.86             0.86             0.94    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_order
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.193 **         0.124            0.116            0.086    
+                  [0.085]          [0.075]          [0.077]          [0.083]    
+                                                                                
+r2                   0.89             0.92             0.92             0.95    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpcr_econ
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.122            0.104            0.103            0.059    
+                  [0.075]          [0.062]          [0.062]          [0.052]    
+                                                                                
+r2                   0.70             0.71             0.71             0.86    
+N                     391              391              391              391    
+Table 4 - Dependent Variable: lpkidmen
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+postwres            0.005           -0.003           -0.030           -0.134    
+                  [0.135]          [0.105]          [0.113]          [0.123]    
+                                                                                
+r2                   0.66             0.68             0.69             0.79    
+N                     330              330              330              330    

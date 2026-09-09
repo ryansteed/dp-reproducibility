@@ -1,0 +1,22 @@
+[
+  {
+    "id": "mld-all",
+    "est": -0.94,
+    "se": 0.37
+  },
+  {
+    "id": "mld-poor",
+    "est": -0.40,
+    "se": 0.13
+  },
+  {
+    "id": "mld-income",
+    "est": -0.92,
+    "se": 0.34
+  },
+  {
+    "id": "mld-nonincome",
+    "est": -0.02,
+    "se": 0.04
+  }
+]

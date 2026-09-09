@@ -1,0 +1,25 @@
+% 17 Feb 2025 14:36:26
+\documentclass{article}
+\usepackage{dcolumn}
+\begin{document}
+
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{4}{D{.}{.}{-1}}}
+jobs                &       0.188***&       0.187***&               &               \\
+                    &     (0.009)   &     (0.009)   &               &               \\
+female              &               &      -0.007   &               &               \\
+                    &               &     (0.007)   &               &               \\
+(mean) jobs2        &               &               &       0.419***&               \\
+                    &               &               &     (0.070)   &               \\
+(mean) age\_ind\_occ\_egap&               &               &               &       0.724** \\
+                    &               &               &               &     (0.349)   \\
+Observations        &       10046   &       10046   &          92   &          92   \\
+\(R^{2}\)           &       0.058   &       0.058   &       0.336   &       0.055   \\
+\multicolumn{5}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{5}{l}{\footnotesize * p<0.10, ** p<0.05, *** p<0.01}\\
+\end{tabular}
+}
+
+\end{document}
+

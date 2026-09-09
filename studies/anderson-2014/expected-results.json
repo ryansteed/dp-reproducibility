@@ -1,0 +1,17 @@
+[
+  {
+    "id": "all3-arrests",
+    "est": -10.27,
+    "se": 5.323
+  },
+  {
+    "id": "property3-arrests",
+    "est": -3.241,
+    "se": 1.295
+  },
+  {
+    "id": "violent3-arrests",
+    "est": -3.264,
+    "se": 1.468
+  }
+]

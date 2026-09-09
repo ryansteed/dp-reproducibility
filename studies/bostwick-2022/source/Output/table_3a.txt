@@ -1,0 +1,18 @@
+	(1)	(2)	(3)	(4)	(5)	(6)	(7)	(8)	(9)	(10)
+VARIABLES	gradrate4yr	gradrate4yr	gradrate4yr	gradrate4yr	womengradrate4yr	mengradrate4yr	urmgradrate4yr	nonurmgradrate4yr	gradrate4yr	gradrate4yr
+										
+block1	-0.003	-0.013	-0.021**	-0.024***	-0.023**	-0.025***	-0.022**	-0.024**	-0.022**	-0.015
+	(0.016)	(0.010)	(0.009)	(0.009)	(0.010)	(0.008)	(0.011)	(0.010)	(0.010)	(0.015)
+block2	-0.009	-0.015	-0.035***	-0.037***	-0.037***	-0.038***	-0.028*	-0.039***	-0.032**	-0.036*
+	(0.020)	(0.017)	(0.012)	(0.012)	(0.014)	(0.012)	(0.017)	(0.013)	(0.014)	(0.020)
+Constant	0.287***	0.254***	4.223***	2.680	7.972***	-0.875	-5.540***	3.205*	1.383	-6.396**
+	(0.004)	(0.068)	(0.103)	(1.663)	(1.683)	(.)	(2.022)	(1.699)	(2.020)	(2.945)
+										
+Observations	13,889	13,889	13,889	13,889	13,865	13,824	13,883	13,799	6,365	7,524
+R-squared	0.958	0.963	0.981	0.981	0.977	0.976	0.945	0.966	0.978	0.967
+School FE	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes
+Year FE	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes
+Controls	No	Yes	No	Yes	No	No	No	No	No	No
+Time Trends	No	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes
+Robust standard errors in parentheses										
+*** p<0.01, ** p<0.05, * p<0.1										

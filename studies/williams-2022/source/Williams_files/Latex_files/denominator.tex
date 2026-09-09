@@ -1,0 +1,21 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{3}{c}}
+\hline\hline
+                    &\multicolumn{3}{c}{\makecell{Black Voter\\Registration Rate}}\\
+                    &         (1)&         (2)&         (3)\\
+\hline
+Black lynching rate (in 1910)&      -0.416&            &            \\
+                    &     (0.099)&            &            \\
+Black lynching rate (in 1920)&            &      -0.086&            \\
+                    &            &     (0.034)&            \\
+Black lynching rate (in 1930)&            &            &      -0.040\\
+                    &            &            &     (0.020)\\
+Historical Controls &         Yes&         Yes&         Yes\\
+State Fixed Effects &         Yes&         Yes&         Yes\\
+\hline
+\# of counties      &         267&         267&         267\\
+R-Squared           &       0.560&       0.540&       0.536\\
+\hline\hline
+\end{tabular}
+}

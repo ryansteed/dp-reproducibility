@@ -1,0 +1,22 @@
+[
+  {
+    "id": "tariff-ruralpoverty",
+    "est": -0.710,
+    "se": 0.250
+  },
+  {
+    "id": "tariff-ruralexpense",
+    "est": 0.677,
+    "se": 0.400
+  },
+  {
+    "id": "tariff-urbanpoverty",
+    "est": -0.600,
+    "se": 0.311
+  },
+  {
+    "id": "tariff-urbanexpense",
+    "est": 6.011,
+    "se": 1.861
+  }
+]

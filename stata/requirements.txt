@@ -1,0 +1,112 @@
+educationdata
+estout
+grc1leg , from("http://www.stata.com/users/vwiggins/") 
+ftools , from("https://raw.githubusercontent.com/sergiocorreia/ftools/master/src/")
+reghdfe , from("https://raw.githubusercontent.com/sergiocorreia/reghdfe/master/src/")
+ivreg2
+rangestat
+ivreghdfe, from("https://raw.githubusercontent.com/sergiocorreia/ivreghdfe/master/src/")
+libjson
+outreg2
+outtable
+ranktest
+reghdfe
+regsave
+unique
+gsort
+winsor2
+mat2txt
+# bell-2022
+hdfe
+boottest
+distinct
+# jack-2023
+labutil
+labmask
+tabstatmat
+coefplot
+# guren-2021
+rolling2
+xtoverid
+binscatter
+rollreg
+# englmaier-2017
+clustse
+# martinez-2019
+psmatch2
+# bernecker-2021
+xtabond2
+# dias-2023
+eret2
+xtivreg2
+# chodorow-2018
+listtex
+# cengz-2019
+# graphexportpdf
+# strobl-2011
+outreg
+# strain-2023
+mplotoffset
+grc1leg2
+# wang-2022
+weakivtest
+# ajzenman-2023
+groups
+reg_ss
+ivreg_ss
+weakiv
+ranktest
+avar
+# sg97_5
+# strain-2023
+egenmore
+_gwtmean
+#murillo-2020
+ivreg2h
+#hup-2024
+imperfectiv
+acreg
+boottest
+# fetzer-2022
+vselect
+# bellego-2024
+asgen
+# litschig-2013
+outreg
+#bucheli-2021
+lincomest
+# bove-2017
+sutex
+# kumar-2018
+fsum
+# campante-2019
+psacalc
+# sosina-2019
+parmest
+# beach-2017
+rdrobust
+# kroeger-2020
+carryforward
+parmest
+# beach-2017
+rdrobust
+# kroeger-2020
+carryforward
+parmest
+# zwart-2021
+asdoc
+# sviatchi-2019
+mmerge
+# borraz-2024
+geodist
+geonear
+# lundqvist-2014
+icomp
+# falck-2014
+center
+# kumar-2024
+_gwtmean
+# jacob-2024
+numdate
+# gonzalez-2025
+ppmlhdfe

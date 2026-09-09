@@ -1,0 +1,13 @@
+Table 4: Matching				
+	(1)	(2)	(3)	(4)
+	g_pop			
+bzone	0.309*	0.338**	0.082	0.061
+	(0.153)	(0.156)	(0.167)	(0.194)
+treat	-0.921***	-1.000***	-0.888***	-0.782***
+	(0.218)	(0.253)	(0.247)	(0.261)
+Constant	1.785***	1.784***	2.618***	2.373***
+	(0.220)	(0.228)	(0.256)	(0.270)
+Observations	280	280	280	280
+R-squared	0.29	0.26	0.38	0.29
+Robust standard errors in parentheses				
+* significant at 10%; ** significant at 5%; *** significant at 1%				

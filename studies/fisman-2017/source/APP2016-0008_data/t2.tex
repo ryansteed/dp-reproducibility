@@ -1,0 +1,27 @@
+\begin{table}[htbp]\centering\captionsetup{width=0.8\textwidth}\footnotesize{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Table 2: No safety, no promotion laws and accidental deaths}
+\begin{tabular}{l*{4}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         \\
+Dependent Variable & \multicolumn{4}{c}{ $ I(Deaths_{cpy} > Ceiling_{cpy}) $ }  \\
+\hline
+ $ NSNP_{py} $      &      -0.051         &      -0.090         &      -0.098\sym{*}  &      -0.104\sym{*}  \\
+                    &     (0.040)         &     (0.053)         &     (0.053)         &     (0.057)         \\
+ $ GDP_{py}/GDPTarget_{py} $ &                     &                     &      -0.800\sym{*}  &      -0.903\sym{*}  \\
+                    &                     &                     &     (0.388)         &     (0.439)         \\
+\hline
+Category and Year FEs            & Yes & Yes & Yes & No  \\
+Province FEs                     & Yes & Yes & Yes & No  \\
+Cat. $ \times $ Year FEs     & No  & No  & No  & Yes \\
+Cat. $ \times $ Province FEs & No  & No  & No  & Yes \\
+\hline
+Full Sample                      & Yes & No  & No  & No  \\
+ $ Var(NSNP)>0 $ Sample          & No  & Yes & Yes & Yes \\
+\hline
+Observations        &        1755         &         855         &         855         &         855         \\
+Adjusted R-Squared  &       0.128         &       0.124         &       0.125         &       0.114         \\
+\hline\hline
+\end{tabular}}
+\caption{Notes: Standard Errors clustered at the province level. All analyses use province-year level data for the sample period 2005-2012. The dependent variable in all columns an indicator variable denoting whether $ Deaths_{cpy}/Ceiling_{cpy} $ (strictly) exceeds one. NSNP is an indicator variable denoting whether the province has passed \enquote{No safety, no promotion} legislation by year \emph{y}. See text for additional details on variable construction and definitions. The $ Var(NSNP) > 0 $ sample is the set of 15 provinces that passed NSNP legislation during the sample period 2005-2012 (and hence have within-province variation in NSNP). * significant at 10\%; ** significant at 5\%; *** significant at 1\%. }
+\end{table}

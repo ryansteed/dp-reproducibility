@@ -1,0 +1,29 @@
+\begin{table}[p]\centering\captionsetup{width=\textwidth,labelformat=empty}\begin{threeparttable}\footnotesize{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Table 3: The Relationship Between Auditor Hometown and Government Audit Outcomes}
+\begin{tabular}{l*{8}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         &\multicolumn{1}{c}{(7)}         &\multicolumn{1}{c}{(8)}         \\
+Dependent Variable & \multicolumn{6}{c}{log(SuspiciousExpenditures)} & log(SuspExp/Audit) & log(Projects Audited) \\
+\hline
+Hometown            &      -0.331\sym{**} &      -0.520\sym{***}&      -0.473\sym{***}&      -0.471\sym{***}&      -0.413\sym{***}&      -0.426\sym{***}&      -0.445\sym{***}&      -0.020         \\
+                    &     (0.158)         &     (0.176)         &     (0.148)         &     (0.143)         &     (0.111)         &     (0.130)         &     (0.136)         &     (0.050)         \\
+\hline
+Year FEs         & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes \\
+City FEs         &     & Yes & Yes & Yes & Yes & Yes & Yes & Yes \\
+Auditor Controls &     &     & Yes & Yes &     & Yes & Yes & Yes \\
+Auditor FE       &     &     &     &     &     Yes     &     &         &         \\
+City Controls    &     &     &     & Yes & Yes & Yes & Yes & Yes \\
+\hline
+Sample & Full & Full & Full & Full & Full & \tabincell{c}{Within-City \\ Variation} & Full & Full \\ 
+\hline
+Observations        &        2940         &        2939         &        2939         &        2939         &        2939         &         339         &        2939         &        2939         \\
+R-Squared           &        .553         &         .81         &        .826         &        .827         &        .839         &        .822         &        .807         &        .787         \\
+Mean of Dep. Var.   &        11.7         &        11.7         &        11.7         &        11.7         &        11.7         &        11.7         &        5.75         &        5.91         \\
+\hline\hline
+\end{tabular}}
+\captionsetup{justification=justified,labelformat=empty}
+\begin{tablenotes}
+\item Notes: Standard errors clustered by city in parentheses. The sample covers the period from 2006 to 2016. The dependent variable in columns (1)-(6) is $ log(SuspiciousExpenditures) $, which denotes the logarithm of total questionable expenditures found during the audit. The dependent variable in columns (7) is $ log(SuspiciousExpenditures \; per \;Audit) $, which denotes the logarithm of total questionable expenditures per audited project. The dependent variable in columns (8) is $ log(Projects \; Audited) $, which denotes the logarithm of number of projects audited. The sample in column (6) is limited to cities that have variation in $ Hometown $ during the sample period. $ Hometown $ is an indicator variable denoting that the provincial chief auditor was born in city $ c $. Auditor Controls include $ Gender $, $ Age $, $ Tenure $, $ Tenure^2 $, $ Education $, $ EduFinance $, $ PastAuditor $, $ PastFinance $, $ PastDiscipline $, and $ PastCityLeader $. City controls include $ Log(GDP pc) $, $ IndustrialRatio $, $ Log(Population) $, $ Log(GovRev) $, $ GovBalance $, $ FDI/GDP $, and $ AvgEdu $. The coefficients and standard errors of the control variables are suppressed to conserve space. See the notes to Table 1 for detailed definitions of the control variables.   \\  Significance: * significant at 10\%; ** significant at 5\%; *** significant at 1\%.
+\end{tablenotes}
+\end{threeparttable}\end{table}

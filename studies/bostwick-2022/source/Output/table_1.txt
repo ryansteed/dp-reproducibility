@@ -1,0 +1,222 @@
+-------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /home/rsteed/git/private-research/studies/bostwick-2022/source/Dat
+> a/../Output/table_1.txt
+  log type:  text
+ opened on:  25 Jul 2025, 11:01:18
+
+. ***Table 1: Institution-Level Summary Statistics 
+. *Column 1: All Observations
+. sutex semester2, dig(2)
+%------- Begin LaTeX code -------%
+
+\begin{table}[htbp]\centering \caption{Summary statistics \label{sumstat}}
+\begin{tabular}{l c c  }\hline\hline
+\multicolumn{1}{c}{\textbf{Variable}} & \textbf{Mean}
+ & \textbf{Std. Dev.} \\ \hline
+semester2 & 0.93 & 0.25  \\
+\multicolumn{1}{c}{N} & \multicolumn{2}{c}{13889}\\ \hline
+\end{tabular}
+\end{table}
+%------- End LaTeX code -------%
+
+. sutex gradrate4yr womengradrate4yr mengradrate4yr urmgradrate4yr nonurmgradra
+> te4yr [aw= meansize] , dig(2)
+%------- Begin LaTeX code -------%
+
+\begin{table}[htbp]\centering \caption{Summary statistics \label{sumstat}}
+\begin{tabular}{l c c  c}\hline\hline
+\multicolumn{1}{c}{\textbf{Variable}} & \textbf{Mean}
+ & \textbf{Std. Dev.} & \textbf{N}\\ \hline
+gradrate4yr & 0.36 & 0.22  & 13889\\
+womengradrate4yr & 0.4 & 0.22  & 13865\\
+mengradrate4yr & 0.3 & 0.21  & 13824\\
+urmgradrate4yr & 0.29 & 0.2  & 13883\\
+nonurmgradrate4yr & 0.37 & 0.22  & 13799\\
+\hline
+\end{tabular}
+\end{table}
+%------- End LaTeX code -------%
+
+. sutex gradrate6yr womengradrate6yr mengradrate6yr urmgradrate6yr nonurmgradra
+> te6yr [aw= meansize] , dig(2)
+%------- Begin LaTeX code -------%
+
+\begin{table}[htbp]\centering \caption{Summary statistics \label{sumstat}}
+\begin{tabular}{l c c  c}\hline\hline
+\multicolumn{1}{c}{\textbf{Variable}} & \textbf{Mean}
+ & \textbf{Std. Dev.} & \textbf{N}\\ \hline
+gradrate6yr & 0.58 & 0.18  & 13889\\
+womengradrate6yr & 0.61 & 0.17  & 13865\\
+mengradrate6yr & 0.55 & 0.19  & 13824\\
+urmgradrate6yr & 0.51 & 0.19  & 13883\\
+nonurmgradrate6yr & 0.6 & 0.18  & 13799\\
+\hline
+\end{tabular}
+\end{table}
+%------- End LaTeX code -------%
+
+. sutex public faculty totcohortsize instatetuition  costs  , dig(2)
+%------- Begin LaTeX code -------%
+
+\begin{table}[htbp]\centering \caption{Summary statistics \label{sumstat}}
+\begin{tabular}{l c c  }\hline\hline
+\multicolumn{1}{c}{\textbf{Variable}} & \textbf{Mean}
+ & \textbf{Std. Dev.} \\ \hline
+public & 0.46 & 0.5  \\
+faculty & 340 & 382.59  \\
+totcohortsize & 1099.45 & 1183.03  \\
+instatetuition & 11088.47 & 9181.55  \\
+costs & 192.1 & 400.54  \\
+\multicolumn{1}{c}{N} & \multicolumn{2}{c}{13889}\\ \hline
+\end{tabular}
+\end{table}
+%------- End LaTeX code -------%
+
+. *sutex gradrate4yr gradrate6yr if public==1 [aw= meansize] , dig(2)
+. 
+. *Column 2: Never Changes Only
+. sutex semester2 if changers==0, dig(2)
+%------- Begin LaTeX code -------%
+
+\begin{table}[htbp]\centering \caption{Summary statistics \label{sumstat}}
+\begin{tabular}{l c c  }\hline\hline
+\multicolumn{1}{c}{\textbf{Variable}} & \textbf{Mean}
+ & \textbf{Std. Dev.} \\ \hline
+semester2 & 0.96 & 0.2  \\
+\multicolumn{1}{c}{N} & \multicolumn{2}{c}{12388}\\ \hline
+\end{tabular}
+\end{table}
+%------- End LaTeX code -------%
+
+. sutex gradrate4yr womengradrate4yr mengradrate4yr urmgradrate4yr nonurmgradra
+> te4yr [aw= meansize] if changers==0 , dig(2)
+%------- Begin LaTeX code -------%
+
+\begin{table}[htbp]\centering \caption{Summary statistics \label{sumstat}}
+\begin{tabular}{l c c  c}\hline\hline
+\multicolumn{1}{c}{\textbf{Variable}} & \textbf{Mean}
+ & \textbf{Std. Dev.} & \textbf{N}\\ \hline
+gradrate4yr & 0.37 & 0.22  & 12388\\
+womengradrate4yr & 0.42 & 0.23  & 12364\\
+mengradrate4yr & 0.31 & 0.22  & 12323\\
+urmgradrate4yr & 0.3 & 0.21  & 12382\\
+nonurmgradrate4yr & 0.39 & 0.23  & 12300\\
+\hline
+\end{tabular}
+\end{table}
+%------- End LaTeX code -------%
+
+. sutex gradrate6yr womengradrate6yr mengradrate6yr urmgradrate6yr nonurmgradra
+> te6yr [aw= meansize] if changers==0, dig(2)
+%------- Begin LaTeX code -------%
+
+\begin{table}[htbp]\centering \caption{Summary statistics \label{sumstat}}
+\begin{tabular}{l c c  c}\hline\hline
+\multicolumn{1}{c}{\textbf{Variable}} & \textbf{Mean}
+ & \textbf{Std. Dev.} & \textbf{N}\\ \hline
+gradrate6yr & 0.59 & 0.18  & 12388\\
+womengradrate6yr & 0.62 & 0.17  & 12364\\
+mengradrate6yr & 0.55 & 0.19  & 12323\\
+urmgradrate6yr & 0.51 & 0.19  & 12382\\
+nonurmgradrate6yr & 0.61 & 0.18  & 12300\\
+\hline
+\end{tabular}
+\end{table}
+%------- End LaTeX code -------%
+
+. sutex public faculty totcohortsize instatetuition  costs if changers==0 , dig
+> (2)
+%------- Begin LaTeX code -------%
+
+\begin{table}[htbp]\centering \caption{Summary statistics \label{sumstat}}
+\begin{tabular}{l c c  }\hline\hline
+\multicolumn{1}{c}{\textbf{Variable}} & \textbf{Mean}
+ & \textbf{Std. Dev.} \\ \hline
+public & 0.43 & 0.49  \\
+faculty & 330.24 & 372.32  \\
+totcohortsize & 1065.99 & 1148.55  \\
+instatetuition & 11554.71 & 9298.51  \\
+costs & 185.14 & 390.65  \\
+\multicolumn{1}{c}{N} & \multicolumn{2}{c}{12388}\\ \hline
+\end{tabular}
+\end{table}
+%------- End LaTeX code -------%
+
+. 
+. *Column 3: Changers Only
+. sutex semester2 if changers==1, dig(2)
+%------- Begin LaTeX code -------%
+
+\begin{table}[htbp]\centering \caption{Summary statistics \label{sumstat}}
+\begin{tabular}{l c c  }\hline\hline
+\multicolumn{1}{c}{\textbf{Variable}} & \textbf{Mean}
+ & \textbf{Std. Dev.} \\ \hline
+semester2 & 0.72 & 0.45  \\
+\multicolumn{1}{c}{N} & \multicolumn{2}{c}{1501}\\ \hline
+\end{tabular}
+\end{table}
+%------- End LaTeX code -------%
+
+. sutex gradrate4yr womengradrate4yr mengradrate4yr urmgradrate4yr nonurmgradra
+> te4yr [aw= meansize] if changers==1 , dig(2)
+%------- Begin LaTeX code -------%
+
+\begin{table}[htbp]\centering \caption{Summary statistics \label{sumstat}}
+\begin{tabular}{l c c  c}\hline\hline
+\multicolumn{1}{c}{\textbf{Variable}} & \textbf{Mean}
+ & \textbf{Std. Dev.} & \textbf{N}\\ \hline
+gradrate4yr & 0.28 & 0.16  & 1501\\
+womengradrate4yr & 0.34 & 0.18  & 1501\\
+mengradrate4yr & 0.23 & 0.15  & 1501\\
+urmgradrate4yr & 0.21 & 0.14  & 1501\\
+nonurmgradrate4yr & 0.3 & 0.17  & 1499\\
+\hline
+\end{tabular}
+\end{table}
+%------- End LaTeX code -------%
+
+. sutex gradrate6yr womengradrate6yr mengradrate6yr urmgradrate6yr nonurmgradra
+> te6yr [aw= meansize] if changers==1, dig(2)
+%------- Begin LaTeX code -------%
+
+\begin{table}[htbp]\centering \caption{Summary statistics \label{sumstat}}
+\begin{tabular}{l c c  c}\hline\hline
+\multicolumn{1}{c}{\textbf{Variable}} & \textbf{Mean}
+ & \textbf{Std. Dev.} & \textbf{N}\\ \hline
+gradrate6yr & 0.54 & 0.17  & 1501\\
+womengradrate6yr & 0.57 & 0.17  & 1501\\
+mengradrate6yr & 0.51 & 0.18  & 1501\\
+urmgradrate6yr & 0.46 & 0.17  & 1501\\
+nonurmgradrate6yr & 0.56 & 0.17  & 1499\\
+\hline
+\end{tabular}
+\end{table}
+%------- End LaTeX code -------%
+
+. sutex public faculty totcohortsize instatetuition  costs if changers==1 , dig
+> (2)
+%------- Begin LaTeX code -------%
+
+\begin{table}[htbp]\centering \caption{Summary statistics \label{sumstat}}
+\begin{tabular}{l c c  }\hline\hline
+\multicolumn{1}{c}{\textbf{Variable}} & \textbf{Mean}
+ & \textbf{Std. Dev.} \\ \hline
+public & 0.71 & 0.45  \\
+faculty & 420.58 & 450.77  \\
+totcohortsize & 1375.54 & 1406.74  \\
+instatetuition & 7240.46 & 7063.64  \\
+costs & 249.54 & 470.59  \\
+\multicolumn{1}{c}{N} & \multicolumn{2}{c}{1501}\\ \hline
+\end{tabular}
+\end{table}
+%------- End LaTeX code -------%
+
+. 
+. log close
+      name:  <unnamed>
+       log:  /home/rsteed/git/private-research/studies/bostwick-2022/source/Dat
+> a/../Output/table_1.txt
+  log type:  text
+ closed on:  25 Jul 2025, 11:01:18
+-------------------------------------------------------------------------------

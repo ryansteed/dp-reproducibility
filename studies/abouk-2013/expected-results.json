@@ -1,0 +1,12 @@
+[
+  {
+    "id": "strong-accident",
+    "est": -0.0807,
+    "se": 0.0255
+  },
+  {
+    "id": "weak-accident",
+    "est": 0.0753,
+    "se": 0.0374
+  }
+]

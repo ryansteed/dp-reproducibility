@@ -1,0 +1,17 @@
+[
+  {
+    "id": "prohibit-nonfatal",
+    "est": -336.7,
+    "se": 106.1
+  },
+  {
+    "id": "prohibit-fatal",
+    "est": -71.56,
+    "se": 32.32
+  },
+  {
+    "id": "prohibit-all",
+    "est": -407.3,
+    "se": 129.1
+  }
+]

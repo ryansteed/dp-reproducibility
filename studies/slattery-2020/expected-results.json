@@ -1,0 +1,17 @@
+[
+  {
+    "id": "emp-incentive",
+    "est": -0.09,
+    "se": 0.04
+  },
+  {
+    "id": "governor-incentive",
+    "est": 0.25,
+    "se": 0.11
+  },
+  {
+    "id": "win-emp",
+    "est": 1108.287,
+    "se": 539.686
+  }
+]

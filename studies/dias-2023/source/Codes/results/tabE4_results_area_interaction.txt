@@ -1,0 +1,22 @@
+		(1)	(2)	(3)
+VARIABLES	LABELS	Reduced Form	Reduced Form	Reduced Form
+				
+potentialUpstream	Instrument: Upstream	0.452	0.385	0.877
+		(1.632)	(1.952)	(1.868)
+c.potentialUpstream#c.area_upstream		0.532	0.539	0.504
+		(0.144)***	(0.162)***	(0.120)***
+potentialAMC	Instrument: Direct Effect		-0.452	-0.696
+			(3.225)	(2.532)
+				
+Observations		12,309	12,309	12,309
+R-squared		0.102	0.102	0.104
+Number of AMC		1,119	1,119	1,119
+AMC FE		Yes	Yes	Yes
+UF-Year FE		Yes	Yes	Yes
+Controls		No	No	Yes
+IMR_baseline_mean		18.00	18.00	18.00
+area_upstream_mean		4.684	4.684	4.684
+coef_sum		2.943	2.911	3.236
+pval		0.0466	0.0716	0.0541
+Robust standard errors in parentheses				
+*** p<0.01, ** p<0.05, * p<0.1				

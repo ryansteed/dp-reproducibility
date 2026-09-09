@@ -1,0 +1,13 @@
+Table A2: Aggregations and the Division Treatment			
+	(1)	(2)	(3)
+	=1 in year in which a cities merges with another cities with 20000>pop>10000 in		
+bzone	-0.013**	-0.014	0.002
+	(0.007)	(0.026)	(0.038)
+treat	0.003	-0.004	-0.024
+	(0.008)	(0.026)	(0.054)
+Constant	0.002*	0.019	0.016
+	(0.001)	(0.012)	(0.014)
+Observations	833	833	833
+R-squared	0.02	0.04	0.24
+Robust standard errors in parentheses			
+* significant at 10%; ** significant at 5%; *** significant at 1%			

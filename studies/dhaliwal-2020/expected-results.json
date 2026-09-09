@@ -1,0 +1,17 @@
+[
+  {
+    "id": "ruralremote-spend",
+    "est": 22665,
+    "se": 2905
+  },
+  {
+    "id": "ruraldistant-spend",
+    "est": -5136,
+    "se": 3105
+  },
+  {
+    "id": "ruralfringe-spend",
+    "est": -7643,
+    "se": 2966
+  }
+]

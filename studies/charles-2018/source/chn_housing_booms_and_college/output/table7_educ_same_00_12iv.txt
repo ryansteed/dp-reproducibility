@@ -1,0 +1,8 @@
+                         	(1) iv1
+                         	 b/se/p
+housing_demand_shock     	 -0.005
+                         	(0.009)
+                         	[0.629]
+Fstat                    	 35.158
+N                        	275.000
+r2                       	  0.124

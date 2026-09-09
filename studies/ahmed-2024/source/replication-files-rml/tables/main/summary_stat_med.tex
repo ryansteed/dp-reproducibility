@@ -1,0 +1,58 @@
+\begin{table}
+\centering
+\begin{tblr}[         %% tabularray outer open
+]                     %% tabularray outer close
+{                     %% tabularray inner open
+colspec={Q[]Q[]Q[]Q[]Q[]Q[]Q[]},
+cell{1}{1}={}{halign=l, halign=c,},
+cell{1}{2}={c=2,}{halign=r, halign=c, halign=c,},
+cell{1}{3}={}{halign=r, halign=c,},
+cell{1}{4}={c=2,}{halign=r, halign=c, halign=c,},
+cell{1}{5}={}{halign=r, halign=c,},
+cell{1}{6}={}{halign=r, halign=c,},
+cell{1}{7}={}{halign=r, halign=c,},
+cell{2-33}{1}={}{halign=l,},
+cell{2-33}{2}={}{halign=r,},
+cell{2-33}{3}={}{halign=r,},
+cell{2-33}{4}={}{halign=r,},
+cell{2-33}{5}={}{halign=r,},
+cell{2-33}{6}={}{halign=r,},
+cell{2-33}{7}={}{halign=r,},
+}                     %% tabularray inner close
+\toprule
+& Non-RM States (N=16993) &  & RM States (N=6534) &  &  &  \\ \cmidrule[lr]{2-3}\cmidrule[lr]{4-5}
+& Mean & Std. Dev. & Mean & Std. Dev. & Diff. in Means & p \\ \midrule %% TinyTableHeader
+Log total first-time enrollment & \num{5.676} & \num{1.660} & \num{5.765} & \num{1.844} & \num{0.089} & <0.001 \\
+Log male first-time enrollment & \num{4.717} & \num{1.901} & \num{4.775} & \num{2.110} & \num{0.058} & 0.054 \\
+Log female first-time enrollment & \num{5.057} & \num{1.697} & \num{5.179} & \num{1.814} & \num{0.122} & <0.001 \\
+Log number of degrees & \num{6.426} & \num{1.615} & \num{6.518} & \num{1.733} & \num{0.092} & <0.001 \\
+Offering medical degree dummy & \num{0.038} & \num{0.192} & \num{0.029} & \num{0.168} & \num{-0.009} & <0.001 \\
+Aggregate enrollment over 20k dummy & \num{0.059} & \num{0.236} & \num{0.099} & \num{0.299} & \num{0.040} & <0.001 \\
+Offering ROTC program dummy & \num{0.309} & \num{0.462} & \num{0.226} & \num{0.418} & \num{-0.083} & <0.001 \\
+Offering distance programs dummy & \num{0.789} & \num{0.408} & \num{0.762} & \num{0.426} & \num{-0.028} & <0.001 \\
+Log age 18 to 24 population & \num{10.281} & \num{1.484} & \num{11.495} & \num{1.464} & \num{1.214} & <0.001 \\
+Age 18 to 24 population female share & \num{0.491} & \num{0.024} & \num{0.487} & \num{0.022} & \num{-0.005} & <0.001 \\
+Unemployment rate & \num{6.258} & \num{2.343} & \num{7.267} & \num{3.397} & \num{1.009} & <0.001 \\
+Log student to faculty ratio & \num{2.693} & \num{0.407} & \num{2.819} & \num{0.467} & \num{0.127} & <0.001 \\
+Log per capita income & \num{10.696} & \num{0.271} & \num{10.793} & \num{0.258} & \num{0.097} & <0.001 \\
+Log Net migration & \num{11.287} & \num{0.142} & \num{11.099} & \num{1.284} & \num{-0.187} & <0.001 \\
+ACT 75th Math score & \num{25.314} & \num{3.356} & \num{26.528} & \num{3.863} & \num{1.213} & <0.001 \\
+SAT 75th Math score & \num{592.911} & \num{71.508} & \num{611.573} & \num{77.858} & \num{18.662} & <0.001 \\
+ACT 75th English score & \num{25.883} & \num{3.833} & \num{27.042} & \num{4.437} & \num{1.159} & <0.001 \\
+ACT 75th Crititcal Reading score & \num{587.533} & \num{69.224} & \num{605.316} & \num{72.090} & \num{17.783} & <0.001 \\
+Log number of  admissionss & \num{7.139} & \num{1.612} & \num{7.131} & \num{1.960} & \num{-0.008} & 0.857 \\
+Log number of ACT and SAT submissions & \num{6.284} & \num{1.215} & \num{6.681} & \num{1.345} & \num{0.397} & <0.001 \\
+Log total out-of-state enrollment & \num{6.448} & \num{1.685} & \num{6.507} & \num{1.852} & \num{0.058} & 0.134 \\
+Log RHG out-of-state enrollment & \num{5.764} & \num{2.279} & \num{5.652} & \num{2.465} & \num{-0.112} & 0.031 \\
+Bachelor’s graduation rate (100\% normal time) & \num{37.490} & \num{22.796} & \num{41.507} & \num{25.451} & \num{4.017} & <0.001 \\
+Bachelor’s graduation rate (150\% normal time) & \num{51.994} & \num{20.853} & \num{57.255} & \num{22.455} & \num{5.260} & <0.001 \\
+Bachelor’s graduation rate (200\% normal time) & \num{53.914} & \num{20.338} & \num{59.888} & \num{21.538} & \num{5.974} & <0.001 \\
+Associate’s graduation rate (100\% normal time) & \num{19.179} & \num{19.326} & \num{16.618} & \num{18.001} & \num{-2.561} & <0.001 \\
+Associate’s graduation rate (150\% normal time) & \num{30.137} & \num{19.957} & \num{32.238} & \num{19.697} & \num{2.100} & <0.001 \\
+Associate’s graduation rate (200\% normal time) & \num{34.500} & \num{19.348} & \num{38.473} & \num{18.752} & \num{3.974} & <0.001 \\
+Tuition and fees revenue & \num{16.424} & \num{1.655} & \num{16.414} & \num{1.585} & \num{-0.010} & 0.660 \\
+Tuition and fees revenue per student & \num{8.620} & \num{1.252} & \num{8.367} & \num{1.698} & \num{-0.253} & <0.001 \\
+Retention rate & \num{67.128} & \num{17.085} & \num{70.384} & \num{16.782} & \num{3.256} & <0.001 \\
+\bottomrule
+\end{tblr}
+\end{table}

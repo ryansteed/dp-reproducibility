@@ -1,0 +1,30 @@
+Breaks in S&L Employment Change.
+                    	1955-2011                                	1990-2007    
+                    	 AbsoluteF   	  SquaredF   	 AbsoluteP   	  SquaredP   
+                    	      b/se   	      b/se   	      b/se   	      b/se   
+month==1            	     -0.12***	     -0.11***	     -0.10***	     -0.06***
+                    	    (0.04)   	    (0.04)   	    (0.04)   	    (0.02)   
+month==2            	     -0.12***	     -0.10***	     -0.14***	     -0.07***
+                    	    (0.04)   	    (0.04)   	    (0.04)   	    (0.02)   
+month==3            	     -0.14***	     -0.12***	     -0.10***	     -0.06***
+                    	    (0.04)   	    (0.04)   	    (0.04)   	    (0.02)   
+month==4            	     -0.13***	     -0.13***	     -0.12***	     -0.07***
+                    	    (0.04)   	    (0.04)   	    (0.04)   	    (0.02)   
+month==5            	     -0.09** 	     -0.07*  	     -0.12***	     -0.06***
+                    	    (0.04)   	    (0.04)   	    (0.04)   	    (0.02)   
+month==6            	     -0.11***	     -0.11***	     -0.08** 	     -0.04***
+                    	    (0.04)   	    (0.04)   	    (0.04)   	    (0.02)   
+month==8            	     -0.07*  	     -0.08** 	     -0.06*  	     -0.04** 
+                    	    (0.04)   	    (0.04)   	    (0.04)   	    (0.02)   
+month==9            	     -0.02   	     -0.04   	     -0.04   	     -0.03*  
+                    	    (0.04)   	    (0.04)   	    (0.04)   	    (0.02)   
+month==10           	     -0.05   	     -0.04   	     -0.11***	     -0.06***
+                    	    (0.04)   	    (0.04)   	    (0.04)   	    (0.02)   
+month==11           	     -0.11***	     -0.11***	     -0.11***	     -0.06***
+                    	    (0.04)   	    (0.04)   	    (0.04)   	    (0.02)   
+month==12           	     -0.10***	     -0.09** 	     -0.13***	     -0.07***
+                    	    (0.04)   	    (0.04)   	    (0.04)   	    (0.02)   
+Constant            	      0.35***	      0.20***	      0.25***	      0.09***
+                    	    (0.03)   	    (0.03)   	    (0.03)   	    (0.01)   
+Observations        	       676   	       676   	       216   	       216   
+Note: In columns marked 'Absolute value', the dependent variable is the absolute value of the log monthly change in S&L  government employment multiplied by 100 and the reported coefficients are for dummy variables for the eleven months excluding July. In columns marked 'Squared', the dependent  variable is the squared change in log monthly employment multiplied by 100 and the reported coefficients are for dummy variables for the eleven months excluding July.  Standard errors in parentheses. * indicates significance at the 10% level; ** indicates significance at the 5% level; *** indicates significance at the 1% level.

@@ -1,0 +1,12 @@
+[
+  {
+    "id": "bene-conception",
+    "est": 0.0514,
+    "se": 0.0221
+  },
+  {
+    "id": "bene-abortion",
+    "est": -0.1248,
+    "se": 0.0427
+  }
+]

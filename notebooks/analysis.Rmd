@@ -1,0 +1,1144 @@
+---
+title: "Results Visualization"
+output: html_document
+editor_options: 
+  chunk_output_type: inline
+---
+
+```{r setup, include=FALSE}
+knitr::opts_knit$set(
+  root.dir = here::here()
+)
+```
+
+Run `make citations` after refreshing `data/studies.csv` to fetch latest citation counts.
+
+```{sh cites}
+make citations
+```
+
+```{r}
+source("R/utils.R")
+
+dbs_to_include = c("control", "privacy", "privacy_continuous", "error", "error_scaled", "margin")
+sensitivity_db = c("sensitivity")
+experiments_to_include = c(
+  "control",
+  "privacy",
+  "privacy_continuous",
+  "error",
+  "error_scaled",
+  "margin"
+)
+log_threshold(DEBUG)
+```
+
+```{r data}
+study_metadata = load_study_metadata()
+results_metadata = load_results_metadata()
+variables_metadata = load_variables_metadata(results_metadata)
+
+sensitivities = load_sensitivity(sensitivity_db)
+
+noise = load_noise(experiments_to_include)
+print_antijoin("%d variables with no noise (expected; these are constructed vars)", variables_metadata, noise, pk_variables)
+print_antijoin("%d variables with no metadata (expected; these are component vars)", noise, variables_metadata, pk_variables)
+
+results_latest = load_results(
+  experiments_to_include,
+  study_metadata,
+  results_metadata,
+  variables_metadata,
+  noise,
+  sensitivities
+)
+print_counts(
+  "Final sample: %d results, %d studies", results_latest,
+  save_num_studies="numStudies",
+  save_num_results="numResults"
+)
+
+# Compute metrics
+results_latest = results_latest %>%
+  compute_error_metrics()
+
+# Subsets for analysis
+# DP only, no error
+epsilon_abbrv <- c("1000", "100", "10", "1", "0.1", "0.01", "0.001", "0.0001")
+results_latest_dp_extended = results_latest %>%
+  filter((is_dp & !is_error & !is_mo) | is_control)
+results_latest_dp = results_latest_dp_extended %>%
+  filter(is_control | epsilon_str %in% epsilon_abbrv)
+results_latest_laplace = results_latest_dp %>%
+  filter(mechanism_str == "laplace" | is_control)
+results_latest_gaussian = results_latest_dp %>%
+  filter(mechanism_str == "gaussian" | is_control)
+# error only, no DP
+results_latest_error = results_latest %>%
+  filter((is_error & !is_dp & !is_mo) | is_control)
+results_latest_static = results_latest_error %>%
+  filter((cscale_str == "static" & shrink_str == "Original") | is_control) %>%
+  filter(shrink_b_str != "None, b=0.0") # this is just the same as None
+results_latest_scaled = results_latest_error %>%
+  filter((shrink_str == "None") | is_control)
+# combined error + DP
+results_latest_combined = results_latest %>%
+  filter((is_error & !is_mo & shrink_str == "Hudson-Berger") | is_control)
+# multiple overimputation
+mo_epsilon_str <- as.vector(results_latest %>% filter(is_mo) %>% distinct(epsilon_str) %>% pull())
+results_latest_dp_mo = results_latest %>%
+  filter((is_dp & (epsilon_str %in% mo_epsilon_str)) | is_mo | is_control) %>%
+  filter(mechanism_str != "gaussian") %>%
+  group_by(across(all_of(pk_studies))) %>% mutate(
+    has_results = !all(is_null_result[is_mo])
+  ) %>%
+  filter(has_results)
+print_counts("MO sample: %d results, %d studies", results_latest_dp_mo)
+
+# long version of JEL metadata
+results_latest_jel = results_latest %>%
+  select(study_id, jel_code) %>%
+  distinct() %>% # jel code maps 1:1 to study, so this just drops dupes
+  expand_jel()
+results_latest_jel_1 = results_latest_jel %>%
+  distinct(study_id, jel_code_1, jel_description_1_abbrv)
+num_jel_studies = results_latest_jel %>% drop_na(jel_code_1) %>% distinct(study_id) %>% nrow()
+log_info("Studies with JEL codes: {num_jel_studies}")
+report("numStudiesJEL", num_jel_studies)
+print_counts("Computed metrics for %d results from %d studies", results_latest)
+```
+
+```{r info}
+# studies per year
+results_latest %>% distinct(study_id, year) %>% count(year)
+# studies per source
+results_latest %>% distinct(study_id, source) %>% count(source)
+results_latest %>% distinct(study_id, source, search_term) %>% count(source, search_term)
+
+# unusual failures
+show_failures = function(df) df %>% 
+  select(all_of(pk_experiment_result_runs), est, p, est_original, p_original, expected_lb, expected_ub, starts_with("epistemic"))
+little_noise_failures = results_latest_dp %>%
+  filter(!epistemic_match & epsilon == 1000)
+little_noise_failures %>% show_failures()
+report("numResultsFailedEpsOneThousandLaplace", little_noise_failures %>% filter(mechanism_str == "laplace") %>% distinct(result_id) %>% nrow())
+low_noise_failures = results_latest_dp %>%
+  filter(!epistemic_match & epsilon == 100)
+low_noise_failures %>% show_failures()
+report("numResultsFailedEpsOneHundredLaplace", low_noise_failures %>% filter(mechanism_str == "laplace") %>% distinct(result_id) %>% nrow())
+```
+
+```{r sample-summary}
+controls = results_latest %>%
+  filter(is_control & sim_id == 1)
+
+## numericals
+# study
+study_stats_df = controls %>%
+  group_by(study_id) %>%
+  summarise(
+    "Years since publication" = first(years_since_publication),
+    "Num. results replicated" = n_distinct(result_id),
+    "Citations (Semantic Scholar)" = first(semantic_scholar_citation_count)
+  ) %>%
+  pivot_longer(c(-study_id))
+study_stats_df %>% summ_stats()
+num_results = study_stats_df %>% filter(name == "Num. results replicated") %>% pull(value)
+report("numResultsRange", sprintf("%d--%d", num_results %>% quantile(0.25)
+, num_results %>% quantile(0.75)))
+report("maxYearsSincePub", study_stats_df %>% summ_stats(compact=F) %>% filter(name == "Years since publication") %>% slice(1L) %>% pull("Max.") %>% as.numeric() %>% round())
+
+# result
+result_stats = controls %>%
+  select(
+    study_id, result_id, df_model, n_vars_personal, prop_noised_success, avg_population_size, dv_rq_primary, claim_in_abstract, individual_level
+    # starts_with("reg_role")
+  ) %>%
+  rename(
+    any_of(varnames_lookup)
+  ) %>%
+  select(-starts_with("reg_role")) %>%
+  pivot_longer(c(-study_id, -result_id)) %>%
+  summ_stats()
+result_stats
+num_results_in_abstract = result_stats %>%
+  filter(name == "Supports claim mentioned in abstract") %>% slice(1L) %>% pull("Obs.")
+report("propResultsInAbstract", sprintf("%s of %s", num_results_in_abstract, get_report("numResults")))
+  
+# variables
+cats = c("reg_role", "noised", "query_type_simple")
+var_joined = controls %>%
+  inner_join(variables_metadata, by=pk_results)
+nvars = var_joined %>% distinct(study_id, variable_id) %>% nrow()
+log_info("Used {nvars} vars in results")
+report("numVars", nvars)
+var_joined %>%
+  distinct(across(c(study_id, variable_id, any_of(cats)))) %>%
+  dummy_cols(select_columns=cats) %>%
+  rename(
+    any_of(varnames_lookup)
+  ) %>%
+  select(-starts_with(cats)) %>%
+  pivot_longer(c(-study_id, -variable_id)) %>%
+  summ_stats()
+num_privatized = var_joined %>%
+  distinct(study_id, variable_id, noised) %>%
+  pull(noised) %>% sum()
+print(num_privatized)
+report("propVarsNotPrivatized", sprintf("%.1f", 100 * (1 - num_privatized / as.numeric(get_report("numVars")))), add_pct_sign = T)
+report("numResultsNotFullyPrivatized", sprintf("%d", results_latest %>% filter(n_vars_noised != n_vars_personal) %>% distinct(study_id, result_id) %>% nrow()))
+
+## categoricals
+bar_count = list(
+  geom_bar(),
+  coord_flip(),
+  scale_x_discrete(labels=function(x) str_wrap(x, width=25)),
+  theme
+)
+# study
+results_latest_jel_1 %>%
+  ggplot(aes(x=fct_infreq(jel_description_1_abbrv))) +
+    bar_count +
+    ylab("# studies") +
+    xlab("JEL Classification")
+# results
+controls %>%
+  select(study_id, result_id, design, estimation_method, stata_cmd_abbrv) %>%
+  pivot_longer(c(-study_id, -result_id)) %>%
+  ggplot(aes(x=value)) +
+    bar_count +
+    ylab("# results") +
+    facet_wrap(vars(name), scales="free_y")
+# variables
+controls %>%
+  inner_join(variables_metadata, by=c("study_id", "result_id")) %>%
+  select(study_id, result_id, variable_id, reg_role, data_type, query_type_simple) %>%
+  pivot_longer(c(-study_id, -result_id, -variable_id)) %>%
+  ggplot(aes(x=value)) +
+    bar_count +
+    ylab("# variables") +
+    facet_wrap(vars(name), scales="free_y")
+# top journals
+results_latest %>%
+  distinct(study_id, journal_abbrv) %>%
+  ggplot(aes(x=journal_abbrv %>% fct_infreq())) +
+    bar_count +
+    ylab("# studies") +
+    xlab("Journal")
+ggsave("plots/journals.pdf", width=5, height=7, dpi=300)
+ggsave("plots/journals.png", width=5, height=7, dpi=300)
+```
+```{r variable-types}
+# plot variables_metadata$query_type_abbrv as a categorical bar chart, but grouped by noised or not
+labels = c("Not privatized", "Privatized")
+plot_variable_type = function(df, var, wrap_labels=T) {
+  plt = df %>%
+    ggplot(aes(x=!!sym(var) %>% fct_infreq() %>% fct_rev(), fill=noised, color=noised)) +
+    geom_bar(position="stack", alpha=1) +
+    coord_flip() +
+    scale_fill_manual(
+      name="",
+      values=c("TRUE"="#0072B2", "FALSE"="#E69F00"),
+      labels=labels
+    ) +
+    scale_color_manual(
+      name="",
+      values=c("TRUE"="#0072B2", "FALSE"="#E69F00"),
+      labels=labels
+    ) +
+    theme +
+    ylab("# variables") +
+    xlab("Query type")
+  if (wrap_labels) {
+    plt = plt + scale_x_discrete(labels=function(x) str_wrap(x, width=10, whitespace_only=F))
+  }
+  plt
+}
+variables_metadata %>%
+  distinct(variable_id, query_type_simple, noised) %>%
+  filter(!is.na(query_type_simple)) %>%
+  plot_variable_type("query_type_simple")
+ggsave("plots/query-type.pdf", width=5, height=3)
+ggsave("plots/query-type.png", width=5, height=3)
+
+variables_metadata %>%
+  expand_data_domain() %>%
+  distinct(variable_id, data_domain_abbrv, noised) %>%
+  filter(!is.na(data_domain_abbrv)) %>%
+  plot_variable_type("data_domain_abbrv", wrap_labels=F)
+ggsave("plots/data-domain.pdf", width=5, height=4)
+ggsave("plots/data-domain.png", width=5, height=4)
+
+results_metadata %>%
+  distinct(result_id, stata_cmd) %>%
+  filter(!is.na(stata_cmd)) %>%
+  ggplot(aes(x=stata_cmd %>% fct_infreq() %>% fct_rev())) +
+  geom_bar(position="stack") +
+  coord_flip() +
+  theme +
+  ylab("# findings") +
+  xlab("Stata command used")
+ggsave("plots/stata-cmd.pdf", width=3, height=4)
+ggsave("plots/stata-cmd.png", width=3, height=4)
+```
+
+```{r viz-science}
+results_latest_gaussian %>%
+    results_means() %>%
+    drop_na(r_stat_original, r_stat_mean, r_stat_se, epistemic_match_mean) %>%
+    ggplot(aes(
+      x=p_original,
+      y=p_mean,
+      ymin=ci_lb(p_mean, p_se, 0.1),
+      ymax=ci_ub(p_mean, p_se, 0.1),
+      color=epistemic_match_mean
+    )) +
+      geom_abline(slope=1, intercept=0, linetype="dashed", alpha=0.5) +
+      xlab("Original p") +
+      ylab("Avg. replication p") +
+      geom_pointrange(size=0.1) +
+      scale_x_continuous(limits=c(0, 0.1)) +
+      # geom_linerange() +
+      color_scale +
+      theme +
+      theme(legend.position="top") +
+    facet_wrap(vars(epsilon_str_eq), labeller=label_parsed, ncol=3)
+
+results_latest_laplace %>%
+  filter(!is_control, epsilon < 1000, epsilon > 0.0001) %>%
+  effect_scatter() +
+    facet_wrap(vars(epsilon_str_eq), labeller=label_parsed, ncol=2)
+ggsave("plots/effect-scatter_laplace.pdf", dpi=300, width=5, height=5.5)
+ggsave("plots/effect-scatter_laplace.png", dpi=300, width=5, height=5.5)
+results_latest_laplace %>%
+  effect_scatter() +
+    facet_wrap(vars(epsilon_str_eq), labeller=label_parsed, ncol=3)
+ggsave("plots/effect-scatter_laplace_wide.pdf", dpi=300, width=6, height=5)
+ggsave("plots/effect-scatter_laplace_wide.png", dpi=300, width=6, height=5)
+
+results_latest_gaussian %>%
+  effect_scatter() +
+    facet_wrap(vars(epsilon_str_eq), labeller=label_parsed)
+ggsave("plots/effect-scatter_gaussian.pdf", dpi=300)
+ggsave("plots/effect-scatter_gaussian.png", dpi=300)
+
+results_latest_error %>%
+  filter(shrink_str == "Hudson-Berger", b_str == "None") %>%
+  effect_scatter() +
+    facet_wrap(vars(a_str_eq), labeller=label_parsed, ncol=2)
+ggsave("plots/effect-scatter_hb.pdf", dpi=300, width=4, height=7)
+ggsave("plots/effect-scatter_hb.png", dpi=300, width=4, height=7)
+
+violin_dots(results_latest_dp, "r_stat", "epsilon_str", groupvar="mechanism_str") +
+  ylab("Effect size") +
+  xlab(expression(epsilon)) +
+  mech_fill_guide
+ggsave("plots/effect-violin.pdf", dpi=300)
+ggsave("plots/effect-violin.png", dpi=300)
+
+violin_dots(results_latest_dp %>% filter(p_original < 0.1), "p", "epsilon_str", groupvar="mechanism_str") +
+  scale_y_continuous(trans='sqrt') +
+  ylab("p-value (p < 0.1 only)") +
+  xlab(expression(epsilon)) +
+  mech_fill_guide
+ggsave("plots/p-violin.pdf", dpi=300)
+ggsave("plots/p-violin.png", dpi=300)
+
+violin_dots(results_latest_scaled, "r_stat", "a_str", groupvar="b_str") +
+  ylab("Effect size") +
+  xlab("Coefficient of variation") +
+  guides(
+    fill=guide_legend(title="Scaling b")
+  )
+
+violin_dots(results_latest_scaled %>% filter(p_original < 0.1), "p", "a_str", groupvar="b_str") +
+  scale_y_continuous(trans='sqrt') +
+  ylab("p-value (p < 0.1 only)") +
+  xlab("Coefficient of variation") +
+  guides(
+    fill=guide_legend(title="Scaling b")
+  )
+
+violin_dots(results_latest_error %>% filter(b_str == "None"), "r_stat", "a_str", groupvar="shrink_str") +
+  ylab("Effect size") +
+  xlab("Coefficient of variation") +
+  error_fill_guide
+
+violin_dots(results_latest_error %>% filter(p_original < 0.1, b_str == "None"), "p", "a_str", groupvar="shrink_str") +
+  scale_y_continuous(trans='sqrt') +
+  ylab("p-value (p < 0.1 only)") +
+  xlab("Coefficient of variation") +
+  error_fill_guide
+```
+
+```{r scatters}
+results_latest_laplace %>%
+  scatter_fit("avg_population_size", "Avg. sample unit size") +
+  scale_x_log10()
+ggsave("plots/scatter-popsize_laplace.pdf", dpi=300, width=6, height=6)
+ggsave("plots/scatter-popsize_laplace.png", dpi=300, width=6, height=6)
+
+results_latest_laplace %>%
+  scatter_fit("sum_avg_sensitivity_norm", "Avg. sensitivity / original statistic") +
+  scale_x_log10()
+ggsave("plots/scatter-sensitivity_laplace.pdf", dpi=300, width=6, height=6)
+ggsave("plots/scatter-sensitivity_laplace.png", dpi=300, width=6, height=6)
+```
+
+```{r noise}
+results_latest_dp %>%
+  join_noise_long(variables_metadata, noise) %>%
+  violin_dots("log_rmsd_norm", "epsilon_str", groupvar="mechanism_str") +
+  xlab("Epsilon") +
+  mech_fill_guide
+```
+
+```{r sensitivity}
+results_latest_laplace_treatment = results_latest_laplace %>%
+  filter(!is_control)
+results_latest_laplace_treatment
+# noise_laplace = results_latest_laplace_treatment %>%
+#   join_noise_long(variables_metadata, noise)
+noise_laplace = noise %>%
+  inner_join(results_latest_laplace_treatment %>% distinct(across(all_of(pk_experiment_runs))), by=pk_experiment_runs)
+sensitivity_noise = sensitivities %>%
+  inner_join(noise_laplace, by=pk_sensitivity, suffix=c("", ".noise")) %>%
+  mutate(
+    rmsd_norm_range = rmsd / original_range
+  )
+# print_counts("Sample: %d results, %d studies", sensitivity_noise)
+
+sensitivity_noise_var_means = sensitivity_noise %>%
+  group_by(across(all_of(pk_experiment_variables))) %>%
+  summarise_all(mean)
+sensitivity_noise_var_means %>%
+  ggplot(aes(x=log(sensitivity_norm), y=log(rmsd_norm), color=epsilon_str)) +
+  scale_color_brewer(name=expression(epsilon), palette=palette_sequential) +
+  geom_point() +
+  xlab("Log (Sensitivity / orig. value)") +
+  ylab("Log (RMSD / orig. value)") +
+  geom_text(aes(label=replace(variable_id, study_id != "chu-2021", NA))) +
+  theme
+
+results_latest_laplace_treatment %>%
+  select(sum_sensitivity, avg_avg_sensitivity_norm_range) %>%
+  describe()
+results_latest_laplace_treatment %>%
+  arrange(-avg_avg_sensitivity_norm_range) %>%
+  distinct(study_id, avg_avg_sensitivity_norm_range, sum_sensitivity)
+```
+
+```{r viz-sankey}
+# x=node -> next_x=next_node
+# e.g. Original=small -> 1000=very small
+
+results_latest_laplace %>%
+  select(all_of(pk_results), sim_id, epsilon_str, r_stat_size) %>%
+  pivot_wider(id_cols=c(pk_results, sim_id), names_from=epsilon_str, values_from=r_stat_size) %>%
+  group_by(across(all_of(pk_results))) %>%
+  mutate(Original=first(Original)) %>% # only one entry for Original by default, so impute the rest from the first row
+  ungroup() %>%
+  select(-all_of(pk_results), -sim_id) %>%
+  plot_sankey() +
+  ylab("# simulations") +
+  guides(
+    fill = guide_legend("Effect size")
+  )
+
+results_latest_laplace %>%
+  filter(epsilon_str == "Original" | (epsilon < 1000 & epsilon > 0.0001)) %>%
+  results_means() %>%
+  select(all_of(pk_results), epsilon_str, r_stat_mean_size) %>%
+  pivot_wider(id_cols=pk_results, names_from=epsilon_str, values_from=r_stat_mean_size) %>%
+  select(-all_of(pk_results)) %>%
+  plot_sankey() +
+  ylab("# results") +
+  guides(
+    fill = guide_legend(
+      paste0("Average effect size (N=", results_latest_laplace %>% distinct(sim_id) %>% nrow(), ")"),
+      ncol=2, title.position="top"
+    )
+  ) +
+  theme(
+    legend.position="top"
+  )
+ggsave("plots/sankey_laplace.pdf", dpi=300, width=5.5, height=6)
+ggsave("plots/sankey_laplace.png", dpi=300, width=5.5, height=6)
+```
+
+```{r viz-examples, fig.height=12}
+plot_examples = function(df, example_studies, suffix=NULL, ...) {
+  if (is.null(suffix)) {
+    suffix = ""
+  } else {
+    suffix = paste0("_", suffix)
+  }
+  examples = df %>%
+    filter(study_id %in% example_studies) %>%
+    filter((epsilon > 0.0001 & epsilon < 1000) | is_control)
+  results_formatted = examples %>%
+    group_by(
+      across(all_of(pk_results)), epsilon_str
+    ) %>%
+    summarise_all(first)
+
+  results_formatted %>%
+    plot_results("free_y")
+  ggsave(sprintf("plots/cis%s.pdf", suffix), dpi=300, ...)
+  ggsave(sprintf("plots/cis%s.png", suffix), dpi=300, ...)
+  
+  examples %>%
+    results_means() %>%
+    plot_results_tile()
+  ggsave(sprintf("plots/tile%s.pdf", suffix), dpi=300, ...)
+  ggsave(sprintf("plots/tile%s.png", suffix), dpi=300, ...)
+}
+example_studies = c(
+  "autor-2013", "ferraz-2011", "topalova-2010", "wilson-2012"
+  # "allison-2023"
+)
+results_latest_dp %>% plot_examples(c(
+  "autor-2013", "ferraz-2011", "topalova-2010", "wilson-2012"
+))
+
+# appendix examples
+results_latest_dp %>%
+  mutate(
+    study_id_abbrv = replace(study_id_abbrv, study_id_abbrv == "Al'23", "St'23"),
+    row_label = case_when(
+      str_starts(row_label, "Al'23") ~ str_replace(row_label, "Al'23", "St'23"),
+      TRUE ~ row_label
+    )
+  ) %>%
+  plot_examples(
+    c("guidetti-2021", "allison-2023"), suffix="guidetti", width=7, height=7
+  )
+```
+
+```{r data-dependent}
+## sensitivity gt > 1
+studies = results_latest %>% distinct(study_id) %>% pull()
+sens_gt_1 = sensitivities %>%
+  filter(sensitivity > 1, study_id %in% studies) %>%
+  distinct(study_id, variable_id, sensitivity)
+sens_gt_1
+# num studies sens > 0
+sens_gt_1 %>% distinct(study_id) %>% arrange(study_id)
+results_sens_gt_1 = results_latest %>% filter(n_sens_gt_1 > 0) %>% distinct(study_id, result_id) # should match, except if result with n_sens_gt_1 is not included in results_latest
+report("numResultsSensGtOne", sprintf("%d", results_sens_gt_1 %>% nrow()))
+report("numStudiesSensGtOne", sprintf("%d", results_sens_gt_1 %>% distinct(study_id) %>% nrow()))
+results_sens_gt_1
+## data dependent
+queries_data_dep = variables_metadata %>% filter(data_dependent_bounds > 0) %>% distinct(study_id, variable_id)
+report("numQueriesDataDep", sprintf("%d", queries_data_dep %>% nrow()))
+queries_data_dep
+# num studies data dependent bounds > 0
+results_data_dep = results_latest %>% filter(n_data_dependent_bounds > 0) %>% distinct(study_id, result_id)
+report("numResultsDataDep", sprintf("%d", results_data_dep %>% nrow()))
+report("numStudiesDataDep", sprintf("%d", results_data_dep %>% distinct(study_id) %>% nrow()))
+results_data_dep
+```
+
+```{r metrics}
+## non-CI metrics
+num_trials_for = function(df) {
+  (df %>% distinct(study_id, result_id) %>% nrow()) *
+    (df %>% distinct(sim_id) %>% nrow())
+}
+ylabel_for = function(df) ylab(paste0("Rate (N=", num_trials_for(df), ")"))
+yscale_for = function(df) list(scale, ylabel_for(df))
+results_latest_dp %>%
+  filter(!is_control) %>%
+  get_metrics_long() %>%
+  dot_means("value", "epsilon_str_latex", "name", "free_y", sample_sizes=F, ncol=2, colorvar="mechanism_str", colorlabels=mechanism_expressions, freq_order=F, report_name="") +
+    ylabel_for(results_latest_dp) +
+    xlab(expression(epsilon)) +
+  guides(
+    color=guide_legend("Mechanism"),
+    shape=guide_legend("Mechanism")
+  )
+ggsave("plots/metrics.pdf", dpi=300, height=6)
+ggsave("plots/metrics.png", dpi=300, height=6)
+report("numTrialsTotal", sprintf("%d", num_trials_for(results_latest_dp)))
+
+results_latest_dp %>%
+  filter(!is_control) %>%
+  get_metrics_long() %>%
+  filter(n_vars_noised == n_vars_personal) %>%
+  dot_means(
+    "value", "epsilon_str_latex", "name", "free_y",
+    sample_sizes=F, ncol=2, colorvar="mechanism_str",
+    colorlabels=mechanism_expressions, freq_order=F,
+    report_name="PerfectPriv"
+  ) +
+    ylabel_for(results_latest_dp %>% filter(n_vars_noised == n_vars_personal)) +
+    xlab(expression(epsilon)) +
+  guides(
+    color=guide_legend("Mechanism"),
+    shape=guide_legend("Mechanism")
+  )
+ggsave("plots/metrics_perfect-priv.pdf", dpi=300, height=7, width=7)
+ggsave("plots/metrics_perfect-priv.png", dpi=300, height=7, width=7)
+
+## CI metrics
+results_latest_dp %>%
+  get_metrics_long_alpha(all=T) %>%
+  dot_means_grid(
+    "value", "epsilon_str_latex", "alpha_str", "name", scales="free_x",
+    colorvar="mechanism_str", colorlabels=mechanism_expressions,
+    report_name=""
+  ) +
+  ylabel_for(results_latest_dp) +
+  xlab(expression(epsilon)) +
+  guides(
+    color=guide_legend("Mechanism"),
+    shape=guide_legend("Mechanism")
+  )
+ggsave("plots/metrics_alpha.pdf", height=7, width=7, dpi=300)
+ggsave("plots/metrics_alpha.png", height=7, width=7, dpi=300)
+# report diff between gaussian, laplace
+percent_to_numeric = function(x) x %>% str_replace_all("[^0-9.-]", "") %>% as.numeric()
+report(
+  "epiDisparityEpsOneGaussianMinusLaplaceAlphaTen", (
+    get_report("epiDisparityEpsOneLaplaceAlphaTen") %>% percent_to_numeric() - 
+      get_report("epiDisparityEpsOneGaussianAlphaTen") %>% percent_to_numeric()
+  ),
+  add_pct_sign=T
+)
+
+results_latest_dp %>%
+  get_metrics_long_alpha(all=T) %>%
+  filter(n_vars_noised == n_vars_personal) %>%
+  dot_means_grid("value", "epsilon_str_latex", "alpha_str", "name", scales="free_x", colorvar="mechanism_str", colorlabels=mechanism_expressions, report_name="PerfectPriv") +
+  ylabel_for(results_latest_dp %>% filter(n_vars_noised == n_vars_personal)) +
+  xlab(expression(epsilon)) +
+  guides(
+    color=guide_legend("Mechanism"),
+    shape=guide_legend("Mechanism")
+  )
+ggsave("plots/metrics_alpha_perfect-priv.pdf", height=7, width=7, dpi=300)
+ggsave("plots/metrics_alpha_perfect-priv.png", height=7, width=7, dpi=300)
+
+results_latest_error %>%
+  filter(a_str != "0.8") %>%
+  get_metrics_long_alpha(all=T) %>%
+  dot_means_grid("value", "a", "alpha_str", "name", scales="free_x", colorvar="shrink_b_str", report_name="") +
+  xlab("Coefficient of variation") +
+  guides(
+    color=guide_legend("Construction"),
+    shape=guide_legend("Construction")
+  )
+```
+
+```{r metrics compact}
+## CI metrics, alpha fixed
+alpha_thresh = 0.05
+lb = 0.3
+scale = scale_y_continuous(
+  limits=c(lb, 1.0),
+  # breaks=c(1.0, 1-alpha, 0.8, 0.6, 0.4, 0.2, 0.0),
+  breaks=c(1.0, 0.8, 0.6, 0.4, 0.2, 0.0),
+  # labels=c(1.0, expression(1-alpha), 0.8, 0.6, 0.4, 0.2, 0.0)
+  labels=c(1.0, 0.8, 0.6, 0.4, 0.2, 0.0)
+)
+scale_margin = scale_y_continuous(
+  limits=c(-1+lb, 0.0),
+  # breaks=c(-1, -0.8, -0.6, -0.4, -0.2, -alpha, 0.0),
+  breaks=c(-1, -0.8, -0.6, -0.4, -0.2, 0.0),
+  # labels=c(-1, -0.8, -0.6, -0.4, -0.2, expression(alpha), 0.0)
+  labels=c(-1, -0.8, -0.6, -0.4, -0.2, 0.0)
+)
+formatting = list(
+  theme(
+    legend.title = ggtext::element_markdown(),
+    legend.justification = c("left", "top"),
+    legend.box.margin=margin(0, 0, -10, 0),
+    plot.margin=margin(l=5)
+  )
+)
+epsilonlabel = list(
+  xlab(expression(epsilon)),
+  theme(axis.title.x=element_text(size=15))
+)
+
+privacy_plot = function(df, title) df %>%
+  dot_means("value", "epsilon_str_latex", "name", "free_y", sample_sizes=F, compact=T, ncol=1, colorvar="mechanism_str", colorlabels=mechanism_expressions, freq_order=F, hlines=hlines) +
+  yscale_for(df) +
+  epsilonlabel +
+  guides(
+    color=guide_legend(title, ncol=1, title.position="top"),
+    shape=guide_legend(title, ncol=1, title.position="top"),
+    linetype="none"
+  ) +
+  formatting
+privacy_df = results_latest_dp %>%
+  format_treatments() %>%
+  get_metrics_long_alpha() %>%
+  filter(alpha == alpha_thresh, !is_control, epsilon < 1000, epsilon > 0.0001)
+privacy = privacy_df %>%
+  privacy_plot("**Privacy noise alone**<br><br>Mechanism")
+privacy_perfect = privacy_df %>%
+  filter(n_vars_noised == n_vars_personal) %>%
+  privacy_plot("**Privacy noise alone**<br>(all personal vars. privatized)<br><br>Mechanism")
+privacy_sens_lte_1 = privacy_df %>%
+  filter(n_sens_gt_1 < 1) %>%
+  privacy_plot("**Privacy noise alone**<br>(no sens. > 1)<br><br>Mechanism")
+privacy_data_ind = privacy_df %>%
+  filter(n_data_dependent_bounds < 1) %>%
+  privacy_plot("**Privacy noise alone**<br>(data ind. bounds only)<br><br>Mechanism")
+
+title = "**Data error alone**<br><br>Construction"
+scaled_df = results_latest_error %>%
+  filter(b_str == "None" | b == 0.0) %>%
+  get_metrics_long_alpha() %>%
+  filter(alpha == alpha_thresh, !is_control)
+scaled = scaled_df %>%
+  dot_means("value", "a", "name", "free_y", sample_sizes=F, compact=T, ncol=1, colorvar="shrink_b_str", freq_order=F, hlines=hlines) +
+  yscale_for(scaled_df) +
+  xlab("Coefficient of variation (CV)") +
+  guides(
+    color=guide_legend(title, ncol=1, title.position="top"),
+    shape=guide_legend(title, ncol=1, title.position="top"),
+    linetype="none"
+  ) +
+  formatting +
+  theme(axis.title.y=element_blank()) # don't need axis title for middle plot
+subtitle = "**Data error (Hudson-**<br>**Berger) +**<br>**privacy noise (Gaussian)**<br><br>Data error CV"
+margin_df = results_latest_combined %>%
+  format_treatments() %>%
+  filter((mechanism_str != "laplace" & shrink_str == "Hudson-Berger") | is_control) %>%
+  filter(a %in% c(0.001, 0.01, 0.1, 0.2, 0.5, 0.8) | is_control) %>%
+  get_metrics_long_alpha(margin=T) %>%
+  filter(alpha == alpha_thresh, !is_control, epsilon < 1000, epsilon > 0.0001)
+margin = margin_df %>%
+  dot_means("value", "epsilon_str_latex", "name", "free_y", sample_sizes=F, compact=T, ncol=1, colorvar="a_str", freq_order=F, report_name="GaussianAlphaTen") +
+  scale_margin +
+  ylab("Avg. marginal impact of privacy mech.") +
+  epsilonlabel +
+  guides(
+    color=guide_legend(subtitle, ncol=3, title.position="top"),
+    shape=guide_legend(subtitle, ncol=3, title.position="top")
+  ) +
+  formatting
+# shared legend https://wilkelab.org/cowplot/articles/shared_legends.html
+legend = cowplot::get_legend(
+  privacy + guides(
+    linetype=guide_legend(hline_title, ncol=2, title.position="left"),
+    color="none",
+    shape="none"
+  ) + theme(
+    legend.justification="center",
+    legend.title.justification="right",
+    plot.margin=margin(0,0,0,0)
+  )
+)
+plots = c(
+  "all"=privacy + scaled + margin,
+  "dperror"=privacy + scaled,
+  "margin"=privacy + margin,
+  "privacy-perfect"=privacy + privacy_perfect,
+  "privacy-sens-lte-1"=privacy + privacy_sens_lte_1,
+  "privacy-data-ind"=privacy + privacy_data_ind
+)
+for (plot in names(plots)) {
+  plots[[plot]] / legend + plot_layout(heights=c(6, 1))
+  ggsave(sprintf("plots/metrics_%s.pdf", plot), dpi=300, height=8, width=7)
+  ggsave(sprintf("plots/metrics_%s.png", plot), dpi=300, height=8, width=7)
+}
+```
+
+```{r regression-data}
+# data
+df_reg = results_latest_dp_extended %>%
+  filter(!is_control, !(epsilon_str %in% epsilon_abbrv)) %>%
+  clean_results_for_regression(aggregate=T)
+df_reg_gaussian = df_reg %>%
+  filter(mechanism_str=="gaussian")
+df_reg_scaled = results_latest_error %>%
+  filter(shrink_str != "None" & b_str == "None") %>%
+  clean_results_for_regression(aggregate=T)
+```
+
+```{r regression-controls, out.height="150%" out.width="100%"}
+outcome = "^epistemic_match$"
+treatments = c("^log_epsilon$", "^mechanism_str_gaussian$", "^log_epsilon_mechanism_str_gaussian$")
+implementation_controls = c(
+  "^n_vars_noised$", "^log_n_component_vars$")
+component_controls = c(
+  treatments, 
+  "^log_sum_avg_sensitivity_norm$"
+)
+noise_controls = c("^prop_query_type_simple_")
+reg_controls = c(
+  "^log_N_original$",
+  "^df_model$",
+  "^any_reg_role_abbrv_ind$",
+  "^any_reg_role_abbrv_ind_log_epsilon$",
+  "^any_reg_role_abbrv_dep$",
+  "^any_reg_role_abbrv_dep_log_epsilon$",
+  "^avg_population_size$"
+)
+# error-only models have no epsilon variation, so epsilon interactions are all-NA
+reg_controls_error = c(
+  "^log_N_original$",
+  "^df_model$",
+  "^any_reg_role_abbrv_ind$",
+  "^any_reg_role_abbrv_dep$",
+  "^avg_population_size$"
+)
+claim_controls = c(
+  "^r_stat_original$",
+  "^r_stat_original_log_epsilon$",
+  "^epistemic_claim_abbrv_insignificant$",
+  "^epistemic_claim_abbrv_interval$"
+)
+claim_controls_error = c(
+  "^r_stat_original$",
+  "^epistemic_claim_abbrv_insignificant$",
+  "^epistemic_claim_abbrv_interval$"
+)
+```
+
+```{r regression}
+## antecedents
+spec0 = c("study_id")
+spec01 = c(spec0, "result_id")
+spec1 = c(
+  "study_id",
+  treatments, implementation_controls
+)
+spec2 = c(spec1, component_controls)
+spec3 = c(spec2, noise_controls)
+spec4 = c(spec3, claim_controls)
+spec5 = c(spec4, reg_controls)
+# error
+spec1_error = c("study_id", "log_a$", "shrink_str_ml$", implementation_controls)
+spec2_error = c(spec1_error, noise_controls, reg_controls_error)
+spec3_error = c(spec2_error, claim_controls_error)
+# specs for table
+specs = list(
+  ## privacy
+  # list("df"=df_reg, "spec"=spec1, "study_fe"=F),
+  # list("df"=df_reg, "spec"=spec2, "study_fe"=T),
+  list("df"=df_reg, "spec"=spec3, "study_fe"=T, outcome=outcome),
+  list("df"=df_reg, "spec"=spec4, "study_fe"=T, outcome=outcome),
+  # list("df"=df_reg, "spec"=spec5, "study_fe"=T, outcome=outcome),
+  list("df"=df_reg, "spec"=spec5, "study_fe"=F, outcome=outcome)
+  # list("df"=df_reg, "spec"=spec5, "study_fe"=T, outcome="^bias_r$"),,
+)
+specs_error = list(
+  ## error
+  list("df"=df_reg_scaled, "spec"=spec1_error, "study_fe"=T, outcome=outcome),
+  list("df"=df_reg_scaled, "spec"=spec2_error, "study_fe"=T, outcome=outcome),
+  list("df"=df_reg_scaled, "spec"=spec3_error, "study_fe"=F, outcome=outcome)
+)
+models = get_models(specs)
+table = models %>% format_regression_output(skinny=FALSE)
+capture.output(table %>% print_latex(tabular_only=T), file="tables/regression.tex")
+capture.output(table %>% print_html(), file="tables/regression.html")
+table = models %>% format_regression_output(skinny=TRUE)
+capture.output(table %>% print_latex(tabular_only=T), file="tables/regression_skinny.tex")
+
+model_mech = models[[1]]
+report("colMechEpsilon", "%.1f" %>% sprintf(100 * get_coef(model_mech, "log_epsilon")))
+report("colMechGaussian", "%.1f" %>% sprintf(100 * get_coef(model_mech, "mechanism_str_gaussian")))
+report("colMechEpsilonGaussian", "%.1f\\log\\epsilon" %>% sprintf(100 * get_coef(model_mech, "log_epsilon_mechanism_str_gaussian")))
+
+model_reg = models[[3]]
+report("colRegDOF", "%.1f" %>% sprintf(- 100 * get_coef(model_reg, "df_model")), note="NEGATIVE")
+report("colRegState", "%.1f" %>% sprintf(100 * get_coef(model_reg, "geographic_index_abbrv_State, district, province (1st division)")))
+report("colRegDep", "%.1f" %>% sprintf(-100 * get_coef(model_reg, "any_reg_role_abbrv_dep")), note="NEGATIVE")
+report("colRegDepEpsilon", "%.1f" %>% sprintf(100 * get_coef(model_reg, "any_reg_role_abbrv_dep_log_epsilon")))
+report("colRegES", "%.2f" %>% sprintf(10 * get_coef(model_reg, "r_stat_original")), note="for a 0.1 increase/decrease, multiply by 100*0.1=10")
+report("colRegESEpsilon", "%.2f" %>% sprintf(10 * get_coef(model_reg, "r_stat_original_log_epsilon")), note="for a 0.1 increase/decrease, multiply by 100*0.1=10")
+
+model_claim = models[[2]]
+report("colClaimES", "%.2f" %>% sprintf(10 * get_coef(model_claim, "r_stat_original")), note="for a 0.1 increase/decrease, multiply by 100*0.1=10")
+report("colClaimESEpsilon", "%.2f" %>% sprintf(10 * get_coef(model_claim, "r_stat_original_log_epsilon")), note="for a 0.1 increase/decrease, multiply by 100*0.1=10")
+report("colClaimInsig", "%.1f" %>% sprintf(100 * get_coef(model_claim, "epistemic_claim_abbrv_insignificant")))
+report("colClaimInterval", "%.1f" %>% sprintf(-100 * get_coef(model_claim, "epistemic_claim_abbrv_interval")), note="NEGATIVE")
+report("colClaimSensitivity", "%.1f" %>% sprintf(-100 * get_coef(model_claim, "log_sum_avg_sensitivity_norm")), note="NEGATIVE")
+
+models_error = get_models(specs_error)
+table = models_error %>% format_regression_output()
+capture.output(table %>% print_latex(tabular_only=T), file="tables/regression_error.tex")
+capture.output(table %>% print_html(), file="tables/regression_error.html")
+
+model_error = models_error[[length(models_error)]]
+report("colErrorES", "%.2f" %>% sprintf(10 * get_coef(model_error, "r_stat_original")), note="for a 0.1 increase/decrease, multiply by 100*0.1=10")
+```
+```{r reg-eps-viz}
+# plot epsilon dummies  
+treatments_dummies = c("^epsilon_str$", "^mechanism_str_gaussian$", "log_epsilon_mechanism_str_gaussian")
+spec_dummies = c(
+  "study_id",
+  treatments_dummies, implementation_controls,
+  component_controls, noise_controls, claim_controls
+)
+specs_dummies = list(
+  list("df"=df_reg, "spec"=spec_dummies, "study_fe"=F, outcome=outcome)
+)
+models_dummies = get_models(specs_dummies)
+table = models_dummies %>% format_regression_output()
+capture.output(table %>% print_latex(tabular_only=T), file="tables/regression_dummies.tex")
+capture.output(table %>% print_html(), file="tables/regression_dummies.html")
+
+models_dummies[[1]] %>%
+  tidy() %>%
+  filter(grepl("epsilon_str", term)) %>%
+  mutate(
+    # convert epsilon to linear scale
+    # epsilon_str looks like epsilon_str[number].[number]e[exponent]
+    epsilon=term %>% str_replace("epsilon_str", "") %>% as.numeric(),
+    ymin=ci_lb(estimate, std.error, alpha=0.1),
+    ymax=ci_ub(estimate, std.error, alpha=0.1),
+    sig=ifelse(p.value >= 0.1, "Not sig.", "Sig. @ p < 0.1"),
+    term = fct_reorder(replace_backticks(term), -p.value)
+  ) %>%
+  ggplot(aes(x=epsilon, y=estimate, ymin=ymin, ymax=ymax)) +
+  geom_hline(yintercept = 0, lty = 2) +
+  geom_point(aes(fill=sig), shape=21) +
+  geom_errorbar() +
+  scale_x_continuous(trans='log10', breaks=c(1e-5, 1e-4, 0.001, 0.01, 0.1, 1, 10, 100, 1000)) +
+  scale_fill_manual(values=c("white", "black"), name="") +
+  theme +
+  theme(legend.position="right") +
+  ylab("Coefficient") +
+  xlab(expression(epsilon))
+ggsave("plots/reg_epsilon_dummies.pdf", width=6, height=3)
+ggsave("plots/reg_epsilon_dummies.png", width=6, height=3)
+```
+
+
+```{r reg-summ}
+## ACTUAL DF USED (NAs, infs dropped)
+# attr(models[[2]], "object")$model %>%
+#   select(-prop_query_type_simple_NA) %>%
+#   pivot_longer(-study_id) %>%
+#   summ_stats()
+
+## ORIGINAL DF
+full_spec = c(
+  outcome,
+  spec5
+)
+# get everything including dropped dummies
+df_reg_all = results_latest_dp_extended %>%
+  filter(!is_control) %>%
+  clean_results_for_regression(aggregate=T, drop_top_cat=F)
+full_spec = full_spec
+# summary stats
+get_reg_df(df_reg_all, full_spec) %>%
+  select(
+    -prop_query_type_simple_NA, -contains(" x ")
+  ) %>%
+  pivot_longer(-study_id) %>%
+  summ_stats(include_desc = TRUE, count_dummies = FALSE)
+```
+
+```{r reg-plot}
+models[[length(models)]] %>%
+  tidy() %>%
+  # filter(!grepl("study_id|median", term), grepl("Original|freedom|Gaussian|epsilon|sensitivity|Claim|% stat|Noised|Cmd|Region|sample", term)) %>%
+  filter(grepl("% stat", term)) %>%
+  mutate(
+    ymin=ci_lb(estimate, std.error, alpha=0.1),
+    ymax=ci_ub(estimate, std.error, alpha=0.1),
+    sig=ifelse(p.value < 0.1, "Sig. @ p < 0.1", "Not sig."),
+    term = fct_reorder(replace_backticks(term), -p.value)
+  ) %>%
+  ggplot(aes(x=term, y=estimate, ymin=ymin, ymax=ymax)) +
+  geom_hline(yintercept = 0, lty = 2) +
+  geom_point(aes(fill=sig), shape=21) +
+  geom_errorbar() +
+  coord_flip() +
+  scale_fill_manual(values=c("white", "black"), name="") +
+  theme +
+  theme(legend.position="right") +
+  ylab("Effect on strict parity") +
+  xlab("Covariate")
+ggsave("plots/reg_coefs.png", width=6, height=2)
+```
+
+```{r reg-noise-components}
+spec0_components = c("study_id", treatments)
+spec1 = c("study_id", "^log_sensitivity$", "^log_sensitivity_mechanism_str_gaussian$")
+spec_components = union(spec0_components, spec1)
+outcome_noise = "^log_rmsd$"
+df_reg_noise_components = noise %>%
+  inner_join(results_latest_dp_extended %>% distinct(across(all_of(pk_experiment_runs))), by=pk_experiment_runs) %>%
+  inner_join(sensitivities, by=pk_sensitivity, suffix=c(".noise", ".sensitivity")) %>%
+  format_treatments() %>%
+  clean_for_regression(grouping=setdiff(pk_noise, "sim_id"), aggregate=T)
+df_reg_noise_components %>%
+  ggplot(aes(x=log(sensitivity_norm_range))) +
+  geom_histogram(color="black", fill="#7570b3") +
+  theme +
+  xlab("Log (Sensitivity / orig. range)") +
+  ylab("# component queries")
+ggsave("plots/sensitivity.pdf", dpi=300, height=5, width=5)
+ggsave("plots/sensitivity.png", dpi=300, height=5, width=5)
+specs_noise = list(
+  list("df"=df_reg_noise_components, "spec"=spec0_components, "study_fe"=F, outcome=outcome_noise),
+  list("df"=df_reg_noise_components, "spec"=spec1, "study_fe"=F, outcome=outcome_noise),
+  list("df"=df_reg_noise_components, "spec"=spec_components, "study_fe"=F, outcome=outcome_noise),
+  list("df"=df_reg_noise_components, "spec"=spec_components, "study_fe"=T, outcome=outcome_noise)
+)
+table = get_models(specs_noise) %>% format_regression_output()
+capture.output(table %>% print_html(), file="tables/regression_noise_components.html")
+capture.output(table %>% print_latex(tabular_only=T), file="tables/regression_noise_components.tex")
+```
+
+```{r reg-noise-components-summary}
+# summary
+full_spec = c(
+  outcome_noise,
+  spec_components,
+  "^query_type_simple_"
+)
+get_reg_df(df_reg_noise_components, full_spec) %>%
+  select(-`Log epsilon x Gaussian mech. (zCDP)`, -`Log sensitivity x Gaussian mech. (zCDP)`) %>%
+  pivot_longer(-study_id) %>%
+  summ_stats(include_desc = TRUE, count_dummies = FALSE)
+```
+
+```{r reg-noise-final}
+spec1_noise = c(spec0_components, "^log_sum_avg_sensitivity_norm$", "^n_component_vars")
+spec2 = c(spec1_noise, "^query_type_simple_")
+df_reg_noise = noise %>% 
+  inner_join(results_latest_dp %>% distinct(across(all_of(pk_experiment_runs))), by=pk_experiment_runs) %>%
+  inner_join(variables_metadata, by=pk_variables, relationship="many-to-many") %>% # only get final variables
+  format_treatments() %>%
+  summarize_sensitivity(variables_metadata, sensitivities, grouping=pk_result_variables, is_long=T) %>%
+  filter(sum_sensitivity != 0) %>%
+  clean_for_regression(grouping=setdiff(pk_experiment_variable_runs, "sim_id"), aggregate=T)
+df_reg_noise %>% distinct(study_id, variable_id, sum_sensitivity, n_component_vars)
+specs_noise = list(
+  # list("df"=df_reg_noise, "spec"=spec0, "study_fe"=F),
+  list("df"=df_reg_noise, "spec"=spec1_noise, "study_fe"=F, outcome=outcome_noise),
+  list("df"=df_reg_noise, "spec"=spec2, "study_fe"=F, outcome=outcome_noise),
+  list("df"=df_reg_noise, "spec"=spec2, "study_fe"=T, outcome=outcome_noise)
+)
+models = get_models(specs_noise)
+table = models %>% format_regression_output()
+capture.output(table %>% print_html(), file="tables/regression_noise_final.html")
+```
+
+```{r reg-effect-size}
+print(names(df_reg))
+spec0 = c("study_id", treatments, "^log_sum_sensitivity_norm_range$", "^log_sum_sensitivity_norm_range_mechanism_str_gaussian$")
+spec1 = c(
+  spec0,
+  "^sum_sensitivity_norm_range_"
+)
+spec2 = c(spec1, noise_controls)
+# spec3 = c(spec2, "^r_stat_original$")
+spec4 = c(spec2, reg_controls)
+outcome_effect = "^r_stat$"
+specs = list(
+  list("df"=df_reg, "spec"=spec0, "study_fe"=F, outcome=outcome_effect),
+  list("df"=df_reg, "spec"=spec1, "study_fe"=F, outcome=outcome_effect),
+  list("df"=df_reg, "spec"=spec2, "study_fe"=F, outcome=outcome_effect),
+  list("df"=df_reg, "spec"=spec4, "study_fe"=F, outcome=outcome_effect),
+  list("df"=df_reg, "spec"=spec4, "study_fe"=T, outcome=outcome_effect)
+)
+table = get_models(specs) %>% format_regression_output()
+capture.output(table %>% print_html(), file="tables/regression_effect-size.html")
+```
+
+```{r reg-parity}
+spec0 = c("study_id", "^r_stat$", "r_stat_original")
+spec1 = c(spec0, claim_controls)
+outcome_effect = "^epistemic_match$"
+specs = list(
+  list("df"=df_reg, "spec"=spec0, "study_fe"=F, outcome=outcome_effect),
+  list("df"=df_reg, "spec"=spec1, "study_fe"=F, outcome=outcome_effect)
+  # list("df"=df_reg, "spec"=spec2, "study_fe"=F),
+  # list("df"=df_reg, "spec"=spec3, "study_fe"=F),
+  # list("df"=df_reg, "spec"=spec4, "study_fe"=F),
+  # list("df"=df_reg, "spec"=spec4, "study_fe"=T)
+)
+table = get_models(specs) %>% format_regression_output()
+capture.output(table %>% print_html(), file="tables/regression_parity.html")
+```
+
+```{r cross-sections}
+results_latest_dp_middle = results_latest_gaussian %>%
+  filter(epsilon < 1000, epsilon > 0.0001)
+
+min_results = 10
+report("nMinResults", min_results)
+for (v in c(
+  "p_bin_original",
+  "journal_abbrv",
+  # "design",
+  # "estimation_method",
+  "stata_cmd_abbrv",
+  "time_index_abbrv",
+  "geographic_index_abbrv",
+  "claim_in_abstract",
+  "dv_rq_importance_abbrv",
+  "all_noised",
+  "epistemic_claim"
+)) {
+  print(
+    dot_means(results_latest_dp_middle, "epistemic_match", "epsilon_str", v, min_results=min_results, facet_label_width=if (v == "geographic_index_abbrv") 60 else NULL) + ylab("Rate of strict parity") +
+    scale_y_continuous(breaks=c(0, 0.25, 0.5, 0.75, 1)) +
+    xlab(expression(epsilon))
+  )
+  save(v)
+}
+
+df_vars = results_latest_dp_middle %>%
+  inner_join(variables_metadata, by=pk_results)
+
+print(df_vars %>% select(starts_with("query_type")))
+
+for (v in c(
+  "query_type_abbrv",
+  "query_type_simple",
+  "reg_role",
+  "data_type_abbrv",
+  "interaction_variable"
+)) {
+  print(dot_means(df_vars, "epistemic_match", "epsilon_str", v, min_results=min_results) + ylab("Rate of strict parity") +
+    scale_y_continuous(breaks=c(0, 0.25, 0.5, 0.75, 1)) +
+    xlab(expression(epsilon))
+  )
+  save(v)
+}
+
+df_data_domain = df_vars %>%
+  expand_data_domain() %>%
+  drop_na(data_domain_abbrv) %>%
+  filter(epsilon < 100, epsilon > 0.001)
+dot_means(df_data_domain, "epistemic_match", "epsilon_str", "data_domain_abbrv", min_results=min_results, sample_sizes=F, bar=T) +
+        ylab("Rate of strict parity") +
+    xlab("Type of data") +
+    scale_fill_brewer(
+      palette=palette_sequential,
+      direction=1,
+      name=expression(epsilon)
+    ) +
+    guides(
+      "fill"=guide_legend(title=expression(epsilon))
+    )
+save("data_domain", h=5, w=7)
+
+df_jel_1 = results_latest_dp_middle %>%
+  left_join(results_latest_jel_1, by="study_id", relationship="many-to-many") %>%
+  drop_na("jel_description_1_abbrv") %>%
+  filter(epsilon < 100, epsilon > 0.001)
+dot_means(df_jel_1, "epistemic_match", "epsilon_str", "jel_description_1_abbrv", min_results=min_results, ncol=2, sample_sizes=T, bar=T) +
+  ylab("Rate of strict parity") +
+  xlab("Top-level JEL category") +
+  scale_fill_brewer(
+    palette=palette_sequential,
+    direction=1,
+    name=expression(epsilon)
+  ) +
+  guides(
+    "fill"=guide_legend(title=expression(epsilon))
+  )
+save("jel", h=5, w=7)
+```

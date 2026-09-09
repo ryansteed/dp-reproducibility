@@ -1,0 +1,22 @@
+[
+  {
+    "id": "first-corruption",
+    "est": -0.027,
+    "se": 0.011
+  },
+  {
+    "id": "judiciary-difference",
+    "est": 0.037,
+    "se": 0.020
+  },
+  {
+    "id": "first-media",
+    "est": 0.084,
+    "se": 0.029
+  },
+  {
+    "id": "media-corruption",
+    "est": -0.051,
+    "se": 0.026
+  }
+]

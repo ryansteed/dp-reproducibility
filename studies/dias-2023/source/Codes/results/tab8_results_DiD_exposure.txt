@@ -1,0 +1,22 @@
+		(1)	(2)	(3)	(4)	(5)
+		High Exposure	High Exposure	High Exposure	Low Exposure	Low Exposure
+VARIABLES	LABELS	OLS	Reduced Form	IV	OLS	Reduced Form
+						
+glyph_soy_upstream	Glyphosate Upstream	11.659		47.684	11.750	
+		(6.216)*		(14.769)***	(7.431)	
+potentialAMC	Instrument: Direct Effect	1.045	1.264	1.196	-0.085	0.052
+		(3.140)	(2.566)	(2.409)	(3.473)	(3.277)
+potentialUpstream	Instrument: Upstream		5.607			3.890
+			(1.539)***			(1.823)**
+						
+Observations		12,306	12,306	12,306	12,309	12,309
+R-squared		0.047	0.048		0.061	0.061
+Number of AMC		1,119	1,119	1,119	1,119	1,119
+AMC FE		Yes	Yes	Yes	Yes	Yes
+UF-Year FE		Yes	Yes	Yes	Yes	Yes
+Controls		Yes	Yes	Yes	Yes	Yes
+IMR_baseline_mean		18.00	18.00	18.00	18.00	18.00
+F-stat				51.36		
+Rejection Rate (Lee et al. 2020)				0.0130		
+Robust standard errors in parentheses						
+*** p<0.01, ** p<0.05, * p<0.1						

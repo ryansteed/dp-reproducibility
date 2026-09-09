@@ -1,0 +1,12 @@
+[
+  {
+    "id": "punish-drugcrime",
+    "est": -0.132,
+    "se": 0.064
+  },
+  {
+    "id": "punishspp-drugcrime",
+    "est": -0.003,
+    "se": 0.116
+  }
+]

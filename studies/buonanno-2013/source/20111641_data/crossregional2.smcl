@@ -1,0 +1,292 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/home/zhiwenz/private-research/studies/buonanno-2013/source/20111641_data/crossregional2.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 6 Nov 2024, 00:25:15
+{txt}
+{com}. clear all
+{res}{txt}
+{com}. use regionnational
+{txt}
+{com}. keep if crecode==12
+{txt}(27,192 observations deleted)
+
+{com}. keep if ymonth==6|ymonth==7|ymonth==9|ymonth==10
+{txt}(2,060 observations deleted)
+
+{com}. gen after=ymonth>8
+{txt}
+{com}. sort idprov after
+{txt}
+{com}. collapse (mean) crate pardonrate population incrate, by(idprov after)
+{res}{txt}
+{com}. tsset idprov after
+{res}
+{col 1}{txt:Panel variable: }{res:idprov}{txt: (strongly balanced)}
+{p 1 16 2}{txt:Time variable: }{res:after}{txt:, }{res:{bind:0}}{txt: to }{res:{bind:1}}{p_end}
+{txt}{col 10}Delta: {res}1 unit
+{txt}
+{com}. gen cdiff2= crate-l.crate
+{txt}(103 missing values generated)
+
+{com}. gen pardonincrate=pardonrate*l.incrate
+{txt}(103 missing values generated)
+
+{com}. reg cdiff2 pardonrate [aweight=population]
+{txt}(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(1, 101)       = {res}    23.61
+{txt}       Model {c |} {res} 70739.0445         1  70739.0445   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 302622.926       101   2996.2666   {txt}R-squared       ={res}    0.1895
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.1814
+{txt}       Total {c |} {res} 373361.971       102  3660.41148   {txt}Root MSE        =   {res} 54.738
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2} 1.137775{col 26}{space 2} .2341623{col 37}{space 1}    4.86{col 46}{space 3}0.000{col 54}{space 4} .6732599{col 67}{space 3}  1.60229
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-10.27383{col 26}{space 2} 11.52036{col 37}{space 1}   -0.89{col 46}{space 3}0.375{col 54}{space 4}-33.12713{col 67}{space 3} 12.57946
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. reg cdiff2 pardonrate l.incrate l.crate [aweight=population]
+{txt}(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(3, 99)        = {res}     8.39
+{txt}       Model {c |} {res} 75663.0801         3  25221.0267   {txt}Prob > F        ={res}    0.0001
+{txt}    Residual {c |} {res} 297698.891        99   3007.0595   {txt}R-squared       ={res}    0.2027
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.1785
+{txt}       Total {c |} {res} 373361.971       102  3660.41148   {txt}Root MSE        =   {res} 54.837
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2} 1.252805{col 26}{space 2} .2902468{col 37}{space 1}    4.32{col 46}{space 3}0.000{col 54}{space 4} .6768928{col 67}{space 3} 1.828718
+{txt}{space 12} {c |}
+{space 5}incrate {c |}
+{space 9}L1. {c |}{col 14}{res}{space 2} .0598891{col 26}{space 2} .1111448{col 37}{space 1}    0.54{col 46}{space 3}0.591{col 54}{space 4}-.1606464{col 67}{space 3} .2804246
+{txt}{space 12} {c |}
+{space 7}crate {c |}
+{space 9}L1. {c |}{col 14}{res}{space 2}-.0505442{col 26}{space 2} .0495082{col 37}{space 1}   -1.02{col 46}{space 3}0.310{col 54}{space 4}-.1487793{col 67}{space 3} .0476909
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-1.506007{col 26}{space 2} 20.90384{col 37}{space 1}   -0.07{col 46}{space 3}0.943{col 54}{space 4}-42.98376{col 67}{space 3} 39.97175
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. eststo: reg cdiff2 pardonrate pardonincrate l.incrate l.crate [aweight=population]
+{txt}(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(4, 98)        = {res}     8.09
+{txt}       Model {c |} {res}  92659.887         4  23164.9717   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 280702.084        98  2864.30698   {txt}R-squared       ={res}    0.2482
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.2175
+{txt}       Total {c |} {res} 373361.971       102  3660.41148   {txt}Root MSE        =   {res} 53.519
+
+{txt}{hline 14}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}       cdiff2{col 15}{c |} Coefficient{col 27}  Std. err.{col 39}      t{col 47}   P>|t|{col 55}     [95% con{col 68}f. interval]
+{hline 14}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 3}pardonrate {c |}{col 15}{res}{space 2} 3.222732{col 27}{space 2}  .856858{col 38}{space 1}    3.76{col 47}{space 3}0.000{col 55}{space 4} 1.522325{col 68}{space 3} 4.923139
+{txt}pardonincrate {c |}{col 15}{res}{space 2}-.0156552{col 27}{space 2} .0064267{col 38}{space 1}   -2.44{col 47}{space 3}0.017{col 55}{space 4}-.0284087{col 68}{space 3}-.0029017
+{txt}{space 13} {c |}
+{space 6}incrate {c |}
+{space 10}L1. {c |}{col 15}{res}{space 2}  .610328{col 27}{space 2} .2506502{col 38}{space 1}    2.43{col 47}{space 3}0.017{col 55}{space 4} .1129208{col 68}{space 3} 1.107735
+{txt}{space 13} {c |}
+{space 8}crate {c |}
+{space 10}L1. {c |}{col 15}{res}{space 2}-.0781804{col 27}{space 2} .0496328{col 38}{space 1}   -1.58{col 47}{space 3}0.118{col 55}{space 4}-.1766751{col 68}{space 3} .0203143
+{txt}{space 13} {c |}
+{space 8}_cons {c |}{col 15}{res}{space 2}-57.89049{col 27}{space 2}  30.8543{col 38}{space 1}   -1.88{col 47}{space 3}0.064{col 55}{space 4}-119.1198{col 68}{space 3} 3.338868
+{txt}{hline 14}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}({res}est1{txt} stored)
+
+{com}. 
+. lincom pardonrate+32.46019*pardonincrate
+
+{p 0 7}{space 1}{text:( 1)}{space 1} {res}pardonrate + 32.46019{res}*{res}pardonincrate = 0{p_end}
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}(1) {c |}{col 14}{res}{space 2}  2.71456{col 26}{space 2} .6635705{col 37}{space 1}    4.09{col 46}{space 3}0.000{col 54}{space 4} 1.397726{col 67}{space 3} 4.031394
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+
+{com}. lincom pardonrate+58.86092*pardonincrate
+
+{p 0 7}{space 1}{text:( 1)}{space 1} {res}pardonrate + 58.86092{res}*{res}pardonincrate = 0{p_end}
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}(1) {c |}{col 14}{res}{space 2} 2.301251{col 26}{space 2} .5152551{col 37}{space 1}    4.47{col 46}{space 3}0.000{col 54}{space 4} 1.278744{col 67}{space 3} 3.323758
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+
+{com}. lincom pardonrate+100.1021*pardonincrate
+
+{p 0 7}{space 1}{text:( 1)}{space 1} {res}pardonrate + 100.1021{res}*{res}pardonincrate = 0{p_end}
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}(1) {c |}{col 14}{res}{space 2}  1.65561{col 26}{space 2} .3280041{col 37}{space 1}    5.05{col 46}{space 3}0.000{col 54}{space 4} 1.004697{col 67}{space 3} 2.306524
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+
+{com}. lincom pardonrate+160.0622*pardonincrate
+
+{p 0 7}{space 1}{text:( 1)}{space 1} {res}pardonrate + 160.0622{res}*{res}pardonincrate = 0{p_end}
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}(1) {c |}{col 14}{res}{space 2} .7169213{col 26}{space 2} .3586617{col 37}{space 1}    2.00{col 46}{space 3}0.048{col 54}{space 4} .0051689{col 67}{space 3} 1.428674
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+
+{com}. lincom pardonrate+191.9295*pardonincrate
+
+{p 0 7}{space 1}{text:( 1)}{space 1} {res}pardonrate + 191.9295{res}*{res}pardonincrate = 0{p_end}
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}(1) {c |}{col 14}{res}{space 2} .2180314{col 26}{space 2} .5105764{col 37}{space 1}    0.43{col 46}{space 3}0.670{col 54}{space 4}-.7951907{col 67}{space 3} 1.231254
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+
+{com}. 
+. *** EDIT by Donna Zhu
+. estout using "../../results/table7.csv", cells(`"b() se() t() p()"') stats(N r2 df_m df_r df_b df) notype abbrev begin(`"""') delimiter(`"",""') end(`"""') replace
+{res}{txt}(output written to {browse  `"../../results/table7.csv"'})
+
+{com}. 
+. 
+. gen above=incrate>100.1021
+{txt}
+{com}. reg cdiff2 pardonrate [aweight=population] if above==0
+{txt}(sum of wgt is 26,240,518)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}        51
+{txt}{hline 13}{c +}{hline 34}   F(1, 49)        = {res}     6.38
+{txt}       Model {c |} {res} 26280.1315         1  26280.1315   {txt}Prob > F        ={res}    0.0148
+{txt}    Residual {c |} {res} 201939.158        49  4121.20732   {txt}R-squared       ={res}    0.1152
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.0971
+{txt}       Total {c |} {res}  228219.29        50   4564.3858   {txt}Root MSE        =   {res} 64.197
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2} 1.654523{col 26}{space 2} .6551962{col 37}{space 1}    2.53{col 46}{space 3}0.015{col 54}{space 4} .3378573{col 67}{space 3} 2.971189
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-36.69112{col 26}{space 2} 24.19168{col 37}{space 1}   -1.52{col 46}{space 3}0.136{col 54}{space 4}-85.30611{col 67}{space 3} 11.92388
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. reg cdiff2 pardonrate [aweight=population] if above==1
+{txt}(sum of wgt is 32,450,621)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}        52
+{txt}{hline 13}{c +}{hline 34}   F(1, 50)        = {res}    13.01
+{txt}       Model {c |} {res} 25779.0604         1  25779.0604   {txt}Prob > F        ={res}    0.0007
+{txt}    Residual {c |} {res} 99040.1247        50  1980.80249   {txt}R-squared       ={res}    0.2065
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.1907
+{txt}       Total {c |} {res} 124819.185        51    2447.435   {txt}Root MSE        =   {res} 44.506
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2} .8515403{col 26}{space 2} .2360436{col 37}{space 1}    3.61{col 46}{space 3}0.001{col 54}{space 4} .3774327{col 67}{space 3} 1.325648
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 11.33586{col 26}{space 2} 13.50887{col 37}{space 1}    0.84{col 46}{space 3}0.405{col 54}{space 4} -15.7975{col 67}{space 3} 38.46921
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. 
+. reg cdiff2 pardonrate l.crate l.incrate [aweight=population] if above==0
+{txt}(sum of wgt is 26,240,518)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}        51
+{txt}{hline 13}{c +}{hline 34}   F(3, 47)        = {res}    13.44
+{txt}       Model {c |} {res} 105378.079         3  35126.0263   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 122841.211        47  2613.64279   {txt}R-squared       ={res}    0.4617
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.4274
+{txt}       Total {c |} {res}  228219.29        50   4564.3858   {txt}Root MSE        =   {res} 51.124
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2} 3.007427{col 26}{space 2} .6684521{col 37}{space 1}    4.50{col 46}{space 3}0.000{col 54}{space 4} 1.662675{col 67}{space 3}  4.35218
+{txt}{space 12} {c |}
+{space 7}crate {c |}
+{space 9}L1. {c |}{col 14}{res}{space 2}-.3485164{col 26}{space 2} .0645911{col 37}{space 1}   -5.40{col 46}{space 3}0.000{col 54}{space 4} -.478457{col 67}{space 3}-.2185758
+{txt}{space 12} {c |}
+{space 5}incrate {c |}
+{space 9}L1. {c |}{col 14}{res}{space 2} .1688191{col 26}{space 2} .3411801{col 37}{space 1}    0.49{col 46}{space 3}0.623{col 54}{space 4}-.5175467{col 67}{space 3}  .855185
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2} 38.50366{col 26}{space 2} 27.37279{col 37}{space 1}    1.41{col 46}{space 3}0.166{col 54}{space 4} -16.5633{col 67}{space 3} 93.57062
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. reg cdiff2 pardonrate l.crate l.incrate [aweight=population] if above==1
+{txt}(sum of wgt is 32,450,621)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}        52
+{txt}{hline 13}{c +}{hline 34}   F(3, 48)        = {res}    10.18
+{txt}       Model {c |} {res} 48536.1607         3  16178.7202   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 76283.0244        48  1589.22968   {txt}R-squared       ={res}    0.3889
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.3507
+{txt}       Total {c |} {res} 124819.185        51    2447.435   {txt}Root MSE        =   {res} 39.865
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      cdiff2{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}pardonrate {c |}{col 14}{res}{space 2} .3338144{col 26}{space 2} .2555184{col 37}{space 1}    1.31{col 46}{space 3}0.198{col 54}{space 4}-.1799399{col 67}{space 3} .8475686
+{txt}{space 12} {c |}
+{space 7}crate {c |}
+{space 9}L1. {c |}{col 14}{res}{space 2} .1731778{col 26}{space 2} .0537989{col 37}{space 1}    3.22{col 46}{space 3}0.002{col 54}{space 4} .0650079{col 67}{space 3} .2813476
+{txt}{space 12} {c |}
+{space 5}incrate {c |}
+{space 9}L1. {c |}{col 14}{res}{space 2}-.1091201{col 26}{space 2} .1530807{col 37}{space 1}   -0.71{col 46}{space 3}0.479{col 54}{space 4}-.4169095{col 67}{space 3} .1986692
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2} -18.1594{col 26}{space 2} 33.64021{col 37}{space 1}   -0.54{col 46}{space 3}0.592{col 54}{space 4}-85.79758{col 67}{space 3} 49.47877
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. 
+. gen pardonrateabove=pardonrate*above
+{txt}
+{com}. gen lcrateabove=l.crate*above
+{txt}(103 missing values generated)
+
+{com}. gen lincrateabove=l.incrate*above
+{txt}(103 missing values generated)
+
+{com}. reg cdiff2 pardonrate pardonrateabove l.crate lcrateabove l.incrate lincrateabove [aweight=population]
+{txt}(sum of wgt is 58,691,139)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}       103
+{txt}{hline 13}{c +}{hline 34}   F(6, 96)        = {res}    14.20
+{txt}       Model {c |} {res} 175580.338         6  29263.3897   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 197781.633        96  2060.22534   {txt}R-squared       ={res}    0.4703
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.4372
+{txt}       Total {c |} {res} 373361.971       102  3660.41148   {txt}Root MSE        =   {res}  45.39
+
+{txt}{hline 16}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}         cdiff2{col 17}{c |} Coefficient{col 29}  Std. err.{col 41}      t{col 49}   P>|t|{col 57}     [95% con{col 70}f. interval]
+{hline 16}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 5}pardonrate {c |}{col 17}{res}{space 2} 3.039661{col 29}{space 2} .6240389{col 40}{space 1}    4.87{col 49}{space 3}0.000{col 57}{space 4} 1.800953{col 70}{space 3} 4.278368
+{txt}pardonrateabove {c |}{col 17}{res}{space 2}-2.702308{col 29}{space 2} .6832585{col 40}{space 1}   -3.96{col 49}{space 3}0.000{col 57}{space 4}-4.058566{col 70}{space 3}-1.346051
+{txt}{space 15} {c |}
+{space 10}crate {c |}
+{space 12}L1. {c |}{col 17}{res}{space 2}-.3227111{col 29}{space 2} .0568205{col 40}{space 1}   -5.68{col 49}{space 3}0.000{col 57}{space 4}-.4354989{col 70}{space 3}-.2099233
+{txt}{space 15} {c |}
+{space 4}lcrateabove {c |}{col 17}{res}{space 2} .4549561{col 29}{space 2}  .065593{col 40}{space 1}    6.94{col 49}{space 3}0.000{col 57}{space 4}  .324755{col 70}{space 3} .5851572
+{txt}{space 15} {c |}
+{space 8}incrate {c |}
+{space 12}L1. {c |}{col 17}{res}{space 2} .2750147{col 29}{space 2} .3075955{col 40}{space 1}    0.89{col 49}{space 3}0.374{col 57}{space 4}-.3355575{col 70}{space 3} .8855868
+{txt}{space 15} {c |}
+{space 2}lincrateabove {c |}{col 17}{res}{space 2} -.530361{col 29}{space 2} .2996531{col 40}{space 1}   -1.77{col 49}{space 3}0.080{col 57}{space 4}-1.125168{col 70}{space 3} .0644458
+{txt}{space 10}_cons {c |}{col 17}{res}{space 2} 19.91316{col 29}{space 2} 20.96409{col 40}{space 1}    0.95{col 49}{space 3}0.345{col 57}{space 4}-21.70023{col 70}{space 3} 61.52655
+{txt}{hline 16}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}/home/zhiwenz/private-research/studies/buonanno-2013/source/20111641_data/crossregional2.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res} 6 Nov 2024, 00:25:15
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

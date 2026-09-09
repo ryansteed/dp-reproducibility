@@ -1,0 +1,52 @@
+[
+  {
+    "id": "gov_d_lper_earn-turnout",
+    "est": -0.138,
+    "se": 0.047
+  },
+  {
+    "id": "gov_d_lper_emp-turnout",
+    "est": -0.318,
+    "se": 0.105
+  },
+  {
+    "id": "pres_d_lper_earn-turnout",
+    "est": 0.033,
+    "se": 0.027
+  },
+  {
+    "id": "pres_d_lper_emp-turnout",
+    "est": 0.068,
+    "se": 0.066
+  },
+  {
+    "id": "sen6_d_lper_earn-turnout",
+    "est": -0.05,
+    "se": 0.026
+  },
+  {
+    "id": "sen6_d_lper_emp-turnout",
+    "est": -0.125,
+    "se": 0.095
+  },
+  {
+    "id": "congr4_d_lper_earn-turnout",
+    "est": -0.134,
+    "se": 0.03
+  },
+  {
+    "id": "congr4_d_lper_emp-turnout",
+    "est": -0.305,
+    "se": 0.086
+  },
+  {
+    "id": "st4_d_lper_earn-turnout",
+    "est": -0.373,
+    "se": 0.105
+  },
+  {
+    "id": "st4_d_lper_emp-turnout",
+    "est": -0.735,
+    "se": 0.253
+  }
+]

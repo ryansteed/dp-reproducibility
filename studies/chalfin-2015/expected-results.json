@@ -1,0 +1,17 @@
+[
+  {
+    "id": "mexican-rape",
+    "est": -0.131,
+    "se": 0.062
+  },
+  {
+    "id": "mexican-larceny",
+    "est": -0.105,
+    "se": 0.047
+  },
+  {
+    "id": "mexican-motor",
+    "est": -0.149,
+    "se": 0.081
+  }
+]

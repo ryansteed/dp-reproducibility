@@ -1,0 +1,22 @@
+[
+  {
+    "id": "recession_property",
+    "est": 72.990,
+    "se": 14.288
+  },
+  {
+    "id": "recovery_property",
+    "est": 61.428,
+    "se": 16.039
+  },
+  {
+    "id": "recession_violent",
+    "est": 0.115,
+    "se": 1.664
+  },
+  {
+    "id": "recovery_violent",
+    "est": -2.012,
+    "se": 1.853
+  }
+]

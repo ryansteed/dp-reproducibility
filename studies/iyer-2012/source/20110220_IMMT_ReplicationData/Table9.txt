@@ -1,0 +1,1456 @@
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.296 *          0.271 ***
+                  [0.153]          [0.090]    
+                                              
+r2                   0.88             0.94    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_rape
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.116            0.092    
+                  [0.076]          [0.068]    
+                                              
+r2                   0.85             0.92    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womgirl
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.175 ***        0.148 ** 
+                  [0.060]          [0.068]    
+                                              
+r2                   0.87             0.92    
+N                     323              323    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_nonwomen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.251 *          0.095    
+                  [0.120]          [0.107]    
+                                              
+r2                   0.78             0.85    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_kidmen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.062           -0.100    
+                  [0.109]          [0.098]    
+                                              
+r2                   0.73             0.81    
+N                     312              312    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: charge_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.345            1.280    
+                  [0.979]          [1.341]    
+                                              
+r2                   0.83             0.85    
+N                     289              289    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: chargesheet_rate
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.216            1.467    
+                  [1.864]          [1.317]    
+                                              
+r2                   0.87             0.94    
+N                     289              289    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.296 *          0.271 ***
+                  [0.153]          [0.090]    
+                                              
+r2                   0.88             0.94    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_rape
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.116            0.092    
+                  [0.076]          [0.068]    
+                                              
+r2                   0.85             0.92    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womgirl
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.175 ***        0.148 ** 
+                  [0.060]          [0.068]    
+                                              
+r2                   0.87             0.92    
+N                     323              323    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_nonwomen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.251 *          0.095    
+                  [0.120]          [0.107]    
+                                              
+r2                   0.78             0.85    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_kidmen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.062           -0.100    
+                  [0.109]          [0.098]    
+                                              
+r2                   0.73             0.81    
+N                     312              312    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: charge_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.345            1.280    
+                  [0.979]          [1.341]    
+                                              
+r2                   0.83             0.85    
+N                     289              289    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: chargesheet_rate
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.216            1.467    
+                  [1.864]          [1.317]    
+                                              
+r2                   0.87             0.94    
+N                     289              289    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.296 *          0.271 ***
+                  [0.153]          [0.090]    
+                                              
+r2                   0.88             0.94    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_rape
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.116            0.092    
+                  [0.076]          [0.068]    
+                                              
+r2                   0.85             0.92    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womgirl
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.175 ***        0.148 ** 
+                  [0.060]          [0.068]    
+                                              
+r2                   0.87             0.92    
+N                     323              323    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_nonwomen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.251 *          0.095    
+                  [0.120]          [0.107]    
+                                              
+r2                   0.78             0.85    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_kidmen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.062           -0.100    
+                  [0.109]          [0.098]    
+                                              
+r2                   0.73             0.81    
+N                     312              312    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: charge_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.345            1.280    
+                  [0.979]          [1.341]    
+                                              
+r2                   0.83             0.85    
+N                     289              289    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: chargesheet_rate
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.216            1.467    
+                  [1.864]          [1.317]    
+                                              
+r2                   0.87             0.94    
+N                     289              289    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.296 *          0.271 ***
+                  [0.153]          [0.090]    
+                                              
+r2                   0.88             0.94    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_rape
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.116            0.092    
+                  [0.076]          [0.068]    
+                                              
+r2                   0.85             0.92    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womgirl
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.175 ***        0.148 ** 
+                  [0.060]          [0.068]    
+                                              
+r2                   0.87             0.92    
+N                     323              323    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_nonwomen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.251 *          0.095    
+                  [0.120]          [0.107]    
+                                              
+r2                   0.78             0.85    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_kidmen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.062           -0.100    
+                  [0.109]          [0.098]    
+                                              
+r2                   0.73             0.81    
+N                     312              312    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: charge_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.345            1.280    
+                  [0.979]          [1.341]    
+                                              
+r2                   0.83             0.85    
+N                     289              289    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: chargesheet_rate
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.216            1.467    
+                  [1.864]          [1.317]    
+                                              
+r2                   0.87             0.94    
+N                     289              289    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.296 *          0.271 ***
+                  [0.153]          [0.090]    
+                                              
+r2                   0.88             0.94    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_rape
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.116            0.092    
+                  [0.076]          [0.068]    
+                                              
+r2                   0.85             0.92    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womgirl
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.175 ***        0.148 ** 
+                  [0.060]          [0.068]    
+                                              
+r2                   0.87             0.92    
+N                     323              323    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_nonwomen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.251 *          0.095    
+                  [0.120]          [0.107]    
+                                              
+r2                   0.78             0.85    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_kidmen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.062           -0.100    
+                  [0.109]          [0.098]    
+                                              
+r2                   0.73             0.81    
+N                     312              312    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: charge_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.345            1.280    
+                  [0.979]          [1.341]    
+                                              
+r2                   0.83             0.85    
+N                     289              289    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: chargesheet_rate
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.216            1.467    
+                  [1.864]          [1.317]    
+                                              
+r2                   0.87             0.94    
+N                     289              289    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.296 *          0.271 ***
+                  [0.153]          [0.090]    
+                                              
+r2                   0.88             0.94    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_rape
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.116            0.092    
+                  [0.076]          [0.068]    
+                                              
+r2                   0.85             0.92    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womgirl
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.175 ***        0.148 ** 
+                  [0.060]          [0.068]    
+                                              
+r2                   0.87             0.92    
+N                     323              323    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_nonwomen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.251 *          0.095    
+                  [0.120]          [0.107]    
+                                              
+r2                   0.78             0.85    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_kidmen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.062           -0.100    
+                  [0.109]          [0.098]    
+                                              
+r2                   0.73             0.81    
+N                     312              312    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: charge_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.345            1.280    
+                  [0.979]          [1.341]    
+                                              
+r2                   0.83             0.85    
+N                     289              289    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: chargesheet_rate
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.216            1.467    
+                  [1.864]          [1.317]    
+                                              
+r2                   0.87             0.94    
+N                     289              289    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.296 *          0.271 ***
+                  [0.153]          [0.090]    
+                                              
+r2                   0.88             0.94    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_rape
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.116            0.092    
+                  [0.076]          [0.068]    
+                                              
+r2                   0.85             0.92    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womgirl
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.175 ***        0.148 ** 
+                  [0.060]          [0.068]    
+                                              
+r2                   0.87             0.92    
+N                     323              323    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_nonwomen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.251 *          0.095    
+                  [0.120]          [0.107]    
+                                              
+r2                   0.78             0.85    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_kidmen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.062           -0.100    
+                  [0.109]          [0.098]    
+                                              
+r2                   0.73             0.81    
+N                     312              312    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: charge_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.345            1.280    
+                  [0.979]          [1.341]    
+                                              
+r2                   0.83             0.85    
+N                     289              289    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: chargesheet_rate
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.216            1.467    
+                  [1.864]          [1.317]    
+                                              
+r2                   0.87             0.94    
+N                     289              289    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.296 *          0.271 ***
+                  [0.153]          [0.090]    
+                                              
+r2                   0.88             0.94    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_rape
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.116            0.092    
+                  [0.076]          [0.068]    
+                                              
+r2                   0.85             0.92    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womgirl
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.175 ***        0.148 ** 
+                  [0.060]          [0.068]    
+                                              
+r2                   0.87             0.92    
+N                     323              323    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_nonwomen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.251 *          0.095    
+                  [0.120]          [0.107]    
+                                              
+r2                   0.78             0.85    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_kidmen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.062           -0.100    
+                  [0.109]          [0.098]    
+                                              
+r2                   0.73             0.81    
+N                     312              312    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: charge_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.345            1.280    
+                  [0.979]          [1.341]    
+                                              
+r2                   0.83             0.85    
+N                     289              289    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: chargesheet_rate
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.216            1.467    
+                  [1.864]          [1.317]    
+                                              
+r2                   0.87             0.94    
+N                     289              289    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.296 *          0.271 ***
+                  [0.153]          [0.090]    
+                                              
+r2                   0.88             0.94    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_rape
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.116            0.092    
+                  [0.076]          [0.068]    
+                                              
+r2                   0.85             0.92    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womgirl
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.175 ***        0.148 ** 
+                  [0.060]          [0.068]    
+                                              
+r2                   0.87             0.92    
+N                     323              323    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_nonwomen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.251 *          0.095    
+                  [0.120]          [0.107]    
+                                              
+r2                   0.78             0.85    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_kidmen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.062           -0.100    
+                  [0.109]          [0.098]    
+                                              
+r2                   0.73             0.81    
+N                     312              312    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: charge_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.345            1.280    
+                  [0.979]          [1.341]    
+                                              
+r2                   0.83             0.85    
+N                     289              289    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: chargesheet_rate
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.216            1.467    
+                  [1.864]          [1.317]    
+                                              
+r2                   0.87             0.94    
+N                     289              289    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.296 *          0.271 ***
+                  [0.153]          [0.090]    
+                                              
+r2                   0.88             0.94    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_rape
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.116            0.092    
+                  [0.076]          [0.068]    
+                                              
+r2                   0.85             0.92    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womgirl
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.175 ***        0.148 ** 
+                  [0.060]          [0.068]    
+                                              
+r2                   0.87             0.92    
+N                     323              323    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_nonwomen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.251 *          0.095    
+                  [0.120]          [0.107]    
+                                              
+r2                   0.78             0.85    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_kidmen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.062           -0.100    
+                  [0.109]          [0.098]    
+                                              
+r2                   0.73             0.81    
+N                     312              312    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: charge_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.345            1.280    
+                  [0.979]          [1.341]    
+                                              
+r2                   0.83             0.85    
+N                     289              289    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: chargesheet_rate
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.216            1.467    
+                  [1.864]          [1.317]    
+                                              
+r2                   0.87             0.94    
+N                     289              289    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.296 *          0.271 ***
+                  [0.153]          [0.090]    
+                                              
+r2                   0.88             0.94    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_rape
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.116            0.092    
+                  [0.076]          [0.068]    
+                                              
+r2                   0.85             0.92    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womgirl
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.175 ***        0.148 ** 
+                  [0.060]          [0.068]    
+                                              
+r2                   0.87             0.92    
+N                     323              323    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_nonwomen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.251 *          0.095    
+                  [0.120]          [0.107]    
+                                              
+r2                   0.78             0.85    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_kidmen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.062           -0.100    
+                  [0.109]          [0.098]    
+                                              
+r2                   0.73             0.81    
+N                     312              312    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: charge_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.345            1.280    
+                  [0.979]          [1.341]    
+                                              
+r2                   0.83             0.85    
+N                     289              289    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: chargesheet_rate
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.216            1.467    
+                  [1.864]          [1.317]    
+                                              
+r2                   0.87             0.94    
+N                     289              289    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.296 *          0.271 ***
+                  [0.153]          [0.090]    
+                                              
+r2                   0.88             0.94    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_rape
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.116            0.092    
+                  [0.076]          [0.068]    
+                                              
+r2                   0.85             0.92    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womgirl
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.175 ***        0.148 ** 
+                  [0.060]          [0.068]    
+                                              
+r2                   0.87             0.92    
+N                     323              323    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_nonwomen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.251 *          0.095    
+                  [0.120]          [0.107]    
+                                              
+r2                   0.78             0.85    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_kidmen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.062           -0.100    
+                  [0.109]          [0.098]    
+                                              
+r2                   0.73             0.81    
+N                     312              312    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: charge_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.345            1.280    
+                  [0.979]          [1.341]    
+                                              
+r2                   0.83             0.85    
+N                     289              289    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: chargesheet_rate
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.216            1.467    
+                  [1.864]          [1.317]    
+                                              
+r2                   0.87             0.94    
+N                     289              289    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.296 *          0.271 ***
+                  [0.153]          [0.090]    
+                                              
+r2                   0.88             0.94    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_rape
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.116            0.092    
+                  [0.076]          [0.068]    
+                                              
+r2                   0.85             0.92    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womgirl
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.175 ***        0.148 ** 
+                  [0.060]          [0.068]    
+                                              
+r2                   0.87             0.92    
+N                     323              323    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_nonwomen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.251 *          0.095    
+                  [0.120]          [0.107]    
+                                              
+r2                   0.78             0.85    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_kidmen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.062           -0.100    
+                  [0.109]          [0.098]    
+                                              
+r2                   0.73             0.81    
+N                     312              312    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: charge_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.345            1.280    
+                  [0.979]          [1.341]    
+                                              
+r2                   0.83             0.85    
+N                     289              289    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: chargesheet_rate
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.216            1.467    
+                  [1.864]          [1.317]    
+                                              
+r2                   0.87             0.94    
+N                     289              289    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.296 *          0.271 ***
+                  [0.153]          [0.090]    
+                                              
+r2                   0.88             0.94    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_rape
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.116            0.092    
+                  [0.076]          [0.068]    
+                                              
+r2                   0.85             0.92    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womgirl
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.175 ***        0.148 ** 
+                  [0.060]          [0.068]    
+                                              
+r2                   0.87             0.92    
+N                     323              323    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_nonwomen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.251 *          0.095    
+                  [0.120]          [0.107]    
+                                              
+r2                   0.78             0.85    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_kidmen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.062           -0.100    
+                  [0.109]          [0.098]    
+                                              
+r2                   0.73             0.81    
+N                     312              312    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: charge_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.345            1.280    
+                  [0.979]          [1.341]    
+                                              
+r2                   0.83             0.85    
+N                     289              289    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: chargesheet_rate
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.216            1.467    
+                  [1.864]          [1.317]    
+                                              
+r2                   0.87             0.94    
+N                     289              289    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.296 *          0.271 ***
+                  [0.153]          [0.090]    
+                                              
+r2                   0.88             0.94    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_rape
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.116            0.092    
+                  [0.076]          [0.068]    
+                                              
+r2                   0.85             0.92    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womgirl
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.175 ***        0.148 ** 
+                  [0.060]          [0.068]    
+                                              
+r2                   0.87             0.92    
+N                     323              323    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_nonwomen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.251 *          0.095    
+                  [0.120]          [0.107]    
+                                              
+r2                   0.78             0.85    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_kidmen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.062           -0.100    
+                  [0.109]          [0.098]    
+                                              
+r2                   0.73             0.81    
+N                     312              312    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: charge_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.345            1.280    
+                  [0.979]          [1.341]    
+                                              
+r2                   0.83             0.85    
+N                     289              289    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: chargesheet_rate
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.216            1.467    
+                  [1.864]          [1.317]    
+                                              
+r2                   0.87             0.94    
+N                     289              289    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.296 *          0.271 ***
+                  [0.153]          [0.090]    
+                                              
+r2                   0.88             0.94    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_rape
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.116            0.092    
+                  [0.076]          [0.068]    
+                                              
+r2                   0.85             0.92    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womgirl
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.175 ***        0.148 ** 
+                  [0.060]          [0.068]    
+                                              
+r2                   0.87             0.92    
+N                     323              323    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_nonwomen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.251 *          0.095    
+                  [0.120]          [0.107]    
+                                              
+r2                   0.78             0.85    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_kidmen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.062           -0.100    
+                  [0.109]          [0.098]    
+                                              
+r2                   0.73             0.81    
+N                     312              312    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: charge_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.345            1.280    
+                  [0.979]          [1.341]    
+                                              
+r2                   0.83             0.85    
+N                     289              289    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: chargesheet_rate
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.216            1.467    
+                  [1.864]          [1.317]    
+                                              
+r2                   0.87             0.94    
+N                     289              289    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.296 *          0.271 ***
+                  [0.153]          [0.090]    
+                                              
+r2                   0.88             0.94    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_rape
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.116            0.092    
+                  [0.076]          [0.068]    
+                                              
+r2                   0.85             0.92    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womgirl
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.175 ***        0.148 ** 
+                  [0.060]          [0.068]    
+                                              
+r2                   0.87             0.92    
+N                     323              323    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_nonwomen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.251 *          0.095    
+                  [0.120]          [0.107]    
+                                              
+r2                   0.78             0.85    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_kidmen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.062           -0.100    
+                  [0.109]          [0.098]    
+                                              
+r2                   0.73             0.81    
+N                     312              312    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: charge_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.345            1.280    
+                  [0.979]          [1.341]    
+                                              
+r2                   0.83             0.85    
+N                     289              289    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: chargesheet_rate
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.216            1.467    
+                  [1.864]          [1.317]    
+                                              
+r2                   0.87             0.94    
+N                     289              289    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.296 *          0.271 ***
+                  [0.153]          [0.090]    
+                                              
+r2                   0.88             0.94    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_rape
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.116            0.092    
+                  [0.076]          [0.068]    
+                                              
+r2                   0.85             0.92    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womgirl
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.175 ***        0.148 ** 
+                  [0.060]          [0.068]    
+                                              
+r2                   0.87             0.92    
+N                     323              323    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_nonwomen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.251 *          0.095    
+                  [0.120]          [0.107]    
+                                              
+r2                   0.78             0.85    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_kidmen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.062           -0.100    
+                  [0.109]          [0.098]    
+                                              
+r2                   0.73             0.81    
+N                     312              312    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: charge_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.345            1.280    
+                  [0.979]          [1.341]    
+                                              
+r2                   0.83             0.85    
+N                     289              289    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: chargesheet_rate
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.216            1.467    
+                  [1.864]          [1.317]    
+                                              
+r2                   0.87             0.94    
+N                     289              289    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.296 *          0.271 ***
+                  [0.153]          [0.090]    
+                                              
+r2                   0.88             0.94    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_rape
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.116            0.092    
+                  [0.076]          [0.068]    
+                                              
+r2                   0.85             0.92    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womgirl
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.175 ***        0.148 ** 
+                  [0.060]          [0.068]    
+                                              
+r2                   0.87             0.92    
+N                     323              323    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_nonwomen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.251 *          0.095    
+                  [0.120]          [0.107]    
+                                              
+r2                   0.78             0.85    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_kidmen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.062           -0.100    
+                  [0.109]          [0.098]    
+                                              
+r2                   0.73             0.81    
+N                     312              312    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: charge_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.345            1.280    
+                  [0.979]          [1.341]    
+                                              
+r2                   0.83             0.85    
+N                     289              289    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: chargesheet_rate
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.216            1.467    
+                  [1.864]          [1.317]    
+                                              
+r2                   0.87             0.94    
+N                     289              289    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.296 *          0.271 ***
+                  [0.153]          [0.090]    
+                                              
+r2                   0.88             0.94    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_rape
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.116            0.092    
+                  [0.076]          [0.068]    
+                                              
+r2                   0.85             0.92    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womgirl
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.175 ***        0.148 ** 
+                  [0.060]          [0.068]    
+                                              
+r2                   0.87             0.92    
+N                     323              323    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_nonwomen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.251 *          0.095    
+                  [0.120]          [0.107]    
+                                              
+r2                   0.78             0.85    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_kidmen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.062           -0.100    
+                  [0.109]          [0.098]    
+                                              
+r2                   0.73             0.81    
+N                     312              312    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: charge_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.345            1.280    
+                  [0.979]          [1.341]    
+                                              
+r2                   0.83             0.85    
+N                     289              289    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: chargesheet_rate
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.216            1.467    
+                  [1.864]          [1.317]    
+                                              
+r2                   0.87             0.94    
+N                     289              289    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.296 *          0.271 ***
+                  [0.153]          [0.090]    
+                                              
+r2                   0.88             0.94    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_rape
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.116            0.092    
+                  [0.076]          [0.068]    
+                                              
+r2                   0.85             0.92    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womgirl
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.175 ***        0.148 ** 
+                  [0.060]          [0.068]    
+                                              
+r2                   0.87             0.92    
+N                     323              323    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_nonwomen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.251 *          0.095    
+                  [0.120]          [0.107]    
+                                              
+r2                   0.78             0.85    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_kidmen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.062           -0.100    
+                  [0.109]          [0.098]    
+                                              
+r2                   0.73             0.81    
+N                     312              312    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: charge_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.345            1.280    
+                  [0.979]          [1.341]    
+                                              
+r2                   0.83             0.85    
+N                     289              289    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: chargesheet_rate
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.216            1.467    
+                  [1.864]          [1.317]    
+                                              
+r2                   0.87             0.94    
+N                     289              289    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.296 *          0.271 ***
+                  [0.153]          [0.090]    
+                                              
+r2                   0.88             0.94    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_rape
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.116            0.092    
+                  [0.076]          [0.068]    
+                                              
+r2                   0.85             0.92    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womgirl
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.175 ***        0.148 ** 
+                  [0.060]          [0.068]    
+                                              
+r2                   0.87             0.92    
+N                     323              323    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_nonwomen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.251 *          0.095    
+                  [0.120]          [0.107]    
+                                              
+r2                   0.78             0.85    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_kidmen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.062           -0.100    
+                  [0.109]          [0.098]    
+                                              
+r2                   0.73             0.81    
+N                     312              312    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: charge_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.345            1.280    
+                  [0.979]          [1.341]    
+                                              
+r2                   0.83             0.85    
+N                     289              289    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: chargesheet_rate
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.216            1.467    
+                  [1.864]          [1.317]    
+                                              
+r2                   0.87             0.94    
+N                     289              289    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.296 *          0.271 ***
+                  [0.153]          [0.090]    
+                                              
+r2                   0.88             0.94    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_rape
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.116            0.092    
+                  [0.076]          [0.068]    
+                                              
+r2                   0.85             0.92    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womgirl
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.175 ***        0.148 ** 
+                  [0.060]          [0.068]    
+                                              
+r2                   0.87             0.92    
+N                     323              323    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_nonwomen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.251 *          0.095    
+                  [0.120]          [0.107]    
+                                              
+r2                   0.78             0.85    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_kidmen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.062           -0.100    
+                  [0.109]          [0.098]    
+                                              
+r2                   0.73             0.81    
+N                     312              312    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: charge_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.345            1.280    
+                  [0.979]          [1.341]    
+                                              
+r2                   0.83             0.85    
+N                     289              289    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: chargesheet_rate
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.216            1.467    
+                  [1.864]          [1.317]    
+                                              
+r2                   0.87             0.94    
+N                     289              289    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.296 *          0.271 ***
+                  [0.153]          [0.090]    
+                                              
+r2                   0.88             0.94    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_rape
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.116            0.092    
+                  [0.076]          [0.068]    
+                                              
+r2                   0.85             0.92    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womgirl
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.175 ***        0.148 ** 
+                  [0.060]          [0.068]    
+                                              
+r2                   0.87             0.92    
+N                     323              323    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_nonwomen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.251 *          0.095    
+                  [0.120]          [0.107]    
+                                              
+r2                   0.78             0.85    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_kidmen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.062           -0.100    
+                  [0.109]          [0.098]    
+                                              
+r2                   0.73             0.81    
+N                     312              312    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: charge_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.345            1.280    
+                  [0.979]          [1.341]    
+                                              
+r2                   0.83             0.85    
+N                     289              289    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: chargesheet_rate
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.216            1.467    
+                  [1.864]          [1.317]    
+                                              
+r2                   0.87             0.94    
+N                     289              289    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.296 *          0.271 ***
+                  [0.153]          [0.090]    
+                                              
+r2                   0.88             0.94    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_rape
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.116            0.092    
+                  [0.076]          [0.068]    
+                                              
+r2                   0.85             0.92    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womgirl
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.175 ***        0.148 ** 
+                  [0.060]          [0.068]    
+                                              
+r2                   0.87             0.92    
+N                     323              323    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_nonwomen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.251 *          0.095    
+                  [0.120]          [0.107]    
+                                              
+r2                   0.78             0.85    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_kidmen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.062           -0.100    
+                  [0.109]          [0.098]    
+                                              
+r2                   0.73             0.81    
+N                     312              312    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: charge_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.345            1.280    
+                  [0.979]          [1.341]    
+                                              
+r2                   0.83             0.85    
+N                     289              289    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: chargesheet_rate
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.216            1.467    
+                  [1.864]          [1.317]    
+                                              
+r2                   0.87             0.94    
+N                     289              289    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.296 *          0.271 ***
+                  [0.153]          [0.090]    
+                                              
+r2                   0.88             0.94    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_rape
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.116            0.092    
+                  [0.076]          [0.068]    
+                                              
+r2                   0.85             0.92    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_womgirl
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.175 ***        0.148 ** 
+                  [0.060]          [0.068]    
+                                              
+r2                   0.87             0.92    
+N                     323              323    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_nonwomen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.251 *          0.095    
+                  [0.120]          [0.107]    
+                                              
+r2                   0.78             0.85    
+N                     340              340    
+Table 9- Arrest Rates, Panel A and B - Dependent Variable: lparrest_kidmen
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.062           -0.100    
+                  [0.109]          [0.098]    
+                                              
+r2                   0.73             0.81    
+N                     312              312    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: charge_womcrime
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres            0.345            1.280    
+                  [0.979]          [1.341]    
+                                              
+r2                   0.83             0.85    
+N                     289              289    
+Table 9, Chargesheeting, panels A and B, Dependent Variable: chargesheet_rate
+                       m1               m2    
+               b/se/blank       b/se/blank    
+postwres           -0.216            1.467    
+                  [1.864]          [1.317]    
+                                              
+r2                   0.87             0.94    
+N                     289              289    

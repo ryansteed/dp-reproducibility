@@ -1,0 +1,22 @@
+[
+  {
+    "id": "rml-compcol",
+    "est": 0.125,
+    "se": 0.025
+  },
+  {
+    "id": "rml-compasso",
+    "est": 0.142,
+    "se": 0.049
+  },
+  {
+    "id": "rml-gradcol",
+    "est": 2.744,
+    "se": 1.073
+  },
+  {
+    "id": "rml-gradasso",
+    "est": 5.599,
+    "se": 0.934
+  }
+]

@@ -1,0 +1,27 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{6}{c}}
+\hline\hline
+                    &\multicolumn{6}{c}{Dependent Variable: Black Voter Registration Rate}        \\
+                    &         (1)&         (2)&         (3)&         (4)&         (5)&         (6)\\
+\hline
+Black lynching rate &      -0.455&      -0.448&      -0.348&      -0.473&      -0.491&      -0.340\\
+                    &     (0.143)&     (0.145)&     (0.139)&     (0.144)&     (0.136)&     (0.134)\\
+\makecell{Some college exp.\\or more of blacks}&      11.439&            &            &            &            &      22.055\\
+                    &     (6.884)&            &            &            &            &     (6.969)\\
+\makecell{Monthly earnings\\of blacks}&            &       0.003&            &            &            &       0.002\\
+                    &            &     (0.003)&            &            &            &     (0.003)\\
+\makecell{Republican party\\dominance\\(4-year lag)}&            &            &      -0.191&            &            &      -0.133\\
+                    &            &            &     (0.038)&            &            &     (0.041)\\
+\makecell{Incarceration rate\\of blacks\\(per 10k pop)}&            &            &            &      -0.004&            &      -0.006\\
+                    &            &            &            &     (0.004)&            &     (0.004)\\
+\makecell{Polling place rate\\(per 10k pop)}&            &            &            &            &       1.339&       1.313\\
+                    &            &            &            &            &     (0.243)&     (0.277)\\
+Historical Controls &         Yes&         Yes&         Yes&         Yes&         Yes&         Yes\\
+State Fixed Effects &         Yes&         Yes&         Yes&         Yes&         Yes&         Yes\\
+\hline
+\# of counties      &         267&         267&         267&         267&         267&         267\\
+R-Squared           &       0.553&       0.550&       0.589&       0.550&       0.597&       0.644\\
+\hline\hline
+\end{tabular}
+}

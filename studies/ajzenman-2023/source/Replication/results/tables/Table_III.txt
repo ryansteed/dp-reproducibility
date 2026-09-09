@@ -1,0 +1,13 @@
+		(1)	(2)	(3)	(4)
+		Investment	Neighbors	Owns	Principal
+		in Home	Security	Weapon	Component
+		Security	System		Summary
+VARIABLES	LABELS				Index (PCI)
+					
+lnrate_stock_imm	Log Imm Rate	1.18	2.33***	1.04***	1.70***
+		(0.90)	(0.76)	(0.37)	(0.62)
+		[0.192]	[0.003]	[0.007]	[0.008]
+					
+Observations		243,786	243,993	243,408	243,096
+R-squared		0.07	0.05	0.01	0.07
+Mean DV		22.78	13.16	4.776	16.41

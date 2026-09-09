@@ -1,0 +1,22 @@
+[
+  {
+    "id": "arr_pblackxhprime",
+    "est": 11.40,
+    "se": 2.80
+  },
+  {
+    "id": "arr_pblack",
+    "est": -17.13,
+    "se": 3.24
+  },
+  {
+    "id": "ps_pblackxhprime",
+    "est": -3.32,
+    "se": 8.54
+  },
+  {
+    "id": "ps_pblack",
+    "est": -14.60,
+    "se": 11.91
+  }
+]

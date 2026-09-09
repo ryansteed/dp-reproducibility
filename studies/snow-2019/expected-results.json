@@ -1,0 +1,22 @@
+[
+  {
+    "id": "white_post",
+    "est": -0.12,
+    "se": 0.07
+  },
+  {
+    "id": "white_south_post",
+    "est": -0.14,
+    "se": 0.07
+  },
+  {
+    "id": "black_post",
+    "est": 0.14,
+    "se": 0.03
+  },
+  {
+    "id": "black_nonsouth_post",
+    "est": 0.13,
+    "se": 0.04
+  }
+]

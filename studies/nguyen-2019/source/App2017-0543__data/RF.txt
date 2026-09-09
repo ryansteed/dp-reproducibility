@@ -1,0 +1,208 @@
+		(1)	(2)
+VARIABLES	LABELS	NumSBL_Rev1	AmtSBL_Rev1
+			
+POST_expose	POST_expose	-2.513***	-206.7***
+		(0.909)	(77.91)
+poptot1999	poptot1999	-0.00256***	-0.0318
+		(0.000393)	(0.0215)
+poptot2000	poptot2000	-0.00154***	-0.0263
+		(0.000321)	(0.0201)
+poptot2001	poptot2001	-0.00177***	0.0211
+		(0.000474)	(0.0200)
+poptot2002	poptot2002	-0.00152***	0.0164
+		(0.000334)	(0.0230)
+poptot2003	poptot2003	-0.000376	0.0283
+		(0.000288)	(0.0251)
+poptot2004	poptot2004	-6.37e-05	0.0174
+		(0.000315)	(0.0232)
+poptot2005	poptot2005	0.00244***	0.0269
+		(0.000302)	(0.0229)
+poptot2006	poptot2006	0.00459***	0.0471**
+		(0.000337)	(0.0222)
+poptot2007	poptot2007	0.00531***	0.0308
+		(0.000367)	(0.0204)
+poptot2008	poptot2008	0.00201***	0.0251
+		(0.000254)	(0.0171)
+poptot2009	poptot2009	-0.00236***	-0.0176
+		(0.000258)	(0.0186)
+poptot2010	poptot2010	-0.00239***	-0.0365**
+		(0.000244)	(0.0155)
+poptot2011	poptot2011	-0.000754***	-0.0229*
+		(0.000152)	(0.0117)
+o.poptot2012	poptot2012 = o,	-	-
+			
+popdensity1999	popdensity1999	0.000160	-0.00150
+		(9.90e-05)	(0.00458)
+popdensity2000	popdensity2000	0.000216***	-0.00270
+		(7.95e-05)	(0.00266)
+popdensity2001	popdensity2001	-0.000175**	-0.00547
+		(7.19e-05)	(0.00383)
+popdensity2002	popdensity2002	4.24e-06	-0.00637**
+		(6.32e-05)	(0.00309)
+popdensity2003	popdensity2003	-1.39e-05	-0.000432
+		(4.56e-05)	(0.00491)
+popdensity2004	popdensity2004	-4.93e-06	-0.00870
+		(4.90e-05)	(0.00579)
+popdensity2005	popdensity2005	-0.000136	-0.00853***
+		(0.000123)	(0.00282)
+popdensity2006	popdensity2006	-0.000318*	-0.0159***
+		(0.000178)	(0.00441)
+popdensity2007	popdensity2007	-0.000341*	-0.0126***
+		(0.000194)	(0.00378)
+popdensity2008	popdensity2008	-0.000130**	-0.00902***
+		(6.22e-05)	(0.00246)
+popdensity2009	popdensity2009	0.000202***	-0.00155
+		(5.23e-05)	(0.00238)
+popdensity2010	popdensity2010	0.000207***	-0.000851
+		(6.96e-05)	(0.00207)
+popdensity2011	popdensity2011	6.10e-06	-0.00233
+		(4.25e-05)	(0.00219)
+o.popdensity2012	popdensity2012 = o,	-	-
+			
+pminority1999	pminority1999	8.599	147.7
+		(5.402)	(250.1)
+pminority2000	pminority2000	3.878	-74.65
+		(4.177)	(353.6)
+pminority2001	pminority2001	11.85**	265.8
+		(5.995)	(275.7)
+pminority2002	pminority2002	7.420	409.9
+		(5.065)	(300.7)
+pminority2003	pminority2003	-1.385	-96.96
+		(4.944)	(375.8)
+pminority2004	pminority2004	-1.781	-135.5
+		(4.439)	(330.5)
+pminority2005	pminority2005	-11.87***	-33.31
+		(3.686)	(303.4)
+pminority2006	pminority2006	-16.14***	44.13
+		(4.398)	(275.7)
+pminority2007	pminority2007	-21.16***	-121.9
+		(4.830)	(205.6)
+pminority2008	pminority2008	-10.75***	-184.4
+		(3.357)	(191.6)
+pminority2009	pminority2009	3.671	-243.7
+		(4.909)	(166.4)
+pminority2010	pminority2010	6.264	272.4**
+		(4.632)	(137.8)
+pminority2011	pminority2011	-2.420	-102.3
+		(2.574)	(155.4)
+o.pminority2012	pminority2012 = o,	-	-
+			
+pcollege1999	pcollege1999	-27.63***	759.6*
+		(6.927)	(426.2)
+pcollege2000	pcollege2000	-28.13***	49.57
+		(5.268)	(476.4)
+pcollege2001	pcollege2001	5.390	1,306***
+		(6.363)	(463.5)
+pcollege2002	pcollege2002	-4.518	2,594***
+		(7.236)	(618.4)
+pcollege2003	pcollege2003	-4.416	1,641***
+		(5.398)	(607.8)
+pcollege2004	pcollege2004	-10.54*	1,785***
+		(5.974)	(540.4)
+pcollege2005	pcollege2005	-0.413	1,572***
+		(6.303)	(454.1)
+pcollege2006	pcollege2006	11.70	1,850***
+		(7.646)	(506.8)
+pcollege2007	pcollege2007	10.08	1,236***
+		(6.190)	(392.0)
+pcollege2008	pcollege2008	-15.85***	733.9***
+		(4.451)	(270.0)
+pcollege2009	pcollege2009	-51.76***	-41.95
+		(5.047)	(363.9)
+pcollege2010	pcollege2010	-47.23***	150.0
+		(4.711)	(385.2)
+pcollege2011	pcollege2011	-6.022*	158.5
+		(3.385)	(383.5)
+o.pcollege2012	pcollege2012 = o,	-	-
+			
+medincome1999	medincome1999	-0.000206***	-0.00798**
+		(5.32e-05)	(0.00351)
+medincome2000	medincome2000	-0.000240***	-0.00668*
+		(3.96e-05)	(0.00394)
+medincome2001	medincome2001	-0.000481***	-0.00800**
+		(6.43e-05)	(0.00362)
+medincome2002	medincome2002	-0.000308***	-0.00916**
+		(6.20e-05)	(0.00443)
+medincome2003	medincome2003	-0.000260***	-0.00435
+		(5.26e-05)	(0.00472)
+medincome2004	medincome2004	-0.000163***	-0.00757*
+		(5.16e-05)	(0.00402)
+medincome2005	medincome2005	-0.000151***	-0.00300
+		(5.52e-05)	(0.00334)
+medincome2006	medincome2006	-0.000143**	-0.00369
+		(6.67e-05)	(0.00415)
+medincome2007	medincome2007	-0.000216***	-0.00554*
+		(5.89e-05)	(0.00325)
+medincome2008	medincome2008	-0.000121***	-0.00225
+		(3.94e-05)	(0.00301)
+medincome2009	medincome2009	-1.64e-05	-0.00314
+		(4.27e-05)	(0.00270)
+medincome2010	medincome2010	5.16e-06	-0.00217
+		(4.32e-05)	(0.00255)
+medincome2011	medincome2011	-3.82e-05	-0.00238
+		(2.63e-05)	(0.00293)
+o.medincome2012	medincome2012 = o,	-	-
+			
+cont_totalbranches1999	cont_totalbranches1999	-0.695**	-4.006
+		(0.312)	(17.02)
+cont_totalbranches2000	cont_totalbranches2000	-0.626***	-18.14
+		(0.207)	(20.72)
+cont_totalbranches2001	cont_totalbranches2001	1.252***	6.579
+		(0.275)	(18.31)
+cont_totalbranches2002	cont_totalbranches2002	0.476**	79.01***
+		(0.202)	(20.40)
+cont_totalbranches2003	cont_totalbranches2003	1.844***	94.85***
+		(0.224)	(23.43)
+cont_totalbranches2004	cont_totalbranches2004	1.371***	94.77***
+		(0.168)	(14.92)
+cont_totalbranches2005	cont_totalbranches2005	2.077***	77.26***
+		(0.236)	(18.64)
+cont_totalbranches2006	cont_totalbranches2006	2.280***	66.41***
+		(0.432)	(22.78)
+cont_totalbranches2007	cont_totalbranches2007	2.208***	59.65**
+		(0.482)	(23.73)
+cont_totalbranches2008	cont_totalbranches2008	0.566**	47.58***
+		(0.237)	(17.87)
+cont_totalbranches2009	cont_totalbranches2009	-2.284***	-18.55
+		(0.267)	(13.52)
+cont_totalbranches2010	cont_totalbranches2010	-2.453***	-52.61***
+		(0.261)	(14.50)
+cont_totalbranches2011	cont_totalbranches2011	-0.0123	-50.60***
+		(0.186)	(14.26)
+cont_totalbranches2012	cont_totalbranches2012	-0.170	-77.68***
+		(0.202)	(19.09)
+cont_brgrowth1999	cont_brgrowth1999	-7.802***	-279.0**
+		(1.895)	(121.2)
+cont_brgrowth2000	cont_brgrowth2000	-4.797***	-9.381
+		(1.654)	(122.1)
+cont_brgrowth2001	cont_brgrowth2001	-11.28***	-451.6***
+		(2.729)	(164.5)
+cont_brgrowth2002	cont_brgrowth2002	-5.573***	-157.8
+		(1.594)	(110.9)
+cont_brgrowth2003	cont_brgrowth2003	-8.685***	-582.5***
+		(1.838)	(141.2)
+cont_brgrowth2004	cont_brgrowth2004	-5.383***	-377.1***
+		(1.304)	(122.2)
+cont_brgrowth2005	cont_brgrowth2005	-3.035	-91.29
+		(1.914)	(126.8)
+cont_brgrowth2006	cont_brgrowth2006	2.117	130.9
+		(2.362)	(119.2)
+cont_brgrowth2007	cont_brgrowth2007	3.642	21.14
+		(2.500)	(104.7)
+cont_brgrowth2008	cont_brgrowth2008	5.637***	206.1*
+		(2.091)	(119.6)
+cont_brgrowth2009	cont_brgrowth2009	7.621***	257.1*
+		(1.841)	(138.7)
+cont_brgrowth2010	cont_brgrowth2010	7.170***	367.1***
+		(1.669)	(132.5)
+cont_brgrowth2011	cont_brgrowth2011	7.410***	320.0***
+		(2.356)	(121.0)
+cont_brgrowth2012	cont_brgrowth2012	7.080***	351.7***
+		(2.250)	(105.7)
+Constant	Constant	82.99***	2,576***
+		(2.448)	(168.9)
+			
+Observations		45,160	43,033
+R-squared		0.895	0.810
+Robust standard errors in parentheses			
+*** p<0.01, ** p<0.05, * p<0.1			

@@ -1,0 +1,36 @@
+\begin{table}[p]\centering\captionsetup{width=\textwidth,labelformat=empty}\begin{threeparttable}\footnotesize{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Table 7: Robustness and heterogeneity}
+\begin{tabular}{l*{8}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         &\multicolumn{1}{c}{(7)}         &\multicolumn{1}{c}{(8)}         \\
+Dependent Variable & \multicolumn{8}{c}{log(SuspiciousExpenditures)} \\ 
+\hline
+Hometown            &      -0.471\sym{***}&      -0.473\sym{***}&      -0.436\sym{***}&      -0.472\sym{***}&      -0.470\sym{***}&      -0.367\sym{**} &      -0.452\sym{***}&      -0.461\sym{***}\\
+                    &     (0.143)         &     (0.143)         &     (0.156)         &     (0.143)         &     (0.147)         &     (0.163)         &     (0.144)         &     (0.139)         \\
+Homeprovince        &      -0.006         &                     &                     &                     &                     &                     &                     &                     \\
+                    &     (0.103)         &                     &                     &                     &                     &                     &                     &                     \\
+SameHometown Leaders&                     &      -0.025         &                     &                     &                     &                     &                     &                     \\
+                    &                     &     (0.080)         &                     &                     &                     &                     &                     &                     \\
+Prov Leader Hometown&                     &                     &                     &      -0.063         &                     &                     &                     &                     \\
+                    &                     &                     &                     &     (0.138)         &                     &                     &                     &                     \\
+NearbyCity          &                     &                     &                     &                     &       0.004         &                     &                     &                     \\
+                    &                     &                     &                     &                     &     (0.079)         &                     &                     &                     \\
+Hometown*log(Population)&                     &                     &                     &                     &                     &                     &      -0.190         &                     \\
+                    &                     &                     &                     &                     &                     &                     &     (0.227)         &                     \\
+Hometown*log(GDP per capita)&                     &                     &                     &                     &                     &                     &                     &      -0.226\sym{*}  \\
+                    &                     &                     &                     &                     &                     &                     &                     &     (0.122)         \\
+\hline
+Excluding Mayor/PS hometowns? &     &     & Yes &     &     &     &     &  \\
+Excluding Prov capitals?          &     &     &     &     &     & Yes &     &  \\
+\hline
+Observations        &        2939         &        2939         &        2698         &        2939         &        2939         &        2654         &        2939         &        2939         \\
+R-Squared           &        .827         &        .827         &        .827         &        .827         &        .827         &        .824         &        .827         &        .827         \\
+Mean of Dep. Var.   &        11.7         &        11.7         &        11.6         &        11.7         &        11.7         &        11.6         &        11.7         &        11.7         \\
+\hline\hline
+\end{tabular}}
+\captionsetup{justification=justified,labelformat=empty}
+\begin{tablenotes}
+\item Notes: Standard errors clustered by city in parentheses. The sample covers the period from 2006 to 2016. Column (2) excludes cities that, at some point during this period, was the hometown of the provincial governor or party secretary for the province where $ c $ is located. Column (6) excludes provincial capital cities. The dependent variable in all columns is $ log(SuspiciousExpenditures) $, which denotes the logarithm of total questionable expenditures found during the audit. $ Hometown $ is an indicator variable denoting that the provincial chief auditor was born in city $ c $. $ Homeprovince $ is an indicator variable denoting that the provincial chief auditor was born in province of city $ c $. $ Same Hometown Leader $ is an indicator variable denoting that the provincial chief auditor had the same hometown as the city mayor or party secretary. $ ProvLeaderHometown $ is an indicator variable denoting that the provincial governor or party secretary was born in city $ c $. All regressions include the following auditor controls: $ Gender $, $ Age $, $ Tenure $, $ Tenure^2 $, $ Education $, $ EduFinance $, $ PastAuditor $, $ PastFinance $, $ PastDiscipline $, and $ PastCityLeader $. All regressions include the following city controls: $ Log(GDP pc) $, $ IndustrialRatio $, $ Log(Population) $, $ Log(GovRev) $, $ GovBalance $, $ FDI/GDP $, and $ AvgEdu $. The coefficients and standard errors of the control variables are suppressed to conserve space. See the notes to Table 1 for detailed definitions of the remaining control variables.   \\  Significance: * significant at 10\%; ** significant at 5\%; *** significant at 1\%.
+\end{tablenotes}
+\end{threeparttable}\end{table}

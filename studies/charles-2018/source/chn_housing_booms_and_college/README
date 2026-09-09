@@ -1,0 +1,40 @@
+
+Replication kit for Charles, Hurst, Notowidigdo AMERICAN ECONOMIC REVIEW
+
+For questions/comments, please e-mail noto@alum.mit.edu
+
+To generate the main tables and figures, simply run the following files in order in STATA:
+
+
+
+** Build analysis files from Census/ACS
+do build.do
+
+** This 
+do main.do
+
+** This "flag" runs education analysis for Census/ACS
+do main.do "education"
+
+** This file runs all of the analysis of IPEDS
+cd ipeds
+do ipeds_main.do
+cd ../
+
+** General additional graphs
+do main.do "graphs"
+
+
+
+
+After these files have been run, the tables will be in numbered "txt"
+files in "output" folder, and the figures will be numbered "eps" and
+"pdf" files in the same folder.
+
+
+
+The NLSY analysis uses restricted-use geo-coded data. The code for
+this analysis is given in "nlsy" folder, but to get access to the data
+to run this code, visit this website for more details:
+https://nlsy97.norc.org/ or contact Matt Notowidigdo at e-mail above
+for assistance in getting access to the restricted-use data.

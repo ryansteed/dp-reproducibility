@@ -1,0 +1,27 @@
+[
+  {
+    "id": "oil-revenue",
+    "est": 0.0334,
+    "se": 0.0038
+  },
+  {
+    "id": "revenue-house",
+    "est": 0.178,
+    "se": 0.018
+  },
+  {
+    "id": "revenue-education",
+    "est": 0.138,
+    "se": 0.019
+  },
+  {
+    "id": "revenue-transportation",
+    "est": 0.125,
+    "se": 0.014
+  },
+  {
+    "id": "revenue-social",
+    "est": 0.054,
+    "se": 0.007
+  }
+]

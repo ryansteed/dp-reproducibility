@@ -1,0 +1,63 @@
+		(1)	(2)	(3)	(4)	(5)	(6)	(7)
+VARIABLES	LABELS	Vote share of HSP et al.	Vote share of HSP et al.	Vote share of HSP et al.	Vote share of HSP et al.	Vote share of HSP et al.	Vote share of HSP et al.	Vote share of HSP et al.
+								
+radio1	At least 1 RTS radio available	0.028**	0.025***	0.026***	0.018*			
+		[0.011]	[0.008]	[0.008]	[0.009]			
+radio2	At least 2 RTS radios available				0.025			
+					[0.019]			
+log_distance_full	Distance to Serbia, logged	-0.006	-0.015*	-0.016	-0.014	0.005	-0.006	-0.006
+		[0.008]	[0.008]	[0.010]	[0.010]	[0.007]	[0.007]	[0.008]
+logpop	Population (logged)		-0.004	-0.002	-0.001		-0.007***	-0.007
+			[0.003]	[0.006]	[0.006]		[0.002]	[0.004]
+male_share	% of male population		-0.223	-0.214	-0.179		-0.301	-0.282
+			[0.320]	[0.346]	[0.344]		[0.303]	[0.328]
+z2	% of aged 21-40		0.597*	0.571*	0.546		0.210	0.183
+			[0.330]	[0.336]	[0.344]		[0.292]	[0.269]
+z3	% of aged 41-60		-0.085	-0.093	-0.113		0.011	0.005
+			[0.235]	[0.236]	[0.237]		[0.206]	[0.208]
+z6	% of aged 61+		0.146	0.149	0.127		0.034	0.023
+			[0.169]	[0.171]	[0.169]		[0.146]	[0.142]
+Croats	% of Croats		0.112***	0.105**	0.102**		0.118***	0.099**
+			[0.040]	[0.047]	[0.047]		[0.035]	[0.039]
+higher_educ	higher_educ		-0.511	-0.511	-0.462		-0.396	-0.415
+			[0.333]	[0.363]	[0.372]		[0.284]	[0.320]
+ec_active	Economically active population, %		0.717**	0.739**	0.700**		0.658**	0.682**
+			[0.313]	[0.321]	[0.323]		[0.271]	[0.278]
+disable_share2	Disabled after the war of independence, %		1.971***	2.007***	2.040***		1.473**	1.339**
+			[0.682]	[0.687]	[0.693]		[0.584]	[0.546]
+war	Was important during the war			-0.005	-0.007			0.002
+				[0.016]	[0.018]			[0.015]
+monument	Monument in the honor of died defendants of the town			0.000	-0.001			0.003
+				[0.011]	[0.010]			[0.010]
+name_of_the_streets_cyrillic	Names of the streets in Cyrillic script			-0.005	-0.001			-0.023
+				[0.022]	[0.021]			[0.020]
+name_of_the_streets_in_hungarian	Names of the streets in Hungarian			0.004	0.002			0.001
+				[0.014]	[0.014]			[0.011]
+pivo_Serb	Serbian beer in bars			-0.017	-0.017			-0.024
+				[0.017]	[0.017]			[0.016]
+o.r2	county==County of Požega-Slavonia = o,	-	-	-	-	-	-	-
+								
+o.r3	county==County of Slavonski Brod-Posavina = o,	-	-	-	-	-	-	-
+								
+o.r4	county==County of Virovitica-Podravina = o,	-	-	-	-	-	-	-
+								
+o.r5	county==County of Vukovar-Sirmium = o,	-	-	-	-	-	-	-
+								
+bliz_forest	Large forest nearby			0.005	0.005			-0.000
+				[0.008]	[0.009]			[0.007]
+s1_1	s1_1					3.671***	2.464***	2.678***
+						[0.975]	[0.622]	[0.617]
+								
+Observations		139	139	139	139	139	139	139
+R-squared		0.357	0.597	0.600	0.603	0.476	0.630	0.639
+Persuasion rates		0.0544	0.0494	0.0495	0.0343	0.0430	0.0287	0.0312
+ATT		0.0896	0.0813	0.0816	0.0564	0.0715	0.0480	0.0522
+F-stat, census			3.988	3.469	3.352		3.450	2.371
+F-stat, geographic			3.862	1.537	1.424		0.910	0.255
+F-stat, manual			0	0.427	0.305		0	1.647
+p-value, census			0.000672	0.00207	0.00267		0.00215	0.0245
+p-value, geographic			0.0559	0.227	0.252		0.345	0.776
+p-value, manual			0	0.827	0.907		0	0.168
+Effect of 1 st. dev. change						0.0632	0.0424	0.0461
+Robust standard errors in brackets								
+*** p<0.01, ** p<0.05, * p<0.1								

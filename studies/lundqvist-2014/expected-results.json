@@ -1,0 +1,37 @@
+[
+  {
+    "id": "grant-publicemp",
+    "est": 0.0521,
+    "se": 0.0478
+  },
+  {
+    "id": "grant-adminemp",
+    "est": 0.0300,
+    "se": 0.00568
+  },
+  {
+    "id": "grant-childcareemp",
+    "est": 0.00353,
+    "se": 0.00669
+  },
+  {
+    "id": "grant-schoolemp",
+    "est": -0.0134,
+    "se": 0.0140
+  },
+  {
+    "id": "grant-elderlycareemp",
+    "est": 0.0425,
+    "se": 0.0287
+  },
+  {
+    "id": "grant-welfareemp",
+    "est": -0.00730,
+    "se": 0.00328
+  },
+  {
+    "id": "grant-technicalemp",
+    "est": -0.00333,
+    "se": 0.0157
+  }
+]

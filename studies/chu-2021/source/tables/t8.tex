@@ -1,0 +1,27 @@
+\begin{table}[p]\centering\captionsetup{width=\textwidth,labelformat=empty}\begin{threeparttable}\footnotesize{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Table 8: Firm Level Regressions on Locally-Owned SOE Real Activity Manipulation}
+\begin{tabular}{l*{4}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         \\
+Dependent Variable & \multicolumn{4}{c}{ Real Activity Manipulation }\\
+\hline
+Hometown            &       0.027\sym{**} &       0.030\sym{**} &       0.034\sym{***}&       0.038\sym{**} \\
+                    &     (0.014)         &     (0.013)         &     (0.013)         &     (0.016)         \\
+\hline
+Year FEs         & Yes & Yes & Yes & Yes \\
+Firm FEs         & Yes & Yes & Yes & Yes \\
+Auditor Controls &     & Yes & Yes & Yes \\
+Firm Controls    &     &     & Yes & Yes \\
+City Controls    &     &     &     & Yes \\
+\hline
+Observations        &        5950         &        5950         &        5950         &        5331         \\
+R-Squared           &        .561         &        .563         &        .596         &        .607         \\
+Mean of Dep. Var.   &       .0072         &       .0072         &       .0072         &       .0054         \\
+\hline\hline
+\end{tabular}}
+\captionsetup{justification=justified,labelformat=empty}
+\begin{tablenotes}
+\item Notes: Standard errors clustered by city in parentheses. The sample covers the period from 2006 to 2018. The sample includes all locally-controlled state-owned enterprises The dependent variable in all columns is real activity manipulation ($ RAM $). $ Hometown $ is an indicator variable denoting that the provincial chief auditor was born in city $ c $. Auditor Controls include $ Gender $, $ Age $, $ Tenure $, $ Tenure^2 $, $ Education $, $ EduFinance $, $ PastAuditor $, $ PastFinance $, $ PastDiscipline $, and $ PastCityLeader $. Firm controls include $ log(Assets) $, $ Leverage $, $ ROA $, $ MBRatio $, $ TopOwnership $, $ log(BoardSize) $, $ Dual $, $ Indep\_Ratio $, $ Mgtshare $, and $ Big4Audit $. City controls include $ Log(GDP pc) $, $ IndustrialRatio $, $ Log(Population) $, $ Log(GovRev) $, $ GovBalance $, $ FDI/GDP $, and $ AvgEdu $. The coefficients and standard errors of the control variables are suppressed to conserve space. See the notes to Table 1 for detailed definitions of the control variables, and the text for further description of real activity manipulation.   \\  Significance: * significant at 10\%; ** significant at 5\%; *** significant at 1\%.
+\end{tablenotes}
+\end{threeparttable}\end{table}

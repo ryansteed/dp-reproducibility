@@ -1,0 +1,21 @@
+StataFileTM:00001:01100:GREC:                          :
+00004:00004:00001:
+*! classname: twowaygraph_g
+*! family: twoway
+*! date: 30 Nov 2015
+*! time: 09:43:42
+*! graph_scheme: s2color
+*! naturallywhite: 1
+*! end
+
+// File created by Graph Editor Recorder.
+// Edit only if you know what you are doing.
+
+.title.text = {}
+// title edits
+
+.subtitle.text = {}
+// subtitle edits
+
+
+// <end>

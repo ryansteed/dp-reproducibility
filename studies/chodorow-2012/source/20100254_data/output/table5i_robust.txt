@@ -1,0 +1,45 @@
+                              	new_rob_1	new_rob_2	new_rob_3
+                              	b/se	b/se	b/se
+ARRA FMAP Payouts per capita ($100k)	2.89**	2.80***	2.79**
+                              	1.23	0.95	1.29
+Constant                      	-0.01**	-0.01	-0.00
+                              	0.01	0.00	0.01
+Region 1                      	-0.00	-0.00	-0.00***
+                              	0.00	0.00	0.00
+Region 2                      	0.01**	0.01	0.00
+                              	0.00	0.00	0.00
+Region 3                      	0.00	0.00	-0.00
+                              	0.00	0.00	0.00
+Region 4                      	0.00	0.00	0.00
+                              	0.00	0.00	0.00
+Region 5                      	-0.00	-0.00	-0.00
+                              	0.00	0.00	0.00
+Region 6                      	0.00	0.00	
+                              	0.00	0.00	
+Region 8                      	-0.01*	-0.01**	-0.01***
+                              	0.00	0.00	0.00
+Region 9                      	0.00	0.00	-0.00
+                              	0.00	0.00	0.00
+share kerry / 10000           	0.81	0.11	0.13
+                              	1.31	1.02	1.45
+union share/ 10000            	-5.02**	-3.69*	-3.67*
+                              	2.04	2.07	2.10
+GDP per capita divided by 10000	-0.03	-0.02	-0.02
+                              	0.06	0.05	0.05
+per_empl_manu/10000           	-6.65***	-9.77***	-9.75***
+                              	2.48	2.54	2.74
+population estimate 2008 in billions	-0.29**	-0.40***	-0.40***
+                              	0.11	0.09	0.10
+totalemp_baseline_pc          	0.28*		
+                              	0.17		
+sachange_totalemp_lag_pc      		-0.23	-0.23
+                              		0.42	0.95
+sachange_totalemp_lag_pc_2    		-0.02*	-0.02
+                              		0.01	0.06
+Region 7                      			-0.00
+                              			0.00
+sachange_totalemp_lag_pc_3    			0.00
+                              			0.01
+Observations                  	51.00	51.00	51.00
+R-squared                     	0.68	0.72	0.72
+Mean Dep Var                  	-18.76	-18.76	-18.76

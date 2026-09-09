@@ -1,0 +1,17 @@
+[
+  {
+    "id": "irca-allcrime",
+    "est": -4.525,
+    "se": 1.245
+  },
+  {
+    "id": "irca-violentcrime",
+    "est": -1.333,
+    "se": 1.829
+  },
+  {
+    "id": "irca-propertycrime",
+    "est": -4.022,
+    "se": 1.690
+  }
+]

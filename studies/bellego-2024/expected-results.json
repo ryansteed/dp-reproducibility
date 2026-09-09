@@ -1,0 +1,28 @@
+[
+  {
+    "id": "pacif-murder",
+    "est": -0.0688,
+    "se": 0.034
+  },
+  {
+    "id": "pacif-robbery",
+    "est": -0.138,
+    "se": 0.0653
+  },
+  {
+    "id": "pacif-assult",
+    "est": 0.715,
+    "se": 0.0943
+  },
+  {
+    "id": "pacif-theft",
+    "est": 0.245,
+    "se": 0.0671
+  },
+  {
+    "id": "pacif-threat",
+    "est": 0.806,
+    "se": 0.0925
+  }
+
+]

@@ -1,0 +1,146 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/home/rsteed/git/private-research/studies/dickstein-2015/source/Logs-and-do-files/region_level_analysis.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}29 Jan 2025, 09:20:33
+{txt}
+{com}. clear
+{txt}
+{com}. use region_data 
+{txt}
+{com}. //////////////////////////////////////
+> //// run regressoins//////////////////
+> //////////////////////////////////////
+> eststo: areg Nins logPop  , a(state) rob cl(state)
+{res}
+{txt}{col 1}Linear regression, absorbing indicators{col 53}{lalign 17:Number of obs}{col 70} = {res}{ralign 6:398}
+{txt}{col 1}Absorbed variable: {res:state}{col 53}{lalign 17:No. of categories}{col 70} = {res}{ralign 6:33}
+{txt}{col 53}{lalign 17:F({res:1}, {res:32})}{col 70} = {res}{ralign 6:12.23}
+{txt}{col 53}{lalign 17:Prob > F}{col 70} = {res}{ralign 6:0.0014}
+{txt}{col 53}{lalign 17:R-squared}{col 70} = {res}{ralign 6:0.6511}
+{txt}{col 53}{lalign 17:Adj R-squared}{col 70} = {res}{ralign 6:0.6194}
+{txt}{col 53}{lalign 17:Root MSE}{col 70} = {res}{ralign 6:0.9409}
+
+{txt}{ralign 78:(Std. err. adjusted for {res:33} clusters in {res:state})}
+{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}        Nins{col 14}{c |} Coefficient{col 26}  std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}logPop {c |}{col 14}{res}{space 2} .6524825{col 26}{space 2} .1865709{col 37}{space 1}    3.50{col 46}{space 3}0.001{col 54}{space 4} .2724499{col 67}{space 3} 1.032515
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-.3223827{col 26}{space 2} .9267443{col 37}{space 1}   -0.35{col 46}{space 3}0.730{col 54}{space 4}-2.210099{col 67}{space 3} 1.565334
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+({res}est1{txt} stored)
+
+{com}. est store a1 
+{txt}
+{com}. 
+. eststo: areg Nins logPop landArea Urban Urbsq Median  Inc_25k_100k  GAF  relold smallfirm hosps, a(state) rob cl(state)
+{res}
+{txt}{col 1}Linear regression, absorbing indicators{col 53}{lalign 17:Number of obs}{col 70} = {res}{ralign 6:398}
+{txt}{col 1}Absorbed variable: {res:state}{col 53}{lalign 17:No. of categories}{col 70} = {res}{ralign 6:33}
+{txt}{col 53}{lalign 17:F({res:10}, {res:32})}{col 70} = {res}{ralign 6:7.93}
+{txt}{col 53}{lalign 17:Prob > F}{col 70} = {res}{ralign 6:0.0000}
+{txt}{col 53}{lalign 17:R-squared}{col 70} = {res}{ralign 6:0.6952}
+{txt}{col 53}{lalign 17:Adj R-squared}{col 70} = {res}{ralign 6:0.6591}
+{txt}{col 53}{lalign 17:Root MSE}{col 70} = {res}{ralign 6:0.8905}
+
+{txt}{ralign 78:(Std. err. adjusted for {res:33} clusters in {res:state})}
+{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}        Nins{col 14}{c |} Coefficient{col 26}  std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}logPop {c |}{col 14}{res}{space 2} .6453051{col 26}{space 2} .2214809{col 37}{space 1}    2.91{col 46}{space 3}0.006{col 54}{space 4} .1941633{col 67}{space 3} 1.096447
+{txt}{space 4}landArea {c |}{col 14}{res}{space 2}-.2122122{col 26}{space 2}  .129234{col 37}{space 1}   -1.64{col 46}{space 3}0.110{col 54}{space 4}-.4754532{col 67}{space 3} .0510289
+{txt}{space 7}Urban {c |}{col 14}{res}{space 2}-3.014619{col 26}{space 2} 1.030296{col 37}{space 1}   -2.93{col 46}{space 3}0.006{col 54}{space 4}-5.113264{col 67}{space 3} -.915974
+{txt}{space 7}Urbsq {c |}{col 14}{res}{space 2} 3.094192{col 26}{space 2} 1.094966{col 37}{space 1}    2.83{col 46}{space 3}0.008{col 54}{space 4} .8638191{col 67}{space 3} 5.324566
+{txt}MedianIncome {c |}{col 14}{res}{space 2}-.0233553{col 26}{space 2} .0099498{col 37}{space 1}   -2.35{col 46}{space 3}0.025{col 54}{space 4}-.0436223{col 67}{space 3}-.0030883
+{txt}Inc_25k_100k {c |}{col 14}{res}{space 2} 2.349594{col 26}{space 2} 2.122168{col 37}{space 1}    1.11{col 46}{space 3}0.276{col 54}{space 4} -1.97312{col 67}{space 3} 6.672309
+{txt}{space 9}GAF {c |}{col 14}{res}{space 2} .9820024{col 26}{space 2} 4.158994{col 37}{space 1}    0.24{col 46}{space 3}0.815{col 54}{space 4}-7.489592{col 67}{space 3} 9.453597
+{txt}{space 6}relold {c |}{col 14}{res}{space 2}-1.189323{col 26}{space 2} 1.703391{col 37}{space 1}   -0.70{col 46}{space 3}0.490{col 54}{space 4}-4.659018{col 67}{space 3} 2.280372
+{txt}{space 3}smallfirm {c |}{col 14}{res}{space 2}-.0661139{col 26}{space 2} .0386504{col 37}{space 1}   -1.71{col 46}{space 3}0.097{col 54}{space 4} -.144842{col 67}{space 3} .0126143
+{txt}{space 7}hosps {c |}{col 14}{res}{space 2}-.0059423{col 26}{space 2} .0056988{col 37}{space 1}   -1.04{col 46}{space 3}0.305{col 54}{space 4}-.0175504{col 67}{space 3} .0056658
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 1.931874{col 26}{space 2} 4.201247{col 37}{space 1}    0.46{col 46}{space 3}0.649{col 54}{space 4}-6.625787{col 67}{space 3} 10.48953
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+({res}est2{txt} stored)
+
+{com}. est store a2
+{txt}
+{com}. 
+. eststo: areg Price logPop, a(state) rob cl(state)
+{res}
+{txt}{col 1}Linear regression, absorbing indicators{col 51}{lalign 17:Number of obs}{col 68} = {res}{ralign 8:398}
+{txt}{col 1}Absorbed variable: {res:state}{col 51}{lalign 17:No. of categories}{col 68} = {res}{ralign 8:33}
+{txt}{col 51}{lalign 17:F({res:1}, {res:32})}{col 68} = {res}{ralign 8:20.42}
+{txt}{col 51}{lalign 17:Prob > F}{col 68} = {res}{ralign 8:0.0001}
+{txt}{col 51}{lalign 17:R-squared}{col 68} = {res}{ralign 8:0.6526}
+{txt}{col 51}{lalign 17:Adj R-squared}{col 68} = {res}{ralign 8:0.6211}
+{txt}{col 51}{lalign 17:Root MSE}{col 68} = {res}{ralign 8:479.8199}
+
+{txt}{ralign 78:(Std. err. adjusted for {res:33} clusters in {res:state})}
+{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}       Price{col 14}{c |} Coefficient{col 26}  std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}logPop {c |}{col 14}{res}{space 2} -108.866{col 26}{space 2} 24.09218{col 37}{space 1}   -4.52{col 46}{space 3}0.000{col 54}{space 4}-157.9401{col 67}{space 3}-59.79183
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 5435.476{col 26}{space 2} 119.6718{col 37}{space 1}   45.42{col 46}{space 3}0.000{col 54}{space 4} 5191.713{col 67}{space 3}  5679.24
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+({res}est3{txt} stored)
+
+{com}. est store b1
+{txt}
+{com}. 
+. eststo: areg Price logPop landArea Urban Urbsq ded Median  Inc_25k_100k  GAF  relold smallfirm hosps, a(state) rob cl(state)
+{res}
+{txt}{col 1}Linear regression, absorbing indicators{col 51}{lalign 17:Number of obs}{col 68} = {res}{ralign 8:398}
+{txt}{col 1}Absorbed variable: {res:state}{col 51}{lalign 17:No. of categories}{col 68} = {res}{ralign 8:33}
+{txt}{col 51}{lalign 17:F({res:11}, {res:32})}{col 68} = {res}{ralign 8:11.29}
+{txt}{col 51}{lalign 17:Prob > F}{col 68} = {res}{ralign 8:0.0000}
+{txt}{col 51}{lalign 17:R-squared}{col 68} = {res}{ralign 8:0.6932}
+{txt}{col 51}{lalign 17:Adj R-squared}{col 68} = {res}{ralign 8:0.6559}
+{txt}{col 51}{lalign 17:Root MSE}{col 68} = {res}{ralign 8:457.2551}
+
+{txt}{ralign 78:(Std. err. adjusted for {res:33} clusters in {res:state})}
+{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}       Price{col 14}{c |} Coefficient{col 26}  std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}logPop {c |}{col 14}{res}{space 2}-137.1873{col 26}{space 2} 61.64684{col 37}{space 1}   -2.23{col 46}{space 3}0.033{col 54}{space 4}-262.7578{col 67}{space 3}-11.61679
+{txt}{space 4}landArea {c |}{col 14}{res}{space 2} 202.9816{col 26}{space 2} 68.83328{col 37}{space 1}    2.95{col 46}{space 3}0.006{col 54}{space 4} 62.77277{col 67}{space 3} 343.1904
+{txt}{space 7}Urban {c |}{col 14}{res}{space 2} 1095.807{col 26}{space 2} 510.1427{col 37}{space 1}    2.15{col 46}{space 3}0.039{col 54}{space 4} 56.68016{col 67}{space 3} 2134.934
+{txt}{space 7}Urbsq {c |}{col 14}{res}{space 2}-1047.129{col 26}{space 2} 597.3774{col 37}{space 1}   -1.75{col 46}{space 3}0.089{col 54}{space 4}-2263.947{col 67}{space 3} 169.6889
+{txt}{space 2}deductible {c |}{col 14}{res}{space 2}-10.00898{col 26}{space 2} 4.822147{col 37}{space 1}   -2.08{col 46}{space 3}0.046{col 54}{space 4}-19.83137{col 67}{space 3}-.1865864
+{txt}MedianIncome {c |}{col 14}{res}{space 2}-1.494276{col 26}{space 2} 4.982399{col 37}{space 1}   -0.30{col 46}{space 3}0.766{col 54}{space 4}-11.64309{col 67}{space 3} 8.654538
+{txt}Inc_25k_100k {c |}{col 14}{res}{space 2}-1634.377{col 26}{space 2} 967.8144{col 37}{space 1}   -1.69{col 46}{space 3}0.101{col 54}{space 4}-3605.751{col 67}{space 3} 336.9965
+{txt}{space 9}GAF {c |}{col 14}{res}{space 2} 2435.805{col 26}{space 2} 1845.256{col 37}{space 1}    1.32{col 46}{space 3}0.196{col 54}{space 4}-1322.859{col 67}{space 3} 6194.469
+{txt}{space 6}relold {c |}{col 14}{res}{space 2} 90.53786{col 26}{space 2} 610.6231{col 37}{space 1}    0.15{col 46}{space 3}0.883{col 54}{space 4}-1153.261{col 67}{space 3} 1334.336
+{txt}{space 3}smallfirm {c |}{col 14}{res}{space 2}-12.11509{col 26}{space 2} 25.17593{col 37}{space 1}   -0.48{col 46}{space 3}0.634{col 54}{space 4}-63.39678{col 67}{space 3}  39.1666
+{txt}{space 7}hosps {c |}{col 14}{res}{space 2} -4.49619{col 26}{space 2} 2.250349{col 37}{space 1}   -2.00{col 46}{space 3}0.054{col 54}{space 4}    -9.08{col 67}{space 3} .0876199
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 2939.575{col 26}{space 2}  1994.43{col 37}{space 1}    1.47{col 46}{space 3}0.150{col 54}{space 4}-1122.945{col 67}{space 3} 7002.095
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+({res}est4{txt} stored)
+
+{com}. est store b2
+{txt}
+{com}. ///////////////////////////////////////////
+> /////////// display regression output ////////////
+> ///////////////////////////////////////////
+> 
+. *** EDIT by Donna
+. * est tab a* ,   se stats(N r2_a) label title("///// N insurers  /////")
+. * est tab b* ,   se stats(N r2_a) label title("///// Price  /////")
+. ///////////////////////////////////////////////
+> 
+. estout using "../../results/region.csv", cells(`"b() se() t() p()"') stats(N r2 df_m df_r df_b df) notype abbrev begin(`"""') delimiter(`"",""') end(`"""') replace
+{txt}(tabulating estimates stored by eststo; specify "." to tabulate the active results)
+{res}{txt}(output written to {browse  `"../../results/region.csv"'})
+
+{com}. 
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}/home/rsteed/git/private-research/studies/dickstein-2015/source/Logs-and-do-files/region_level_analysis.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}29 Jan 2025, 09:20:33
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

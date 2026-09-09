@@ -1,0 +1,32 @@
+[
+  {
+    "id": "edi-covidcase",
+    "est": 344.61,
+    "se": 98.62
+  },
+  {
+    "id": "edi-coviddeath",
+    "est": 16.10,
+    "se": 5.56
+  },
+  {
+    "id": "edi_bmediancase",
+    "est": 282.76,
+    "se": 119.78
+  },
+  {
+    "id": "edi_bmediandeath",
+    "est": 12.40,
+    "se": 7.76
+  },
+  {
+    "id": "edi_amediancase",
+    "est": 397.49,
+    "se": 141.66
+  },
+  {
+    "id": "edi_amediandeath",
+    "est": 19.06,
+    "se": 6.87
+  }
+]

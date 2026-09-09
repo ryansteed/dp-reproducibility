@@ -1,0 +1,81 @@
+{smcl}
+{txt}{sf}{ul off}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\Pietro\Dropbox\Exchanges\Write-up\P and P\Final Draft, Jan 9 2015\Logs and do files\County_tables_distance.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}11 Jan 2015, 18:43:10
+{txt}
+{com}. 
+. gen ELIGIBLE = (distance<100)
+{txt}
+{com}. 
+. capture {c -(}
+{txt}
+{com}. 
+. est tab Price* ,   se stats(N r2_a)   label
+{res}
+{txt}{hline 24}{c -}{c TT}{c -}{hline 10}{c -}{c -}{c -}{hline 10}{c -}{c -}
+{ralign 24:Variable} {c |} {center 10:PriceFE_e0} {space 1} {center 10:PriceFE_e1} {space 1}
+{hline 24}{c -}{c +}{c -}{hline 10}{c -}{c -}{c -}{hline 10}{c -}{c -}
+{res}{txt}{space 22}Gr {c |}{res} {ralign 10:-293.25391}{txt} {space 1}{res} {ralign 10:-262.00279}{txt} {space 1}
+{space 24} {c |}{res} {ralign 10:69.355954}{txt} {space 1}{res} {ralign 10:65.094069}{txt} {space 1}
+{res}{txt}{ralign 24:Deductible} {c |}{res} {ralign 10:.11739367}{txt} {space 1}{res} {ralign 10:.14407963}{txt} {space 1}
+{space 24} {c |}{res} {ralign 10:.1572247}{txt} {space 1}{res} {ralign 10:.15834647}{txt} {space 1}
+{res}{txt}{ralign 24:Median HH income ($~000)} {c |}{res} {ralign 10:}{txt} {space 1}{res} {ralign 10:-4.6416099}{txt} {space 1}
+{space 24} {c |}{res} {ralign 10:}{txt} {space 1}{res} {ralign 10:3.4872378}{txt} {space 1}
+{res}{txt}{ralign 24:Proportion of househol~n} {c |}{res} {ralign 10:}{txt} {space 1}{res} {ralign 10:-1514.0894}{txt} {space 1}
+{space 24} {c |}{res} {ralign 10:}{txt} {space 1}{res} {ralign 10:669.18881}{txt} {space 1}
+{res}{txt}{ralign 24:Medicare Geografic Adj~a} {c |}{res} {ralign 10:}{txt} {space 1}{res} {ralign 10:-2415.3188}{txt} {space 1}
+{space 24} {c |}{res} {ralign 10:}{txt} {space 1}{res} {ralign 10:2316.2653}{txt} {space 1}
+{res}{txt}{space 24} {c |}
+{space 18}relold {c |}{res} {ralign 10:}{txt} {space 1}{res} {ralign 10:-341.97516}{txt} {space 1}
+{space 24} {c |}{res} {ralign 10:}{txt} {space 1}{res} {ralign 10:709.31179}{txt} {space 1}
+{res}{txt}{ralign 24:% Working for Small Em~r} {c |}{res} {ralign 10:}{txt} {space 1}{res} {ralign 10:-22.734445}{txt} {space 1}
+{space 24} {c |}{res} {ralign 10:}{txt} {space 1}{res} {ralign 10:14.020318}{txt} {space 1}
+{res}{txt}{ralign 24:Number Short Term Gene~a} {c |}{res} {ralign 10:}{txt} {space 1}{res} {ralign 10:14.631085}{txt} {space 1}
+{space 24} {c |}{res} {ralign 10:}{txt} {space 1}{res} {ralign 10:58.063581}{txt} {space 1}
+{res}{txt}{ralign 24:Constant} {c |}{res} {ralign 10:4495.2824}{txt} {space 1}{res} {ralign 10:8201.9894}{txt} {space 1}
+{space 24} {c |}{res} {ralign 10:434.82763}{txt} {space 1}{res} {ralign 10:2556.9682}{txt} {space 1}
+{hline 24}{c -}{c +}{c -}{hline 10}{c -}{c -}{c -}{hline 10}{c -}{c -}
+{ralign 24:N} {c |}{res} {ralign 10:96}{txt} {space 1}{res} {ralign 10:96}{txt} {space 1}
+{ralign 24:r2_a} {c |}{res} {ralign 10:.91376621}{txt} {space 1}{res} {ralign 10:.91722023}{txt} {space 1}
+{hline 24}{c -}{c BT}{c -}{hline 10}{c -}{c -}{c -}{hline 10}{c -}{c -}
+{ralign 52:legend: b/se}
+
+{com}. est tab Ins* , se stats(N r2_a) label
+{res}
+{txt}{hline 24}{c -}{c TT}{c -}{hline 10}{c -}{c -}{c -}{hline 10}{c -}{c -}
+{ralign 24:Variable} {c |} {center 10:InsFE_e0} {space 1} {center 10:InsFE_e1} {space 1}
+{hline 24}{c -}{c +}{c -}{hline 10}{c -}{c -}{c -}{hline 10}{c -}{c -}
+{res}{txt}{space 22}Gr {c |}{res} {ralign 10:1.0776332}{txt} {space 1}{res} {ralign 10:.95596731}{txt} {space 1}
+{space 24} {c |}{res} {ralign 10:.27224442}{txt} {space 1}{res} {ralign 10:.26076936}{txt} {space 1}
+{res}{txt}{ralign 24:Median HH income ($~000)} {c |}{res} {ralign 10:}{txt} {space 1}{res} {ralign 10:.03178144}{txt} {space 1}
+{space 24} {c |}{res} {ralign 10:}{txt} {space 1}{res} {ralign 10:.01062152}{txt} {space 1}
+{res}{txt}{ralign 24:Proportion of househol~n} {c |}{res} {ralign 10:}{txt} {space 1}{res} {ralign 10:.47590441}{txt} {space 1}
+{space 24} {c |}{res} {ralign 10:}{txt} {space 1}{res} {ralign 10:1.9204171}{txt} {space 1}
+{res}{txt}{ralign 24:Medicare Geografic Adj~a} {c |}{res} {ralign 10:}{txt} {space 1}{res} {ralign 10:14.696867}{txt} {space 1}
+{space 24} {c |}{res} {ralign 10:}{txt} {space 1}{res} {ralign 10:7.9947868}{txt} {space 1}
+{res}{txt}{space 24} {c |}
+{space 18}relold {c |}{res} {ralign 10:}{txt} {space 1}{res} {ralign 10:-5.5593079}{txt} {space 1}
+{space 24} {c |}{res} {ralign 10:}{txt} {space 1}{res} {ralign 10:4.3118259}{txt} {space 1}
+{res}{txt}{ralign 24:% Working for Small Em~r} {c |}{res} {ralign 10:}{txt} {space 1}{res} {ralign 10:.09245437}{txt} {space 1}
+{space 24} {c |}{res} {ralign 10:}{txt} {space 1}{res} {ralign 10:.04935517}{txt} {space 1}
+{res}{txt}{ralign 24:Number Short Term Gene~a} {c |}{res} {ralign 10:}{txt} {space 1}{res} {ralign 10:-.00302877}{txt} {space 1}
+{space 24} {c |}{res} {ralign 10:}{txt} {space 1}{res} {ralign 10:.22363553}{txt} {space 1}
+{res}{txt}{ralign 24:Constant} {c |}{res} {ralign 10:1.7799605}{txt} {space 1}{res} {ralign 10:-11.257425}{txt} {space 1}
+{space 24} {c |}{res} {ralign 10:.21860003}{txt} {space 1}{res} {ralign 10:8.3725056}{txt} {space 1}
+{hline 24}{c -}{c +}{c -}{hline 10}{c -}{c -}{c -}{hline 10}{c -}{c -}
+{ralign 24:N} {c |}{res} {ralign 10:96}{txt} {space 1}{res} {ralign 10:96}{txt} {space 1}
+{ralign 24:r2_a} {c |}{res} {ralign 10:.49766982}{txt} {space 1}{res} {ralign 10:.51786671}{txt} {space 1}
+{hline 24}{c -}{c BT}{c -}{hline 10}{c -}{c -}{c -}{hline 10}{c -}{c -}
+{ralign 52:legend: b/se}
+
+{com}. 
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\Pietro\Dropbox\Exchanges\Write-up\P and P\Final Draft, Jan 9 2015\Logs and do files\County_tables_distance.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}11 Jan 2015, 18:43:10
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

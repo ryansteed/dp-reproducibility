@@ -1,0 +1,14 @@
+		(1)	(2)
+VARIABLES	LABELS	Physicians Office - Level	Physicians Office - Rate
+			
+treat	Act14/Hurricane Maria	-0.0253***	0.0573***
+		(0.00773)	(0.00810)
+treat_2014	Junk Bond Status	-0.000411	0.124***
+		(0.0146)	(0.0111)
+			
+Observations		236,015	236,015
+Number of area_fips		3,102	3,102
+State FE		YES	YES
+Year FE		YES	YES
+Robust standard errors in parentheses			
+*** p<0.01, ** p<0.05, * p<0.1			

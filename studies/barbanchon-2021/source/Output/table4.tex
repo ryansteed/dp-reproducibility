@@ -1,0 +1,31 @@
+% 17 Feb 2025 14:35:57
+\documentclass{article}
+\usepackage{dcolumn}
+\begin{document}
+
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{6}{D{.}{.}{-1}}}
+Contestable         &      -0.053***&      -0.066***&      -0.050***&      -0.042** &      -0.040** &      -0.033** \\
+                    &     (0.017)   &     (0.017)   &     (0.017)   &     (0.017)   &     (0.017)   &     (0.013)   \\
+Observations        &        3880   &        3880   &        3874   &        3874   &        3874   &        3874   \\
+\(R^{2}\)           &       0.047   &       0.073   &       0.130   &       0.175   &       0.178   &       0.377   \\
+\multicolumn{7}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{7}{l}{\footnotesize * p<0.10, ** p<0.05, *** p<0.01}\\
+\end{tabular}
+}
+
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{12}{D{.}{.}{-1}}}
+Contestable         &      -0.053***&      -0.066***&      -0.050***&      -0.042** &      -0.040** &      -0.033** &      -0.006   &      -0.005   &      -0.003   &      -0.002   &      -0.001   &       0.001   \\
+                    &     (0.017)   &     (0.017)   &     (0.017)   &     (0.017)   &     (0.017)   &     (0.013)   &     (0.004)   &     (0.004)   &     (0.004)   &     (0.004)   &     (0.004)   &     (0.002)   \\
+Observations        &        3880   &        3880   &        3874   &        3874   &        3874   &        3874   &        3869   &        3869   &        3863   &        3863   &        3863   &        3863   \\
+\(R^{2}\)           &       0.047   &       0.073   &       0.130   &       0.175   &       0.178   &       0.377   &       0.051   &       0.056   &       0.071   &       0.075   &       0.094   &       0.502   \\
+\multicolumn{13}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{13}{l}{\footnotesize * p<0.10, ** p<0.05, *** p<0.01}\\
+\end{tabular}
+}
+
+\end{document}
+

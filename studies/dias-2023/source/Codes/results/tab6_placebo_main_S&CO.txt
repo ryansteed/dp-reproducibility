@@ -1,0 +1,21 @@
+		(1)	(2)	(3)	(4)	(5)	(6)	(7)	(8)	(9)
+VARIABLES	LABELS	Reduced Form	Reduced Form	Reduced Form	OLS	OLS	OLS	IV	IV	IV
+										
+potentialDownstream	Instrument: Downstream	-1.684	-1.674	-1.095						
+		(1.806)	(1.798)	(1.985)						
+potentialAMC	Instrument: Direct Effect		0.790	0.333		1.175	0.790		0.984	0.494
+			(3.932)	(3.388)		(3.957)	(3.477)		(3.943)	(3.451)
+glyph_soy_downstream	Glyphosate Downstream				-22.044	-22.148	-20.117	-10.057	-9.982	-6.659
+					(3.964)***	(3.884)***	(4.064)***	(9.464)	(9.465)	(11.289)
+										
+Observations		12,309	12,309	12,309	12,309	12,309	12,309	12,309	12,309	12,309
+R-squared		0.100	0.100	0.102	0.102	0.102	0.104			
+Number of AMC		1,119	1,119	1,119	1,119	1,119	1,119	1,119	1,119	1,119
+AMC FE		Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes
+UF-Year FE		Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes
+Controls		No	No	Yes	No	No	Yes	No	No	Yes
+IMR_baseline_mean		18.00	18.00	18.00	18.00	18.00	18.00	18.00	18.00	18.00
+F-stat								15.03	14.87	16.67
+Rejection Rate (Lee et al. 2020)								0.202	0.204	0.303
+Robust standard errors in parentheses										
+*** p<0.01, ** p<0.05, * p<0.1										

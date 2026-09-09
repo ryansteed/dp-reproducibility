@@ -1,0 +1,14 @@
+		(1)	(2)	(3)
+VARIABLES	LABELS	Vote share of HSP et al.	Vote share of HSP et al.	Vote share of HSP et al.
+				
+radio1_p	AET all, binary	0.031		
+		[0.062]		
+s1_p	AET all, strength		-1.858	
+			[1.279]	
+s1_pp	AET census and geographical			-0.001
+				[0.459]
+				
+Observations		139	139	417
+R-squared		0.006	0.051	0.000
+Robust standard errors in brackets				
+*** p<0.01, ** p<0.05, * p<0.1				

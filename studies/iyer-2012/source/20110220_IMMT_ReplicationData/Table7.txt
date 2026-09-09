@@ -1,0 +1,648 @@
+Willingness to report different kinds of crime - Rural sample
+                f_ave_fir        m_ave_fir     f_fir_evet~e     m_fir_evet~e       f_fir_cell       m_fir_cell     f_fir_beaten     m_fir_beaten    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.087 **         0.025            0.035            0.011            0.061 **         0.018            0.043 **         0.012    
+                  [0.042]          [0.038]          [0.024]          [0.024]          [0.025]          [0.024]          [0.020]          [0.021]    
+                                                                                                                                                    
+r2                   0.03             0.04             0.03             0.03             0.05             0.05             0.02             0.04    
+N                    2304             2303             2304             2303             2302             2303             2304             2303    
+Willingness to report different kinds of crime - Rural Baseline
+               fb_ave_fir       mb_ave_fir     fb_fir_eve~e     mb_fir_eve~e      fb_fir_cell      mb_fir_cell     fb_fir_bea~n     mb_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.057            0.025            0.019            0.018            0.072 **        -0.020            0.029            0.035    
+                  [0.062]          [0.057]          [0.033]          [0.040]          [0.033]          [0.034]          [0.026]          [0.023]    
+                                                                                                                                                    
+r2                   0.04             0.05             0.01             0.02             0.05             0.02             0.03             0.04    
+N                     790              688              790              688              790              688              790              688    
+Willingness to report different kinds of crime - Rural Endline
+               fe_ave_fir       me_ave_fir     fe_fir_eve~e     me_fir_eve~e      fe_fir_cell      me_fir_cell     fe_fir_bea~n     me_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.095 *          0.025            0.043            0.007            0.054            0.033            0.048 *          0.004    
+                  [0.054]          [0.047]          [0.031]          [0.030]          [0.033]          [0.030]          [0.026]          [0.027]    
+                                                                                                                                                    
+r2                   0.01             0.02             0.02             0.03             0.01             0.02             0.02             0.03    
+N                    1514             1615             1514             1615             1512             1615             1514             1615    
+Willingness to report different kinds of crime - Rural sample
+                f_ave_fir        m_ave_fir     f_fir_evet~e     m_fir_evet~e       f_fir_cell       m_fir_cell     f_fir_beaten     m_fir_beaten    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.087 **         0.025            0.035            0.011            0.061 **         0.018            0.043 **         0.012    
+                  [0.042]          [0.038]          [0.024]          [0.024]          [0.025]          [0.024]          [0.020]          [0.021]    
+                                                                                                                                                    
+r2                   0.03             0.04             0.03             0.03             0.05             0.05             0.02             0.04    
+N                    2304             2303             2304             2303             2302             2303             2304             2303    
+Willingness to report different kinds of crime - Rural Baseline
+               fb_ave_fir       mb_ave_fir     fb_fir_eve~e     mb_fir_eve~e      fb_fir_cell      mb_fir_cell     fb_fir_bea~n     mb_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.057            0.025            0.019            0.018            0.072 **        -0.020            0.029            0.035    
+                  [0.062]          [0.057]          [0.033]          [0.040]          [0.033]          [0.034]          [0.026]          [0.023]    
+                                                                                                                                                    
+r2                   0.04             0.05             0.01             0.02             0.05             0.02             0.03             0.04    
+N                     790              688              790              688              790              688              790              688    
+Willingness to report different kinds of crime - Rural Endline
+               fe_ave_fir       me_ave_fir     fe_fir_eve~e     me_fir_eve~e      fe_fir_cell      me_fir_cell     fe_fir_bea~n     me_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.095 *          0.025            0.043            0.007            0.054            0.033            0.048 *          0.004    
+                  [0.054]          [0.047]          [0.031]          [0.030]          [0.033]          [0.030]          [0.026]          [0.027]    
+                                                                                                                                                    
+r2                   0.01             0.02             0.02             0.03             0.01             0.02             0.02             0.03    
+N                    1514             1615             1514             1615             1512             1615             1514             1615    
+Willingness to report different kinds of crime - Rural sample
+                f_ave_fir        m_ave_fir     f_fir_evet~e     m_fir_evet~e       f_fir_cell       m_fir_cell     f_fir_beaten     m_fir_beaten    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.087 **         0.025            0.035            0.011            0.061 **         0.018            0.043 **         0.012    
+                  [0.042]          [0.038]          [0.024]          [0.024]          [0.025]          [0.024]          [0.020]          [0.021]    
+                                                                                                                                                    
+r2                   0.03             0.04             0.03             0.03             0.05             0.05             0.02             0.04    
+N                    2304             2303             2304             2303             2302             2303             2304             2303    
+Willingness to report different kinds of crime - Rural Baseline
+               fb_ave_fir       mb_ave_fir     fb_fir_eve~e     mb_fir_eve~e      fb_fir_cell      mb_fir_cell     fb_fir_bea~n     mb_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.057            0.025            0.019            0.018            0.072 **        -0.020            0.029            0.035    
+                  [0.062]          [0.057]          [0.033]          [0.040]          [0.033]          [0.034]          [0.026]          [0.023]    
+                                                                                                                                                    
+r2                   0.04             0.05             0.01             0.02             0.05             0.02             0.03             0.04    
+N                     790              688              790              688              790              688              790              688    
+Willingness to report different kinds of crime - Rural Endline
+               fe_ave_fir       me_ave_fir     fe_fir_eve~e     me_fir_eve~e      fe_fir_cell      me_fir_cell     fe_fir_bea~n     me_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.095 *          0.025            0.043            0.007            0.054            0.033            0.048 *          0.004    
+                  [0.054]          [0.047]          [0.031]          [0.030]          [0.033]          [0.030]          [0.026]          [0.027]    
+                                                                                                                                                    
+r2                   0.01             0.02             0.02             0.03             0.01             0.02             0.02             0.03    
+N                    1514             1615             1514             1615             1512             1615             1514             1615    
+Willingness to report different kinds of crime - Rural sample
+                f_ave_fir        m_ave_fir     f_fir_evet~e     m_fir_evet~e       f_fir_cell       m_fir_cell     f_fir_beaten     m_fir_beaten    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.087 **         0.025            0.035            0.011            0.061 **         0.018            0.043 **         0.012    
+                  [0.042]          [0.038]          [0.024]          [0.024]          [0.025]          [0.024]          [0.020]          [0.021]    
+                                                                                                                                                    
+r2                   0.03             0.04             0.03             0.03             0.05             0.05             0.02             0.04    
+N                    2304             2303             2304             2303             2302             2303             2304             2303    
+Willingness to report different kinds of crime - Rural Baseline
+               fb_ave_fir       mb_ave_fir     fb_fir_eve~e     mb_fir_eve~e      fb_fir_cell      mb_fir_cell     fb_fir_bea~n     mb_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.057            0.025            0.019            0.018            0.072 **        -0.020            0.029            0.035    
+                  [0.062]          [0.057]          [0.033]          [0.040]          [0.033]          [0.034]          [0.026]          [0.023]    
+                                                                                                                                                    
+r2                   0.04             0.05             0.01             0.02             0.05             0.02             0.03             0.04    
+N                     790              688              790              688              790              688              790              688    
+Willingness to report different kinds of crime - Rural Endline
+               fe_ave_fir       me_ave_fir     fe_fir_eve~e     me_fir_eve~e      fe_fir_cell      me_fir_cell     fe_fir_bea~n     me_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.095 *          0.025            0.043            0.007            0.054            0.033            0.048 *          0.004    
+                  [0.054]          [0.047]          [0.031]          [0.030]          [0.033]          [0.030]          [0.026]          [0.027]    
+                                                                                                                                                    
+r2                   0.01             0.02             0.02             0.03             0.01             0.02             0.02             0.03    
+N                    1514             1615             1514             1615             1512             1615             1514             1615    
+Willingness to report different kinds of crime - Rural sample
+                f_ave_fir        m_ave_fir     f_fir_evet~e     m_fir_evet~e       f_fir_cell       m_fir_cell     f_fir_beaten     m_fir_beaten    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.087 **         0.025            0.035            0.011            0.061 **         0.018            0.043 **         0.012    
+                  [0.042]          [0.038]          [0.024]          [0.024]          [0.025]          [0.024]          [0.020]          [0.021]    
+                                                                                                                                                    
+r2                   0.03             0.04             0.03             0.03             0.05             0.05             0.02             0.04    
+N                    2304             2303             2304             2303             2302             2303             2304             2303    
+Willingness to report different kinds of crime - Rural Baseline
+               fb_ave_fir       mb_ave_fir     fb_fir_eve~e     mb_fir_eve~e      fb_fir_cell      mb_fir_cell     fb_fir_bea~n     mb_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.057            0.025            0.019            0.018            0.072 **        -0.020            0.029            0.035    
+                  [0.062]          [0.057]          [0.033]          [0.040]          [0.033]          [0.034]          [0.026]          [0.023]    
+                                                                                                                                                    
+r2                   0.04             0.05             0.01             0.02             0.05             0.02             0.03             0.04    
+N                     790              688              790              688              790              688              790              688    
+Willingness to report different kinds of crime - Rural Endline
+               fe_ave_fir       me_ave_fir     fe_fir_eve~e     me_fir_eve~e      fe_fir_cell      me_fir_cell     fe_fir_bea~n     me_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.095 *          0.025            0.043            0.007            0.054            0.033            0.048 *          0.004    
+                  [0.054]          [0.047]          [0.031]          [0.030]          [0.033]          [0.030]          [0.026]          [0.027]    
+                                                                                                                                                    
+r2                   0.01             0.02             0.02             0.03             0.01             0.02             0.02             0.03    
+N                    1514             1615             1514             1615             1512             1615             1514             1615    
+Willingness to report different kinds of crime - Rural sample
+                f_ave_fir        m_ave_fir     f_fir_evet~e     m_fir_evet~e       f_fir_cell       m_fir_cell     f_fir_beaten     m_fir_beaten    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.087 **         0.025            0.035            0.011            0.061 **         0.018            0.043 **         0.012    
+                  [0.042]          [0.038]          [0.024]          [0.024]          [0.025]          [0.024]          [0.020]          [0.021]    
+                                                                                                                                                    
+r2                   0.03             0.04             0.03             0.03             0.05             0.05             0.02             0.04    
+N                    2304             2303             2304             2303             2302             2303             2304             2303    
+Willingness to report different kinds of crime - Rural Baseline
+               fb_ave_fir       mb_ave_fir     fb_fir_eve~e     mb_fir_eve~e      fb_fir_cell      mb_fir_cell     fb_fir_bea~n     mb_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.057            0.025            0.019            0.018            0.072 **        -0.020            0.029            0.035    
+                  [0.062]          [0.057]          [0.033]          [0.040]          [0.033]          [0.034]          [0.026]          [0.023]    
+                                                                                                                                                    
+r2                   0.04             0.05             0.01             0.02             0.05             0.02             0.03             0.04    
+N                     790              688              790              688              790              688              790              688    
+Willingness to report different kinds of crime - Rural Endline
+               fe_ave_fir       me_ave_fir     fe_fir_eve~e     me_fir_eve~e      fe_fir_cell      me_fir_cell     fe_fir_bea~n     me_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.095 *          0.025            0.043            0.007            0.054            0.033            0.048 *          0.004    
+                  [0.054]          [0.047]          [0.031]          [0.030]          [0.033]          [0.030]          [0.026]          [0.027]    
+                                                                                                                                                    
+r2                   0.01             0.02             0.02             0.03             0.01             0.02             0.02             0.03    
+N                    1514             1615             1514             1615             1512             1615             1514             1615    
+Willingness to report different kinds of crime - Rural sample
+                f_ave_fir        m_ave_fir     f_fir_evet~e     m_fir_evet~e       f_fir_cell       m_fir_cell     f_fir_beaten     m_fir_beaten    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.087 **         0.025            0.035            0.011            0.061 **         0.018            0.043 **         0.012    
+                  [0.042]          [0.038]          [0.024]          [0.024]          [0.025]          [0.024]          [0.020]          [0.021]    
+                                                                                                                                                    
+r2                   0.03             0.04             0.03             0.03             0.05             0.05             0.02             0.04    
+N                    2304             2303             2304             2303             2302             2303             2304             2303    
+Willingness to report different kinds of crime - Rural Baseline
+               fb_ave_fir       mb_ave_fir     fb_fir_eve~e     mb_fir_eve~e      fb_fir_cell      mb_fir_cell     fb_fir_bea~n     mb_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.057            0.025            0.019            0.018            0.072 **        -0.020            0.029            0.035    
+                  [0.062]          [0.057]          [0.033]          [0.040]          [0.033]          [0.034]          [0.026]          [0.023]    
+                                                                                                                                                    
+r2                   0.04             0.05             0.01             0.02             0.05             0.02             0.03             0.04    
+N                     790              688              790              688              790              688              790              688    
+Willingness to report different kinds of crime - Rural Endline
+               fe_ave_fir       me_ave_fir     fe_fir_eve~e     me_fir_eve~e      fe_fir_cell      me_fir_cell     fe_fir_bea~n     me_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.095 *          0.025            0.043            0.007            0.054            0.033            0.048 *          0.004    
+                  [0.054]          [0.047]          [0.031]          [0.030]          [0.033]          [0.030]          [0.026]          [0.027]    
+                                                                                                                                                    
+r2                   0.01             0.02             0.02             0.03             0.01             0.02             0.02             0.03    
+N                    1514             1615             1514             1615             1512             1615             1514             1615    
+Willingness to report different kinds of crime - Rural sample
+                f_ave_fir        m_ave_fir     f_fir_evet~e     m_fir_evet~e       f_fir_cell       m_fir_cell     f_fir_beaten     m_fir_beaten    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.087 **         0.025            0.035            0.011            0.061 **         0.018            0.043 **         0.012    
+                  [0.042]          [0.038]          [0.024]          [0.024]          [0.025]          [0.024]          [0.020]          [0.021]    
+                                                                                                                                                    
+r2                   0.03             0.04             0.03             0.03             0.05             0.05             0.02             0.04    
+N                    2304             2303             2304             2303             2302             2303             2304             2303    
+Willingness to report different kinds of crime - Rural Baseline
+               fb_ave_fir       mb_ave_fir     fb_fir_eve~e     mb_fir_eve~e      fb_fir_cell      mb_fir_cell     fb_fir_bea~n     mb_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.057            0.025            0.019            0.018            0.072 **        -0.020            0.029            0.035    
+                  [0.062]          [0.057]          [0.033]          [0.040]          [0.033]          [0.034]          [0.026]          [0.023]    
+                                                                                                                                                    
+r2                   0.04             0.05             0.01             0.02             0.05             0.02             0.03             0.04    
+N                     790              688              790              688              790              688              790              688    
+Willingness to report different kinds of crime - Rural Endline
+               fe_ave_fir       me_ave_fir     fe_fir_eve~e     me_fir_eve~e      fe_fir_cell      me_fir_cell     fe_fir_bea~n     me_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.095 *          0.025            0.043            0.007            0.054            0.033            0.048 *          0.004    
+                  [0.054]          [0.047]          [0.031]          [0.030]          [0.033]          [0.030]          [0.026]          [0.027]    
+                                                                                                                                                    
+r2                   0.01             0.02             0.02             0.03             0.01             0.02             0.02             0.03    
+N                    1514             1615             1514             1615             1512             1615             1514             1615    
+Willingness to report different kinds of crime - Rural sample
+                f_ave_fir        m_ave_fir     f_fir_evet~e     m_fir_evet~e       f_fir_cell       m_fir_cell     f_fir_beaten     m_fir_beaten    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.087 **         0.025            0.035            0.011            0.061 **         0.018            0.043 **         0.012    
+                  [0.042]          [0.038]          [0.024]          [0.024]          [0.025]          [0.024]          [0.020]          [0.021]    
+                                                                                                                                                    
+r2                   0.03             0.04             0.03             0.03             0.05             0.05             0.02             0.04    
+N                    2304             2303             2304             2303             2302             2303             2304             2303    
+Willingness to report different kinds of crime - Rural Baseline
+               fb_ave_fir       mb_ave_fir     fb_fir_eve~e     mb_fir_eve~e      fb_fir_cell      mb_fir_cell     fb_fir_bea~n     mb_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.057            0.025            0.019            0.018            0.072 **        -0.020            0.029            0.035    
+                  [0.062]          [0.057]          [0.033]          [0.040]          [0.033]          [0.034]          [0.026]          [0.023]    
+                                                                                                                                                    
+r2                   0.04             0.05             0.01             0.02             0.05             0.02             0.03             0.04    
+N                     790              688              790              688              790              688              790              688    
+Willingness to report different kinds of crime - Rural Endline
+               fe_ave_fir       me_ave_fir     fe_fir_eve~e     me_fir_eve~e      fe_fir_cell      me_fir_cell     fe_fir_bea~n     me_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.095 *          0.025            0.043            0.007            0.054            0.033            0.048 *          0.004    
+                  [0.054]          [0.047]          [0.031]          [0.030]          [0.033]          [0.030]          [0.026]          [0.027]    
+                                                                                                                                                    
+r2                   0.01             0.02             0.02             0.03             0.01             0.02             0.02             0.03    
+N                    1514             1615             1514             1615             1512             1615             1514             1615    
+Willingness to report different kinds of crime - Rural sample
+                f_ave_fir        m_ave_fir     f_fir_evet~e     m_fir_evet~e       f_fir_cell       m_fir_cell     f_fir_beaten     m_fir_beaten    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.087 **         0.025            0.035            0.011            0.061 **         0.018            0.043 **         0.012    
+                  [0.042]          [0.038]          [0.024]          [0.024]          [0.025]          [0.024]          [0.020]          [0.021]    
+                                                                                                                                                    
+r2                   0.03             0.04             0.03             0.03             0.05             0.05             0.02             0.04    
+N                    2304             2303             2304             2303             2302             2303             2304             2303    
+Willingness to report different kinds of crime - Rural Baseline
+               fb_ave_fir       mb_ave_fir     fb_fir_eve~e     mb_fir_eve~e      fb_fir_cell      mb_fir_cell     fb_fir_bea~n     mb_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.057            0.025            0.019            0.018            0.072 **        -0.020            0.029            0.035    
+                  [0.062]          [0.057]          [0.033]          [0.040]          [0.033]          [0.034]          [0.026]          [0.023]    
+                                                                                                                                                    
+r2                   0.04             0.05             0.01             0.02             0.05             0.02             0.03             0.04    
+N                     790              688              790              688              790              688              790              688    
+Willingness to report different kinds of crime - Rural Endline
+               fe_ave_fir       me_ave_fir     fe_fir_eve~e     me_fir_eve~e      fe_fir_cell      me_fir_cell     fe_fir_bea~n     me_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.095 *          0.025            0.043            0.007            0.054            0.033            0.048 *          0.004    
+                  [0.054]          [0.047]          [0.031]          [0.030]          [0.033]          [0.030]          [0.026]          [0.027]    
+                                                                                                                                                    
+r2                   0.01             0.02             0.02             0.03             0.01             0.02             0.02             0.03    
+N                    1514             1615             1514             1615             1512             1615             1514             1615    
+Willingness to report different kinds of crime - Rural sample
+                f_ave_fir        m_ave_fir     f_fir_evet~e     m_fir_evet~e       f_fir_cell       m_fir_cell     f_fir_beaten     m_fir_beaten    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.087 **         0.025            0.035            0.011            0.061 **         0.018            0.043 **         0.012    
+                  [0.042]          [0.038]          [0.024]          [0.024]          [0.025]          [0.024]          [0.020]          [0.021]    
+                                                                                                                                                    
+r2                   0.03             0.04             0.03             0.03             0.05             0.05             0.02             0.04    
+N                    2304             2303             2304             2303             2302             2303             2304             2303    
+Willingness to report different kinds of crime - Rural Baseline
+               fb_ave_fir       mb_ave_fir     fb_fir_eve~e     mb_fir_eve~e      fb_fir_cell      mb_fir_cell     fb_fir_bea~n     mb_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.057            0.025            0.019            0.018            0.072 **        -0.020            0.029            0.035    
+                  [0.062]          [0.057]          [0.033]          [0.040]          [0.033]          [0.034]          [0.026]          [0.023]    
+                                                                                                                                                    
+r2                   0.04             0.05             0.01             0.02             0.05             0.02             0.03             0.04    
+N                     790              688              790              688              790              688              790              688    
+Willingness to report different kinds of crime - Rural Endline
+               fe_ave_fir       me_ave_fir     fe_fir_eve~e     me_fir_eve~e      fe_fir_cell      me_fir_cell     fe_fir_bea~n     me_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.095 *          0.025            0.043            0.007            0.054            0.033            0.048 *          0.004    
+                  [0.054]          [0.047]          [0.031]          [0.030]          [0.033]          [0.030]          [0.026]          [0.027]    
+                                                                                                                                                    
+r2                   0.01             0.02             0.02             0.03             0.01             0.02             0.02             0.03    
+N                    1514             1615             1514             1615             1512             1615             1514             1615    
+Willingness to report different kinds of crime - Rural sample
+                f_ave_fir        m_ave_fir     f_fir_evet~e     m_fir_evet~e       f_fir_cell       m_fir_cell     f_fir_beaten     m_fir_beaten    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.087 **         0.025            0.035            0.011            0.061 **         0.018            0.043 **         0.012    
+                  [0.042]          [0.038]          [0.024]          [0.024]          [0.025]          [0.024]          [0.020]          [0.021]    
+                                                                                                                                                    
+r2                   0.03             0.04             0.03             0.03             0.05             0.05             0.02             0.04    
+N                    2304             2303             2304             2303             2302             2303             2304             2303    
+Willingness to report different kinds of crime - Rural Baseline
+               fb_ave_fir       mb_ave_fir     fb_fir_eve~e     mb_fir_eve~e      fb_fir_cell      mb_fir_cell     fb_fir_bea~n     mb_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.057            0.025            0.019            0.018            0.072 **        -0.020            0.029            0.035    
+                  [0.062]          [0.057]          [0.033]          [0.040]          [0.033]          [0.034]          [0.026]          [0.023]    
+                                                                                                                                                    
+r2                   0.04             0.05             0.01             0.02             0.05             0.02             0.03             0.04    
+N                     790              688              790              688              790              688              790              688    
+Willingness to report different kinds of crime - Rural Endline
+               fe_ave_fir       me_ave_fir     fe_fir_eve~e     me_fir_eve~e      fe_fir_cell      me_fir_cell     fe_fir_bea~n     me_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.095 *          0.025            0.043            0.007            0.054            0.033            0.048 *          0.004    
+                  [0.054]          [0.047]          [0.031]          [0.030]          [0.033]          [0.030]          [0.026]          [0.027]    
+                                                                                                                                                    
+r2                   0.01             0.02             0.02             0.03             0.01             0.02             0.02             0.03    
+N                    1514             1615             1514             1615             1512             1615             1514             1615    
+Willingness to report different kinds of crime - Rural sample
+                f_ave_fir        m_ave_fir     f_fir_evet~e     m_fir_evet~e       f_fir_cell       m_fir_cell     f_fir_beaten     m_fir_beaten    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.087 **         0.025            0.035            0.011            0.061 **         0.018            0.043 **         0.012    
+                  [0.042]          [0.038]          [0.024]          [0.024]          [0.025]          [0.024]          [0.020]          [0.021]    
+                                                                                                                                                    
+r2                   0.03             0.04             0.03             0.03             0.05             0.05             0.02             0.04    
+N                    2304             2303             2304             2303             2302             2303             2304             2303    
+Willingness to report different kinds of crime - Rural Baseline
+               fb_ave_fir       mb_ave_fir     fb_fir_eve~e     mb_fir_eve~e      fb_fir_cell      mb_fir_cell     fb_fir_bea~n     mb_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.057            0.025            0.019            0.018            0.072 **        -0.020            0.029            0.035    
+                  [0.062]          [0.057]          [0.033]          [0.040]          [0.033]          [0.034]          [0.026]          [0.023]    
+                                                                                                                                                    
+r2                   0.04             0.05             0.01             0.02             0.05             0.02             0.03             0.04    
+N                     790              688              790              688              790              688              790              688    
+Willingness to report different kinds of crime - Rural Endline
+               fe_ave_fir       me_ave_fir     fe_fir_eve~e     me_fir_eve~e      fe_fir_cell      me_fir_cell     fe_fir_bea~n     me_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.095 *          0.025            0.043            0.007            0.054            0.033            0.048 *          0.004    
+                  [0.054]          [0.047]          [0.031]          [0.030]          [0.033]          [0.030]          [0.026]          [0.027]    
+                                                                                                                                                    
+r2                   0.01             0.02             0.02             0.03             0.01             0.02             0.02             0.03    
+N                    1514             1615             1514             1615             1512             1615             1514             1615    
+Willingness to report different kinds of crime - Rural sample
+                f_ave_fir        m_ave_fir     f_fir_evet~e     m_fir_evet~e       f_fir_cell       m_fir_cell     f_fir_beaten     m_fir_beaten    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.087 **         0.025            0.035            0.011            0.061 **         0.018            0.043 **         0.012    
+                  [0.042]          [0.038]          [0.024]          [0.024]          [0.025]          [0.024]          [0.020]          [0.021]    
+                                                                                                                                                    
+r2                   0.03             0.04             0.03             0.03             0.05             0.05             0.02             0.04    
+N                    2304             2303             2304             2303             2302             2303             2304             2303    
+Willingness to report different kinds of crime - Rural Baseline
+               fb_ave_fir       mb_ave_fir     fb_fir_eve~e     mb_fir_eve~e      fb_fir_cell      mb_fir_cell     fb_fir_bea~n     mb_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.057            0.025            0.019            0.018            0.072 **        -0.020            0.029            0.035    
+                  [0.062]          [0.057]          [0.033]          [0.040]          [0.033]          [0.034]          [0.026]          [0.023]    
+                                                                                                                                                    
+r2                   0.04             0.05             0.01             0.02             0.05             0.02             0.03             0.04    
+N                     790              688              790              688              790              688              790              688    
+Willingness to report different kinds of crime - Rural Endline
+               fe_ave_fir       me_ave_fir     fe_fir_eve~e     me_fir_eve~e      fe_fir_cell      me_fir_cell     fe_fir_bea~n     me_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.095 *          0.025            0.043            0.007            0.054            0.033            0.048 *          0.004    
+                  [0.054]          [0.047]          [0.031]          [0.030]          [0.033]          [0.030]          [0.026]          [0.027]    
+                                                                                                                                                    
+r2                   0.01             0.02             0.02             0.03             0.01             0.02             0.02             0.03    
+N                    1514             1615             1514             1615             1512             1615             1514             1615    
+Willingness to report different kinds of crime - Rural sample
+                f_ave_fir        m_ave_fir     f_fir_evet~e     m_fir_evet~e       f_fir_cell       m_fir_cell     f_fir_beaten     m_fir_beaten    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.087 **         0.025            0.035            0.011            0.061 **         0.018            0.043 **         0.012    
+                  [0.042]          [0.038]          [0.024]          [0.024]          [0.025]          [0.024]          [0.020]          [0.021]    
+                                                                                                                                                    
+r2                   0.03             0.04             0.03             0.03             0.05             0.05             0.02             0.04    
+N                    2304             2303             2304             2303             2302             2303             2304             2303    
+Willingness to report different kinds of crime - Rural Baseline
+               fb_ave_fir       mb_ave_fir     fb_fir_eve~e     mb_fir_eve~e      fb_fir_cell      mb_fir_cell     fb_fir_bea~n     mb_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.057            0.025            0.019            0.018            0.072 **        -0.020            0.029            0.035    
+                  [0.062]          [0.057]          [0.033]          [0.040]          [0.033]          [0.034]          [0.026]          [0.023]    
+                                                                                                                                                    
+r2                   0.04             0.05             0.01             0.02             0.05             0.02             0.03             0.04    
+N                     790              688              790              688              790              688              790              688    
+Willingness to report different kinds of crime - Rural Endline
+               fe_ave_fir       me_ave_fir     fe_fir_eve~e     me_fir_eve~e      fe_fir_cell      me_fir_cell     fe_fir_bea~n     me_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.095 *          0.025            0.043            0.007            0.054            0.033            0.048 *          0.004    
+                  [0.054]          [0.047]          [0.031]          [0.030]          [0.033]          [0.030]          [0.026]          [0.027]    
+                                                                                                                                                    
+r2                   0.01             0.02             0.02             0.03             0.01             0.02             0.02             0.03    
+N                    1514             1615             1514             1615             1512             1615             1514             1615    
+Willingness to report different kinds of crime - Rural sample
+                f_ave_fir        m_ave_fir     f_fir_evet~e     m_fir_evet~e       f_fir_cell       m_fir_cell     f_fir_beaten     m_fir_beaten    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.087 **         0.025            0.035            0.011            0.061 **         0.018            0.043 **         0.012    
+                  [0.042]          [0.038]          [0.024]          [0.024]          [0.025]          [0.024]          [0.020]          [0.021]    
+                                                                                                                                                    
+r2                   0.03             0.04             0.03             0.03             0.05             0.05             0.02             0.04    
+N                    2304             2303             2304             2303             2302             2303             2304             2303    
+Willingness to report different kinds of crime - Rural Baseline
+               fb_ave_fir       mb_ave_fir     fb_fir_eve~e     mb_fir_eve~e      fb_fir_cell      mb_fir_cell     fb_fir_bea~n     mb_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.057            0.025            0.019            0.018            0.072 **        -0.020            0.029            0.035    
+                  [0.062]          [0.057]          [0.033]          [0.040]          [0.033]          [0.034]          [0.026]          [0.023]    
+                                                                                                                                                    
+r2                   0.04             0.05             0.01             0.02             0.05             0.02             0.03             0.04    
+N                     790              688              790              688              790              688              790              688    
+Willingness to report different kinds of crime - Rural Endline
+               fe_ave_fir       me_ave_fir     fe_fir_eve~e     me_fir_eve~e      fe_fir_cell      me_fir_cell     fe_fir_bea~n     me_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.095 *          0.025            0.043            0.007            0.054            0.033            0.048 *          0.004    
+                  [0.054]          [0.047]          [0.031]          [0.030]          [0.033]          [0.030]          [0.026]          [0.027]    
+                                                                                                                                                    
+r2                   0.01             0.02             0.02             0.03             0.01             0.02             0.02             0.03    
+N                    1514             1615             1514             1615             1512             1615             1514             1615    
+Willingness to report different kinds of crime - Rural sample
+                f_ave_fir        m_ave_fir     f_fir_evet~e     m_fir_evet~e       f_fir_cell       m_fir_cell     f_fir_beaten     m_fir_beaten    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.087 **         0.025            0.035            0.011            0.061 **         0.018            0.043 **         0.012    
+                  [0.042]          [0.038]          [0.024]          [0.024]          [0.025]          [0.024]          [0.020]          [0.021]    
+                                                                                                                                                    
+r2                   0.03             0.04             0.03             0.03             0.05             0.05             0.02             0.04    
+N                    2304             2303             2304             2303             2302             2303             2304             2303    
+Willingness to report different kinds of crime - Rural Baseline
+               fb_ave_fir       mb_ave_fir     fb_fir_eve~e     mb_fir_eve~e      fb_fir_cell      mb_fir_cell     fb_fir_bea~n     mb_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.057            0.025            0.019            0.018            0.072 **        -0.020            0.029            0.035    
+                  [0.062]          [0.057]          [0.033]          [0.040]          [0.033]          [0.034]          [0.026]          [0.023]    
+                                                                                                                                                    
+r2                   0.04             0.05             0.01             0.02             0.05             0.02             0.03             0.04    
+N                     790              688              790              688              790              688              790              688    
+Willingness to report different kinds of crime - Rural Endline
+               fe_ave_fir       me_ave_fir     fe_fir_eve~e     me_fir_eve~e      fe_fir_cell      me_fir_cell     fe_fir_bea~n     me_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.095 *          0.025            0.043            0.007            0.054            0.033            0.048 *          0.004    
+                  [0.054]          [0.047]          [0.031]          [0.030]          [0.033]          [0.030]          [0.026]          [0.027]    
+                                                                                                                                                    
+r2                   0.01             0.02             0.02             0.03             0.01             0.02             0.02             0.03    
+N                    1514             1615             1514             1615             1512             1615             1514             1615    
+Willingness to report different kinds of crime - Rural sample
+                f_ave_fir        m_ave_fir     f_fir_evet~e     m_fir_evet~e       f_fir_cell       m_fir_cell     f_fir_beaten     m_fir_beaten    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.087 **         0.025            0.035            0.011            0.061 **         0.018            0.043 **         0.012    
+                  [0.042]          [0.038]          [0.024]          [0.024]          [0.025]          [0.024]          [0.020]          [0.021]    
+                                                                                                                                                    
+r2                   0.03             0.04             0.03             0.03             0.05             0.05             0.02             0.04    
+N                    2304             2303             2304             2303             2302             2303             2304             2303    
+Willingness to report different kinds of crime - Rural Baseline
+               fb_ave_fir       mb_ave_fir     fb_fir_eve~e     mb_fir_eve~e      fb_fir_cell      mb_fir_cell     fb_fir_bea~n     mb_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.057            0.025            0.019            0.018            0.072 **        -0.020            0.029            0.035    
+                  [0.062]          [0.057]          [0.033]          [0.040]          [0.033]          [0.034]          [0.026]          [0.023]    
+                                                                                                                                                    
+r2                   0.04             0.05             0.01             0.02             0.05             0.02             0.03             0.04    
+N                     790              688              790              688              790              688              790              688    
+Willingness to report different kinds of crime - Rural Endline
+               fe_ave_fir       me_ave_fir     fe_fir_eve~e     me_fir_eve~e      fe_fir_cell      me_fir_cell     fe_fir_bea~n     me_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.095 *          0.025            0.043            0.007            0.054            0.033            0.048 *          0.004    
+                  [0.054]          [0.047]          [0.031]          [0.030]          [0.033]          [0.030]          [0.026]          [0.027]    
+                                                                                                                                                    
+r2                   0.01             0.02             0.02             0.03             0.01             0.02             0.02             0.03    
+N                    1514             1615             1514             1615             1512             1615             1514             1615    
+Willingness to report different kinds of crime - Rural sample
+                f_ave_fir        m_ave_fir     f_fir_evet~e     m_fir_evet~e       f_fir_cell       m_fir_cell     f_fir_beaten     m_fir_beaten    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.087 **         0.025            0.035            0.011            0.061 **         0.018            0.043 **         0.012    
+                  [0.042]          [0.038]          [0.024]          [0.024]          [0.025]          [0.024]          [0.020]          [0.021]    
+                                                                                                                                                    
+r2                   0.03             0.04             0.03             0.03             0.05             0.05             0.02             0.04    
+N                    2304             2303             2304             2303             2302             2303             2304             2303    
+Willingness to report different kinds of crime - Rural Baseline
+               fb_ave_fir       mb_ave_fir     fb_fir_eve~e     mb_fir_eve~e      fb_fir_cell      mb_fir_cell     fb_fir_bea~n     mb_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.057            0.025            0.019            0.018            0.072 **        -0.020            0.029            0.035    
+                  [0.062]          [0.057]          [0.033]          [0.040]          [0.033]          [0.034]          [0.026]          [0.023]    
+                                                                                                                                                    
+r2                   0.04             0.05             0.01             0.02             0.05             0.02             0.03             0.04    
+N                     790              688              790              688              790              688              790              688    
+Willingness to report different kinds of crime - Rural Endline
+               fe_ave_fir       me_ave_fir     fe_fir_eve~e     me_fir_eve~e      fe_fir_cell      me_fir_cell     fe_fir_bea~n     me_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.095 *          0.025            0.043            0.007            0.054            0.033            0.048 *          0.004    
+                  [0.054]          [0.047]          [0.031]          [0.030]          [0.033]          [0.030]          [0.026]          [0.027]    
+                                                                                                                                                    
+r2                   0.01             0.02             0.02             0.03             0.01             0.02             0.02             0.03    
+N                    1514             1615             1514             1615             1512             1615             1514             1615    
+Willingness to report different kinds of crime - Rural sample
+                f_ave_fir        m_ave_fir     f_fir_evet~e     m_fir_evet~e       f_fir_cell       m_fir_cell     f_fir_beaten     m_fir_beaten    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.087 **         0.025            0.035            0.011            0.061 **         0.018            0.043 **         0.012    
+                  [0.042]          [0.038]          [0.024]          [0.024]          [0.025]          [0.024]          [0.020]          [0.021]    
+                                                                                                                                                    
+r2                   0.03             0.04             0.03             0.03             0.05             0.05             0.02             0.04    
+N                    2304             2303             2304             2303             2302             2303             2304             2303    
+Willingness to report different kinds of crime - Rural Baseline
+               fb_ave_fir       mb_ave_fir     fb_fir_eve~e     mb_fir_eve~e      fb_fir_cell      mb_fir_cell     fb_fir_bea~n     mb_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.057            0.025            0.019            0.018            0.072 **        -0.020            0.029            0.035    
+                  [0.062]          [0.057]          [0.033]          [0.040]          [0.033]          [0.034]          [0.026]          [0.023]    
+                                                                                                                                                    
+r2                   0.04             0.05             0.01             0.02             0.05             0.02             0.03             0.04    
+N                     790              688              790              688              790              688              790              688    
+Willingness to report different kinds of crime - Rural Endline
+               fe_ave_fir       me_ave_fir     fe_fir_eve~e     me_fir_eve~e      fe_fir_cell      me_fir_cell     fe_fir_bea~n     me_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.095 *          0.025            0.043            0.007            0.054            0.033            0.048 *          0.004    
+                  [0.054]          [0.047]          [0.031]          [0.030]          [0.033]          [0.030]          [0.026]          [0.027]    
+                                                                                                                                                    
+r2                   0.01             0.02             0.02             0.03             0.01             0.02             0.02             0.03    
+N                    1514             1615             1514             1615             1512             1615             1514             1615    
+Willingness to report different kinds of crime - Rural sample
+                f_ave_fir        m_ave_fir     f_fir_evet~e     m_fir_evet~e       f_fir_cell       m_fir_cell     f_fir_beaten     m_fir_beaten    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.087 **         0.025            0.035            0.011            0.061 **         0.018            0.043 **         0.012    
+                  [0.042]          [0.038]          [0.024]          [0.024]          [0.025]          [0.024]          [0.020]          [0.021]    
+                                                                                                                                                    
+r2                   0.03             0.04             0.03             0.03             0.05             0.05             0.02             0.04    
+N                    2304             2303             2304             2303             2302             2303             2304             2303    
+Willingness to report different kinds of crime - Rural Baseline
+               fb_ave_fir       mb_ave_fir     fb_fir_eve~e     mb_fir_eve~e      fb_fir_cell      mb_fir_cell     fb_fir_bea~n     mb_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.057            0.025            0.019            0.018            0.072 **        -0.020            0.029            0.035    
+                  [0.062]          [0.057]          [0.033]          [0.040]          [0.033]          [0.034]          [0.026]          [0.023]    
+                                                                                                                                                    
+r2                   0.04             0.05             0.01             0.02             0.05             0.02             0.03             0.04    
+N                     790              688              790              688              790              688              790              688    
+Willingness to report different kinds of crime - Rural Endline
+               fe_ave_fir       me_ave_fir     fe_fir_eve~e     me_fir_eve~e      fe_fir_cell      me_fir_cell     fe_fir_bea~n     me_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.095 *          0.025            0.043            0.007            0.054            0.033            0.048 *          0.004    
+                  [0.054]          [0.047]          [0.031]          [0.030]          [0.033]          [0.030]          [0.026]          [0.027]    
+                                                                                                                                                    
+r2                   0.01             0.02             0.02             0.03             0.01             0.02             0.02             0.03    
+N                    1514             1615             1514             1615             1512             1615             1514             1615    
+Willingness to report different kinds of crime - Rural sample
+                f_ave_fir        m_ave_fir     f_fir_evet~e     m_fir_evet~e       f_fir_cell       m_fir_cell     f_fir_beaten     m_fir_beaten    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.087 **         0.025            0.035            0.011            0.061 **         0.018            0.043 **         0.012    
+                  [0.042]          [0.038]          [0.024]          [0.024]          [0.025]          [0.024]          [0.020]          [0.021]    
+                                                                                                                                                    
+r2                   0.03             0.04             0.03             0.03             0.05             0.05             0.02             0.04    
+N                    2304             2303             2304             2303             2302             2303             2304             2303    
+Willingness to report different kinds of crime - Rural Baseline
+               fb_ave_fir       mb_ave_fir     fb_fir_eve~e     mb_fir_eve~e      fb_fir_cell      mb_fir_cell     fb_fir_bea~n     mb_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.057            0.025            0.019            0.018            0.072 **        -0.020            0.029            0.035    
+                  [0.062]          [0.057]          [0.033]          [0.040]          [0.033]          [0.034]          [0.026]          [0.023]    
+                                                                                                                                                    
+r2                   0.04             0.05             0.01             0.02             0.05             0.02             0.03             0.04    
+N                     790              688              790              688              790              688              790              688    
+Willingness to report different kinds of crime - Rural Endline
+               fe_ave_fir       me_ave_fir     fe_fir_eve~e     me_fir_eve~e      fe_fir_cell      me_fir_cell     fe_fir_bea~n     me_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.095 *          0.025            0.043            0.007            0.054            0.033            0.048 *          0.004    
+                  [0.054]          [0.047]          [0.031]          [0.030]          [0.033]          [0.030]          [0.026]          [0.027]    
+                                                                                                                                                    
+r2                   0.01             0.02             0.02             0.03             0.01             0.02             0.02             0.03    
+N                    1514             1615             1514             1615             1512             1615             1514             1615    
+Willingness to report different kinds of crime - Rural sample
+                f_ave_fir        m_ave_fir     f_fir_evet~e     m_fir_evet~e       f_fir_cell       m_fir_cell     f_fir_beaten     m_fir_beaten    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.087 **         0.025            0.035            0.011            0.061 **         0.018            0.043 **         0.012    
+                  [0.042]          [0.038]          [0.024]          [0.024]          [0.025]          [0.024]          [0.020]          [0.021]    
+                                                                                                                                                    
+r2                   0.03             0.04             0.03             0.03             0.05             0.05             0.02             0.04    
+N                    2304             2303             2304             2303             2302             2303             2304             2303    
+Willingness to report different kinds of crime - Rural Baseline
+               fb_ave_fir       mb_ave_fir     fb_fir_eve~e     mb_fir_eve~e      fb_fir_cell      mb_fir_cell     fb_fir_bea~n     mb_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.057            0.025            0.019            0.018            0.072 **        -0.020            0.029            0.035    
+                  [0.062]          [0.057]          [0.033]          [0.040]          [0.033]          [0.034]          [0.026]          [0.023]    
+                                                                                                                                                    
+r2                   0.04             0.05             0.01             0.02             0.05             0.02             0.03             0.04    
+N                     790              688              790              688              790              688              790              688    
+Willingness to report different kinds of crime - Rural Endline
+               fe_ave_fir       me_ave_fir     fe_fir_eve~e     me_fir_eve~e      fe_fir_cell      me_fir_cell     fe_fir_bea~n     me_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.095 *          0.025            0.043            0.007            0.054            0.033            0.048 *          0.004    
+                  [0.054]          [0.047]          [0.031]          [0.030]          [0.033]          [0.030]          [0.026]          [0.027]    
+                                                                                                                                                    
+r2                   0.01             0.02             0.02             0.03             0.01             0.02             0.02             0.03    
+N                    1514             1615             1514             1615             1512             1615             1514             1615    
+Willingness to report different kinds of crime - Rural sample
+                f_ave_fir        m_ave_fir     f_fir_evet~e     m_fir_evet~e       f_fir_cell       m_fir_cell     f_fir_beaten     m_fir_beaten    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.087 **         0.025            0.035            0.011            0.061 **         0.018            0.043 **         0.012    
+                  [0.042]          [0.038]          [0.024]          [0.024]          [0.025]          [0.024]          [0.020]          [0.021]    
+                                                                                                                                                    
+r2                   0.03             0.04             0.03             0.03             0.05             0.05             0.02             0.04    
+N                    2304             2303             2304             2303             2302             2303             2304             2303    
+Willingness to report different kinds of crime - Rural Baseline
+               fb_ave_fir       mb_ave_fir     fb_fir_eve~e     mb_fir_eve~e      fb_fir_cell      mb_fir_cell     fb_fir_bea~n     mb_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.057            0.025            0.019            0.018            0.072 **        -0.020            0.029            0.035    
+                  [0.062]          [0.057]          [0.033]          [0.040]          [0.033]          [0.034]          [0.026]          [0.023]    
+                                                                                                                                                    
+r2                   0.04             0.05             0.01             0.02             0.05             0.02             0.03             0.04    
+N                     790              688              790              688              790              688              790              688    
+Willingness to report different kinds of crime - Rural Endline
+               fe_ave_fir       me_ave_fir     fe_fir_eve~e     me_fir_eve~e      fe_fir_cell      me_fir_cell     fe_fir_bea~n     me_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.095 *          0.025            0.043            0.007            0.054            0.033            0.048 *          0.004    
+                  [0.054]          [0.047]          [0.031]          [0.030]          [0.033]          [0.030]          [0.026]          [0.027]    
+                                                                                                                                                    
+r2                   0.01             0.02             0.02             0.03             0.01             0.02             0.02             0.03    
+N                    1514             1615             1514             1615             1512             1615             1514             1615    
+Willingness to report different kinds of crime - Rural sample
+                f_ave_fir        m_ave_fir     f_fir_evet~e     m_fir_evet~e       f_fir_cell       m_fir_cell     f_fir_beaten     m_fir_beaten    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.087 **         0.025            0.035            0.011            0.061 **         0.018            0.043 **         0.012    
+                  [0.042]          [0.038]          [0.024]          [0.024]          [0.025]          [0.024]          [0.020]          [0.021]    
+                                                                                                                                                    
+r2                   0.03             0.04             0.03             0.03             0.05             0.05             0.02             0.04    
+N                    2304             2303             2304             2303             2302             2303             2304             2303    
+Willingness to report different kinds of crime - Rural Baseline
+               fb_ave_fir       mb_ave_fir     fb_fir_eve~e     mb_fir_eve~e      fb_fir_cell      mb_fir_cell     fb_fir_bea~n     mb_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.057            0.025            0.019            0.018            0.072 **        -0.020            0.029            0.035    
+                  [0.062]          [0.057]          [0.033]          [0.040]          [0.033]          [0.034]          [0.026]          [0.023]    
+                                                                                                                                                    
+r2                   0.04             0.05             0.01             0.02             0.05             0.02             0.03             0.04    
+N                     790              688              790              688              790              688              790              688    
+Willingness to report different kinds of crime - Rural Endline
+               fe_ave_fir       me_ave_fir     fe_fir_eve~e     me_fir_eve~e      fe_fir_cell      me_fir_cell     fe_fir_bea~n     me_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.095 *          0.025            0.043            0.007            0.054            0.033            0.048 *          0.004    
+                  [0.054]          [0.047]          [0.031]          [0.030]          [0.033]          [0.030]          [0.026]          [0.027]    
+                                                                                                                                                    
+r2                   0.01             0.02             0.02             0.03             0.01             0.02             0.02             0.03    
+N                    1514             1615             1514             1615             1512             1615             1514             1615    
+Willingness to report different kinds of crime - Rural sample
+                f_ave_fir        m_ave_fir     f_fir_evet~e     m_fir_evet~e       f_fir_cell       m_fir_cell     f_fir_beaten     m_fir_beaten    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.087 **         0.025            0.035            0.011            0.061 **         0.018            0.043 **         0.012    
+                  [0.042]          [0.038]          [0.024]          [0.024]          [0.025]          [0.024]          [0.020]          [0.021]    
+                                                                                                                                                    
+r2                   0.03             0.04             0.03             0.03             0.05             0.05             0.02             0.04    
+N                    2304             2303             2304             2303             2302             2303             2304             2303    
+Willingness to report different kinds of crime - Rural Baseline
+               fb_ave_fir       mb_ave_fir     fb_fir_eve~e     mb_fir_eve~e      fb_fir_cell      mb_fir_cell     fb_fir_bea~n     mb_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.057            0.025            0.019            0.018            0.072 **        -0.020            0.029            0.035    
+                  [0.062]          [0.057]          [0.033]          [0.040]          [0.033]          [0.034]          [0.026]          [0.023]    
+                                                                                                                                                    
+r2                   0.04             0.05             0.01             0.02             0.05             0.02             0.03             0.04    
+N                     790              688              790              688              790              688              790              688    
+Willingness to report different kinds of crime - Rural Endline
+               fe_ave_fir       me_ave_fir     fe_fir_eve~e     me_fir_eve~e      fe_fir_cell      me_fir_cell     fe_fir_bea~n     me_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.095 *          0.025            0.043            0.007            0.054            0.033            0.048 *          0.004    
+                  [0.054]          [0.047]          [0.031]          [0.030]          [0.033]          [0.030]          [0.026]          [0.027]    
+                                                                                                                                                    
+r2                   0.01             0.02             0.02             0.03             0.01             0.02             0.02             0.03    
+N                    1514             1615             1514             1615             1512             1615             1514             1615    
+Willingness to report different kinds of crime - Rural sample
+                f_ave_fir        m_ave_fir     f_fir_evet~e     m_fir_evet~e       f_fir_cell       m_fir_cell     f_fir_beaten     m_fir_beaten    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.087 **         0.025            0.035            0.011            0.061 **         0.018            0.043 **         0.012    
+                  [0.042]          [0.038]          [0.024]          [0.024]          [0.025]          [0.024]          [0.020]          [0.021]    
+                                                                                                                                                    
+r2                   0.03             0.04             0.03             0.03             0.05             0.05             0.02             0.04    
+N                    2304             2303             2304             2303             2302             2303             2304             2303    
+Willingness to report different kinds of crime - Rural Baseline
+               fb_ave_fir       mb_ave_fir     fb_fir_eve~e     mb_fir_eve~e      fb_fir_cell      mb_fir_cell     fb_fir_bea~n     mb_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.057            0.025            0.019            0.018            0.072 **        -0.020            0.029            0.035    
+                  [0.062]          [0.057]          [0.033]          [0.040]          [0.033]          [0.034]          [0.026]          [0.023]    
+                                                                                                                                                    
+r2                   0.04             0.05             0.01             0.02             0.05             0.02             0.03             0.04    
+N                     790              688              790              688              790              688              790              688    
+Willingness to report different kinds of crime - Rural Endline
+               fe_ave_fir       me_ave_fir     fe_fir_eve~e     me_fir_eve~e      fe_fir_cell      me_fir_cell     fe_fir_bea~n     me_fir_bea~n    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+res_woman           0.095 *          0.025            0.043            0.007            0.054            0.033            0.048 *          0.004    
+                  [0.054]          [0.047]          [0.031]          [0.030]          [0.033]          [0.030]          [0.026]          [0.027]    
+                                                                                                                                                    
+r2                   0.01             0.02             0.02             0.03             0.01             0.02             0.02             0.03    
+N                    1514             1615             1514             1615             1512             1615             1514             1615    

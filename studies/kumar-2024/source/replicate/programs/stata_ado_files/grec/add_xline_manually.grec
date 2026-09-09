@@ -1,0 +1,35 @@
+StataFileTM:00001:01100:GREC:                          :
+00005:00004:00001:
+*! classname: twowaygraph_g
+*! family: twoway
+*! date: 12 Jun 2018
+*! time: 15:28:43
+*! graph_scheme: s2color
+*! naturallywhite: 1
+*! end
+
+// File created by Graph Editor Recorder.
+// Edit only if you know what you are doing.
+
+.plotregion1.AddLine added_lines editor 5.492312573895917 -3.136763845608176 5.39863748774848 1.925491232887403
+.plotregion1.added_lines_new = 1
+.plotregion1.added_lines_rec = 1
+.plotregion1.added_lines[1].style.editstyle  linestyle( width(thin) color(black) pattern(solid)) headstyle( symbol(circle) linestyle( width(thin) color(black) pattern(solid)) fillcolor(black) size(medium) angle(stdarrow) symangle(zero) backsymbol(none) backline( width(thin) color(black) pattern(solid)) backcolor(black) backsize(zero) backangle(stdarrow) backsymangle(zero)) headpos(neither) editcopy
+// edits
+
+.plotregion1.added_lines[1].style.editstyle linestyle(color(red)) editcopy
+.plotregion1.added_lines[1].style.editstyle linestyle(pattern(dash)) editcopy
+// line[1] edits
+
+.plotregion1.AddLine added_lines editor 10.99237834626674 -3.136763845608176 10.9656140359389 1.932551560751415
+.plotregion1.added_lines_new = 2
+.plotregion1.added_lines_rec = 2
+.plotregion1.added_lines[2].style.editstyle  linestyle( width(thin) color(black) pattern(solid)) headstyle( symbol(circle) linestyle( width(thin) color(black) pattern(solid)) fillcolor(black) size(medium) angle(stdarrow) symangle(zero) backsymbol(none) backline( width(thin) color(black) pattern(solid)) backcolor(black) backsize(zero) backangle(stdarrow) backsymangle(zero)) headpos(neither) editcopy
+// edits
+
+.plotregion1.added_lines[2].style.editstyle linestyle(color(red)) editcopy
+.plotregion1.added_lines[2].style.editstyle linestyle(pattern(dash)) editcopy
+// line[2] edits
+
+
+// <end>

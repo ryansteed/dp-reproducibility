@@ -1,0 +1,12 @@
+[
+  {
+    "id": "reform-lf",
+    "est": 1.04,
+    "se": 0.39
+  },
+  {
+    "id": "reform-schooling",
+    "est": 5.65,
+    "se": 2.877
+  }
+]

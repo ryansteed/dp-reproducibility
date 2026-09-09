@@ -1,0 +1,75 @@
+--------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /home/zhiwenz/private-research/studies/iyer-2012/source/20110220_IMMT_Replicati
+> onData/table2.txt
+  log type:  text
+ opened on:   4 Nov 2024, 13:12:06
+
+. use tables1to5.dta, clear
+
+. summ pcr_womtot prape2 pwomgirl pkidmen pcr_prop pcr_order pcr_econ pmurder pmurder_love p
+> suic_f psuic_m if year>=1985 & majstate==1
+
+    Variable |        Obs        Mean    Std. dev.       Min        Max
+-------------+---------------------------------------------------------
+  pcr_womtot |        391     .172629    .1367467   .0011368   .5704777
+      prape2 |        391    .0307855    .0200378   .0009237    .101542
+    pwomgirl |        340    .0379278    .0310551   .0051272   .1487712
+     pkidmen |        340    .0104731    .0076361          0   .0445749
+    pcr_prop |        391    .4458592    .1911113   .0987327   1.086801
+-------------+---------------------------------------------------------
+   pcr_order |        391    .1095588    .0857541   .0003255   .4494137
+    pcr_econ |        391    .0589579    .0327208   .0188261   .1999753
+     pmurder |        391     .035474    .0181011   .0109594   .1502813
+pmurder_love |        374    .0048205    .0029584          0   .0132408
+     psuic_f |        390    .0771781    .0517548   .0036457   .1842538
+-------------+---------------------------------------------------------
+     psuic_m |        390    .1209202    .0992864   .0035329   .4596905
+
+. summ pscpoa pscpcr  pstpoa pstpcr if year>=1992 & elec_scres>=1995 & majstate==1
+
+    Variable |        Obs        Mean    Std. dev.       Min        Max
+-------------+---------------------------------------------------------
+      pscpoa |        175      .05227    .0666919          0   .3199422
+      pscpcr |        175    .0079124    .0130004          0   .0803873
+      pstpoa |        145    .0205973    .0435399          0   .2791441
+      pstpcr |        145    .0033099    .0100732          0   .0870308
+
+. summ parrest_womcrime parrest_rape parrest_womgirl parrest_nonwomen parrest_kidmen if year
+> >=1988 & majstate==1
+
+    Variable |        Obs        Mean    Std. dev.       Min        Max
+-------------+---------------------------------------------------------
+parrest_wo~e |        340    .3513371    .2195336   .0196059    .928711
+parrest_rape |        340    .0199435    .0120817    .004495    .062166
+parrest_wo~l |        340    .0199769     .015914          0   .1005093
+parrest_no~n |        340    .0062364    .0048347   .0011224   .0265596
+parrest_ki~n |        340    .0077861      .00724          0   .0409544
+
+. summ charge_womcrime chargesheet_rate if year>=1991 & majstate==1
+
+    Variable |        Obs        Mean    Std. dev.       Min        Max
+-------------+---------------------------------------------------------
+charge_wom~e |        289    89.60225    7.752535       60.5       98.3
+chargeshee~e |        289     76.6626    10.90067       41.5       94.5
+
+. summ pfemale prural plit pfarm womancm ppol_strength pcgsdp if year>=1985 & majstate==1
+
+    Variable |        Obs        Mean    Std. dev.       Min        Max
+-------------+---------------------------------------------------------
+     pfemale |        391    .9365615     .044663   .8588709   1.070122
+      prural |        391    .7483257    .0927651   .5096334   .9190697
+        plit |        391    .5132485    .1210023   .2733815   .8112149
+       pfarm |        391    .1780241    .0536675   .0206291    .293639
+     womancm |        391    .0792839    .2705275          0          1
+-------------+---------------------------------------------------------
+ppol_stren~h |        391    1.540666    .8851469    .083658   5.923027
+      pcgsdp |        391    1.673926    .7615263          0   4.238542
+
+. log close
+      name:  <unnamed>
+       log:  /home/zhiwenz/private-research/studies/iyer-2012/source/20110220_IMMT_Replicati
+> onData/table2.txt
+  log type:  text
+ closed on:   4 Nov 2024, 13:12:06
+--------------------------------------------------------------------------------------------

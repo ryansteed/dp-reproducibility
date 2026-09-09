@@ -1,0 +1,22 @@
+[
+  {
+    "id": "virtual-absent",
+    "est": 0.069,
+    "se": 0.010
+  },
+  {
+    "id": "virtual-lowq",
+    "est": -0.033,
+    "se": 0.016
+  },
+  {
+    "id": "virtual-4q",
+    "est": 0.086,
+    "se": 0.020
+  },
+  {
+    "id": "virtual-5q",
+    "est": 0.106,
+    "se": 0.018
+  }
+]

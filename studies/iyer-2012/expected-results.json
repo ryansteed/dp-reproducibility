@@ -1,0 +1,22 @@
+[
+  {
+    "id": "postwres-crime",
+    "est": 0.229,
+    "se": 0.084
+  },
+  {
+    "id": "postwres-mencrime",
+    "est": -0.134,
+    "se": 0.123
+  },
+  {
+    "id": "postwres-murder",
+    "est": -0.148,
+    "se": 0.105
+  },
+  {
+    "id": "postwres-suicide",
+    "est": 0.055,
+    "se": 0.070
+  }
+]

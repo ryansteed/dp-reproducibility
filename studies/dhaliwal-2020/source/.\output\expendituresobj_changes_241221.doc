@@ -1,0 +1,28 @@
+{\rtf1\fs24
+\trowd\trgaph75\trleft-75\intbl\trqc\clbrdrt\brdrs\cellx2016\clbrdrt\brdrs\cellx4896\clbrdrt\brdrs\cellx7920\clbrdrt\brdrs\cellx11088\clbrdrt\brdrs\cellx13968\clbrdrt\brdrs\cellx16848
+\ql \cell\qc (1)\cell\qc (2)\cell\qc (3)\cell\qc (4)\cell\qc (5)\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx2016\cellx4896\cellx7920\cellx11088\cellx13968\cellx16848
+\trowd\trgaph75\trleft-75\trqc\clbrdrb\brdrs\cellx2016\clbrdrb\brdrs\cellx4896\clbrdrb\brdrs\cellx7920\clbrdrb\brdrs\cellx11088\clbrdrb\brdrs\cellx13968\clbrdrb\brdrs\cellx16848
+\ql VARIABLES\cell\qc chgsalaries_all_ex1\cell\qc chgsalaries_tchr_ex1\cell\qc chgsalaries_admin_ex1\cell\qc chgbenefits_all_ex1\cell\qc chgotherobjects_ex1\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx2016\cellx4896\cellx7920\cellx11088\cellx13968\cellx16848
+\ql \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\row
+\ql rural_distant\cell\qc 8.329+\cell\qc 6.315\cell\qc 3.452\cell\qc 11.49**\cell\qc 19.23\cell\row
+\ql \cell\qc (4.853)\cell\qc (5.087)\cell\qc (10.35)\cell\qc (4.113)\cell\qc (20.54)\cell\row
+\ql rural_fringe\cell\qc 11.11**\cell\qc 9.832**\cell\qc 11.61\cell\qc 14.29***\cell\qc 3.765\cell\row
+\ql \cell\qc (3.450)\cell\qc (3.456)\cell\qc (10.06)\cell\qc (3.507)\cell\qc (8.277)\cell\row
+\ql town_locale\cell\qc 10.03***\cell\qc 7.722***\cell\qc 2.038\cell\qc 15.83***\cell\qc 7.123\cell\row
+\ql \cell\qc (1.904)\cell\qc (2.126)\cell\qc (8.224)\cell\qc (3.110)\cell\qc (7.861)\cell\row
+\ql suburb_locale\cell\qc 12.24***\cell\qc 10.65***\cell\qc 7.233\cell\qc 18.25***\cell\qc 0.403\cell\row
+\ql \cell\qc (1.711)\cell\qc (2.016)\cell\qc (8.094)\cell\qc (2.793)\cell\qc (8.009)\cell\row
+\ql urban_locale\cell\qc 9.346***\cell\qc 7.147*\cell\qc 2.087\cell\qc 17.18***\cell\qc 5.049\cell\row
+\ql \cell\qc (2.202)\cell\qc (2.918)\cell\qc (8.144)\cell\qc (2.801)\cell\qc (9.397)\cell\row
+\ql Constant\cell\qc 9.489***\cell\qc 5.953**\cell\qc 23.63**\cell\qc 16.13***\cell\qc 28.14***\cell\row
+\ql \cell\qc (1.592)\cell\qc (1.932)\cell\qc (7.991)\cell\qc (2.585)\cell\qc (7.220)\cell\row
+\ql \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\row
+\ql Observations\cell\qc 890\cell\qc 890\cell\qc 884\cell\qc 890\cell\qc 890\cell\row
+\trowd\trgaph75\trleft-75\trqc\trbrdrb\brdrs\clbrdrb\brdrs\cellx2016\clbrdrb\brdrs\cellx4896\clbrdrb\brdrs\cellx7920\clbrdrb\brdrs\cellx11088\clbrdrb\brdrs\cellx13968\clbrdrb\brdrs\cellx16848
+\ql R-squared\cell\qc 0.024\cell\qc 0.033\cell\qc 0.024\cell\qc 0.010\cell\qc 0.005\cell\row
+\pard\qc
+Robust standard errors in parentheses\par
+*** p<0.001, ** p<0.01, * p<0.05, + p<0.10\par
+}

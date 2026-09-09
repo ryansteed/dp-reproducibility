@@ -1,0 +1,410 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/home/zhiwenz/private-research/studies/buonanno-2013/source/20111641_data/prisonfirststage.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 5 Nov 2024, 22:20:45
+{txt}
+{com}. use prisonertimeseries2
+{txt}
+{com}. /*generating quadratic trend term, a dummy variable for the post-pardon period, and interaction terms*/
+. gen ymonthrelative2=ymonthrelative*ymonthrelative
+{txt}
+{com}. gen post=ymonthrelative>0
+{txt}
+{com}. gen postmonth=post*ymonthrelative
+{txt}
+{com}. gen postmonth2=post*ymonthrelative2
+{txt}
+{com}. 
+. /*generating figure 1*/ 
+. twoway  qfitci incrate ymonthrelative if ymonthrelative<=0, legend(off) || qfitci incrate ymonthrelative if ymonthrelative>0 ||scatter incrate ymonthrelative, xline(0) legend(off)  yscale(r(0 110)) ylabel(0(10)110)  ytitle("Monthly Incarceration Rate") xtitle("Month Relative to August 2006")
+{res}{txt}
+{com}. 
+. 
+. 
+. /*generating the regression results in Table 2, Panel B and the denominators for the incapacitation effect estimates
+> presented in Tables 3 and 5*/
+. 
+. tsset ymonthrelative
+{res}
+{p 0 15 2}{txt:Time variable: }{res:ymonthrelative}{txt:, }{res:{bind:-31}}{txt: to }{res:{bind:28}}{p_end}
+{txt}{col 9}Delta: {res}1 unit
+{txt}
+{com}. reg incrate ymonthrelative ymonthrelative2 post postmonth postmonth2
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}        60
+{txt}{hline 13}{c +}{hline 34}   F(5, 54)        = {res}  1637.93
+{txt}       Model {c |} {res} 8960.40518         5  1792.08104   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 59.0822442        54  1.09411563   {txt}R-squared       ={res}    0.9934
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.9928
+{txt}       Total {c |} {res} 9019.48743        59  152.872668   {txt}Root MSE        =   {res}  1.046
+
+{txt}{hline 16}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        incrate{col 17}{c |} Coefficient{col 29}  Std. err.{col 41}      t{col 49}   P>|t|{col 57}     [95% con{col 70}f. interval]
+{hline 16}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}ymonthrelative {c |}{col 17}{res}{space 2} .4653732{col 29}{space 2} .0779045{col 40}{space 1}    5.97{col 49}{space 3}0.000{col 57}{space 4} .3091841{col 70}{space 3} .6215624
+{txt}ymonthrelative2 {c |}{col 17}{res}{space 2} .0030823{col 29}{space 2} .0024286{col 40}{space 1}    1.27{col 49}{space 3}0.210{col 57}{space 4}-.0017867{col 70}{space 3} .0079514
+{txt}{space 11}post {c |}{col 17}{res}{space 2}-42.40558{col 29}{space 2} .8242388{col 40}{space 1}  -51.45{col 49}{space 3}0.000{col 57}{space 4}-44.05808{col 70}{space 3}-40.75308
+{txt}{space 6}postmonth {c |}{col 17}{res}{space 2}  .474017{col 29}{space 2} .1278803{col 40}{space 1}    3.71{col 49}{space 3}0.000{col 57}{space 4} .2176324{col 70}{space 3} .7304015
+{txt}{space 5}postmonth2 {c |}{col 17}{res}{space 2}  .008943{col 29}{space 2} .0041731{col 40}{space 1}    2.14{col 49}{space 3}0.037{col 57}{space 4} .0005765{col 70}{space 3} .0173095
+{txt}{space 10}_cons {c |}{col 17}{res}{space 2} 105.3147{col 29}{space 2} .5217749{col 40}{space 1}  201.84{col 49}{space 3}0.000{col 57}{space 4} 104.2686{col 70}{space 3} 106.3608
+{txt}{hline 16}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. lincom ymonthrelative+postmonth+(ymonthrelative2+postmonth2)*(2*6+1)
+
+{p 0 7}{space 1}{text:( 1)}{space 1} {res}ymonthrelative + 13{res}*{res}ymonthrelative2 + postmonth + 13{res}*{res}postmonth2 = 0{p_end}
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}     incrate{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}(1) {c |}{col 14}{res}{space 2} 1.095719{col 26}{space 2} .0595574{col 37}{space 1}   18.40{col 46}{space 3}0.000{col 54}{space 4} .9763139{col 67}{space 3} 1.215125
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+
+{com}. lincom ymonthrelative+postmonth+(ymonthrelative2+postmonth2)*(2*12+1)
+
+{p 0 7}{space 1}{text:( 1)}{space 1} {res}ymonthrelative + 25{res}*{res}ymonthrelative2 + postmonth + 25{res}*{res}postmonth2 = 0{p_end}
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}     incrate{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}(1) {c |}{col 14}{res}{space 2} 1.240023{col 26}{space 2} .0279843{col 37}{space 1}   44.31{col 46}{space 3}0.000{col 54}{space 4} 1.183918{col 67}{space 3} 1.296129
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+
+{com}. lincom ymonthrelative+postmonth+(ymonthrelative2+postmonth2)*(2*18+1)
+
+{p 0 7}{space 1}{text:( 1)}{space 1} {res}ymonthrelative + 37{res}*{res}ymonthrelative2 + postmonth + 37{res}*{res}postmonth2 = 0{p_end}
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}     incrate{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}(1) {c |}{col 14}{res}{space 2} 1.384327{col 26}{space 2} .0365502{col 37}{space 1}   37.87{col 46}{space 3}0.000{col 54}{space 4} 1.311048{col 67}{space 3} 1.457606
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+
+{com}. lincom ymonthrelative+postmonth+(ymonthrelative2+postmonth2)*(2*24+1)
+
+{p 0 7}{space 1}{text:( 1)}{space 1} {res}ymonthrelative + 49{res}*{res}ymonthrelative2 + postmonth + 49{res}*{res}postmonth2 = 0{p_end}
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}     incrate{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}(1) {c |}{col 14}{res}{space 2} 1.528631{col 26}{space 2} .0721489{col 37}{space 1}   21.19{col 46}{space 3}0.000{col 54}{space 4} 1.383981{col 67}{space 3} 1.673281
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+
+{com}. 
+. xi: reg incrate ymonthrelative ymonthrelative2 post postmonth postmonth2 i.month
+{txt}i.month{col 19}_Imonth_1-12{col 39}(naturally coded; _Imonth_1 omitted)
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}        60
+{txt}{hline 13}{c +}{hline 34}   F(16, 43)       = {res}   676.30
+{txt}       Model {c |} {res} 8983.78736        16   561.48671   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 35.7000691        43  .830234165   {txt}R-squared       ={res}    0.9960
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.9946
+{txt}       Total {c |} {res} 9019.48743        59  152.872668   {txt}Root MSE        =   {res} .91117
+
+{txt}{hline 16}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        incrate{col 17}{c |} Coefficient{col 29}  Std. err.{col 41}      t{col 49}   P>|t|{col 57}     [95% con{col 70}f. interval]
+{hline 16}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}ymonthrelative {c |}{col 17}{res}{space 2} .5039698{col 29}{space 2} .0703333{col 40}{space 1}    7.17{col 49}{space 3}0.000{col 57}{space 4} .3621292{col 70}{space 3} .6458104
+{txt}ymonthrelative2 {c |}{col 17}{res}{space 2} .0046528{col 29}{space 2} .0021957{col 40}{space 1}    2.12{col 49}{space 3}0.040{col 57}{space 4} .0002247{col 70}{space 3} .0090808
+{txt}{space 11}post {c |}{col 17}{res}{space 2}-42.78214{col 29}{space 2} .7859226{col 40}{space 1}  -54.44{col 49}{space 3}0.000{col 57}{space 4}-44.36711{col 70}{space 3}-41.19718
+{txt}{space 6}postmonth {c |}{col 17}{res}{space 2} .4899596{col 29}{space 2} .1125543{col 40}{space 1}    4.35{col 49}{space 3}0.000{col 57}{space 4} .2629721{col 70}{space 3}  .716947
+{txt}{space 5}postmonth2 {c |}{col 17}{res}{space 2} .0051422{col 29}{space 2} .0040208{col 40}{space 1}    1.28{col 49}{space 3}0.208{col 57}{space 4}-.0029665{col 70}{space 3} .0132509
+{txt}{space 6}_Imonth_2 {c |}{col 17}{res}{space 2} .5203887{col 29}{space 2}  .576537{col 40}{space 1}    0.90{col 49}{space 3}0.372{col 57}{space 4}-.6423091{col 70}{space 3} 1.683086
+{txt}{space 6}_Imonth_3 {c |}{col 17}{res}{space 2} 1.103119{col 29}{space 2} .5772048{col 40}{space 1}    1.91{col 49}{space 3}0.063{col 57}{space 4}-.0609251{col 70}{space 3} 2.267164
+{txt}{space 6}_Imonth_4 {c |}{col 17}{res}{space 2} 1.512783{col 29}{space 2} .5781519{col 40}{space 1}    2.62{col 49}{space 3}0.012{col 57}{space 4} .3468283{col 70}{space 3} 2.678737
+{txt}{space 6}_Imonth_5 {c |}{col 17}{res}{space 2} 1.779301{col 29}{space 2} .5793142{col 40}{space 1}    3.07{col 49}{space 3}0.004{col 57}{space 4} .6110027{col 70}{space 3} 2.947599
+{txt}{space 6}_Imonth_6 {c |}{col 17}{res}{space 2} 2.207933{col 29}{space 2} .5806903{col 40}{space 1}    3.80{col 49}{space 3}0.000{col 57}{space 4} 1.036859{col 70}{space 3} 3.379006
+{txt}{space 6}_Imonth_7 {c |}{col 17}{res}{space 2} 1.898049{col 29}{space 2} .5823413{col 40}{space 1}    3.26{col 49}{space 3}0.002{col 57}{space 4} .7236457{col 70}{space 3} 3.072452
+{txt}{space 6}_Imonth_8 {c |}{col 17}{res}{space 2} 1.104162{col 29}{space 2} .5843891{col 40}{space 1}    1.89{col 49}{space 3}0.066{col 57}{space 4}-.0743715{col 70}{space 3} 2.282695
+{txt}{space 6}_Imonth_9 {c |}{col 17}{res}{space 2} 2.013727{col 29}{space 2} .5912716{col 40}{space 1}    3.41{col 49}{space 3}0.001{col 57}{space 4} .8213141{col 70}{space 3}  3.20614
+{txt}{space 5}_Imonth_10 {c |}{col 17}{res}{space 2} 1.626123{col 29}{space 2}  .591682{col 40}{space 1}    2.75{col 49}{space 3}0.009{col 57}{space 4} .4328829{col 70}{space 3} 2.819364
+{txt}{space 5}_Imonth_11 {c |}{col 17}{res}{space 2} 1.992457{col 29}{space 2} .5928177{col 40}{space 1}    3.36{col 49}{space 3}0.002{col 57}{space 4} .7969264{col 70}{space 3} 3.187988
+{txt}{space 5}_Imonth_12 {c |}{col 17}{res}{space 2} 1.964993{col 29}{space 2} .5946747{col 40}{space 1}    3.30{col 49}{space 3}0.002{col 57}{space 4} .7657175{col 70}{space 3} 3.164269
+{txt}{space 10}_cons {c |}{col 17}{res}{space 2} 103.9776{col 29}{space 2}  .610113{col 40}{space 1}  170.42{col 49}{space 3}0.000{col 57}{space 4} 102.7472{col 70}{space 3}  105.208
+{txt}{hline 16}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. lincom ymonthrelative+postmonth+(ymonthrelative2+postmonth2)*(2*6+1)
+
+{p 0 7}{space 1}{text:( 1)}{space 1} {res}ymonthrelative + 13{res}*{res}ymonthrelative2 + postmonth + 13{res}*{res}postmonth2 = 0{p_end}
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}     incrate{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}(1) {c |}{col 14}{res}{space 2} 1.121264{col 26}{space 2} .0551066{col 37}{space 1}   20.35{col 46}{space 3}0.000{col 54}{space 4} 1.010131{col 67}{space 3} 1.232397
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+
+{com}. lincom ymonthrelative+postmonth+(ymonthrelative2+postmonth2)*(2*12+1)
+
+{p 0 7}{space 1}{text:( 1)}{space 1} {res}ymonthrelative + 25{res}*{res}ymonthrelative2 + postmonth + 25{res}*{res}postmonth2 = 0{p_end}
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}     incrate{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}(1) {c |}{col 14}{res}{space 2} 1.238803{col 26}{space 2} .0250257{col 37}{space 1}   49.50{col 46}{space 3}0.000{col 54}{space 4} 1.188334{col 67}{space 3} 1.289272
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+
+{com}. lincom ymonthrelative+postmonth+(ymonthrelative2+postmonth2)*(2*18+1)
+
+{p 0 7}{space 1}{text:( 1)}{space 1} {res}ymonthrelative + 37{res}*{res}ymonthrelative2 + postmonth + 37{res}*{res}postmonth2 = 0{p_end}
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}     incrate{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}(1) {c |}{col 14}{res}{space 2} 1.356343{col 26}{space 2} .0332922{col 37}{space 1}   40.74{col 46}{space 3}0.000{col 54}{space 4} 1.289203{col 67}{space 3} 1.423483
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+
+{com}. lincom ymonthrelative+postmonth+(ymonthrelative2+postmonth2)*(2*24+1)
+
+{p 0 7}{space 1}{text:( 1)}{space 1} {res}ymonthrelative + 49{res}*{res}ymonthrelative2 + postmonth + 49{res}*{res}postmonth2 = 0{p_end}
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}     incrate{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}(1) {c |}{col 14}{res}{space 2} 1.473882{col 26}{space 2} .0669552{col 37}{space 1}   22.01{col 46}{space 3}0.000{col 54}{space 4} 1.338854{col 67}{space 3}  1.60891
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+
+{com}. 
+. xi: reg incrate ymonthrelative ymonthrelative2 post postmonth postmonth2 i.month i.year  
+{txt}i.month{col 19}_Imonth_1-12{col 39}(naturally coded; _Imonth_1 omitted)
+i.year{col 19}_Iyear_2004-2008{col 39}(naturally coded; _Iyear_2004 omitted)
+{p 0 6 2}note: {bf:_Iyear_2008} omitted because of collinearity.{p_end}
+
+      Source {c |}       SS           df       MS      Number of obs   ={res}        60
+{txt}{hline 13}{c +}{hline 34}   F(19, 40)       = {res}   616.66
+{txt}       Model {c |} {res} 8988.79985        19  473.094729   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res}  30.687576        40    .7671894   {txt}R-squared       ={res}    0.9966
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.9950
+{txt}       Total {c |} {res} 9019.48743        59  152.872668   {txt}Root MSE        =   {res} .87589
+
+{txt}{hline 16}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        incrate{col 17}{c |} Coefficient{col 29}  Std. err.{col 41}      t{col 49}   P>|t|{col 57}     [95% con{col 70}f. interval]
+{hline 16}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}ymonthrelative {c |}{col 17}{res}{space 2} .4994245{col 29}{space 2} .1085022{col 40}{space 1}    4.60{col 49}{space 3}0.000{col 57}{space 4} .2801334{col 70}{space 3} .7187156
+{txt}ymonthrelative2 {c |}{col 17}{res}{space 2}  .005414{col 29}{space 2} .0031117{col 40}{space 1}    1.74{col 49}{space 3}0.090{col 57}{space 4} -.000875{col 70}{space 3} .0117029
+{txt}{space 11}post {c |}{col 17}{res}{space 2}-42.69971{col 29}{space 2} .7694213{col 40}{space 1}  -55.50{col 49}{space 3}0.000{col 57}{space 4}-44.25476{col 70}{space 3}-41.14465
+{txt}{space 6}postmonth {c |}{col 17}{res}{space 2}  .680037{col 29}{space 2} .1836625{col 40}{space 1}    3.70{col 49}{space 3}0.001{col 57}{space 4} .3088414{col 70}{space 3} 1.051233
+{txt}{space 5}postmonth2 {c |}{col 17}{res}{space 2} -.002263{col 29}{space 2} .0051523{col 40}{space 1}   -0.44{col 49}{space 3}0.663{col 57}{space 4}-.0126762{col 70}{space 3} .0081502
+{txt}{space 6}_Imonth_2 {c |}{col 17}{res}{space 2} .5269262{col 29}{space 2} .5543121{col 40}{space 1}    0.95{col 49}{space 3}0.348{col 57}{space 4}-.5933804{col 70}{space 3} 1.647233
+{txt}{space 6}_Imonth_3 {c |}{col 17}{res}{space 2} 1.120596{col 29}{space 2} .5551808{col 40}{space 1}    2.02{col 49}{space 3}0.050{col 57}{space 4} -.001466{col 70}{space 3} 2.242659
+{txt}{space 6}_Imonth_4 {c |}{col 17}{res}{space 2} 1.545601{col 29}{space 2}  .556402{col 40}{space 1}    2.78{col 49}{space 3}0.008{col 57}{space 4} .4210704{col 70}{space 3} 2.670131
+{txt}{space 6}_Imonth_5 {c |}{col 17}{res}{space 2} 1.831862{col 29}{space 2} .5579377{col 40}{space 1}    3.28{col 49}{space 3}0.002{col 57}{space 4} .7042279{col 70}{space 3} 2.959496
+{txt}{space 6}_Imonth_6 {c |}{col 17}{res}{space 2} 2.284638{col 29}{space 2} .5598786{col 40}{space 1}    4.08{col 49}{space 3}0.000{col 57}{space 4} 1.153082{col 70}{space 3} 3.416195
+{txt}{space 6}_Imonth_7 {c |}{col 17}{res}{space 2} 2.003301{col 29}{space 2} .5624415{col 40}{space 1}    3.56{col 49}{space 3}0.001{col 57}{space 4} .8665642{col 70}{space 3} 3.140038
+{txt}{space 6}_Imonth_8 {c |}{col 17}{res}{space 2} 1.242362{col 29}{space 2} .5659653{col 40}{space 1}    2.20{col 49}{space 3}0.034{col 57}{space 4} .0985034{col 70}{space 3} 2.386221
+{txt}{space 6}_Imonth_9 {c |}{col 17}{res}{space 2} 2.136255{col 29}{space 2} .5719734{col 40}{space 1}    3.73{col 49}{space 3}0.001{col 57}{space 4} .9802541{col 70}{space 3} 3.292257
+{txt}{space 5}_Imonth_10 {c |}{col 17}{res}{space 2} 1.756831{col 29}{space 2} .5726205{col 40}{space 1}    3.07{col 49}{space 3}0.004{col 57}{space 4} .5995221{col 70}{space 3} 2.914141
+{txt}{space 5}_Imonth_11 {c |}{col 17}{res}{space 2} 2.138709{col 29}{space 2} .5742464{col 40}{space 1}    3.72{col 49}{space 3}0.001{col 57}{space 4} .9781135{col 70}{space 3} 3.299304
+{txt}{space 5}_Imonth_12 {c |}{col 17}{res}{space 2} 2.134152{col 29}{space 2} .5768805{col 40}{space 1}    3.70{col 49}{space 3}0.001{col 57}{space 4} .9682329{col 70}{space 3} 3.300071
+{txt}{space 4}_Iyear_2005 {c |}{col 17}{res}{space 2}  .524709{col 29}{space 2}  .606306{col 40}{space 1}    0.87{col 49}{space 3}0.392{col 57}{space 4}-.7006812{col 70}{space 3} 1.750099
+{txt}{space 4}_Iyear_2006 {c |}{col 17}{res}{space 2}  .640993{col 29}{space 2} .8806733{col 40}{space 1}    0.73{col 49}{space 3}0.471{col 57}{space 4}-1.138914{col 70}{space 3}   2.4209
+{txt}{space 4}_Iyear_2007 {c |}{col 17}{res}{space 2}-.8735155{col 29}{space 2}   .59944{col 40}{space 1}   -1.46{col 49}{space 3}0.153{col 57}{space 4}-2.085029{col 70}{space 3}  .337998
+{txt}{space 4}_Iyear_2008 {c |}{col 17}{res}{space 2}        0{col 29}{txt}  (omitted)
+{space 10}_cons {c |}{col 17}{res}{space 2} 103.2266{col 29}{space 2} 1.190303{col 40}{space 1}   86.72{col 49}{space 3}0.000{col 57}{space 4} 100.8209{col 70}{space 3} 105.6323
+{txt}{hline 16}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. lincom ymonthrelative+postmonth+(ymonthrelative2+postmonth2)*(2*6+1)
+
+{p 0 7}{space 1}{text:( 1)}{space 1} {res}ymonthrelative + 13{res}*{res}ymonthrelative2 + postmonth + 13{res}*{res}postmonth2 = 0{p_end}
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}     incrate{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}(1) {c |}{col 14}{res}{space 2} 1.220424{col 26}{space 2} .0785418{col 37}{space 1}   15.54{col 46}{space 3}0.000{col 54}{space 4} 1.061685{col 67}{space 3} 1.379163
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+
+{com}. lincom ymonthrelative+postmonth+(ymonthrelative2+postmonth2)*(2*12+1)
+
+{p 0 7}{space 1}{text:( 1)}{space 1} {res}ymonthrelative + 25{res}*{res}ymonthrelative2 + postmonth + 25{res}*{res}postmonth2 = 0{p_end}
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}     incrate{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}(1) {c |}{col 14}{res}{space 2} 1.258235{col 26}{space 2} .0445903{col 37}{space 1}   28.22{col 46}{space 3}0.000{col 54}{space 4} 1.168115{col 67}{space 3} 1.348355
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+
+{com}. lincom ymonthrelative+postmonth+(ymonthrelative2+postmonth2)*(2*18+1)
+
+{p 0 7}{space 1}{text:( 1)}{space 1} {res}ymonthrelative + 37{res}*{res}ymonthrelative2 + postmonth + 37{res}*{res}postmonth2 = 0{p_end}
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}     incrate{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}(1) {c |}{col 14}{res}{space 2} 1.296046{col 26}{space 2}  .050382{col 37}{space 1}   25.72{col 46}{space 3}0.000{col 54}{space 4} 1.194221{col 67}{space 3} 1.397872
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+
+{com}. lincom ymonthrelative+postmonth+(ymonthrelative2+postmonth2)*(2*24+1)
+
+{p 0 7}{space 1}{text:( 1)}{space 1} {res}ymonthrelative + 49{res}*{res}ymonthrelative2 + postmonth + 49{res}*{res}postmonth2 = 0{p_end}
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}     incrate{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}(1) {c |}{col 14}{res}{space 2} 1.333858{col 26}{space 2}  .088425{col 37}{space 1}   15.08{col 46}{space 3}0.000{col 54}{space 4} 1.155144{col 67}{space 3} 1.512571
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+
+{com}.  
+. eststo: xi: arima  incrate ymonthrelative ymonthrelative2 post postmonth postmonth2 i.month i.year, ar(1)
+{txt}i.month{col 19}_Imonth_1-12{col 39}(naturally coded; _Imonth_1 omitted)
+i.year{col 19}_Iyear_2004-2008{col 39}(naturally coded; _Iyear_2004 omitted)
+note: {bf:_Iyear_2008} omitted because of collinearity.
+
+(setting optimization to BHHH)
+{res}{txt}Iteration 0:  Log likelihood = {res}-57.686987{txt}  
+{res}{txt}Iteration 1:  Log likelihood = {res}-52.973601{txt}  
+{res}{txt}Iteration 2:  Log likelihood = {res} -44.93881{txt}  
+{res}{txt}Iteration 3:  Log likelihood = {res}-43.829665{txt}  
+{res}{txt}Iteration 4:  Log likelihood = {res}-42.561188{txt}  
+{res}{txt}(switching optimization to BFGS)
+{res}{txt}Iteration 5:  Log likelihood = {res}-42.247393{txt}  
+{res}{txt}Iteration 6:  Log likelihood = {res}-42.097628{txt}  
+{res}{txt}Iteration 7:  Log likelihood = {res}-41.140802{txt}  
+{res}{txt}Iteration 8:  Log likelihood = {res}-40.216361{txt}  
+{res}{txt}Iteration 9:  Log likelihood = {res}-39.124976{txt}  
+{res}{txt}Iteration 10: Log likelihood = {res}-38.774666{txt}  
+{res}{txt}Iteration 11: Log likelihood = {res} -37.70631{txt}  
+{res}{txt}Iteration 12: Log likelihood = {res}-37.698858{txt}  
+{res}{txt}Iteration 13: Log likelihood = {res}-36.605076{txt}  
+{res}{txt}Iteration 14: Log likelihood = {res}-36.518768{txt}  
+{res}{txt}(switching optimization to BHHH)
+{res}{txt}Iteration 15: Log likelihood = {res}-36.299629{txt}  
+{res}{txt}Iteration 16: Log likelihood = {res}-36.262298{txt}  
+{res}{txt}Iteration 17: Log likelihood = {res}-36.256463{txt}  (backed up)
+{res}{txt}Iteration 18: Log likelihood = {res}-36.252807{txt}  
+{res}{txt}Iteration 19: Log likelihood = {res}-36.249739{txt}  (backed up)
+{res}{txt}(switching optimization to BFGS)
+{res}{txt}Iteration 20: Log likelihood = {res}-36.246764{txt}  
+{res}{txt}Iteration 21: Log likelihood = {res}-36.242055{txt}  
+{res}{txt}Iteration 22: Log likelihood = {res}-36.238132{txt}  
+{res}{txt}Iteration 23: Log likelihood = {res}-36.234564{txt}  
+{res}{txt}Iteration 24: Log likelihood = {res}-36.231161{txt}  
+{res}{txt}Iteration 25: Log likelihood = {res}-36.229928{txt}  
+{res}{txt}Iteration 26: Log likelihood = {res}-36.228361{txt}  
+{res}{txt}Iteration 27: Log likelihood = {res}-36.227083{txt}  
+{res}{txt}Iteration 28: Log likelihood = {res}-36.226535{txt}  
+{res}{txt}Iteration 29: Log likelihood = {res}-36.226516{txt}  
+{res}{txt}(switching optimization to BHHH)
+{res}{txt}Iteration 30: Log likelihood = {res}-36.226161{txt}  
+{res}{txt}Iteration 31: Log likelihood = {res}-36.225944{txt}  
+{res}{txt}Iteration 32: Log likelihood = {res}-36.225758{txt}  
+{res}{txt}Iteration 33: Log likelihood = {res}-36.225734{txt}  
+{res}{txt}Iteration 34: Log likelihood = {res}-36.225515{txt}  
+{res}{txt}(switching optimization to BFGS)
+{res}{txt}Iteration 35: Log likelihood = {res}-36.225461{txt}  
+{res}{txt}Iteration 36: Log likelihood = {res}-36.225174{txt}  
+{res}{txt}Iteration 37: Log likelihood = {res}-36.225165{txt}  
+{res}{txt}Iteration 38: Log likelihood = {res}-36.225145{txt}  
+{res}{txt}Iteration 39: Log likelihood = {res}-36.225133{txt}  
+{res}{txt}Iteration 40: Log likelihood = {res}-36.225132{txt}  
+{res}{txt}Iteration 41: Log likelihood = {res}-36.225098{txt}  
+{res}{txt}Iteration 42: Log likelihood = {res}-36.225092{txt}  
+{res}{txt}Iteration 43: Log likelihood = {res}-36.225066{txt}  
+{res}{txt}Iteration 44: Log likelihood = {res}-36.225062{txt}  
+{res}{txt}(switching optimization to BHHH)
+{res}{txt}Iteration 45: Log likelihood = {res}-36.225054{txt}  
+{res}{txt}Iteration 46: Log likelihood = {res}-36.225051{txt}  
+{res}{txt}Iteration 47: Log likelihood = {res} -36.22505{txt}  
+{res}{txt}Iteration 48: Log likelihood = {res} -36.22505{txt}  
+{res}{txt}Iteration 49: Log likelihood = {res} -36.22505{txt}  
+{res}{txt}(switching optimization to BFGS)
+{res}{txt}Iteration 50: Log likelihood = {res} -36.22505{txt}  
+{res}
+{txt}ARIMA regression
+
+Sample: {res}-31 {txt}thru{res} 28 {col 49}{txt}Number of obs{col 67}={res}{col 69}        60
+                                                {txt}Wald chi2({res}20{txt})     =  {res}   933.31
+{txt}Log likelihood = {res}-36.22505                      {txt}Prob > chi2       =     {res}0.0000
+
+{txt}{hline 16}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 17}{c |}{col 29}      OPG
+{col 1}        incrate{col 17}{c |} Coefficient{col 29}  std. err.{col 41}      z{col 49}   P>|z|{col 57}     [95% con{col 70}f. interval]
+{hline 16}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}incrate         {txt}{c |}
+{space 1}ymonthrelative {c |}{col 17}{res}{space 2} .2243792{col 29}{space 2} .2219449{col 40}{space 1}    1.01{col 49}{space 3}0.312{col 57}{space 4}-.2106247{col 70}{space 3} .6593832
+{txt}ymonthrelative2 {c |}{col 17}{res}{space 2}-.0011941{col 29}{space 2}  .008664{col 40}{space 1}   -0.14{col 49}{space 3}0.890{col 57}{space 4}-.0181751{col 70}{space 3}  .015787
+{txt}{space 11}post {c |}{col 17}{res}{space 2}-38.11605{col 29}{space 2} 3.502879{col 40}{space 1}  -10.88{col 49}{space 3}0.000{col 57}{space 4}-44.98156{col 70}{space 3}-31.25053
+{txt}{space 6}postmonth {c |}{col 17}{res}{space 2} .5010912{col 29}{space 2} .4114675{col 40}{space 1}    1.22{col 49}{space 3}0.223{col 57}{space 4}-.3053703{col 70}{space 3} 1.307553
+{txt}{space 5}postmonth2 {c |}{col 17}{res}{space 2} .0180038{col 29}{space 2} .0115621{col 40}{space 1}    1.56{col 49}{space 3}0.119{col 57}{space 4}-.0046575{col 70}{space 3} .0406652
+{txt}{space 6}_Imonth_2 {c |}{col 17}{res}{space 2} .6108088{col 29}{space 2} .2691871{col 40}{space 1}    2.27{col 49}{space 3}0.023{col 57}{space 4} .0832118{col 70}{space 3} 1.138406
+{txt}{space 6}_Imonth_3 {c |}{col 17}{res}{space 2} 1.284954{col 29}{space 2} .6896327{col 40}{space 1}    1.86{col 49}{space 3}0.062{col 57}{space 4}-.0667014{col 70}{space 3} 2.636609
+{txt}{space 6}_Imonth_4 {c |}{col 17}{res}{space 2} 1.786951{col 29}{space 2} .6903317{col 40}{space 1}    2.59{col 49}{space 3}0.010{col 57}{space 4} .4339254{col 70}{space 3} 3.139976
+{txt}{space 6}_Imonth_5 {c |}{col 17}{res}{space 2}  2.14683{col 29}{space 2} .7088112{col 40}{space 1}    3.03{col 49}{space 3}0.002{col 57}{space 4} .7575859{col 70}{space 3} 3.536075
+{txt}{space 6}_Imonth_6 {c |}{col 17}{res}{space 2} 2.669949{col 29}{space 2} .7270637{col 40}{space 1}    3.67{col 49}{space 3}0.000{col 57}{space 4}  1.24493{col 70}{space 3} 4.094968
+{txt}{space 6}_Imonth_7 {c |}{col 17}{res}{space 2} 2.455804{col 29}{space 2} .7816827{col 40}{space 1}    3.14{col 49}{space 3}0.002{col 57}{space 4} .9237345{col 70}{space 3} 3.987874
+{txt}{space 6}_Imonth_8 {c |}{col 17}{res}{space 2} 1.758757{col 29}{space 2} .8159568{col 40}{space 1}    2.16{col 49}{space 3}0.031{col 57}{space 4} .1595114{col 70}{space 3} 3.358003
+{txt}{space 6}_Imonth_9 {c |}{col 17}{res}{space 2}  1.82858{col 29}{space 2} .8304714{col 40}{space 1}    2.20{col 49}{space 3}0.028{col 57}{space 4} .2008862{col 70}{space 3} 3.456274
+{txt}{space 5}_Imonth_10 {c |}{col 17}{res}{space 2} 1.530821{col 29}{space 2} .8521573{col 40}{space 1}    1.80{col 49}{space 3}0.072{col 57}{space 4}-.1393762{col 70}{space 3} 3.201019
+{txt}{space 5}_Imonth_11 {c |}{col 17}{res}{space 2} 1.982979{col 29}{space 2} .8806332{col 40}{space 1}    2.25{col 49}{space 3}0.024{col 57}{space 4} .2569696{col 70}{space 3} 3.708988
+{txt}{space 5}_Imonth_12 {c |}{col 17}{res}{space 2} 2.037607{col 29}{space 2}  .904402{col 40}{space 1}    2.25{col 49}{space 3}0.024{col 57}{space 4} .2650115{col 70}{space 3} 3.810202
+{txt}{space 4}_Iyear_2005 {c |}{col 17}{res}{space 2} .6411673{col 29}{space 2} 1.582261{col 40}{space 1}    0.41{col 49}{space 3}0.685{col 57}{space 4}-2.460007{col 70}{space 3} 3.742342
+{txt}{space 4}_Iyear_2006 {c |}{col 17}{res}{space 2} .9245272{col 29}{space 2} 1.922122{col 40}{space 1}    0.48{col 49}{space 3}0.631{col 57}{space 4}-2.842763{col 70}{space 3} 4.691817
+{txt}{space 4}_Iyear_2007 {c |}{col 17}{res}{space 2} .9278169{col 29}{space 2} 1.966535{col 40}{space 1}    0.47{col 49}{space 3}0.637{col 57}{space 4} -2.92652{col 70}{space 3} 4.782154
+{txt}{space 10}_cons {c |}{col 17}{res}{space 2} 100.6944{col 29}{space 2} 2.713378{col 40}{space 1}   37.11{col 49}{space 3}0.000{col 57}{space 4} 95.37632{col 70}{space 3} 106.0126
+{txt}{hline 16}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}ARMA            {txt}{c |}
+{space 13}ar {c |}
+{space 12}L1. {c |}{col 17}{res}{space 2} .9154858{col 29}{space 2} .0851558{col 40}{space 1}   10.75{col 49}{space 3}0.000{col 57}{space 4} .7485835{col 70}{space 3} 1.082388
+{txt}{hline 16}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+         /sigma {c |}{col 17}{res}{space 2}  .435855{col 29}{space 2} .0586851{col 40}{space 1}    7.43{col 49}{space 3}0.000{col 57}{space 4} .3208343{col 70}{space 3} .5508757
+{txt}{hline 16}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{p 0 6 0 79}Note: The test of the variance against zero is one sided, and the two-sided confidence interval is truncated at zero.{p_end}
+({res}est1{txt} stored)
+
+{com}. lincom ymonthrelative+postmonth+(ymonthrelative2+postmonth2)*(2*6+1)
+
+{p 0 7}{space 1}{text:( 1)}{space 1} {res}[incrate]ymonthrelative + 13{res}*{res}[incrate]ymonthrelative2 + [incrate]postmonth + 13{res}*{res}[incrate]postmonth2 = 0{p_end}
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}     incrate{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      z{col 46}   P>|z|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}(1) {c |}{col 14}{res}{space 2} .9439972{col 26}{space 2} .2233388{col 37}{space 1}    4.23{col 46}{space 3}0.000{col 54}{space 4} .5062611{col 67}{space 3} 1.381733
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+
+{com}. lincom ymonthrelative+postmonth+(ymonthrelative2+postmonth2)*(2*12+1)
+
+{p 0 7}{space 1}{text:( 1)}{space 1} {res}[incrate]ymonthrelative + 25{res}*{res}[incrate]ymonthrelative2 + [incrate]postmonth + 25{res}*{res}[incrate]postmonth2 = 0{p_end}
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}     incrate{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      z{col 46}   P>|z|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}(1) {c |}{col 14}{res}{space 2} 1.145714{col 26}{space 2} .1506549{col 37}{space 1}    7.60{col 46}{space 3}0.000{col 54}{space 4}  .850436{col 67}{space 3} 1.440992
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+
+{com}. lincom ymonthrelative+postmonth+(ymonthrelative2+postmonth2)*(2*18+1)
+
+{p 0 7}{space 1}{text:( 1)}{space 1} {res}[incrate]ymonthrelative + 37{res}*{res}[incrate]ymonthrelative2 + [incrate]postmonth + 37{res}*{res}[incrate]postmonth2 = 0{p_end}
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}     incrate{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      z{col 46}   P>|z|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}(1) {c |}{col 14}{res}{space 2} 1.347431{col 26}{space 2} .1199257{col 37}{space 1}   11.24{col 46}{space 3}0.000{col 54}{space 4} 1.112381{col 67}{space 3} 1.582481
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+
+{com}. lincom ymonthrelative+postmonth+(ymonthrelative2+postmonth2)*(2*24+1)
+
+{p 0 7}{space 1}{text:( 1)}{space 1} {res}[incrate]ymonthrelative + 49{res}*{res}[incrate]ymonthrelative2 + [incrate]postmonth + 49{res}*{res}[incrate]postmonth2 = 0{p_end}
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}     incrate{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      z{col 46}   P>|z|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}(1) {c |}{col 14}{res}{space 2} 1.549148{col 26}{space 2} .1579116{col 37}{space 1}    9.81{col 46}{space 3}0.000{col 54}{space 4} 1.239647{col 67}{space 3} 1.858649
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+
+{com}. 
+. *** EDIT by Donna Zhu
+. estout using "../../results/table2b.csv", cells(`"b() se() t() p()"') stats(N r2 df_m df_r df_b df) notype abbrev begin(`"""') delimiter(`"",""') end(`"""') replace
+{res}{txt}{p 0 4 2}
+(file {bf}
+../../results/table2b.csv{rm}
+not found)
+{p_end}
+(output written to {browse  `"../../results/table2b.csv"'})
+
+{com}. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}/home/zhiwenz/private-research/studies/buonanno-2013/source/20111641_data/prisonfirststage.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res} 5 Nov 2024, 22:20:48
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

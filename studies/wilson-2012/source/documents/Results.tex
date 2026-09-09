@@ -1,0 +1,77 @@
+\documentclass{article}
+\usepackage{url, hyperref, amsmath, verbatim, pdflscape, tabularx, booktabs, ctable, longtable , float}
+\usepackage[cm]{fullpage}
+\usepackage{multirow}
+\graphicspath{{../results/}}
+
+%This gets rid of the caption numbers and names
+\usepackage[center, tablename=Table\ ,labelsep=colon, figurename=Figure\ ]{caption}
+\DeclareCaptionFormat{myformat}{\textbf{\underline{#1}}\\#3}
+\DeclareCaptionLabelFormat{labformat}{#1#2}
+\captionsetup{format=myformat, labelformat=labformat}
+
+\pagestyle{empty}
+
+%This re-defines tables to have a \newpage before them.
+%\let\oldtable\table
+%\let\endoldtable\endtable
+%\renewenvironment{table}{\newpage $\mbox{ }$  \oldtable}{\endoldtable \newpage}
+
+
+\newenvironment{table_old}{\begin{table}}{\end{table}}
+\let \oldtable\table
+\let \endoldtable\endtable
+
+
+\renewenvironment{table}{\bgroup \oldtable \small}{\endoldtable \egroup}
+
+\newfloat{tablecontainer}{thp}{lop}
+
+
+\newcommand{\finaldate}{Feb 10}
+\newcommand{\datafinaldate}{Mar 11}
+
+\usepackage[strings]{underscore}
+\usepackage{subfig}
+
+\captionsetup[subfigure]{labelformat=empty}
+
+\usepackage{graphicx}
+
+\setlength\topmargin{-0.5in}
+\begin{document}
+\author{Dan Wilson}
+\title{Results}
+
+% Input the Summary Statistics Tables
+
+\input{"../table definitions/Table1.tex"}
+\input{"../table definitions/Table2.tex"}
+\input{"../table definitions/Table3.tex"}
+\clearpage
+% Input the Basic Regressions
+\begin{center}
+\input{"../table definitions/Table4.tex"}
+\input{"../table definitions/Table5.tex"}
+\input{"../table definitions/Table6.tex"}
+\input{"../table definitions/Table7.tex"}
+\end{center}
+
+%This starts the figure numbering at 2.
+% The first figure is included in the text.
+\setcounter{figure}{1}
+
+% Stimulus Summary Graphs
+	\input{"../table definitions/Figure2.tex"}
+	\input{"../table definitions/Figure3.tex"}
+\clearpage
+	\input{"../table definitions/Figure4.tex"}
+
+% Graphs showing the coefficients over time
+	\input{"../table definitions/Figure5.tex"}
+
+%Graphs of the reduced forms...
+
+	\input{"../table definitions/Figure6.tex"}
+
+\end{document} 

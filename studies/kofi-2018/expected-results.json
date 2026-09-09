@@ -1,0 +1,22 @@
+[
+  {
+    "id": "earnings-SSDI",
+    "est": -0.293,
+    "se": 0.069
+  },
+  {
+    "id": "employment-SSDI",
+    "est": -0.699,
+    "se": 0.131
+  },
+  {
+    "id": "earnings-SSI",
+    "est": -0.160,
+    "se": 0.079
+  },
+  {
+    "id": "employment-SSI",
+    "est": -0.360,
+    "se": 0.168
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "id": "ivtotal-fmap",
+    "est": 2.83,
+    "se": 1.01
+  },
+  {
+    "id": "ivgov-fmap",
+    "est": 1.17,
+    "se": 0.36
+  }
+]

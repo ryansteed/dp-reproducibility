@@ -1,0 +1,15 @@
+		(1)	(2)	(3)	(4)	(5)	(6)	(7)	(8)	(9)	(10)	(11)	(12)	(13)	(14)	(15)	(16)
+VARIABLES	LABELS	Change in Soy Area	Change in Soy Area	Change in Agri Employment	Change in Agri Employment	Change in Manuf Employment	Change in Manuf Employment	Net migration rate of people aged 16-55	Net migration rate of people aged 16-55	Change in Soy Area	Change in Soy Area	Change in Agri Employment	Change in Agri Employment	Change in Manuf Employment	Change in Manuf Employment	Net migration rate of people aged 16-55	Net migration rate of people aged 16-55
+																	
+dpotentialAMC	Potential in AMC	0.096	0.099	-0.119	-0.122	0.156	0.153	-0.081	-0.091	0.096	0.099	-0.119	-0.122	0.156	0.153	-0.081	-0.091
+		(0.039)**	(0.035)***	(0.043)***	(0.047)**	(0.032)***	(0.027)***	(0.048)*	(0.037)**	(0.039)**	(0.035)***	(0.043)***	(0.047)**	(0.032)***	(0.027)***	(0.048)*	(0.037)**
+dpotentialUpstream	Potential Upstream		-0.013		0.019		0.017		0.056		-0.013		0.019		0.017		0.056
+			(0.035)		(0.040)		(0.035)		(0.097)		(0.035)		(0.040)		(0.035)		(0.097)
+																	
+Observations		1,119	1,119	1,119	1,119	1,119	1,119	1,119	1,119	1,119	1,119	1,119	1,119	1,119	1,119	1,119	1,119
+R-squared		0.173	0.174	0.206	0.207	0.198	0.198	0.269	0.270	0.173	0.174	0.206	0.207	0.198	0.198	0.269	0.270
+Controls		Bustos+Ours	Bustos+Ours	Bustos+Ours	Bustos+Ours	Bustos+Ours	Bustos+Ours	Bustos+Ours	Bustos+Ours	Bustos+Ours	Bustos+Ours	Bustos+Ours	Bustos+Ours	Bustos+Ours	Bustos+Ours	Bustos+Ours	Bustos+Ours
+State FE		Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes
+SE		Cluster	Cluster	Cluster	Cluster	Cluster	Cluster	Cluster	Cluster	Cluster	Cluster	Cluster	Cluster	Cluster	Cluster	Cluster	Cluster
+Robust standard errors in parentheses																	
+*** p<0.01, ** p<0.05, * p<0.1																	

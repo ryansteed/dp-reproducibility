@@ -1,0 +1,40 @@
+		(1)	(2)	(3)	(4)
+VARIABLES	LABELS	mean	sd	min	max
+					
+position	Position in Basin	5.152	2.589	1.000	9.000
+potentialAMC	Potential in AMC	0.164	0.126	0.004	0.436
+potentialUpstream	Potential Upstream	0.163	0.136	0.000	0.438
+potentialDownstream	Potential Downstream	0.167	0.136	0.000	0.429
+glyph_soy_AMC	Glyphosate in AMC	0.047	0.063	0.000	0.459
+glyph_soy_upstream	Glyphosate Upstream	0.033	0.032	0.000	0.202
+glyph_soy_downstream	Glyphosate Downstream	0.041	0.048	0.000	0.244
+s_areasoy	% Soy Area	0.120	0.183	0.000	0.972
+IMR	Infant Mortality Rate - IMR	15.502	14.252	0.000	250.000
+FMR	Fetal Mortality Rate - FMR	2.767	6.022	0.000	117.647
+r_baby_death_infectious	IMR - Infectious	0.715	2.666	0.000	66.667
+r_baby_death_respiratory	IMR - Respiratory	0.884	3.079	0.000	74.074
+r_baby_death_perinatal	IMR - Perinatal	8.815	10.348	0.000	200.000
+r_baby_death_congenital	IMR - Congenital	2.944	6.054	0.000	153.846
+r_baby_death_external	IMR - External	0.521	2.371	0.000	76.923
+r_baby_death_endoc_nut	IMR - Endocrine and Nutritional	0.279	1.856	0.000	66.667
+r_baby_death_others	IMR - Others	0.602	2.562	0.000	71.429
+s_lowapgar1	% Low Apgar 1	0.166	0.126	0.000	1.000
+s_lowapgar5	% Low Apgar 5	0.028	0.033	0.000	0.700
+s_preterm	% Preterm	0.066	0.046	0.000	0.844
+s_birth_lowbirthw	% Low Birth Weight	0.072	0.032	0.000	0.455
+coverage_psf	Coverage PSF	0.595	0.376	0.000	1.000
+coverage_pbf	Coverage PBF	0.033	0.035	0.000	1.000
+coverage_vaccination	Coverage Vaccination	0.785	0.091	0.419	1.000
+l_gdppc	Log of GDP per capita	1.765	0.477	0.221	4.876
+d_hosp	Hospital Presence	0.848	0.359	0.000	1.000
+hospital_beds_pc	Hospital Beds per Capita*1000	3.104	2.523	0.000	47.936
+baseline_share_poprural	Baseline % Rural Pop (in 2000)	0.358	0.208	0.000	0.917
+baseline_theil	Baseline Theil Index (in 2000)	0.520	0.113	0.242	1.271
+baseline_share_analf	Baseline % Illiterate (15yo+, in 2000)	0.129	0.056	0.018	0.417
+baseline_incomepc	Baseline Income Per Capita (in 2000)	231.190	75.671	84.812	709.880
+baseline_share_poor	Baseline Poverty Rate (in 2000)	0.300	0.128	0.037	0.706
+baseline_share_agri	Baseline Share Agri Employment (in 2000)	0.378	0.186	0.006	0.856
+baseline_share_manuf	Baseline Share Manuf Employment (in 2000)	0.124	0.104	0.004	0.643
+share_GDPagro	Share GDP Agro	0.282	0.163	0.000	0.792
+birth_rate	Birth Rate	0.046	0.012	0.006	0.330
+					

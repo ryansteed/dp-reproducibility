@@ -1,0 +1,27 @@
+[
+  {
+    "id": "cgvo-poor",
+    "est": 0.13,
+    "se": 0.06
+  },
+  {
+    "id": "lcgvo-poor",
+    "est": 0.18,
+    "se": 0.07
+  },
+  {
+    "id": "lcgvo-disable",
+    "est": 0.14,
+    "se": 0.08
+  },
+  {
+    "id": "cgvo-subsidize",
+    "est": 0.19,
+    "se": 0.11
+  },
+  {
+    "id": "lcgvo-subsidize",
+    "est": 0.21,
+    "se": 0.10
+  }
+]

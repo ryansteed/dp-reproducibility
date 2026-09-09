@@ -1,0 +1,19 @@
+% 17 Feb 2025 14:35:58
+\documentclass{article}
+\usepackage{dcolumn}
+\begin{document}
+
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{6}{D{.}{.}{-1}}}
+Contestable         &      -0.065***&      -0.078***&      -0.058***&      -0.049***&      -0.047***&      -0.026** \\
+                    &     (0.018)   &     (0.018)   &     (0.018)   &     (0.017)   &     (0.017)   &     (0.013)   \\
+Observations        &        3028   &        3028   &        3023   &        3023   &        3023   &        3023   \\
+\(R^{2}\)           &       0.053   &       0.086   &       0.155   &       0.207   &       0.209   &       0.440   \\
+\multicolumn{7}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{7}{l}{\footnotesize * p<0.10, ** p<0.05, *** p<0.01}\\
+\end{tabular}
+}
+
+\end{document}
+

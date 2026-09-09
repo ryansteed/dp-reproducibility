@@ -1,0 +1,27 @@
+\begin{table}
+\centering
+\begin{threeparttable}
+\begin{tabular}[t]{lcccccc}
+\toprule
+  & ADMSSN & SATACTNUM & ACTMT75 & SATMT75 & ACTEN75 & SATVR75\\
+\midrule
+RM & \num{-0.015} & \num{-0.010} & \num{0.040} & \num{0.077} & \num{0.181}** & \num{0.043}\\
+ & (\num{0.032}) & (\num{0.049}) & (\num{0.038}) & (\num{0.042}) & (\num{0.055}) & (\num{0.045})\\
+\midrule
+N Obs. & \num{11258} & \num{8395} & \num{6862} & \num{7938} & \num{6863} & \num{7881}\\
+Adjusted R2 & \num{0.96} & \num{0.97} & \num{0.89} & \num{0.91} & \num{0.90} & \num{0.89}\\
+Adjusted within R2 & \num{0.04} & \num{0.06} & \num{0.00} & \num{0.00} & \num{0.01} & \num{0.00}\\
+Wild bootstrap p (subcluster) & 0.689 & 0.866 & 0.336 & 0.133 & 0.010 & 0.408\\
+N college & 1329 & 933 & 841 & 909 & 841 & 909\\
+Controls & Y & Y & Y & Y & Y & Y\\
+Year FE & Y & Y & Y & Y & Y & Y\\
+College FE & Y & Y & Y & Y & Y & Y\\
+\bottomrule
+\multicolumn{7}{l}{\rule{0pt}{1em}* p $<$ 0.05, ** p $<$ 0.01, *** p $<$ 0.001}\\
+\end{tabular}
+\begin{tablenotes}
+\item \textit{Note: } 
+\item add note here
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

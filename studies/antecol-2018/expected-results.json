@@ -1,0 +1,17 @@
+[
+  {
+    "id": "clock-mentenure",
+    "est": 0.176,
+    "se": 0.083
+  },
+  {
+    "id": "clock-womentenure",
+    "est": -0.194,
+    "se": 0.106
+  },
+  {
+    "id": "clock-gendergap",
+    "est": 0.370,
+    "se": 0.146
+  }
+]

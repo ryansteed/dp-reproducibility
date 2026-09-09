@@ -1,0 +1,21 @@
+		(1)	(2)	(3)	(4)	(5)	(6)
+VARIABLES	LABELS	Reduced w/o AMCs at the top	Reduced w/o AMCs at the top	Reduced w/o AMCs at the top	IV w/o AMCs at the top	IV w/o AMCs at the top	IV w/o AMCs at the top
+							
+potentialUpstream	Instrument: Upstream	4.217	4.260	4.629			
+		(1.945)**	(1.878)**	(1.779)**			
+potentialAMC	Instrument: Direct Effect		1.886	1.410			1.315
+			(4.026)	(3.263)			(3.034)
+glyph_soy_upstream	Glyphosate Upstream				35.543	35.892	39.396
+					(16.668)**	(16.238)**	(16.137)**
+							
+Observations		11,319	11,319	11,319	11,319	11,319	11,319
+R-squared		0.103	0.104	0.106			
+Number of AMC		1,029	1,029	1,029	1,029	1,029	1,029
+AMC FE		Yes	Yes	Yes	Yes	Yes	Yes
+UF-Year FE		Yes	Yes	Yes	Yes	Yes	Yes
+Controls		No	No	Yes	No	No	Yes
+IMR_position_mean		18.15	18.15	18.15	18.15	18.15	18.15
+F-stat					48.39	47.86	47.38
+Rejection Rate (Lee et al. 2020)					0.0513	0.0470	0.0358
+Robust standard errors in parentheses							
+*** p<0.01, ** p<0.05, * p<0.1							

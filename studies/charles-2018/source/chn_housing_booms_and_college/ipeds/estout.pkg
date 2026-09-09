@@ -1,0 +1,8 @@
+v 3
+d estout
+d Author: Ben Jann, ETH Zurich, jann@soz.gess.ethz.ch
+d
+d Distribution-Date: 29nov2006
+f estout.ado
+f estout.hlp
+f estout_mystyle.def

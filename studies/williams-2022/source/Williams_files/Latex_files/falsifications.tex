@@ -1,0 +1,19 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{4}{c}}
+\hline\hline
+                    &\multicolumn{2}{c}{\makecell{Black Voter\\Registration Rate}}&\multicolumn{2}{c}{\makecell{White Voter\\Registration Rate}}\\
+                    &         (1)&         (2)&         (3)&         (4)\\
+\hline
+Black lynching rate &      -0.469&            &      -0.053&            \\
+                    &     (0.144)&            &     (0.089)&            \\
+White lynching rate &            &      -0.021&            &      -0.015\\
+                    &            &     (0.228)&            &     (0.138)\\
+Historical Controls &         Yes&         Yes&         Yes&         Yes\\
+State Fixed Effects &         Yes&         Yes&         Yes&         Yes\\
+\hline
+\# of counties      &         267&         267&         267&         267\\
+R-Squared           &       0.548&       0.529&       0.585&       0.585\\
+\hline\hline
+\end{tabular}
+}

@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d (TeX Live 2020)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Williams_Voting.aux
+The style file: aea.bst
+Database file #1: References.lynch.bib
+Warning--empty journal in blalock1967toward
+Warning--empty journal in kent2003making
+Warning--empty journal in lowes2018legacy
+You've used 70 entries,
+            2695 wiz_defined-function locations,
+            947 strings with 14300 characters,
+and the built_in function-call counts, 423323 in all, are:
+= -- 71330
+> -- 4021
+< -- 0
++ -- 34607
+- -- 1247
+* -- 37746
+:= -- 82697
+add.period$ -- 489
+call.type$ -- 70
+change.case$ -- 910
+chr.to.int$ -- 70
+cite$ -- 73
+duplicate$ -- 993
+empty$ -- 2487
+format.name$ -- 1265
+if$ -- 75855
+int.to.chr$ -- 5
+int.to.str$ -- 0
+missing$ -- 0
+newline$ -- 217
+num.names$ -- 770
+pop$ -- 73
+preamble$ -- 1
+purify$ -- 1050
+quote$ -- 0
+skip$ -- 793
+stack$ -- 0
+substring$ -- 102823
+swap$ -- 398
+text.length$ -- 980
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 268
+warning$ -- 3
+while$ -- 1731
+width$ -- 0
+write$ -- 351
+(There were 3 warnings)

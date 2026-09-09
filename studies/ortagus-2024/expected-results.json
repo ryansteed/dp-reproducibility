@@ -1,0 +1,12 @@
+[
+  {
+    "id": "fund-totalrevenue",
+    "est": 0.003,
+    "se": 0.001
+  },
+  {
+    "id": "fund-ruralrevenue",
+    "est": -0.004,
+    "se": 0.001
+  }
+]

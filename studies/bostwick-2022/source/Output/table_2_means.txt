@@ -1,0 +1,27 @@
+-------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /home/rsteed/git/private-research/studies/bostwick-2022/source/Dat
+> a/../Output/table_2_means.txt
+  log type:  text
+ opened on:  25 Jul 2025, 11:01:59
+
+. sum  faculty costs instatetuition totcohortsize per_urm per_white per_fem
+
+    Variable |        Obs        Mean    Std. dev.       Min        Max
+-------------+---------------------------------------------------------
+     faculty |     13,889    340.0003    382.5868         18       3438
+       costs |     13,889     192.098    400.5388          0   5988.427
+instatetui~n |     13,889    11088.47     9181.55          0      42600
+totcohorts~e |     13,889    1099.446    1183.032         18       8533
+     per_urm |     13,889    .2479699    .2309157          0          1
+-------------+---------------------------------------------------------
+   per_white |     13,889    .7092066    .2444485          0          1
+     per_fem |     13,889    .5605048    .1003704          0          1
+
+. log close
+      name:  <unnamed>
+       log:  /home/rsteed/git/private-research/studies/bostwick-2022/source/Dat
+> a/../Output/table_2_means.txt
+  log type:  text
+ closed on:  25 Jul 2025, 11:01:59
+-------------------------------------------------------------------------------

@@ -1,0 +1,27 @@
+[
+  {
+    "id": "teacheryear-math",
+    "est": 0.003,
+    "se": 0.004
+  },
+  {
+    "id": "teacheryear-read",
+    "est": 0.009,
+    "se": 0.003
+  },
+  {
+    "id": "teacheryear-read_lowincome",
+    "est": 0.014,
+    "se": 0.008
+  },
+  {
+    "id": "teacheryear-read_lowwhite",
+    "est": 0.018,
+    "se": 0.007
+  },
+  {
+    "id": "teacheryear-read_lowbaseline",
+    "est": 0.019,
+    "se": 0.008
+  }
+]

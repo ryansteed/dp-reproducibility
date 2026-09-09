@@ -1,0 +1,22 @@
+[
+  {
+    "id": "under-population",
+    "est": -39.6,
+    "se": 14.0
+  },
+  {
+    "id": "under-income",
+    "est": -0.28,
+    "se": 0.07
+  },
+  {
+    "id": "under-revenue",
+    "est": -1.86,
+    "se": 0.90
+  },
+  {
+    "id": "under-house",
+    "est": -0.27,
+    "se": 0.06
+  }
+]

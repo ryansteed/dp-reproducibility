@@ -1,0 +1,26 @@
+StataFileTM:00001:01100:GREC:                          :
+00005:00004:00001:
+*! classname: twowaygraph_g
+*! family: twoway
+*! date: 25 Dec 2017
+*! time: 10:43:49
+*! graph_scheme: s2color
+*! naturallywhite: 1
+*! end
+
+// File created by Graph Editor Recorder.
+// Edit only if you know what you are doing.
+
+.plotregion1._xylines[1].Delete
+// line[1] (x) edits
+
+.xaxis1.plotregion.declare_xyline .gridline_g.new 1997, ordinate(x) plotregion(`.xaxis1.plotregion.objkey') style(default)
+.xaxis1.plotregion._xylines_new = 1
+.xaxis1.plotregion._xylines_rec = 2
+// xaxis1 edits
+
+.plotregion1._xylines[2].style.editstyle linestyle(pattern(dash)) editcopy
+// line[2] (x) pattern
+
+
+// <end>

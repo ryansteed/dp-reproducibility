@@ -1,0 +1,17 @@
+[
+  {
+    "id": "nonmodal-spend",
+    "est": -0.127,
+    "se": 0.043
+  },
+  {
+    "id": "segregation-effect",
+    "est": -0.131,
+    "se": 0.049
+  },
+  {
+    "id": "inequality-effect",
+    "est": -0.191,
+    "se": 0.064
+  }
+]

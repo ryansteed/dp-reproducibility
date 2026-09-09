@@ -1,0 +1,12 @@
+[
+  {
+    "id": "support-experiment",
+    "est": -0.005,
+    "se": 0.003
+  },
+  {
+    "id": "lameduck-experiment",
+    "est": -0.008,
+    "se": 0.003
+  }
+]

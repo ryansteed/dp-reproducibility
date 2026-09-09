@@ -1,0 +1,12 @@
+[
+  {
+    "id": "house-college",
+    "est": -0.020,
+    "se": 0.006
+  },
+  {
+    "id": "house-bachelor",
+    "est": 0.003,
+    "se": 0.003
+  }
+]

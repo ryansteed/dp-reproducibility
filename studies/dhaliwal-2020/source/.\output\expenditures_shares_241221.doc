@@ -1,0 +1,28 @@
+{\rtf1\fs24
+\trowd\trgaph75\trleft-75\intbl\trqc\clbrdrt\brdrs\cellx2016\clbrdrt\brdrs\cellx3456\clbrdrt\brdrs\cellx4896\clbrdrt\brdrs\cellx6768\clbrdrt\brdrs\cellx8352\clbrdrt\brdrs\cellx9648\clbrdrt\brdrs\cellx11088\clbrdrt\brdrs\cellx12816\clbrdrt\brdrs\cellx14256
+\ql \cell\qc (1)\cell\qc (2)\cell\qc (3)\cell\qc (4)\cell\qc (5)\cell\qc (6)\cell\qc (7)\cell\qc (8)\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx2016\cellx3456\cellx4896\cellx6768\cellx8352\cellx9648\cellx11088\cellx12816\cellx14256
+\trowd\trgaph75\trleft-75\trqc\clbrdrb\brdrs\cellx2016\clbrdrb\brdrs\cellx3456\clbrdrb\brdrs\cellx4896\clbrdrb\brdrs\cellx6768\clbrdrb\brdrs\cellx8352\clbrdrb\brdrs\cellx9648\clbrdrb\brdrs\cellx11088\clbrdrb\brdrs\cellx12816\clbrdrb\brdrs\cellx14256
+\ql VARIABLES\cell\qc totexp_1\cell\qc st_1\cell\qc nonstudent_1\cell\qc capfacil_1\cell\qc debt_1\cell\qc nonagcs_1\cell\qc prekadult_1\cell\qc retiree_1\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx2016\cellx3456\cellx4896\cellx6768\cellx8352\cellx9648\cellx11088\cellx12816\cellx14256
+\ql \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\row
+\ql rural_distant\cell\qc -5,136+\cell\qc -2,253+\cell\qc -2,884\cell\qc -2,945\cell\qc 23.55\cell\qc -35.66\cell\qc 88.22\cell\qc -4.390\cell\row
+\ql \cell\qc (3,105)\cell\qc (1,243)\cell\qc (2,442)\cell\qc (2,401)\cell\qc (183.1)\cell\qc (53.34)\cell\qc (79.47)\cell\qc (47.31)\cell\row
+\ql rural_fringe\cell\qc -7,643*\cell\qc -4,079***\cell\qc -3,564\cell\qc -3,507\cell\qc 67.31\cell\qc -48.90\cell\qc 3.895\cell\qc -77.14+\cell\row
+\ql \cell\qc (2,966)\cell\qc (995.1)\cell\qc (2,390)\cell\qc (2,352)\cell\qc (188.2)\cell\qc (60.20)\cell\qc (55.89)\cell\qc (39.49)\cell\row
+\ql town_locale\cell\qc -7,075*\cell\qc -4,456***\cell\qc -2,619\cell\qc -2,710\cell\qc 140.8\cell\qc -42.08\cell\qc 44.92\cell\qc -47.39\cell\row
+\ql \cell\qc (2,932)\cell\qc (933.0)\cell\qc (2,402)\cell\qc (2,362)\cell\qc (179.8)\cell\qc (51.09)\cell\qc (50.02)\cell\qc (39.53)\cell\row
+\ql suburb_locale\cell\qc -7,154*\cell\qc -4,676***\cell\qc -2,478\cell\qc -3,021\cell\qc 456.4**\cell\qc -55.48\cell\qc 199.6***\cell\qc -43.64\cell\row
+\ql \cell\qc (2,914)\cell\qc (927.0)\cell\qc (2,382)\cell\qc (2,349)\cell\qc (170.2)\cell\qc (49.99)\cell\qc (50.79)\cell\qc (39.83)\cell\row
+\ql urban_locale\cell\qc -5,378+\cell\qc -3,826***\cell\qc -1,553\cell\qc -2,689\cell\qc 920.9***\cell\qc -84.71+\cell\qc 300.9**\cell\qc 10.28\cell\row
+\ql \cell\qc (3,022)\cell\qc (1,063)\cell\qc (2,403)\cell\qc (2,351)\cell\qc (235.8)\cell\qc (48.86)\cell\qc (109.5)\cell\qc (54.12)\cell\row
+\ql Constant\cell\qc 22,665***\cell\qc 16,976***\cell\qc 5,689*\cell\qc 4,524+\cell\qc 698.3***\cell\qc 184.3***\cell\qc 139.8**\cell\qc 143.5***\cell\row
+\ql \cell\qc (2,905)\cell\qc (918.2)\cell\qc (2,378)\cell\qc (2,347)\cell\qc (153.3)\cell\qc (46.73)\cell\qc (44.20)\cell\qc (38.22)\cell\row
+\ql \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\row
+\ql Observations\cell\qc 890\cell\qc 890\cell\qc 890\cell\qc 890\cell\qc 890\cell\qc 890\cell\qc 890\cell\qc 890\cell\row
+\trowd\trgaph75\trleft-75\trqc\trbrdrb\brdrs\clbrdrb\brdrs\cellx2016\clbrdrb\brdrs\cellx3456\clbrdrb\brdrs\cellx4896\clbrdrb\brdrs\cellx6768\clbrdrb\brdrs\cellx8352\clbrdrb\brdrs\cellx9648\clbrdrb\brdrs\cellx11088\clbrdrb\brdrs\cellx12816\clbrdrb\brdrs\cellx14256
+\ql R-squared\cell\qc 0.060\cell\qc 0.046\cell\qc 0.047\cell\qc 0.020\cell\qc 0.057\cell\qc 0.007\cell\qc 0.052\cell\qc 0.034\cell\row
+\pard\qc
+Robust standard errors in parentheses\par
+*** p<0.001, ** p<0.01, * p<0.05, + p<0.10\par
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "news-turnout",
+    "est": 0.0045,
+    "se": 0.0017
+  },
+  {
+    "id": "news-reelected",
+    "est": 0.1076,
+    "se": 0.0535
+  },
+  {
+    "id": "news-speed",
+    "est": 2.1636,
+    "se": 1.0851
+  }
+]

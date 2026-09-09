@@ -1,0 +1,286 @@
+Table 10, Panel A: district results
+                       m1              m1a    
+               b/se/blank       b/se/blank    
+wdistres            0.046            0.019    
+                  [0.030]          [0.026]    
+                                              
+postwres            0.173 **         0.253 ***
+                  [0.068]          [0.065]    
+                                              
+r2                   0.86             0.90    
+N                    3943             3943    
+Table 10, Panel A: district results
+                       m1              m1a    
+               b/se/blank       b/se/blank    
+wdistres            0.046            0.019    
+                  [0.030]          [0.026]    
+                                              
+postwres            0.173 **         0.253 ***
+                  [0.068]          [0.065]    
+                                              
+r2                   0.86             0.90    
+N                    3943             3943    
+Table 10, Panel A: district results
+                       m1              m1a    
+               b/se/blank       b/se/blank    
+wdistres            0.046            0.019    
+                  [0.030]          [0.026]    
+                                              
+postwres            0.173 **         0.253 ***
+                  [0.068]          [0.065]    
+                                              
+r2                   0.86             0.90    
+N                    3943             3943    
+Table 10, Panel A: district results
+                       m1              m1a    
+               b/se/blank       b/se/blank    
+wdistres            0.046            0.019    
+                  [0.030]          [0.026]    
+                                              
+postwres            0.173 **         0.253 ***
+                  [0.068]          [0.065]    
+                                              
+r2                   0.86             0.90    
+N                    3943             3943    
+Table 10, Panel A: district results
+                       m1              m1a    
+               b/se/blank       b/se/blank    
+wdistres            0.046            0.019    
+                  [0.030]          [0.026]    
+                                              
+postwres            0.173 **         0.253 ***
+                  [0.068]          [0.065]    
+                                              
+r2                   0.86             0.90    
+N                    3943             3943    
+Table 10, Panel A: district results
+                       m1              m1a    
+               b/se/blank       b/se/blank    
+wdistres            0.046            0.019    
+                  [0.030]          [0.026]    
+                                              
+postwres            0.173 **         0.253 ***
+                  [0.068]          [0.065]    
+                                              
+r2                   0.86             0.90    
+N                    3943             3943    
+Table 10, Panel A: district results
+                       m1              m1a    
+               b/se/blank       b/se/blank    
+wdistres            0.046            0.019    
+                  [0.030]          [0.026]    
+                                              
+postwres            0.173 **         0.253 ***
+                  [0.068]          [0.065]    
+                                              
+r2                   0.86             0.90    
+N                    3943             3943    
+Table 10, Panel A: district results
+                       m1              m1a    
+               b/se/blank       b/se/blank    
+wdistres            0.046            0.019    
+                  [0.030]          [0.026]    
+                                              
+postwres            0.173 **         0.253 ***
+                  [0.068]          [0.065]    
+                                              
+r2                   0.86             0.90    
+N                    3943             3943    
+Table 10, Panel A: district results
+                       m1              m1a    
+               b/se/blank       b/se/blank    
+wdistres            0.046            0.019    
+                  [0.030]          [0.026]    
+                                              
+postwres            0.173 **         0.253 ***
+                  [0.068]          [0.065]    
+                                              
+r2                   0.86             0.90    
+N                    3943             3943    
+Table 10, Panel A: district results
+                       m1              m1a    
+               b/se/blank       b/se/blank    
+wdistres            0.046            0.019    
+                  [0.030]          [0.026]    
+                                              
+postwres            0.173 **         0.253 ***
+                  [0.068]          [0.065]    
+                                              
+r2                   0.86             0.90    
+N                    3943             3943    
+Table 10, Panel A: district results
+                       m1              m1a    
+               b/se/blank       b/se/blank    
+wdistres            0.046            0.019    
+                  [0.030]          [0.026]    
+                                              
+postwres            0.173 **         0.253 ***
+                  [0.068]          [0.065]    
+                                              
+r2                   0.86             0.90    
+N                    3943             3943    
+Table 10, Panel A: district results
+                       m1              m1a    
+               b/se/blank       b/se/blank    
+wdistres            0.046            0.019    
+                  [0.030]          [0.026]    
+                                              
+postwres            0.173 **         0.253 ***
+                  [0.068]          [0.065]    
+                                              
+r2                   0.86             0.90    
+N                    3943             3943    
+Table 10, Panel A: district results
+                       m1              m1a    
+               b/se/blank       b/se/blank    
+wdistres            0.046            0.019    
+                  [0.030]          [0.026]    
+                                              
+postwres            0.173 **         0.253 ***
+                  [0.068]          [0.065]    
+                                              
+r2                   0.86             0.90    
+N                    3943             3943    
+Table 10, Panel A: district results
+                       m1              m1a    
+               b/se/blank       b/se/blank    
+wdistres            0.046            0.019    
+                  [0.030]          [0.026]    
+                                              
+postwres            0.173 **         0.253 ***
+                  [0.068]          [0.065]    
+                                              
+r2                   0.86             0.90    
+N                    3943             3943    
+Table 10, Panel A: district results
+                       m1              m1a    
+               b/se/blank       b/se/blank    
+wdistres            0.046            0.019    
+                  [0.030]          [0.026]    
+                                              
+postwres            0.173 **         0.253 ***
+                  [0.068]          [0.065]    
+                                              
+r2                   0.86             0.90    
+N                    3943             3943    
+Table 10, Panel A: district results
+                       m1              m1a    
+               b/se/blank       b/se/blank    
+wdistres            0.046            0.019    
+                  [0.030]          [0.026]    
+                                              
+postwres            0.173 **         0.253 ***
+                  [0.068]          [0.065]    
+                                              
+r2                   0.86             0.90    
+N                    3943             3943    
+Table 10, Panel A: district results
+                       m1              m1a    
+               b/se/blank       b/se/blank    
+wdistres            0.046            0.019    
+                  [0.030]          [0.026]    
+                                              
+postwres            0.173 **         0.253 ***
+                  [0.068]          [0.065]    
+                                              
+r2                   0.86             0.90    
+N                    3943             3943    
+Table 10, Panel A: district results
+                       m1              m1a    
+               b/se/blank       b/se/blank    
+wdistres            0.046            0.019    
+                  [0.030]          [0.026]    
+                                              
+postwres            0.173 **         0.253 ***
+                  [0.068]          [0.065]    
+                                              
+r2                   0.86             0.90    
+N                    3943             3943    
+Table 10, Panel A: district results
+                       m1              m1a    
+               b/se/blank       b/se/blank    
+wdistres            0.046            0.019    
+                  [0.030]          [0.026]    
+                                              
+postwres            0.173 **         0.253 ***
+                  [0.068]          [0.065]    
+                                              
+r2                   0.86             0.90    
+N                    3943             3943    
+Table 10, Panel A: district results
+                       m1              m1a    
+               b/se/blank       b/se/blank    
+wdistres            0.046            0.019    
+                  [0.030]          [0.026]    
+                                              
+postwres            0.173 **         0.253 ***
+                  [0.068]          [0.065]    
+                                              
+r2                   0.86             0.90    
+N                    3943             3943    
+Table 10, Panel A: district results
+                       m1              m1a    
+               b/se/blank       b/se/blank    
+wdistres            0.046            0.019    
+                  [0.030]          [0.026]    
+                                              
+postwres            0.173 **         0.253 ***
+                  [0.068]          [0.065]    
+                                              
+r2                   0.86             0.90    
+N                    3943             3943    
+Table 10, Panel A: district results
+                       m1              m1a    
+               b/se/blank       b/se/blank    
+wdistres            0.046            0.019    
+                  [0.030]          [0.026]    
+                                              
+postwres            0.173 **         0.253 ***
+                  [0.068]          [0.065]    
+                                              
+r2                   0.86             0.90    
+N                    3943             3943    
+Table 10, Panel A: district results
+                       m1              m1a    
+               b/se/blank       b/se/blank    
+wdistres            0.046            0.019    
+                  [0.030]          [0.026]    
+                                              
+postwres            0.173 **         0.253 ***
+                  [0.068]          [0.065]    
+                                              
+r2                   0.86             0.90    
+N                    3943             3943    
+Table 10, Panel A: district results
+                       m1              m1a    
+               b/se/blank       b/se/blank    
+wdistres            0.046            0.019    
+                  [0.030]          [0.026]    
+                                              
+postwres            0.173 **         0.253 ***
+                  [0.068]          [0.065]    
+                                              
+r2                   0.86             0.90    
+N                    3943             3943    
+Table 10, Panel A: district results
+                       m1              m1a    
+               b/se/blank       b/se/blank    
+wdistres            0.046            0.019    
+                  [0.030]          [0.026]    
+                                              
+postwres            0.173 **         0.253 ***
+                  [0.068]          [0.065]    
+                                              
+r2                   0.86             0.90    
+N                    3943             3943    
+Table 10, Panel A: district results
+                       m1              m1a    
+               b/se/blank       b/se/blank    
+wdistres            0.046            0.019    
+                  [0.030]          [0.026]    
+                                              
+postwres            0.173 **         0.253 ***
+                  [0.068]          [0.065]    
+                                              
+r2                   0.86             0.90    
+N                    3943             3943    

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "routine-emp",
+    "est": 0.149,
+    "se": 0.056
+  },
+  {
+    "id": "routine-serviceemp",
+    "est": 0.192,
+    "se": 0.035
+  },
+  {
+    "id": "routine-transconstremp",
+    "est": 0.248,
+    "se": 0.037
+  },
+  {
+    "id": "routine-clericretailemp",
+    "est": -0.277,
+    "se": 0.038
+  },
+  {
+    "id": "routine-productemp",
+    "est": -0.085,
+    "se": 0.017
+  },
+  {
+    "id": "routine-operatoremp",
+    "est": -0.107,
+    "se": 0.044
+  }
+]

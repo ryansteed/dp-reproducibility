@@ -1,0 +1,22 @@
+[
+  {
+    "id": "bundle-insurer",
+    "est": 0.668,
+    "se": 0.210
+  },
+  {
+    "id": "bundle-premium",
+    "est": -242.5,
+    "se": 105.6
+  },
+  {
+    "id": "population-insurer",
+    "est": 0.645,
+    "se": 0.221
+  },
+  {
+    "id": "population-premium",
+    "est": -137.2,
+    "se": 61.65
+  }
+]

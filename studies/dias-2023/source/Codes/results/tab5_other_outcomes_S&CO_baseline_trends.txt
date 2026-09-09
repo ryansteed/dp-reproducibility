@@ -1,0 +1,19 @@
+		(1)	(2)	(3)	(4)	(5)	(6)	(7)	(8)	(9)	(10)	(11)	(12)	(13)	(14)	(15)	(16)	(17)	(18)	(19)	(20)	(21)	(22)	(23)	(24)	(25)	(26)	(27)	(28)	(29)	(30)	(31)	(32)
+		r_baby_death_24hs	r_baby_death_27days	r_baby_death_year	r_baby_death_infectious	r_baby_death_respiratory	r_baby_death_perinatal	r_baby_death_congenital	r_baby_death_external	r_baby_death_endoc_nut	r_baby_death_genito	r_baby_death_illdef	r_baby_death_others	FMR	s_birth_lowbirthw	s_birth_weekspreg_37plus	s_gesta_preterm	s_gesta_below22	s_gesta_22_27	s_gesta_28_36	s_gesta_37_41	s_gesta_above42	s_lowapgar1	s_lowapgar5	IMR_masc	IMR_fem	sex_ratio	l_births	birth_rate	birth_motheredclow_mean	birth_motheredcmid_mean	birth_motheredchigh_mean	birth_motherage_mean
+VARIABLES	LABELS	IV	IV	IV	IV	IV	IV	IV	IV	IV	IV	IV	IV	IV	IV	IV	IV	IV	IV	IV	IV	IV	IV	IV	IV	IV	IV	IV	IV	IV	IV	IV	IV
+																																	
+glyph_soy_upstream	Glyphosate Upstream	4.765	17.290	9.347	-0.644	7.934	20.869	5.112	1.039	-0.394	0.318	-3.840	1.010	-0.506	0.047	-0.168	0.211	-0.000	0.011	0.200	-0.345	0.176	-0.069	-0.024	30.050	33.171	-0.123	0.285	0.017	-0.133	0.429	-0.296	-1.863
+		(6.495)	(8.627)**	(8.023)	(2.713)	(3.252)**	(9.389)**	(4.692)	(3.027)	(1.221)	(0.382)	(2.841)	(1.662)	(5.324)	(0.040)	(0.152)	(0.129)	(0.002)	(0.004)***	(0.128)	(0.215)	(0.094)*	(0.245)	(0.032)	(20.254)	(18.091)*	(0.165)	(0.357)	(0.012)	(0.173)	(0.169)**	(0.174)*	(0.899)**
+																																	
+Observations		12,309	12,309	12,309	12,309	12,309	12,309	12,309	12,309	12,309	12,309	12,309	12,309	12,309	12,309	12,309	12,309	12,309	12,309	12,309	12,309	12,309	12,309	12,309	12,309	12,309	12,309	12,309	12,309	12,309	12,309	12,309	12,309
+Number of AMC		1,119	1,119	1,119	1,119	1,119	1,119	1,119	1,119	1,119	1,119	1,119	1,119	1,119	1,119	1,119	1,119	1,119	1,119	1,119	1,119	1,119	1,119	1,119	1,119	1,119	1,119	1,119	1,119	1,119	1,119	1,119	1,119
+AMC FE		Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes
+UF-Year FE		Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes
+Controls		Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes
+Baseline Birth Rate Trend		Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes
+Baseline SES Trends		Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes
+F-stat		44.92	44.92	44.92	44.92	44.92	44.92	44.92	44.92	44.92	44.92	44.92	44.92	44.92	44.92	44.92	44.92	44.92	44.92	44.92	44.92	44.92	44.92	44.92	44.92	44.92	44.92	44.92	44.92	44.92	44.92	44.92	44.92
+Rejection Rate (Lee et al. 2020)		0.254	0.0614	0.160	0.409	0.0368	0.0475	0.174	0.372	0.379	0.230	0.130	0.289	0.463	0.155	0.171	0.0942	0.405	0.0282	0.102	0.0980	0.0711	0.393	0.253	0.112	0.0750	0.252	0.238	0.121	0.246	0.0328	0.0871	0.0568
+y_baseline_mean		4.976	6.992	6.036	1.142	1.217	9.980	2.804	0.639	0.425	0.0362	1.047	0.714	4.631	0.0660	0.928	0.0666	0.000384	0.00284	0.0633	0.903	0.0247	0.188	0.0320	19.95	16.01	0.969	5.297	0.0526	0.187	0.464	0.349	24.60
+Robust standard errors in parentheses																																	
+*** p<0.01, ** p<0.05, * p<0.1																																	

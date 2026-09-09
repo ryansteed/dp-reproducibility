@@ -1,0 +1,22 @@
+[
+  {
+    "id": "pardon_crime",
+    "est": 57.016,
+    "se": 11.571
+  },
+  {
+    "id": "pardon_incarceration",
+    "est": -38.116,
+    "se": 3.48
+  },
+  {
+    "id": "parson_diffincrime",
+    "est": 1.129,
+    "se": 0.2837
+  },
+  {
+    "id": "parson_reverseinca",
+    "est": 3.223,
+    "se": 0.856
+  }
+]

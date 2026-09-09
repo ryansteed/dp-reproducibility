@@ -1,0 +1,22 @@
+[
+  {
+    "id": "dtariff-emplmf",
+    "est": 0.27,
+    "se": 0.102
+  },
+  {
+    "id": "dtariff-female",
+    "est": -0.42,
+    "se": 0.15
+  },
+  {
+    "id": "dtariff-dis",
+    "est": 0.26,
+    "se": 0.12
+  },
+  {
+    "id": "dtariff-compsh",
+    "est": -0.16,
+    "se": 0.03
+  }
+]

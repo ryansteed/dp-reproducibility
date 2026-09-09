@@ -1,0 +1,59 @@
+		(1)	(2)	(3)	(4)	(5)	(6)
+VARIABLES	LABELS	Nazi_share2003	Nazi_share2003	Nazi_share2003	Nazi_share2011	Nazi_share2011	Nazi_share2011
+							
+radio1	At least 1 RTS radio available	-0.006			0.024***		
+		[0.008]			[0.008]		
+log_distance_full	Distance to Serbia, logged	-0.004	-0.003	-0.003	-0.012	-0.010	-0.014**
+		[0.007]	[0.006]	[0.005]	[0.008]	[0.008]	[0.006]
+logpop	Population (logged)	-0.005	-0.004	-0.000	-0.001	-0.004	-0.004
+		[0.005]	[0.005]	[0.002]	[0.005]	[0.004]	[0.002]
+male_share	% of male population	-0.261	-0.240	0.095	0.027	-0.048	-0.301*
+		[0.316]	[0.311]	[0.217]	[0.394]	[0.382]	[0.158]
+z2	% of aged 21-40	0.272	0.322	0.012	0.523	0.241	0.331*
+		[0.439]	[0.456]	[0.219]	[0.341]	[0.359]	[0.191]
+z3	% of aged 41-60	0.284	0.284	0.216	-0.260	-0.251	0.024
+		[0.292]	[0.290]	[0.157]	[0.295]	[0.295]	[0.133]
+z6	% of aged 61+	-0.231	-0.196	-0.198**	0.215	0.085	0.095
+		[0.195]	[0.191]	[0.099]	[0.225]	[0.220]	[0.090]
+Croats	% of Croats	0.033	0.032	0.018	0.064**	0.061**	0.068***
+		[0.035]	[0.034]	[0.033]	[0.027]	[0.026]	[0.019]
+higher_educ	higher_educ	-0.100	-0.123	-0.043	-0.010	0.078	0.317*
+		[0.216]	[0.230]	[0.164]	[0.222]	[0.204]	[0.175]
+ec_active	Economically active population, %	0.171	0.174	-0.077	0.352	0.344	0.023
+		[0.249]	[0.248]	[0.087]	[0.244]	[0.242]	[0.097]
+disable_share2	Disabled after the war of independence, %	0.594*	0.647**	0.144	1.275***	0.949**	0.341
+		[0.321]	[0.320]	[0.317]	[0.460]	[0.441]	[0.376]
+war	Was important during the war	-0.003	-0.003		0.010	0.010	
+		[0.014]	[0.014]		[0.015]	[0.015]	
+monument	Monument in the honor of died defendants of the town	0.009	0.008		-0.013	-0.010	
+		[0.012]	[0.011]		[0.012]	[0.012]	
+name_of_the_streets_cyrillic	Names of the streets in Cyrillic script	-0.029**	-0.027**		-0.021*	-0.033**	
+		[0.014]	[0.013]		[0.011]	[0.014]	
+name_of_the_streets_in_hungarian	Names of the streets in Hungarian	-0.014	-0.014		-0.014	-0.015	
+		[0.014]	[0.014]		[0.015]	[0.015]	
+pivo_Serb	Serbian beer in bars	-0.008	-0.008		-0.010	-0.014	
+		[0.009]	[0.009]		[0.010]	[0.011]	
+o.r2	county==County of Požega-Slavonia = o,	-	-		-	-	-
+							
+o.r3	county==County of Slavonski Brod-Posavina = o,	-	-		-	-	
+							
+o.r4	county==County of Virovitica-Podravina = o,	-	-	-	-	-	
+							
+o.r5	county==County of Vukovar-Sirmium = o,	-	-				
+							
+bliz_forest	Large forest nearby	-0.004	-0.003		0.010	0.006	
+		[0.009]	[0.009]		[0.009]	[0.010]	
+s1	Maximum signal strength of all RTS radios		-0.115			1.266***	
+			[0.505]			[0.446]	
+s1_1	s1_1			0.748*			0.484
+				[0.384]			[0.500]
+o.r1	county==County of Osijek-Baranja = o,				-	-	
+							
+							
+Observations		121	121	369	123	123	375
+R-squared		0.440	0.439	0.190	0.396	0.394	0.358
+Mean of dependent		0.0718	0.0718	0.0718	0.0522	0.0522	0.0522
+Persuasion rates		-0.0117	-0.00136	0.00916	0.0473	0.0147	0.00579
+ATT		-0.0184	-0.00225	0.0146	0.0776	0.0247	0.00942
+Robust standard errors in brackets							
+*** p<0.01, ** p<0.05, * p<0.1							

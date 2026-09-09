@@ -1,0 +1,13 @@
+Table A1: Robustness to Excluding Aggregations			
+	(1)	(2)	(3)
+	g_pop		
+bzone	0.128	0.148	0.183
+	(0.141)	(0.151)	(0.153)
+treat	-0.775***	-0.871***	-0.759***
+	(0.185)	(0.201)	(0.187)
+Constant	1.895***	-0.081	-0.016
+	(0.120)	(0.058)	(0.111)
+Observations	777	693	718
+R-squared	0.21	0.21	0.35
+Robust standard errors in parentheses			
+* significant at 10%; ** significant at 5%; *** significant at 1%			

@@ -1,0 +1,30 @@
+\begin{table}[p]\centering\captionsetup{width=\textwidth,labelformat=empty}\begin{threeparttable}\footnotesize{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Table 6: City Turnover, Administrative Oversight, and Audit Outcomes}
+\begin{tabular}{l*{3}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         \\
+Dependent Variable & log(SuspiciousExpenditures) & log(SuspExp/Project) & log(Projects Audited) \\
+\hline
+Hometown            &      -0.670\sym{***}&      -0.638\sym{***}&      -0.024         \\
+                    &     (0.168)         &     (0.159)         &     (0.056)         \\
+CityTurnover        &      -0.012         &       0.001         &      -0.015         \\
+                    &     (0.029)         &     (0.031)         &     (0.012)         \\
+CityTurnover*Hometown&       0.378\sym{**} &       0.367\sym{**} &       0.007         \\
+                    &     (0.178)         &     (0.175)         &     (0.044)         \\
+\hline
+Year FEs         & Yes & Yes & Yes \\
+City FEs         & Yes & Yes & Yes \\
+Auditor Controls & Yes & Yes & Yes \\
+City Controls    & Yes & Yes & Yes \\
+\hline
+Observations        &        2939         &        2939         &        2939         \\
+R-Squared           &        .828         &        .808         &        .787         \\
+Mean of Dep. Var    &        11.7         &        5.75         &        5.91         \\
+\hline\hline
+\end{tabular}}
+\captionsetup{justification=justified,labelformat=empty}
+\begin{tablenotes}
+\item Notes: Standard errors clustered by city in parentheses. The sample covers the period from 2006 to 2016. The dependent variable in columns (1) is $ log(SuspiciousExpenditures) $, which denotes the logarithm of total questionable expenditures found during the audit. The dependent variable in columns (2) is $ log(SuspiciousExpenditures \; per \;Audit) $, which denotes the logarithm of total questionable expenditures per audited project. The dependent variable in columns (3) is $ log(Projects \; Audited) $, which denotes the logarithm of number of projects audited. $ Hometown $ is an indicator variable denoting that the provincial chief auditor was born in city $ c $. $ Turnover $ denotes years in which the prefecture mayor or party secretary departs, which triggers audit oversight by the province-level Organization Department. Auditor Controls include $ Gender $, $ Age $, $ Tenure $, $ Tenure^2 $, $ Education $, $ EduFinance $, $ PastAuditor $, $ PastFinance $, $ PastDiscipline $, and $ PastCityLeader $. City controls include $ Log(GDP pc) $, $ IndustrialRatio $, $ Log(Population) $, $ Log(GovRev) $, $ GovBalance $, $ FDI/GDP $, and $ AvgEdu $. The coefficients and standard errors of the control variables are suppressed to conserve space. See the notes to Table 1 for detailed definitions of the control variables.   \\  Significance: * significant at 10\%; ** significant at 5\%; *** significant at 1\%.
+\end{tablenotes}
+\end{threeparttable}\end{table}

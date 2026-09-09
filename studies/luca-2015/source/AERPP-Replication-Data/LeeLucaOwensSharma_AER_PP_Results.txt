@@ -1,0 +1,1791 @@
+----------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /home/zhiwenz/private-research/studies/luca-2015/source/AERPP-Replication-Data/LeeLucaOwensSharma_A
+> ER_PP_Results.txt
+  log type:  text
+ opened on:  24 Nov 2024, 12:37:40
+
+. *****************************************************************;
+. * Individual Level Data from National Family Household Survey
+> *******************;
+. use LeeLucaOwensSharma_AER_PP_NFHSData.dta;
+
+. *****************************************************************;
+. * Set state controls and state by year fixed effects 
+> *******************;
+.  global controls literacy purban pcgdp unemp pcpolice pcpolice_exp pmale health educ ;
+
+. egen C=group(State year) ;
+
+. *****************************************************************;
+. * Generate results, using Donald and Lang (2007) two-step correction for
+> * standard errors 
+> *******************;
+. *****************************************************************;
+. di as text "Table 1 Row 1" ;
+Table 1 Row 1
+
+. *******************;
+. * 1. year FE ;
+. eststo: xi: reg husb_drink prohib  i.year $controls [aw=stwt], cluster(State);
+i.year            _Iyear_1980-2012    (naturally coded; _Iyear_1980 omitted)
+(sum of wgt is 72,310,598,077)
+note: _Iyear_1981 omitted because of collinearity.
+note: _Iyear_1982 omitted because of collinearity.
+note: _Iyear_1983 omitted because of collinearity.
+note: _Iyear_1984 omitted because of collinearity.
+note: _Iyear_1985 omitted because of collinearity.
+note: _Iyear_1986 omitted because of collinearity.
+note: _Iyear_1987 omitted because of collinearity.
+note: _Iyear_1988 omitted because of collinearity.
+note: _Iyear_1989 omitted because of collinearity.
+note: _Iyear_1990 omitted because of collinearity.
+note: _Iyear_1991 omitted because of collinearity.
+note: _Iyear_1992 omitted because of collinearity.
+note: _Iyear_1993 omitted because of collinearity.
+note: _Iyear_1994 omitted because of collinearity.
+note: _Iyear_1995 omitted because of collinearity.
+note: _Iyear_1996 omitted because of collinearity.
+note: _Iyear_1997 omitted because of collinearity.
+note: _Iyear_1998 omitted because of collinearity.
+note: _Iyear_2000 omitted because of collinearity.
+note: _Iyear_2001 omitted because of collinearity.
+note: _Iyear_2002 omitted because of collinearity.
+note: _Iyear_2003 omitted because of collinearity.
+note: _Iyear_2004 omitted because of collinearity.
+note: _Iyear_2007 omitted because of collinearity.
+note: _Iyear_2008 omitted because of collinearity.
+note: _Iyear_2009 omitted because of collinearity.
+note: _Iyear_2010 omitted because of collinearity.
+note: _Iyear_2011 omitted because of collinearity.
+note: _Iyear_2012 omitted because of collinearity.
+
+Linear regression                               Number of obs     =     77,842
+                                                F(13, 16)         =     133.95
+                                                Prob > F          =     0.0000
+                                                R-squared         =     0.0211
+                                                Root MSE          =     .45222
+
+                                 (Std. err. adjusted for 17 clusters in State)
+------------------------------------------------------------------------------
+             |               Robust
+  husb_drink | Coefficient  std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+      prohib |  -.1560277    .046956    -3.32   0.004      -.25557   -.0564853
+ _Iyear_1981 |          0  (omitted)
+ _Iyear_1982 |          0  (omitted)
+ _Iyear_1983 |          0  (omitted)
+ _Iyear_1984 |          0  (omitted)
+ _Iyear_1985 |          0  (omitted)
+ _Iyear_1986 |          0  (omitted)
+ _Iyear_1987 |          0  (omitted)
+ _Iyear_1988 |          0  (omitted)
+ _Iyear_1989 |          0  (omitted)
+ _Iyear_1990 |          0  (omitted)
+ _Iyear_1991 |          0  (omitted)
+ _Iyear_1992 |          0  (omitted)
+ _Iyear_1993 |          0  (omitted)
+ _Iyear_1994 |          0  (omitted)
+ _Iyear_1995 |          0  (omitted)
+ _Iyear_1996 |          0  (omitted)
+ _Iyear_1997 |          0  (omitted)
+ _Iyear_1998 |          0  (omitted)
+ _Iyear_1999 |   .0023727   .0171962     0.14   0.892    -.0340815    .0388269
+ _Iyear_2000 |          0  (omitted)
+ _Iyear_2001 |          0  (omitted)
+ _Iyear_2002 |          0  (omitted)
+ _Iyear_2003 |          0  (omitted)
+ _Iyear_2004 |          0  (omitted)
+ _Iyear_2005 |  -.0821153   .0600848    -1.37   0.191    -.2094894    .0452588
+ _Iyear_2006 |   .0263333    .052858     0.50   0.625    -.0857208    .1383873
+ _Iyear_2007 |          0  (omitted)
+ _Iyear_2008 |          0  (omitted)
+ _Iyear_2009 |          0  (omitted)
+ _Iyear_2010 |          0  (omitted)
+ _Iyear_2011 |          0  (omitted)
+ _Iyear_2012 |          0  (omitted)
+    literacy |   .0010244   .0030766     0.33   0.743    -.0054976    .0075464
+      purban |  -.0014726   .0019657    -0.75   0.465    -.0056397    .0026944
+       pcgdp |   1.83e-06   6.65e-06     0.28   0.786    -.0000123    .0000159
+       unemp |   .0013458   .0115728     0.12   0.909    -.0231873     .025879
+    pcpolice |   .0369927   .0747019     0.50   0.627    -.1213683    .1953537
+pcpolice_exp |  -.0018262   .0042805    -0.43   0.675    -.0109004    .0072481
+       pmale |  -.7689746   .5232811    -1.47   0.161    -1.878281    .3403317
+      health |  -.0197071   .0176672    -1.12   0.281    -.0571599    .0177457
+        educ |  -.0060322   .0074828    -0.81   0.432    -.0218951    .0098307
+       _cons |    .806371   .3430973     2.35   0.032     .0790372    1.533705
+------------------------------------------------------------------------------
+(est1 stored)
+
+. * 2. husband controls ;
+. xi: areg husb_drink husb_age husb_educ husb_wc urban hhsize i.religion [aw=stwt], absorb(C);
+i.religion        _Ireligion_1-5      (naturally coded; _Ireligion_1 omitted)
+(sum of wgt is 91,198,335,477)
+
+Linear regression, absorbing indicators             Number of obs     = 98,739
+Absorbed variable: C                                No. of categories =     74
+                                                    F(9, 98656)       = 580.66
+                                                    Prob > F          = 0.0000
+                                                    R-squared         = 0.1125
+                                                    Adj R-squared     = 0.1118
+                                                    Root MSE          = 0.4423
+
+------------------------------------------------------------------------------
+  husb_drink | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+    husb_age |  -.0013422    .000165    -8.13   0.000    -.0016656   -.0010188
+   husb_educ |  -.0063365   .0002214   -28.62   0.000    -.0067704   -.0059025
+     husb_wc |  -.0917952   .0036571   -25.10   0.000     -.098963   -.0846273
+       urban |    .009505    .003471     2.74   0.006     .0027018    .0163082
+      hhsize |  -.0008646   .0006778    -1.28   0.202    -.0021931     .000464
+_Ireligion_2 |  -.2576154   .0047668   -54.04   0.000    -.2669582   -.2482727
+_Ireligion_3 |  -.0037996   .0076433    -0.50   0.619    -.0187804    .0111813
+_Ireligion_4 |   .0623195   .0132017     4.72   0.000     .0364444    .0881946
+_Ireligion_5 |   .1153695   .0094621    12.19   0.000     .0968239    .1339151
+       _cons |   .4689322   .0071446    65.63   0.000     .4549289    .4829356
+------------------------------------------------------------------------------
+F test of absorbed indicators: F(73, 98656) = 78.473          Prob > F = 0.000
+
+. predict drink2, dr ;
+(11,197 missing values generated)
+
+. eststo: xi: reg drink2 prohib $controls i.year [aw=stwt], cluster(State) ;
+i.year            _Iyear_1980-2012    (naturally coded; _Iyear_1980 omitted)
+(sum of wgt is 72,221,842,992)
+note: _Iyear_1981 omitted because of collinearity.
+note: _Iyear_1982 omitted because of collinearity.
+note: _Iyear_1983 omitted because of collinearity.
+note: _Iyear_1984 omitted because of collinearity.
+note: _Iyear_1985 omitted because of collinearity.
+note: _Iyear_1986 omitted because of collinearity.
+note: _Iyear_1987 omitted because of collinearity.
+note: _Iyear_1988 omitted because of collinearity.
+note: _Iyear_1989 omitted because of collinearity.
+note: _Iyear_1990 omitted because of collinearity.
+note: _Iyear_1991 omitted because of collinearity.
+note: _Iyear_1992 omitted because of collinearity.
+note: _Iyear_1993 omitted because of collinearity.
+note: _Iyear_1994 omitted because of collinearity.
+note: _Iyear_1995 omitted because of collinearity.
+note: _Iyear_1996 omitted because of collinearity.
+note: _Iyear_1997 omitted because of collinearity.
+note: _Iyear_1998 omitted because of collinearity.
+note: _Iyear_2000 omitted because of collinearity.
+note: _Iyear_2001 omitted because of collinearity.
+note: _Iyear_2002 omitted because of collinearity.
+note: _Iyear_2003 omitted because of collinearity.
+note: _Iyear_2004 omitted because of collinearity.
+note: _Iyear_2007 omitted because of collinearity.
+note: _Iyear_2008 omitted because of collinearity.
+note: _Iyear_2009 omitted because of collinearity.
+note: _Iyear_2010 omitted because of collinearity.
+note: _Iyear_2011 omitted because of collinearity.
+note: _Iyear_2012 omitted because of collinearity.
+
+Linear regression                               Number of obs     =     77,748
+                                                F(13, 16)         =     914.64
+                                                Prob > F          =     0.0000
+                                                R-squared         =     0.0226
+                                                Root MSE          =     .44044
+
+                                 (Std. err. adjusted for 17 clusters in State)
+------------------------------------------------------------------------------
+             |               Robust
+      drink2 | Coefficient  std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+      prohib |  -.1348355   .0357457    -3.77   0.002     -.210613    -.059058
+    literacy |  -.0005416   .0023371    -0.23   0.820    -.0054961    .0044129
+      purban |  -.0012248   .0015985    -0.77   0.455    -.0046135    .0021639
+       pcgdp |   2.37e-06   4.93e-06     0.48   0.638    -8.09e-06    .0000128
+       unemp |   .0123656   .0090739     1.36   0.192    -.0068702    .0316015
+    pcpolice |   .0115901   .0605475     0.19   0.851    -.1167649    .1399451
+pcpolice_exp |   .0007205   .0035687     0.20   0.843    -.0068448    .0082858
+       pmale |  -.7858918   .4394008    -1.79   0.093     -1.71738    .1455963
+      health |  -.0106559   .0151891    -0.70   0.493    -.0428553    .0215435
+        educ |  -.0053293   .0061877    -0.86   0.402    -.0184466    .0077879
+ _Iyear_1981 |          0  (omitted)
+ _Iyear_1982 |          0  (omitted)
+ _Iyear_1983 |          0  (omitted)
+ _Iyear_1984 |          0  (omitted)
+ _Iyear_1985 |          0  (omitted)
+ _Iyear_1986 |          0  (omitted)
+ _Iyear_1987 |          0  (omitted)
+ _Iyear_1988 |          0  (omitted)
+ _Iyear_1989 |          0  (omitted)
+ _Iyear_1990 |          0  (omitted)
+ _Iyear_1991 |          0  (omitted)
+ _Iyear_1992 |          0  (omitted)
+ _Iyear_1993 |          0  (omitted)
+ _Iyear_1994 |          0  (omitted)
+ _Iyear_1995 |          0  (omitted)
+ _Iyear_1996 |          0  (omitted)
+ _Iyear_1997 |          0  (omitted)
+ _Iyear_1998 |          0  (omitted)
+ _Iyear_1999 |   .0141559   .0135661     1.04   0.312     -.014603    .0429149
+ _Iyear_2000 |          0  (omitted)
+ _Iyear_2001 |          0  (omitted)
+ _Iyear_2002 |          0  (omitted)
+ _Iyear_2003 |          0  (omitted)
+ _Iyear_2004 |          0  (omitted)
+ _Iyear_2005 |   -.050388   .0540773    -0.93   0.365    -.1650269    .0642508
+ _Iyear_2006 |   .0223887   .0473634     0.47   0.643    -.0780172    .1227947
+ _Iyear_2007 |          0  (omitted)
+ _Iyear_2008 |          0  (omitted)
+ _Iyear_2009 |          0  (omitted)
+ _Iyear_2010 |          0  (omitted)
+ _Iyear_2011 |          0  (omitted)
+ _Iyear_2012 |          0  (omitted)
+       _cons |   .4746981   .3000295     1.58   0.133    -.1613362    1.110732
+------------------------------------------------------------------------------
+(est2 stored)
+
+. * 3. add bargaining controls ;
+. xi: areg husb_drink husb_age husb_educ husb_wc urban hhsize children rep_educ rep_age rep_wc r_* b_unfaithful 
+> ownmoney i.religion [aw=stwt], absorb(C) ;
+i.religion        _Ireligion_1-5      (naturally coded; _Ireligion_1 omitted)
+(sum of wgt is 91,175,427,763)
+
+Linear regression, absorbing indicators             Number of obs     = 98,714
+Absorbed variable: C                                No. of categories =     74
+                                                    F(17, 98623)      = 367.52
+                                                    Prob > F          = 0.0000
+                                                    R-squared         = 0.1211
+                                                    Adj R-squared     = 0.1203
+                                                    Root MSE          = 0.4401
+
+------------------------------------------------------------------------------
+  husb_drink | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+    husb_age |  -.0004124   .0012424    -0.33   0.740    -.0028475    .0020228
+   husb_educ |  -.0033799   .0002545   -13.28   0.000    -.0038788    -.002881
+     husb_wc |  -.0627315   .0038128   -16.45   0.000    -.0702047   -.0552584
+       urban |    .033356   .0035793     9.32   0.000     .0263406    .0403713
+      hhsize |  -.0062791   .0008177    -7.68   0.000    -.0078817   -.0046764
+    children |   .0096697   .0012011     8.05   0.000     .0073154    .0120239
+    rep_educ |  -.0122432   .0004494   -27.24   0.000     -.013124   -.0113623
+     rep_age |  -.0023884   .0014747    -1.62   0.105    -.0052788    .0005019
+      rep_wc |   .0272604   .0066278     4.11   0.000       .01427    .0402508
+      r_educ |   .0100237   .0013703     7.31   0.000     .0073378    .0127096
+       r_age |   .0620163   .0583844     1.06   0.288    -.0524163    .1764489
+b_unfaithful |   .0100504   .0032267     3.11   0.002     .0037261    .0163747
+    ownmoney |   .0259938   .0030799     8.44   0.000     .0199572    .0320303
+_Ireligion_2 |  -.2741279   .0048041   -57.06   0.000    -.2835438    -.264712
+_Ireligion_3 |   .0033863   .0076283     0.44   0.657    -.0115651    .0183377
+_Ireligion_4 |   .0767031   .0131498     5.83   0.000     .0509296    .1024765
+_Ireligion_5 |   .1146562   .0094219    12.17   0.000     .0961895     .133123
+       _cons |   .4464889   .0497611     8.97   0.000     .3489577    .5440201
+------------------------------------------------------------------------------
+F test of absorbed indicators: F(73, 98623) = 83.085          Prob > F = 0.000
+
+. predict drink3, dr ;
+(11,222 missing values generated)
+
+. eststo: xi: reg drink3 prohib $controls i.year [aw=stwt], cluster(State) ;
+i.year            _Iyear_1980-2012    (naturally coded; _Iyear_1980 omitted)
+(sum of wgt is 72,206,313,898)
+note: _Iyear_1981 omitted because of collinearity.
+note: _Iyear_1982 omitted because of collinearity.
+note: _Iyear_1983 omitted because of collinearity.
+note: _Iyear_1984 omitted because of collinearity.
+note: _Iyear_1985 omitted because of collinearity.
+note: _Iyear_1986 omitted because of collinearity.
+note: _Iyear_1987 omitted because of collinearity.
+note: _Iyear_1988 omitted because of collinearity.
+note: _Iyear_1989 omitted because of collinearity.
+note: _Iyear_1990 omitted because of collinearity.
+note: _Iyear_1991 omitted because of collinearity.
+note: _Iyear_1992 omitted because of collinearity.
+note: _Iyear_1993 omitted because of collinearity.
+note: _Iyear_1994 omitted because of collinearity.
+note: _Iyear_1995 omitted because of collinearity.
+note: _Iyear_1996 omitted because of collinearity.
+note: _Iyear_1997 omitted because of collinearity.
+note: _Iyear_2000 omitted because of collinearity.
+note: _Iyear_2001 omitted because of collinearity.
+note: _Iyear_2002 omitted because of collinearity.
+note: _Iyear_2003 omitted because of collinearity.
+note: _Iyear_2004 omitted because of collinearity.
+note: _Iyear_2005 omitted because of collinearity.
+note: _Iyear_2007 omitted because of collinearity.
+note: _Iyear_2008 omitted because of collinearity.
+note: _Iyear_2009 omitted because of collinearity.
+note: _Iyear_2010 omitted because of collinearity.
+note: _Iyear_2011 omitted because of collinearity.
+note: _Iyear_2012 omitted because of collinearity.
+
+Linear regression                               Number of obs     =     77,730
+                                                F(13, 16)         =     195.14
+                                                Prob > F          =     0.0000
+                                                R-squared         =     0.0263
+                                                Root MSE          =     .43863
+
+                                 (Std. err. adjusted for 17 clusters in State)
+------------------------------------------------------------------------------
+             |               Robust
+      drink3 | Coefficient  std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+      prohib |  -.1317657   .0347304    -3.79   0.002    -.2053908   -.0581406
+    literacy |   .0006066   .0023524     0.26   0.800    -.0043803    .0055936
+      purban |  -.0010099   .0017234    -0.59   0.566    -.0046633    .0026436
+       pcgdp |   1.73e-06   4.93e-06     0.35   0.730    -8.72e-06    .0000122
+       unemp |   .0151104     .00935     1.62   0.126    -.0047107    .0349314
+    pcpolice |   .0087712   .0617206     0.14   0.889    -.1220705     .139613
+pcpolice_exp |   .0009475   .0036564     0.26   0.799    -.0068037    .0086987
+       pmale |  -.8149514   .4659342    -1.75   0.099    -1.802688     .172785
+      health |  -.0094042   .0156916    -0.60   0.557     -.042669    .0238605
+        educ |  -.0053396   .0062633    -0.85   0.407    -.0186172    .0079381
+ _Iyear_1981 |          0  (omitted)
+ _Iyear_1982 |          0  (omitted)
+ _Iyear_1983 |          0  (omitted)
+ _Iyear_1984 |          0  (omitted)
+ _Iyear_1985 |          0  (omitted)
+ _Iyear_1986 |          0  (omitted)
+ _Iyear_1987 |          0  (omitted)
+ _Iyear_1988 |          0  (omitted)
+ _Iyear_1989 |          0  (omitted)
+ _Iyear_1990 |          0  (omitted)
+ _Iyear_1991 |          0  (omitted)
+ _Iyear_1992 |          0  (omitted)
+ _Iyear_1993 |          0  (omitted)
+ _Iyear_1994 |          0  (omitted)
+ _Iyear_1995 |          0  (omitted)
+ _Iyear_1996 |          0  (omitted)
+ _Iyear_1997 |          0  (omitted)
+ _Iyear_1998 |   .0526338   .0540299     0.97   0.344    -.0619045    .1671721
+ _Iyear_1999 |    .063742   .0534402     1.19   0.250    -.0495462    .1770302
+ _Iyear_2000 |          0  (omitted)
+ _Iyear_2001 |          0  (omitted)
+ _Iyear_2002 |          0  (omitted)
+ _Iyear_2003 |          0  (omitted)
+ _Iyear_2004 |          0  (omitted)
+ _Iyear_2005 |          0  (omitted)
+ _Iyear_2006 |   .0761061   .0348767     2.18   0.044     .0021708    .1500415
+ _Iyear_2007 |          0  (omitted)
+ _Iyear_2008 |          0  (omitted)
+ _Iyear_2009 |          0  (omitted)
+ _Iyear_2010 |          0  (omitted)
+ _Iyear_2011 |          0  (omitted)
+ _Iyear_2012 |          0  (omitted)
+       _cons |   .3508725   .2902651     1.21   0.244     -.264462    .9662071
+------------------------------------------------------------------------------
+(est3 stored)
+
+. * 4. interacted age categories as fixed effects ;
+. xi: areg husb_drink husb_age husb_educ husb_wc urban hhsize children rep_educ rep_age rep_wc b_unfaithful ownm
+> oney r_* i.husb_age_cat*i.rep_age_cat i.religion [aw=stwt], absorb(C) ;
+i.husb_age_cat    _Ihusb_age__1-8     (naturally coded; _Ihusb_age__1 omitted)
+i.rep_age_cat     _Irep_age_c_1-6     (naturally coded; _Irep_age_c_1 omitted)
+i.h~cat*i.rep~t   _IhusXrep_#_#       (coded as above)
+i.religion        _Ireligion_1-5      (naturally coded; _Ireligion_1 omitted)
+(sum of wgt is 91,175,427,763)
+
+Linear regression, absorbing indicators             Number of obs     = 98,714
+Absorbed variable: C                                No. of categories =     74
+                                                    F(64, 98576)      = 101.04
+                                                    Prob > F          = 0.0000
+                                                    R-squared         = 0.1230
+                                                    Adj R-squared     = 0.1218
+                                                    Root MSE          = 0.4398
+
+-------------------------------------------------------------------------------
+   husb_drink | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
+--------------+----------------------------------------------------------------
+     husb_age |  -.0049769   .0023416    -2.13   0.034    -.0095664   -.0003874
+    husb_educ |   -.003367   .0002544   -13.24   0.000    -.0038656   -.0028684
+      husb_wc |  -.0632906    .003812   -16.60   0.000    -.0707621    -.055819
+        urban |   .0325595   .0035783     9.10   0.000      .025546     .039573
+       hhsize |  -.0065809   .0008181    -8.04   0.000    -.0081843   -.0049775
+     children |   .0074707   .0012166     6.14   0.000     .0050862    .0098551
+     rep_educ |  -.0125598    .000451   -27.85   0.000    -.0134437   -.0116759
+      rep_age |   .0034099    .002683     1.27   0.204    -.0018487    .0086686
+       rep_wc |   .0255736   .0066292     3.86   0.000     .0125804    .0385667
+ b_unfaithful |   .0099356   .0032255     3.08   0.002     .0036136    .0162575
+     ownmoney |   .0254241   .0030787     8.26   0.000       .01939    .0314583
+       r_educ |   .0104117   .0013707     7.60   0.000     .0077251    .0130982
+        r_age |  -.1557943   .1081361    -1.44   0.150    -.3677398    .0561512
+_Ihusb_age__2 |    .006539   .0437627     0.15   0.881    -.0792354    .0923134
+_Ihusb_age__3 |   .0168633    .044961     0.38   0.708    -.0712598    .1049864
+_Ihusb_age__4 |   .0180913   .0499985     0.36   0.717    -.0799052    .1160877
+_Ihusb_age__5 |   .0184228   .0613125     0.30   0.764    -.1017489    .1385945
+_Ihusb_age__6 |   .1740317   .0851831     2.04   0.041     .0070739    .3409896
+_Ihusb_age__7 |   -.189033   .2770884    -0.68   0.495    -.7321231     .354057
+_Ihusb_age__8 |   .0476177   .2426364     0.20   0.844    -.4279467    .5231821
+_Irep_age_c_2 |  -.0049794   .1887113    -0.03   0.979    -.3748513    .3648925
+_Irep_age_c_3 |  -.0414601   .4229059    -0.10   0.922    -.8703505    .7874304
+_Irep_age_c_4 |  -.3219631   .4651577    -0.69   0.489    -1.233667    .5897403
+_Irep_age_c_5 |   .1074823   .2271691     0.47   0.636    -.3377664     .552731
+_Irep_age_c_6 |   .6535668   .4669051     1.40   0.162    -.2615615    1.568695
+_IhusXrep_2_2 |    .025243   .1892863     0.13   0.894    -.3457558    .3962419
+_IhusXrep_2_3 |   .1020759   .4252515     0.24   0.810     -.731412    .9355639
+_IhusXrep_2_4 |   .4590313   .4829239     0.95   0.342    -.4874938    1.405556
+_IhusXrep_2_5 |  -.0394351   .3954443    -0.10   0.921    -.8145013     .735631
+_IhusXrep_2_6 |  -.4914033   .5596966    -0.88   0.380    -1.588402    .6055952
+_IhusXrep_3_2 |   .0266839   .1889801     0.14   0.888    -.3437148    .3970826
+_IhusXrep_3_3 |   .0997758   .4220923     0.24   0.813      -.72752    .9270716
+_IhusXrep_3_4 |   .3859472   .4639556     0.83   0.405    -.5234001    1.295295
+_IhusXrep_3_5 |   .1205337   .2296833     0.52   0.600    -.3296428    .5707102
+_IhusXrep_3_6 |    -.93511   .4864174    -1.92   0.055    -1.888482    .0182623
+_IhusXrep_4_2 |    .052254   .1901683     0.27   0.783    -.3204736    .4249815
+_IhusXrep_4_3 |   .1083055   .4226822     0.26   0.798    -.7201466    .9367576
+_IhusXrep_4_4 |   .3950938   .4640992     0.85   0.395     -.514535    1.304723
+_IhusXrep_4_5 |  -.0451503   .2236998    -0.20   0.840    -.4835992    .3932985
+_IhusXrep_4_6 |  -.5218779   .4700698    -1.11   0.267    -1.443209    .3994533
+_IhusXrep_5_2 |   .0725274   .1936715     0.37   0.708    -.3070664    .4521213
+_IhusXrep_5_3 |   .1047015   .4244724     0.25   0.805    -.7272593    .9366623
+_IhusXrep_5_4 |   .3976799   .4659511     0.85   0.393    -.5155786    1.310938
+_IhusXrep_5_5 |  -.0360766   .2275774    -0.16   0.874    -.4821256    .4099724
+_IhusXrep_5_6 |  -.5470312    .467372    -1.17   0.242    -1.463075    .3690124
+_IhusXrep_6_2 |  -.0886497   .2034078    -0.44   0.663    -.4873265    .3100271
+_IhusXrep_6_3 |  -.0348416   .4289382    -0.08   0.935    -.8755554    .8058721
+_IhusXrep_6_4 |   .2388945   .4703833     0.51   0.612    -.6830513     1.16084
+_IhusXrep_6_5 |  -.2084938   .2372239    -0.88   0.379    -.6734499    .2564623
+_IhusXrep_6_6 |  -.7647388   .4718917    -1.62   0.105    -1.689641    .1601633
+_IhusXrep_7_2 |   .3193147   .3409687     0.94   0.349    -.3489799    .9876093
+_IhusXrep_7_3 |   .3296977   .5052922     0.65   0.514    -.6606689    1.320064
+_IhusXrep_7_4 |   .6227919   .5402786     1.15   0.249    -.4361478    1.681732
+_IhusXrep_7_5 |    .154384   .3567855     0.43   0.665    -.5449113    .8536793
+_IhusXrep_7_6 |  -.4151388   .5420398    -0.77   0.444     -1.47753    .6472528
+_IhusXrep_8_2 |     .09489   .3308111     0.29   0.774    -.5534958    .7432759
+_IhusXrep_8_3 |  -.0045083   .4902317    -0.01   0.993    -.9653565      .95634
+_IhusXrep_8_4 |   .3852451    .524468     0.73   0.463    -.6427059    1.413196
+_IhusXrep_8_5 |  -.0788866   .3327121    -0.24   0.813    -.7309984    .5732252
+_IhusXrep_8_6 |  -.6487359    .526619    -1.23   0.218    -1.680903    .3834311
+ _Ireligion_2 |  -.2718475   .0048065   -56.56   0.000    -.2812682   -.2624268
+ _Ireligion_3 |   .0037876   .0076252     0.50   0.619    -.0111578    .0187329
+ _Ireligion_4 |   .0753122   .0131415     5.73   0.000     .0495551    .1010693
+ _Ireligion_5 |   .1141716   .0094184    12.12   0.000     .0957117    .1326315
+        _cons |   .5561196   .1068912     5.20   0.000     .3466141    .7656252
+-------------------------------------------------------------------------------
+F test of absorbed indicators: F(73, 98576) = 82.512          Prob > F = 0.000
+
+. predict drink4, dr ;
+(11,222 missing values generated)
+
+. eststo: xi: reg drink4 prohib $controls i.year [aw=stwt], cluster(State) ;
+i.year            _Iyear_1980-2012    (naturally coded; _Iyear_1980 omitted)
+(sum of wgt is 72,206,313,898)
+note: _Iyear_1981 omitted because of collinearity.
+note: _Iyear_1982 omitted because of collinearity.
+note: _Iyear_1983 omitted because of collinearity.
+note: _Iyear_1984 omitted because of collinearity.
+note: _Iyear_1985 omitted because of collinearity.
+note: _Iyear_1986 omitted because of collinearity.
+note: _Iyear_1987 omitted because of collinearity.
+note: _Iyear_1988 omitted because of collinearity.
+note: _Iyear_1989 omitted because of collinearity.
+note: _Iyear_1990 omitted because of collinearity.
+note: _Iyear_1991 omitted because of collinearity.
+note: _Iyear_1992 omitted because of collinearity.
+note: _Iyear_1993 omitted because of collinearity.
+note: _Iyear_1994 omitted because of collinearity.
+note: _Iyear_1995 omitted because of collinearity.
+note: _Iyear_1996 omitted because of collinearity.
+note: _Iyear_1997 omitted because of collinearity.
+note: _Iyear_2000 omitted because of collinearity.
+note: _Iyear_2001 omitted because of collinearity.
+note: _Iyear_2002 omitted because of collinearity.
+note: _Iyear_2003 omitted because of collinearity.
+note: _Iyear_2004 omitted because of collinearity.
+note: _Iyear_2005 omitted because of collinearity.
+note: _Iyear_2007 omitted because of collinearity.
+note: _Iyear_2008 omitted because of collinearity.
+note: _Iyear_2009 omitted because of collinearity.
+note: _Iyear_2010 omitted because of collinearity.
+note: _Iyear_2011 omitted because of collinearity.
+note: _Iyear_2012 omitted because of collinearity.
+
+Linear regression                               Number of obs     =     77,730
+                                                F(13, 16)         =     173.32
+                                                Prob > F          =     0.0000
+                                                R-squared         =     0.0260
+                                                Root MSE          =     .43819
+
+                                 (Std. err. adjusted for 17 clusters in State)
+------------------------------------------------------------------------------
+             |               Robust
+      drink4 | Coefficient  std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+      prohib |  -.1314334   .0348721    -3.77   0.002     -.205359   -.0575078
+    literacy |    .000518   .0023533     0.22   0.829    -.0044707    .0055068
+      purban |  -.0010438   .0017142    -0.61   0.551    -.0046778    .0025902
+       pcgdp |   1.83e-06   4.92e-06     0.37   0.715    -8.60e-06    .0000123
+       unemp |   .0151283   .0093384     1.62   0.125    -.0046683    .0349248
+    pcpolice |   .0092778   .0613464     0.15   0.882    -.1207707    .1393263
+pcpolice_exp |   .0009093   .0036279     0.25   0.805    -.0067816    .0086001
+       pmale |  -.8157533   .4627893    -1.76   0.097    -1.796823    .1653162
+      health |  -.0096879   .0156547    -0.62   0.545    -.0428744    .0234987
+        educ |  -.0052765   .0062614    -0.84   0.412    -.0185501     .007997
+ _Iyear_1981 |          0  (omitted)
+ _Iyear_1982 |          0  (omitted)
+ _Iyear_1983 |          0  (omitted)
+ _Iyear_1984 |          0  (omitted)
+ _Iyear_1985 |          0  (omitted)
+ _Iyear_1986 |          0  (omitted)
+ _Iyear_1987 |          0  (omitted)
+ _Iyear_1988 |          0  (omitted)
+ _Iyear_1989 |          0  (omitted)
+ _Iyear_1990 |          0  (omitted)
+ _Iyear_1991 |          0  (omitted)
+ _Iyear_1992 |          0  (omitted)
+ _Iyear_1993 |          0  (omitted)
+ _Iyear_1994 |          0  (omitted)
+ _Iyear_1995 |          0  (omitted)
+ _Iyear_1996 |          0  (omitted)
+ _Iyear_1997 |          0  (omitted)
+ _Iyear_1998 |   .0520226   .0537269     0.97   0.347    -.0618734    .1659185
+ _Iyear_1999 |   .0632706   .0530154     1.19   0.250     -.049117    .1756583
+ _Iyear_2000 |          0  (omitted)
+ _Iyear_2001 |          0  (omitted)
+ _Iyear_2002 |          0  (omitted)
+ _Iyear_2003 |          0  (omitted)
+ _Iyear_2004 |          0  (omitted)
+ _Iyear_2005 |          0  (omitted)
+ _Iyear_2006 |   .0748217   .0344832     2.17   0.045     .0017207    .1479228
+ _Iyear_2007 |          0  (omitted)
+ _Iyear_2008 |          0  (omitted)
+ _Iyear_2009 |          0  (omitted)
+ _Iyear_2010 |          0  (omitted)
+ _Iyear_2011 |          0  (omitted)
+ _Iyear_2012 |          0  (omitted)
+       _cons |   .3574933   .2887235     1.24   0.234    -.2545731    .9695597
+------------------------------------------------------------------------------
+(est4 stored)
+
+. * 5. age gap + education gap as fixed effects ;
+. xi: areg husb_drink husb_age husb_educ husb_wc urban hhsize children rep_educ rep_age rep_wc b_unfaithful ownm
+> oney i.agegap_cat i.educgap_cat i.religion [aw=stwt], absorb(C) ;
+i.agegap_cat      _Iagegap_ca_1-9     (naturally coded; _Iagegap_ca_1 omitted)
+i.educgap_cat     _Ieducgap_c_1-7     (naturally coded; _Ieducgap_c_1 omitted)
+i.religion        _Ireligion_1-5      (naturally coded; _Ireligion_1 omitted)
+(sum of wgt is 90,542,233,779)
+
+Linear regression, absorbing indicators             Number of obs     = 98,032
+Absorbed variable: C                                No. of categories =     74
+                                                    F(29, 97929)      = 230.01
+                                                    Prob > F          = 0.0000
+                                                    R-squared         = 0.1247
+                                                    Adj R-squared     = 0.1238
+                                                    Root MSE          = 0.4393
+
+-------------------------------------------------------------------------------
+   husb_drink | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
+--------------+----------------------------------------------------------------
+     husb_age |  -.0016805   .0010584    -1.59   0.112     -.003755     .000394
+    husb_educ |  -.0109239   .0010123   -10.79   0.000    -.0129079   -.0089399
+      husb_wc |  -.0480131   .0039003   -12.31   0.000    -.0556577   -.0403685
+        urban |    .036903   .0035924    10.27   0.000     .0298619     .043944
+       hhsize |  -.0059649   .0008221    -7.26   0.000    -.0075762   -.0043536
+     children |   .0090065   .0012082     7.45   0.000     .0066385    .0113746
+     rep_educ |  -.0069514   .0011085    -6.27   0.000    -.0091241   -.0047787
+      rep_age |  -.0008034   .0010698    -0.75   0.453    -.0029001    .0012933
+       rep_wc |   .0223436   .0066356     3.37   0.001     .0093379    .0353494
+ b_unfaithful |   .0098077   .0032325     3.03   0.002      .003472    .0161435
+     ownmoney |   .0279719   .0030865     9.06   0.000     .0219224    .0340215
+_Iagegap_ca_2 |   .0109918   .0619628     0.18   0.859    -.1104546    .1324382
+_Iagegap_ca_3 |   .0053457   .0584818     0.09   0.927    -.1092779    .1199693
+_Iagegap_ca_4 |    .005856   .0591974     0.10   0.921    -.1101701    .1218822
+_Iagegap_ca_5 |    .005192   .0605586     0.09   0.932    -.1135022    .1238861
+_Iagegap_ca_6 |   .0066316   .0625789     0.11   0.916    -.1160223    .1292854
+_Iagegap_ca_7 |   .0004625   .0653031     0.01   0.994    -.1275308    .1284557
+_Iagegap_ca_8 |   .0060634   .0693194     0.09   0.930    -.1298018    .1419287
+_Iagegap_ca_9 |   .0189684   .0768008     0.25   0.805    -.1315602     .169497
+_Ieducgap_c_2 |  -.0618106   .0651994    -0.95   0.343    -.1896007    .0659795
+_Ieducgap_c_3 |  -.0412935   .0650683    -0.63   0.526    -.1688266    .0862395
+_Ieducgap_c_4 |  -.0462756    .065703    -0.70   0.481    -.1750527    .0825015
+_Ieducgap_c_5 |  -.0453178    .067111    -0.68   0.500    -.1768546     .086219
+_Ieducgap_c_6 |   -.054982   .0686956    -0.80   0.423    -.1896245    .0796604
+_Ieducgap_c_7 |    -.07992   .0789591    -1.01   0.311    -.2346789    .0748389
+ _Ireligion_2 |  -.2787533   .0048214   -57.82   0.000    -.2882032   -.2693033
+ _Ireligion_3 |   .0032943   .0076354     0.43   0.666    -.0116711    .0182596
+ _Ireligion_4 |   .0740108   .0131395     5.63   0.000     .0482576    .0997641
+ _Ireligion_5 |    .112606   .0094425    11.93   0.000     .0940988    .1311132
+        _cons |   .5664302   .0880544     6.43   0.000     .3938446    .7390158
+-------------------------------------------------------------------------------
+F test of absorbed indicators: F(73, 97929) = 80.561          Prob > F = 0.000
+
+. predict drink5, dr ;
+(11,904 missing values generated)
+
+. eststo: xi: reg drink5 prohib $controls i.year [aw=stwt], cluster(State) ;
+i.year            _Iyear_1980-2012    (naturally coded; _Iyear_1980 omitted)
+(sum of wgt is 71,739,013,340)
+note: _Iyear_1981 omitted because of collinearity.
+note: _Iyear_1982 omitted because of collinearity.
+note: _Iyear_1983 omitted because of collinearity.
+note: _Iyear_1984 omitted because of collinearity.
+note: _Iyear_1985 omitted because of collinearity.
+note: _Iyear_1986 omitted because of collinearity.
+note: _Iyear_1987 omitted because of collinearity.
+note: _Iyear_1988 omitted because of collinearity.
+note: _Iyear_1989 omitted because of collinearity.
+note: _Iyear_1990 omitted because of collinearity.
+note: _Iyear_1991 omitted because of collinearity.
+note: _Iyear_1992 omitted because of collinearity.
+note: _Iyear_1993 omitted because of collinearity.
+note: _Iyear_1994 omitted because of collinearity.
+note: _Iyear_1995 omitted because of collinearity.
+note: _Iyear_1996 omitted because of collinearity.
+note: _Iyear_1997 omitted because of collinearity.
+note: _Iyear_1998 omitted because of collinearity.
+note: _Iyear_2000 omitted because of collinearity.
+note: _Iyear_2001 omitted because of collinearity.
+note: _Iyear_2002 omitted because of collinearity.
+note: _Iyear_2003 omitted because of collinearity.
+note: _Iyear_2004 omitted because of collinearity.
+note: _Iyear_2007 omitted because of collinearity.
+note: _Iyear_2008 omitted because of collinearity.
+note: _Iyear_2009 omitted because of collinearity.
+note: _Iyear_2010 omitted because of collinearity.
+note: _Iyear_2011 omitted because of collinearity.
+note: _Iyear_2012 omitted because of collinearity.
+
+Linear regression                               Number of obs     =     77,228
+                                                F(13, 16)         =     130.56
+                                                Prob > F          =     0.0000
+                                                R-squared         =     0.0256
+                                                Root MSE          =     .43755
+
+                                 (Std. err. adjusted for 17 clusters in State)
+------------------------------------------------------------------------------
+             |               Robust
+      drink5 | Coefficient  std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+      prohib |  -.1346413   .0338748    -3.97   0.001    -.2064527   -.0628299
+    literacy |   .0005073   .0022986     0.22   0.828    -.0043655    .0053801
+      purban |   -.001144   .0016975    -0.67   0.510    -.0047426    .0024546
+       pcgdp |   2.32e-06   4.84e-06     0.48   0.638    -7.94e-06    .0000126
+       unemp |   .0139819    .009162     1.53   0.147    -.0054407    .0334045
+    pcpolice |    .009261   .0612276     0.15   0.882    -.1205358    .1390577
+pcpolice_exp |    .001078   .0036398     0.30   0.771     -.006638     .008794
+       pmale |  -.8339649   .4558773    -1.83   0.086    -1.800382    .1324519
+      health |  -.0107094    .015553    -0.69   0.501    -.0436803    .0222614
+        educ |  -.0047883   .0060779    -0.79   0.442     -.017673    .0080963
+ _Iyear_1981 |          0  (omitted)
+ _Iyear_1982 |          0  (omitted)
+ _Iyear_1983 |          0  (omitted)
+ _Iyear_1984 |          0  (omitted)
+ _Iyear_1985 |          0  (omitted)
+ _Iyear_1986 |          0  (omitted)
+ _Iyear_1987 |          0  (omitted)
+ _Iyear_1988 |          0  (omitted)
+ _Iyear_1989 |          0  (omitted)
+ _Iyear_1990 |          0  (omitted)
+ _Iyear_1991 |          0  (omitted)
+ _Iyear_1992 |          0  (omitted)
+ _Iyear_1993 |          0  (omitted)
+ _Iyear_1994 |          0  (omitted)
+ _Iyear_1995 |          0  (omitted)
+ _Iyear_1996 |          0  (omitted)
+ _Iyear_1997 |          0  (omitted)
+ _Iyear_1998 |          0  (omitted)
+ _Iyear_1999 |   .0095123   .0132544     0.72   0.483    -.0185857    .0376103
+ _Iyear_2000 |          0  (omitted)
+ _Iyear_2001 |          0  (omitted)
+ _Iyear_2002 |          0  (omitted)
+ _Iyear_2003 |          0  (omitted)
+ _Iyear_2004 |          0  (omitted)
+ _Iyear_2005 |  -.0492112   .0516493    -0.95   0.355    -.1587027    .0602804
+ _Iyear_2006 |   .0219186   .0481891     0.45   0.655    -.0802378     .124075
+ _Iyear_2007 |          0  (omitted)
+ _Iyear_2008 |          0  (omitted)
+ _Iyear_2009 |          0  (omitted)
+ _Iyear_2010 |          0  (omitted)
+ _Iyear_2011 |          0  (omitted)
+ _Iyear_2012 |          0  (omitted)
+       _cons |   .4142401   .3035803     1.36   0.191    -.2293213    1.057802
+------------------------------------------------------------------------------
+(est5 stored)
+
+. *** EDIT by Donna
+> * esttab using LeeLucaOwensSharma_AER_PP_Table1A.csv, se b(4) se(4) r2(%9.2f) starlevels(* .10 ** .05 *** .01)
+>  drop(_I* o.*) replace ;
+. *****************************************************************;
+. di as text "Table 1 Row 2" ;
+Table 1 Row 2
+
+. *******************;
+. eststo clear ;
+
+. * 1. year FE ;
+. eststo: xi: reg husb_beat prohib i.year $controls [aw=stwt], cluster(State) ;
+i.year            _Iyear_1980-2012    (naturally coded; _Iyear_1980 omitted)
+(sum of wgt is 72,314,724,529)
+note: _Iyear_1981 omitted because of collinearity.
+note: _Iyear_1982 omitted because of collinearity.
+note: _Iyear_1983 omitted because of collinearity.
+note: _Iyear_1984 omitted because of collinearity.
+note: _Iyear_1985 omitted because of collinearity.
+note: _Iyear_1986 omitted because of collinearity.
+note: _Iyear_1987 omitted because of collinearity.
+note: _Iyear_1988 omitted because of collinearity.
+note: _Iyear_1989 omitted because of collinearity.
+note: _Iyear_1990 omitted because of collinearity.
+note: _Iyear_1991 omitted because of collinearity.
+note: _Iyear_1992 omitted because of collinearity.
+note: _Iyear_1993 omitted because of collinearity.
+note: _Iyear_1994 omitted because of collinearity.
+note: _Iyear_1995 omitted because of collinearity.
+note: _Iyear_1996 omitted because of collinearity.
+note: _Iyear_1997 omitted because of collinearity.
+note: _Iyear_1998 omitted because of collinearity.
+note: _Iyear_2000 omitted because of collinearity.
+note: _Iyear_2001 omitted because of collinearity.
+note: _Iyear_2002 omitted because of collinearity.
+note: _Iyear_2003 omitted because of collinearity.
+note: _Iyear_2004 omitted because of collinearity.
+note: _Iyear_2007 omitted because of collinearity.
+note: _Iyear_2008 omitted because of collinearity.
+note: _Iyear_2009 omitted because of collinearity.
+note: _Iyear_2010 omitted because of collinearity.
+note: _Iyear_2011 omitted because of collinearity.
+note: _Iyear_2012 omitted because of collinearity.
+
+Linear regression                               Number of obs     =     77,848
+                                                F(13, 16)         =      22.30
+                                                Prob > F          =     0.0000
+                                                R-squared         =     0.0201
+                                                Root MSE          =      .3846
+
+                                 (Std. err. adjusted for 17 clusters in State)
+------------------------------------------------------------------------------
+             |               Robust
+   husb_beat | Coefficient  std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+      prohib |  -.0839883   .0380406    -2.21   0.042    -.1646308   -.0033459
+ _Iyear_1981 |          0  (omitted)
+ _Iyear_1982 |          0  (omitted)
+ _Iyear_1983 |          0  (omitted)
+ _Iyear_1984 |          0  (omitted)
+ _Iyear_1985 |          0  (omitted)
+ _Iyear_1986 |          0  (omitted)
+ _Iyear_1987 |          0  (omitted)
+ _Iyear_1988 |          0  (omitted)
+ _Iyear_1989 |          0  (omitted)
+ _Iyear_1990 |          0  (omitted)
+ _Iyear_1991 |          0  (omitted)
+ _Iyear_1992 |          0  (omitted)
+ _Iyear_1993 |          0  (omitted)
+ _Iyear_1994 |          0  (omitted)
+ _Iyear_1995 |          0  (omitted)
+ _Iyear_1996 |          0  (omitted)
+ _Iyear_1997 |          0  (omitted)
+ _Iyear_1998 |          0  (omitted)
+ _Iyear_1999 |   .0165369   .0202581     0.82   0.426    -.0264083    .0594822
+ _Iyear_2000 |          0  (omitted)
+ _Iyear_2001 |          0  (omitted)
+ _Iyear_2002 |          0  (omitted)
+ _Iyear_2003 |          0  (omitted)
+ _Iyear_2004 |          0  (omitted)
+ _Iyear_2005 |  -.0015582   .0421948    -0.04   0.971    -.0910072    .0878908
+ _Iyear_2006 |  -.0306146    .035701    -0.86   0.404    -.1062974    .0450682
+ _Iyear_2007 |          0  (omitted)
+ _Iyear_2008 |          0  (omitted)
+ _Iyear_2009 |          0  (omitted)
+ _Iyear_2010 |          0  (omitted)
+ _Iyear_2011 |          0  (omitted)
+ _Iyear_2012 |          0  (omitted)
+    literacy |  -.0048163   .0014399    -3.34   0.004    -.0078688   -.0017638
+      purban |   .0033483   .0017377     1.93   0.072    -.0003355    .0070321
+       pcgdp |   4.25e-07   4.21e-06     0.10   0.921    -8.50e-06    9.35e-06
+       unemp |   .0033496   .0080785     0.41   0.684    -.0137761    .0204753
+    pcpolice |  -.0466938   .0457829    -1.02   0.323    -.1437493    .0503616
+pcpolice_exp |   .0021801   .0027803     0.78   0.444    -.0037139    .0080741
+       pmale |  -.4608231   .3456041    -1.33   0.201    -1.193471     .271825
+      health |  -.0137276   .0105342    -1.30   0.211    -.0360592    .0086039
+        educ |   .0048812   .0042585     1.15   0.269    -.0041464    .0139089
+       _cons |   .6275617   .1571219     3.99   0.001     .2944781    .9606452
+------------------------------------------------------------------------------
+(est1 stored)
+
+. * 2. husband controls ;
+. xi: areg husb_beat husb_age husb_educ husb_wc urban hhsize i.religion [aw=stwt], absorb(C) ;
+i.religion        _Ireligion_1-5      (naturally coded; _Ireligion_1 omitted)
+(sum of wgt is 91,202,939,077)
+
+Linear regression, absorbing indicators             Number of obs     = 98,744
+Absorbed variable: C                                No. of categories =     74
+                                                    F(9, 98661)       = 155.14
+                                                    Prob > F          = 0.0000
+                                                    R-squared         = 0.0561
+                                                    Adj R-squared     = 0.0554
+                                                    Root MSE          = 0.3651
+
+------------------------------------------------------------------------------
+   husb_beat | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+    husb_age |  -.0001231   .0001362    -0.90   0.366    -.0003901    .0001438
+   husb_educ |  -.0041955   .0001831   -22.91   0.000    -.0045545   -.0038366
+     husb_wc |  -.0417755   .0030194   -13.84   0.000    -.0476935   -.0358576
+       urban |  -.0243757   .0028654    -8.51   0.000    -.0299918   -.0187597
+      hhsize |   .0007616   .0005595     1.36   0.173     -.000335    .0018582
+_Ireligion_2 |    .028523   .0039346     7.25   0.000     .0208114    .0362347
+_Ireligion_3 |  -.0033623   .0063097    -0.53   0.594    -.0157292    .0090046
+_Ireligion_4 |  -.0237904   .0108973    -2.18   0.029     -.045149   -.0024319
+_Ireligion_5 |    .012284   .0078106     1.57   0.116    -.0030246    .0275926
+       _cons |   .2109742   .0058981    35.77   0.000      .199414    .2225345
+------------------------------------------------------------------------------
+F test of absorbed indicators: F(73, 98661) = 50.283          Prob > F = 0.000
+
+. predict beat2, dr ;
+(11,192 missing values generated)
+
+. eststo: xi: reg beat2 prohib $controls i.year [aw=stwt], cluster(State) ;
+i.year            _Iyear_1980-2012    (naturally coded; _Iyear_1980 omitted)
+(sum of wgt is 72,225,969,444)
+note: _Iyear_1981 omitted because of collinearity.
+note: _Iyear_1982 omitted because of collinearity.
+note: _Iyear_1983 omitted because of collinearity.
+note: _Iyear_1984 omitted because of collinearity.
+note: _Iyear_1985 omitted because of collinearity.
+note: _Iyear_1986 omitted because of collinearity.
+note: _Iyear_1987 omitted because of collinearity.
+note: _Iyear_1988 omitted because of collinearity.
+note: _Iyear_1989 omitted because of collinearity.
+note: _Iyear_1990 omitted because of collinearity.
+note: _Iyear_1991 omitted because of collinearity.
+note: _Iyear_1992 omitted because of collinearity.
+note: _Iyear_1993 omitted because of collinearity.
+note: _Iyear_1994 omitted because of collinearity.
+note: _Iyear_1995 omitted because of collinearity.
+note: _Iyear_1996 omitted because of collinearity.
+note: _Iyear_1997 omitted because of collinearity.
+note: _Iyear_1998 omitted because of collinearity.
+note: _Iyear_2000 omitted because of collinearity.
+note: _Iyear_2001 omitted because of collinearity.
+note: _Iyear_2002 omitted because of collinearity.
+note: _Iyear_2003 omitted because of collinearity.
+note: _Iyear_2004 omitted because of collinearity.
+note: _Iyear_2007 omitted because of collinearity.
+note: _Iyear_2008 omitted because of collinearity.
+note: _Iyear_2009 omitted because of collinearity.
+note: _Iyear_2010 omitted because of collinearity.
+note: _Iyear_2011 omitted because of collinearity.
+note: _Iyear_2012 omitted because of collinearity.
+
+Linear regression                               Number of obs     =     77,754
+                                                F(13, 16)         =      16.29
+                                                Prob > F          =     0.0000
+                                                R-squared         =     0.0174
+                                                Root MSE          =     .38164
+
+                                 (Std. err. adjusted for 17 clusters in State)
+------------------------------------------------------------------------------
+             |               Robust
+       beat2 | Coefficient  std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+      prohib |  -.0823357   .0381842    -2.16   0.047    -.1632826   -.0013889
+    literacy |  -.0042268    .001426    -2.96   0.009    -.0072497   -.0012038
+      purban |    .003416   .0017562     1.95   0.070     -.000307     .007139
+       pcgdp |   8.21e-07   4.14e-06     0.20   0.845    -7.96e-06    9.61e-06
+       unemp |   .0022324   .0081096     0.28   0.787    -.0149592    .0194239
+    pcpolice |  -.0435123   .0472084    -0.92   0.370    -.1435897    .0565652
+pcpolice_exp |   .0020624    .002865     0.72   0.482    -.0040111    .0081359
+       pmale |  -.4441518   .3425996    -1.30   0.213    -1.170431    .2821269
+      health |  -.0156175    .010908    -1.43   0.171    -.0387414    .0075064
+        educ |   .0051955   .0042092     1.23   0.235    -.0037276    .0141186
+ _Iyear_1981 |          0  (omitted)
+ _Iyear_1982 |          0  (omitted)
+ _Iyear_1983 |          0  (omitted)
+ _Iyear_1984 |          0  (omitted)
+ _Iyear_1985 |          0  (omitted)
+ _Iyear_1986 |          0  (omitted)
+ _Iyear_1987 |          0  (omitted)
+ _Iyear_1988 |          0  (omitted)
+ _Iyear_1989 |          0  (omitted)
+ _Iyear_1990 |          0  (omitted)
+ _Iyear_1991 |          0  (omitted)
+ _Iyear_1992 |          0  (omitted)
+ _Iyear_1993 |          0  (omitted)
+ _Iyear_1994 |          0  (omitted)
+ _Iyear_1995 |          0  (omitted)
+ _Iyear_1996 |          0  (omitted)
+ _Iyear_1997 |          0  (omitted)
+ _Iyear_1998 |          0  (omitted)
+ _Iyear_1999 |   .0168519   .0194682     0.87   0.399    -.0244188    .0581227
+ _Iyear_2000 |          0  (omitted)
+ _Iyear_2001 |          0  (omitted)
+ _Iyear_2002 |          0  (omitted)
+ _Iyear_2003 |          0  (omitted)
+ _Iyear_2004 |          0  (omitted)
+ _Iyear_2005 |  -.0037762   .0432841    -0.09   0.932    -.0955344    .0879821
+ _Iyear_2006 |  -.0248519   .0366074    -0.68   0.507    -.1024561    .0527522
+ _Iyear_2007 |          0  (omitted)
+ _Iyear_2008 |          0  (omitted)
+ _Iyear_2009 |          0  (omitted)
+ _Iyear_2010 |          0  (omitted)
+ _Iyear_2011 |          0  (omitted)
+ _Iyear_2012 |          0  (omitted)
+       _cons |    .403337   .1610021     2.51   0.023     .0620278    .7446461
+------------------------------------------------------------------------------
+(est2 stored)
+
+. * 3. add bargaining controls ;
+. xi: areg husb_beat husb_age husb_educ husb_wc urban hhsize children rep_educ rep_age rep_wc r_* b_unfaithful o
+> wnmoney i.religion [aw=stwt], absorb(C) ;
+i.religion        _Ireligion_1-5      (naturally coded; _Ireligion_1 omitted)
+(sum of wgt is 91,180,031,363)
+
+Linear regression, absorbing indicators             Number of obs     = 98,719
+Absorbed variable: C                                No. of categories =     74
+                                                    F(17, 98628)      = 162.64
+                                                    Prob > F          = 0.0000
+                                                    R-squared         = 0.0689
+                                                    Adj R-squared     = 0.0680
+                                                    Root MSE          = 0.3626
+
+------------------------------------------------------------------------------
+   husb_beat | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+    husb_age |    .001864   .0010235     1.82   0.069     -.000142      .00387
+   husb_educ |  -.0015441   .0002103    -7.34   0.000    -.0019563   -.0011319
+     husb_wc |  -.0150749   .0031416    -4.80   0.000    -.0212324   -.0089174
+       urban |   .0007904   .0029489     0.27   0.789    -.0049894    .0065703
+      hhsize |  -.0051002   .0006736    -7.57   0.000    -.0064206   -.0037799
+    children |   .0110879   .0009896    11.20   0.000     .0091483    .0130274
+    rep_educ |   -.010029   .0003704   -27.07   0.000    -.0107551    -.009303
+     rep_age |  -.0036178   .0012148    -2.98   0.003    -.0059988   -.0012368
+      rep_wc |   .0315596   .0054605     5.78   0.000      .020857    .0422622
+      r_educ |   .0077477   .0011292     6.86   0.000     .0055345    .0099609
+       r_age |   .0889456   .0480982     1.85   0.064    -.0053263    .1832175
+b_unfaithful |   .0415109   .0026584    15.62   0.000     .0363005    .0467213
+    ownmoney |   .0014298   .0025374     0.56   0.573    -.0035435    .0064032
+_Ireligion_2 |   .0104198   .0039578     2.63   0.008     .0026625    .0181771
+_Ireligion_3 |   .0033832   .0062854     0.54   0.590    -.0089361    .0157025
+_Ireligion_4 |   -.010298    .010834    -0.95   0.342    -.0315325    .0109364
+_Ireligion_5 |    .013246   .0077627     1.71   0.088    -.0019687    .0284608
+       _cons |   .1625535   .0409934     3.97   0.000      .082207       .2429
+------------------------------------------------------------------------------
+F test of absorbed indicators: F(73, 98628) = 47.939          Prob > F = 0.000
+
+. predict beat3, dr ;
+(11,217 missing values generated)
+
+. eststo: xi: reg beat3 prohib $controls i.year [aw=stwt], cluster(State) ;
+i.year            _Iyear_1980-2012    (naturally coded; _Iyear_1980 omitted)
+(sum of wgt is 72,210,440,350)
+note: _Iyear_1981 omitted because of collinearity.
+note: _Iyear_1982 omitted because of collinearity.
+note: _Iyear_1983 omitted because of collinearity.
+note: _Iyear_1984 omitted because of collinearity.
+note: _Iyear_1985 omitted because of collinearity.
+note: _Iyear_1986 omitted because of collinearity.
+note: _Iyear_1987 omitted because of collinearity.
+note: _Iyear_1988 omitted because of collinearity.
+note: _Iyear_1989 omitted because of collinearity.
+note: _Iyear_1990 omitted because of collinearity.
+note: _Iyear_1991 omitted because of collinearity.
+note: _Iyear_1992 omitted because of collinearity.
+note: _Iyear_1993 omitted because of collinearity.
+note: _Iyear_1994 omitted because of collinearity.
+note: _Iyear_1995 omitted because of collinearity.
+note: _Iyear_1996 omitted because of collinearity.
+note: _Iyear_1997 omitted because of collinearity.
+note: _Iyear_1998 omitted because of collinearity.
+note: _Iyear_2000 omitted because of collinearity.
+note: _Iyear_2001 omitted because of collinearity.
+note: _Iyear_2002 omitted because of collinearity.
+note: _Iyear_2003 omitted because of collinearity.
+note: _Iyear_2004 omitted because of collinearity.
+note: _Iyear_2007 omitted because of collinearity.
+note: _Iyear_2008 omitted because of collinearity.
+note: _Iyear_2009 omitted because of collinearity.
+note: _Iyear_2010 omitted because of collinearity.
+note: _Iyear_2011 omitted because of collinearity.
+note: _Iyear_2012 omitted because of collinearity.
+
+Linear regression                               Number of obs     =     77,736
+                                                F(13, 16)         =       9.06
+                                                Prob > F          =     0.0000
+                                                R-squared         =     0.0154
+                                                Root MSE          =     .37908
+
+                                 (Std. err. adjusted for 17 clusters in State)
+------------------------------------------------------------------------------
+             |               Robust
+       beat3 | Coefficient  std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+      prohib |  -.0787934     .03843    -2.05   0.057    -.1602613    .0026746
+    literacy |  -.0033012   .0013475    -2.45   0.026    -.0061577   -.0004447
+      purban |   .0034643   .0017941     1.93   0.071    -.0003391    .0072676
+       pcgdp |   1.37e-06   4.14e-06     0.33   0.744    -7.40e-06    .0000101
+       unemp |    .004893   .0079389     0.62   0.546    -.0119368    .0217228
+    pcpolice |  -.0439511   .0466598    -0.94   0.360    -.1428654    .0549632
+pcpolice_exp |   .0021208   .0028881     0.73   0.473    -.0040017    .0082433
+       pmale |  -.4822726   .3540681    -1.36   0.192    -1.232863    .2683182
+      health |  -.0129874   .0116071    -1.12   0.280    -.0375933    .0116184
+        educ |   .0059129   .0042221     1.40   0.180    -.0030375    .0148633
+ _Iyear_1981 |          0  (omitted)
+ _Iyear_1982 |          0  (omitted)
+ _Iyear_1983 |          0  (omitted)
+ _Iyear_1984 |          0  (omitted)
+ _Iyear_1985 |          0  (omitted)
+ _Iyear_1986 |          0  (omitted)
+ _Iyear_1987 |          0  (omitted)
+ _Iyear_1988 |          0  (omitted)
+ _Iyear_1989 |          0  (omitted)
+ _Iyear_1990 |          0  (omitted)
+ _Iyear_1991 |          0  (omitted)
+ _Iyear_1992 |          0  (omitted)
+ _Iyear_1993 |          0  (omitted)
+ _Iyear_1994 |          0  (omitted)
+ _Iyear_1995 |          0  (omitted)
+ _Iyear_1996 |          0  (omitted)
+ _Iyear_1997 |          0  (omitted)
+ _Iyear_1998 |          0  (omitted)
+ _Iyear_1999 |   .0197551   .0203134     0.97   0.345    -.0233073    .0628176
+ _Iyear_2000 |          0  (omitted)
+ _Iyear_2001 |          0  (omitted)
+ _Iyear_2002 |          0  (omitted)
+ _Iyear_2003 |          0  (omitted)
+ _Iyear_2004 |          0  (omitted)
+ _Iyear_2005 |  -.0024589   .0414108    -0.06   0.953     -.090246    .0853281
+ _Iyear_2006 |  -.0222131   .0378588    -0.59   0.566    -.1024701    .0580439
+ _Iyear_2007 |          0  (omitted)
+ _Iyear_2008 |          0  (omitted)
+ _Iyear_2009 |          0  (omitted)
+ _Iyear_2010 |          0  (omitted)
+ _Iyear_2011 |          0  (omitted)
+ _Iyear_2012 |          0  (omitted)
+       _cons |   .3184817   .1716298     1.86   0.082    -.0453572    .6823207
+------------------------------------------------------------------------------
+(est3 stored)
+
+. * 4. interacted age categories as fixed effects ;
+. xi: areg husb_beat husb_age husb_educ husb_wc urban hhsize children rep_educ rep_age rep_wc b_unfaithful ownmo
+> ney r_* i.husb_age_cat*i.rep_age_cat i.religion [aw=stwt], absorb(C) ;
+i.husb_age_cat    _Ihusb_age__1-8     (naturally coded; _Ihusb_age__1 omitted)
+i.rep_age_cat     _Irep_age_c_1-6     (naturally coded; _Irep_age_c_1 omitted)
+i.h~cat*i.rep~t   _IhusXrep_#_#       (coded as above)
+i.religion        _Ireligion_1-5      (naturally coded; _Ireligion_1 omitted)
+(sum of wgt is 91,180,031,363)
+
+Linear regression, absorbing indicators             Number of obs     = 98,719
+Absorbed variable: C                                No. of categories =     74
+                                                    F(64, 98581)      =  45.55
+                                                    Prob > F          = 0.0000
+                                                    R-squared         = 0.0703
+                                                    Adj R-squared     = 0.0690
+                                                    Root MSE          = 0.3624
+
+-------------------------------------------------------------------------------
+    husb_beat | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
+--------------+----------------------------------------------------------------
+     husb_age |   .0008788   .0019298     0.46   0.649    -.0029036    .0046611
+    husb_educ |  -.0015377   .0002102    -7.31   0.000    -.0019497   -.0011256
+      husb_wc |  -.0154823   .0031419    -4.93   0.000    -.0216404   -.0093242
+        urban |   .0002903   .0029491     0.10   0.922    -.0054898    .0060704
+       hhsize |  -.0052289   .0006742    -7.76   0.000    -.0065503   -.0039076
+     children |   .0094852   .0010026     9.46   0.000     .0075201    .0114503
+     rep_educ |   -.010221   .0003718   -27.49   0.000    -.0109498   -.0094922
+      rep_age |  -.0030905   .0022112    -1.40   0.162    -.0074244    .0012434
+       rep_wc |   .0308424   .0054634     5.65   0.000     .0201343    .0415505
+ b_unfaithful |   .0415279   .0026582    15.62   0.000     .0363179     .046738
+     ownmoney |   .0010718   .0025372     0.42   0.673    -.0039011    .0060447
+       r_educ |   .0080329   .0011298     7.11   0.000     .0058185    .0102474
+        r_age |    .082592   .0891192     0.93   0.354    -.0920805    .2572645
+_Ihusb_age__2 |   .1127683   .0360667     3.13   0.002     .0420779    .1834587
+_Ihusb_age__3 |   .1357441   .0370544     3.66   0.000      .063118    .2083702
+_Ihusb_age__4 |   .1449788   .0412059     3.52   0.000     .0642157    .2257419
+_Ihusb_age__5 |   .0818337   .0505302     1.62   0.105    -.0172049    .1808723
+_Ihusb_age__6 |    .115092    .070203     1.64   0.101     -.022505     .252689
+_Ihusb_age__7 |  -.0536439   .2283603    -0.23   0.814    -.5012273    .3939396
+_Ihusb_age__8 |   .0106121   .1999668     0.05   0.958    -.3813204    .4025447
+_Irep_age_c_2 |   -.059771   .1555249    -0.38   0.701    -.3645981     .245056
+_Irep_age_c_3 |    .061261   .3485345     0.18   0.860    -.6218625    .7443845
+_Irep_age_c_4 |  -.0898885    .383356    -0.23   0.815    -.8412616    .6614847
+_Irep_age_c_5 |   -.099524   .1872193    -0.53   0.595    -.4664716    .2674235
+_Irep_age_c_6 |   -.076391    .384796    -0.20   0.843    -.8305865    .6778046
+_IhusXrep_2_2 |   .0774809   .1559989     0.50   0.619     -.228275    .3832368
+_IhusXrep_2_3 |   .0327737   .3504678     0.09   0.925    -.6541389    .7196863
+_IhusXrep_2_4 |   .1440383    .397998     0.36   0.717     -.636033    .9241097
+_IhusXrep_2_5 |   .0712775   .3259024     0.22   0.827    -.5674873    .7100424
+_IhusXrep_2_6 |   .4544277   .4612698     0.99   0.325    -.4496555    1.358511
+_IhusXrep_3_2 |   .0685502   .1557465     0.44   0.660    -.2367111    .3738114
+_IhusXrep_3_3 |  -.0346997   .3478641    -0.10   0.921    -.7165092    .6471097
+_IhusXrep_3_4 |   .1214368   .3823654     0.32   0.751    -.6279948    .8708685
+_IhusXrep_3_5 |   .0881308   .1892917     0.47   0.642    -.2828787    .4591403
+_IhusXrep_3_6 |  -.0513295   .4008772    -0.13   0.898     -.837044    .7343849
+_IhusXrep_4_2 |   .0850859   .1567257     0.54   0.587    -.2220946    .3922665
+_IhusXrep_4_3 |  -.0377201   .3483503    -0.11   0.914    -.7204825    .6450423
+_IhusXrep_4_4 |   .1118556   .3824839     0.29   0.770    -.6378083    .8615195
+_IhusXrep_4_5 |   .1642393   .1843605     0.89   0.373     -.197105    .5255837
+_IhusXrep_4_6 |   .1119715   .3874045     0.29   0.773    -.6473367    .8712797
+_IhusXrep_5_2 |   .1463459    .159613     0.92   0.359    -.1664936    .4591855
+_IhusXrep_5_3 |   .0401679   .3498256     0.11   0.909    -.6454862     .725822
+_IhusXrep_5_4 |   .1810746     .38401     0.47   0.637    -.5715805    .9337297
+_IhusXrep_5_5 |   .1944939   .1875563     1.04   0.300    -.1731142    .5621021
+_IhusXrep_5_6 |   .1368288   .3851811     0.36   0.722    -.6181216    .8917792
+_IhusXrep_6_2 |   .0961511   .1676408     0.57   0.566    -.2324228    .4247249
+_IhusXrep_6_3 |   .0108241   .3535061     0.03   0.976    -.6820437    .7036919
+_IhusXrep_6_4 |   .1634469   .3876628     0.42   0.673    -.5963676    .9232613
+_IhusXrep_6_5 |   .1647834   .1955064     0.84   0.399    -.2184069    .5479737
+_IhusXrep_6_6 |   .1297341    .388906     0.33   0.739    -.6325169    .8919852
+_IhusXrep_7_2 |   .3593984   .2810068     1.28   0.201    -.1913716    .9101683
+_IhusXrep_7_3 |   .1674363   .4164327     0.40   0.688    -.6487667    .9836394
+_IhusXrep_7_4 |   .3345882   .4452665     0.75   0.452    -.5381288    1.207305
+_IhusXrep_7_5 |   .3345555    .294042     1.14   0.255    -.2417634    .9108744
+_IhusXrep_7_6 |   .2957204    .446718     0.66   0.508    -.5798416    1.171282
+_IhusXrep_8_2 |    .150331   .2726354     0.55   0.581    -.3840312    .6846931
+_IhusXrep_8_3 |   .1028243   .4040206     0.25   0.799    -.6890513    .8946999
+_IhusXrep_8_4 |   .2340217   .4322362     0.54   0.588    -.6131561    1.081199
+_IhusXrep_8_5 |    .267441   .2741997     0.98   0.329    -.2699872    .8048691
+_IhusXrep_8_6 |   .2359847    .434009     0.54   0.587    -.6146678    1.086637
+ _Ireligion_2 |   .0120585   .0039611     3.04   0.002     .0042949    .0198221
+ _Ireligion_3 |   .0042289   .0062848     0.67   0.501    -.0080892     .016547
+ _Ireligion_4 |  -.0112922   .0108304    -1.04   0.297    -.0325198    .0099353
+ _Ireligion_5 |   .0128012   .0077622     1.65   0.099    -.0024126     .028015
+        _cons |   .0253631   .0880922     0.29   0.773    -.1472965    .1980227
+-------------------------------------------------------------------------------
+F test of absorbed indicators: F(73, 98581) = 48.123          Prob > F = 0.000
+
+. predict beat4, dr ;
+(11,217 missing values generated)
+
+. eststo: xi: reg beat4 prohib $controls i.year [aw=stwt], cluster(State) ;
+i.year            _Iyear_1980-2012    (naturally coded; _Iyear_1980 omitted)
+(sum of wgt is 72,210,440,350)
+note: _Iyear_1981 omitted because of collinearity.
+note: _Iyear_1982 omitted because of collinearity.
+note: _Iyear_1983 omitted because of collinearity.
+note: _Iyear_1984 omitted because of collinearity.
+note: _Iyear_1985 omitted because of collinearity.
+note: _Iyear_1986 omitted because of collinearity.
+note: _Iyear_1987 omitted because of collinearity.
+note: _Iyear_1988 omitted because of collinearity.
+note: _Iyear_1989 omitted because of collinearity.
+note: _Iyear_1990 omitted because of collinearity.
+note: _Iyear_1991 omitted because of collinearity.
+note: _Iyear_1992 omitted because of collinearity.
+note: _Iyear_1993 omitted because of collinearity.
+note: _Iyear_1994 omitted because of collinearity.
+note: _Iyear_1995 omitted because of collinearity.
+note: _Iyear_1996 omitted because of collinearity.
+note: _Iyear_1997 omitted because of collinearity.
+note: _Iyear_1998 omitted because of collinearity.
+note: _Iyear_2000 omitted because of collinearity.
+note: _Iyear_2001 omitted because of collinearity.
+note: _Iyear_2002 omitted because of collinearity.
+note: _Iyear_2003 omitted because of collinearity.
+note: _Iyear_2004 omitted because of collinearity.
+note: _Iyear_2007 omitted because of collinearity.
+note: _Iyear_2008 omitted because of collinearity.
+note: _Iyear_2009 omitted because of collinearity.
+note: _Iyear_2010 omitted because of collinearity.
+note: _Iyear_2011 omitted because of collinearity.
+note: _Iyear_2012 omitted because of collinearity.
+
+Linear regression                               Number of obs     =     77,736
+                                                F(13, 16)         =       9.06
+                                                Prob > F          =     0.0000
+                                                R-squared         =     0.0156
+                                                Root MSE          =      .3788
+
+                                 (Std. err. adjusted for 17 clusters in State)
+------------------------------------------------------------------------------
+             |               Robust
+       beat4 | Coefficient  std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+      prohib |  -.0782491   .0385194    -2.03   0.059    -.1599065    .0034083
+    literacy |  -.0033561   .0013572    -2.47   0.025    -.0062333   -.0004789
+      purban |   .0034354   .0017956     1.91   0.074    -.0003712     .007242
+       pcgdp |   1.43e-06   4.14e-06     0.34   0.735    -7.36e-06    .0000102
+       unemp |    .004873   .0079453     0.61   0.548    -.0119703    .0217162
+    pcpolice |  -.0433803   .0468638    -0.93   0.368    -.1427271    .0559666
+pcpolice_exp |   .0020901   .0028946     0.72   0.481    -.0040463    .0082264
+       pmale |  -.4838529   .3529596    -1.37   0.189    -1.232094     .264388
+      health |  -.0132696   .0115888    -1.15   0.269    -.0378367    .0112975
+        educ |   .0060092   .0042277     1.42   0.174    -.0029532    .0149715
+ _Iyear_1981 |          0  (omitted)
+ _Iyear_1982 |          0  (omitted)
+ _Iyear_1983 |          0  (omitted)
+ _Iyear_1984 |          0  (omitted)
+ _Iyear_1985 |          0  (omitted)
+ _Iyear_1986 |          0  (omitted)
+ _Iyear_1987 |          0  (omitted)
+ _Iyear_1988 |          0  (omitted)
+ _Iyear_1989 |          0  (omitted)
+ _Iyear_1990 |          0  (omitted)
+ _Iyear_1991 |          0  (omitted)
+ _Iyear_1992 |          0  (omitted)
+ _Iyear_1993 |          0  (omitted)
+ _Iyear_1994 |          0  (omitted)
+ _Iyear_1995 |          0  (omitted)
+ _Iyear_1996 |          0  (omitted)
+ _Iyear_1997 |          0  (omitted)
+ _Iyear_1998 |          0  (omitted)
+ _Iyear_1999 |   .0200348   .0202089     0.99   0.336    -.0228061    .0628757
+ _Iyear_2000 |          0  (omitted)
+ _Iyear_2001 |          0  (omitted)
+ _Iyear_2002 |          0  (omitted)
+ _Iyear_2003 |          0  (omitted)
+ _Iyear_2004 |          0  (omitted)
+ _Iyear_2005 |  -.0016045   .0412556    -0.04   0.969    -.0890624    .0858533
+ _Iyear_2006 |  -.0221699    .037659    -0.59   0.564    -.1020036    .0576637
+ _Iyear_2007 |          0  (omitted)
+ _Iyear_2008 |          0  (omitted)
+ _Iyear_2009 |          0  (omitted)
+ _Iyear_2010 |          0  (omitted)
+ _Iyear_2011 |          0  (omitted)
+ _Iyear_2012 |          0  (omitted)
+       _cons |   .3220938   .1712614     1.88   0.078    -.0409641    .6851517
+------------------------------------------------------------------------------
+(est4 stored)
+
+. * 5. age gap + education gap as fixed effects ;
+. xi: areg husb_beat husb_age husb_educ husb_wc urban hhsize children rep_educ rep_age rep_wc b_unfaithful ownmo
+> ney i.agegap_cat i.educgap_cat i.religion [aw=stwt], absorb(C) ;
+i.agegap_cat      _Iagegap_ca_1-9     (naturally coded; _Iagegap_ca_1 omitted)
+i.educgap_cat     _Ieducgap_c_1-7     (naturally coded; _Ieducgap_c_1 omitted)
+i.religion        _Ireligion_1-5      (naturally coded; _Ireligion_1 omitted)
+(sum of wgt is 90,548,597,259)
+
+Linear regression, absorbing indicators             Number of obs     = 98,038
+Absorbed variable: C                                No. of categories =     74
+                                                    F(29, 97935)      = 103.57
+                                                    Prob > F          = 0.0000
+                                                    R-squared         = 0.0714
+                                                    Adj R-squared     = 0.0704
+                                                    Root MSE          = 0.3622
+
+-------------------------------------------------------------------------------
+    husb_beat | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
+--------------+----------------------------------------------------------------
+     husb_age |   .0018658   .0008727     2.14   0.033     .0001552    .0035764
+    husb_educ |  -.0033096   .0008347    -3.97   0.000    -.0049455   -.0016737
+      husb_wc |  -.0057418   .0032162    -1.79   0.074    -.0120455     .000562
+        urban |   .0026081   .0029622     0.88   0.379    -.0031978    .0084139
+       hhsize |  -.0050444   .0006778    -7.44   0.000     -.006373   -.0037158
+     children |   .0107435   .0009962    10.78   0.000      .008791    .0126961
+     rep_educ |    -.00981   .0009141   -10.73   0.000    -.0116015   -.0080184
+      rep_age |  -.0032213   .0008821    -3.65   0.000    -.0049502   -.0014924
+       rep_wc |   .0287822   .0054716     5.26   0.000     .0180579    .0395064
+ b_unfaithful |   .0412699   .0026654    15.48   0.000     .0360458    .0464941
+     ownmoney |   .0025501    .002545     1.00   0.316     -.002438    .0075382
+_Iagegap_ca_2 |  -.0603599   .0510935    -1.18   0.237    -.1605025    .0397826
+_Iagegap_ca_3 |  -.0477625    .048223    -0.99   0.322    -.1422791    .0467541
+_Iagegap_ca_4 |  -.0673665   .0488131    -1.38   0.168    -.1630395    .0283066
+_Iagegap_ca_5 |  -.0738022   .0499354    -1.48   0.139     -.171675    .0240707
+_Iagegap_ca_6 |  -.0848154   .0516013    -1.64   0.100    -.1859532    .0163225
+_Iagegap_ca_7 |  -.0905266    .053847    -1.68   0.093    -.1960661     .015013
+_Iagegap_ca_8 |  -.1096983   .0571576    -1.92   0.055    -.2217264    .0023299
+_Iagegap_ca_9 |   -.101111   .0633282    -1.60   0.110    -.2252335    .0230114
+_Ieducgap_c_2 |    .044555   .0537619     0.83   0.407    -.0608176    .1499277
+_Ieducgap_c_3 |   .0413885   .0536541     0.77   0.440    -.0637729      .14655
+_Ieducgap_c_4 |   .0220756   .0541775     0.41   0.684    -.0841117    .1282628
+_Ieducgap_c_5 |   .0102265   .0553385     0.18   0.853    -.0982363    .1186892
+_Ieducgap_c_6 |  -.0212781   .0566449    -0.38   0.707    -.1323014    .0897452
+_Ieducgap_c_7 |  -.0536593   .0651081    -0.82   0.410    -.1812703    .0739518
+ _Ireligion_2 |   .0083808   .0039755     2.11   0.035     .0005889    .0161727
+ _Ireligion_3 |   .0026649   .0062966     0.42   0.672    -.0096763    .0150062
+ _Ireligion_4 |  -.0113282   .0108346    -1.05   0.296    -.0325639    .0099075
+ _Ireligion_5 |   .0121621   .0077862     1.56   0.118    -.0030988     .027423
+        _cons |   .2931229   .0726081     4.04   0.000     .1508119     .435434
+-------------------------------------------------------------------------------
+F test of absorbed indicators: F(73, 97935) = 47.438          Prob > F = 0.000
+
+. predict beat5, dr ;
+(11,898 missing values generated)
+
+. eststo: xi: reg beat5 prohib $controls i.year [aw=stwt], cluster(State) ;
+i.year            _Iyear_1980-2012    (naturally coded; _Iyear_1980 omitted)
+(sum of wgt is 71,744,899,672)
+note: _Iyear_1981 omitted because of collinearity.
+note: _Iyear_1982 omitted because of collinearity.
+note: _Iyear_1983 omitted because of collinearity.
+note: _Iyear_1984 omitted because of collinearity.
+note: _Iyear_1985 omitted because of collinearity.
+note: _Iyear_1986 omitted because of collinearity.
+note: _Iyear_1987 omitted because of collinearity.
+note: _Iyear_1988 omitted because of collinearity.
+note: _Iyear_1989 omitted because of collinearity.
+note: _Iyear_1990 omitted because of collinearity.
+note: _Iyear_1991 omitted because of collinearity.
+note: _Iyear_1992 omitted because of collinearity.
+note: _Iyear_1993 omitted because of collinearity.
+note: _Iyear_1994 omitted because of collinearity.
+note: _Iyear_1995 omitted because of collinearity.
+note: _Iyear_1996 omitted because of collinearity.
+note: _Iyear_1997 omitted because of collinearity.
+note: _Iyear_1998 omitted because of collinearity.
+note: _Iyear_2000 omitted because of collinearity.
+note: _Iyear_2001 omitted because of collinearity.
+note: _Iyear_2002 omitted because of collinearity.
+note: _Iyear_2003 omitted because of collinearity.
+note: _Iyear_2004 omitted because of collinearity.
+note: _Iyear_2007 omitted because of collinearity.
+note: _Iyear_2008 omitted because of collinearity.
+note: _Iyear_2009 omitted because of collinearity.
+note: _Iyear_2010 omitted because of collinearity.
+note: _Iyear_2011 omitted because of collinearity.
+note: _Iyear_2012 omitted because of collinearity.
+
+Linear regression                               Number of obs     =     77,235
+                                                F(13, 16)         =      10.23
+                                                Prob > F          =     0.0000
+                                                R-squared         =     0.0154
+                                                Root MSE          =     .37876
+
+                                 (Std. err. adjusted for 17 clusters in State)
+------------------------------------------------------------------------------
+             |               Robust
+       beat5 | Coefficient  std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+      prohib |  -.0814828   .0379144    -2.15   0.047    -.1618576   -.0011079
+    literacy |  -.0033787   .0013276    -2.54   0.022    -.0061932   -.0005642
+      purban |   .0033329   .0017923     1.86   0.081    -.0004665    .0071324
+       pcgdp |   1.83e-06   4.05e-06     0.45   0.657    -6.75e-06    .0000104
+       unemp |   .0039321   .0078276     0.50   0.622    -.0126616    .0205259
+    pcpolice |  -.0437771   .0469617    -0.93   0.365    -.1433314    .0557772
+pcpolice_exp |   .0022282   .0029008     0.77   0.454    -.0039212    .0083776
+       pmale |  -.4888628   .3457192    -1.41   0.177    -1.221755    .2440291
+      health |  -.0138175   .0114841    -1.20   0.246    -.0381627    .0105277
+        educ |   .0062855   .0041543     1.51   0.150    -.0025211    .0150921
+ _Iyear_1981 |          0  (omitted)
+ _Iyear_1982 |          0  (omitted)
+ _Iyear_1983 |          0  (omitted)
+ _Iyear_1984 |          0  (omitted)
+ _Iyear_1985 |          0  (omitted)
+ _Iyear_1986 |          0  (omitted)
+ _Iyear_1987 |          0  (omitted)
+ _Iyear_1988 |          0  (omitted)
+ _Iyear_1989 |          0  (omitted)
+ _Iyear_1990 |          0  (omitted)
+ _Iyear_1991 |          0  (omitted)
+ _Iyear_1992 |          0  (omitted)
+ _Iyear_1993 |          0  (omitted)
+ _Iyear_1994 |          0  (omitted)
+ _Iyear_1995 |          0  (omitted)
+ _Iyear_1996 |          0  (omitted)
+ _Iyear_1997 |          0  (omitted)
+ _Iyear_1998 |          0  (omitted)
+ _Iyear_1999 |   .0183677   .0204812     0.90   0.383    -.0250504    .0617859
+ _Iyear_2000 |          0  (omitted)
+ _Iyear_2001 |          0  (omitted)
+ _Iyear_2002 |          0  (omitted)
+ _Iyear_2003 |          0  (omitted)
+ _Iyear_2004 |          0  (omitted)
+ _Iyear_2005 |   .0009412   .0409968     0.02   0.982    -.0859681    .0878504
+ _Iyear_2006 |  -.0227816   .0374388    -0.61   0.551    -.1021482    .0565851
+ _Iyear_2007 |          0  (omitted)
+ _Iyear_2008 |          0  (omitted)
+ _Iyear_2009 |          0  (omitted)
+ _Iyear_2010 |          0  (omitted)
+ _Iyear_2011 |          0  (omitted)
+ _Iyear_2012 |          0  (omitted)
+       _cons |   .3238746   .1684874     1.92   0.073    -.0333027    .6810518
+------------------------------------------------------------------------------
+(est5 stored)
+
+. *** EDIT by Donna
+> * esttab using LeeLucaOwensSharma_AER_PP_Table1B.csv, se b(4) se(4) r2(%9.2f) starlevels(* .10 ** .05 *** .01)
+>  drop(_I* o.*) replace ;
+. *****************************************************************;
+. * State Level Data from Indian Government Records 
+> *******************;
+. # delimit ;
+delimiter now ;
+. use LeeLucaOwensSharma_AER_PP_CrimeData.dta, clear ;
+
+. global controls literacy urban pcgdp unemp pcpolice ;
+
+. eststo clear ;
+
+. xi i.State i.year ;
+i.State           _IState_1-35        (_IState_1 for State==an omitted)
+i.year            _Iyear_1980-2012    (naturally coded; _Iyear_1980 omitted)
+
+. eststo: reg women_indexnf prohib  _I*  $controls [aw=pop], cluster(State) ;
+(sum of wgt is 13,007,801.5)
+note: _IState_3 omitted because of collinearity.
+note: _IState_4 omitted because of collinearity.
+note: _IState_5 omitted because of collinearity.
+note: _IState_6 omitted because of collinearity.
+note: _IState_7 omitted because of collinearity.
+note: _IState_8 omitted because of collinearity.
+note: _IState_9 omitted because of collinearity.
+note: _IState_10 omitted because of collinearity.
+note: _IState_12 omitted because of collinearity.
+note: _IState_13 omitted because of collinearity.
+note: _IState_15 omitted because of collinearity.
+note: _IState_16 omitted because of collinearity.
+note: _IState_19 omitted because of collinearity.
+note: _IState_20 omitted because of collinearity.
+note: _IState_22 omitted because of collinearity.
+note: _IState_23 omitted because of collinearity.
+note: _IState_25 omitted because of collinearity.
+note: _IState_28 omitted because of collinearity.
+note: _IState_30 omitted because of collinearity.
+note: _IState_32 omitted because of collinearity.
+note: _IState_34 omitted because of collinearity.
+note: _Iyear_1981 omitted because of collinearity.
+note: _Iyear_1982 omitted because of collinearity.
+note: _Iyear_1983 omitted because of collinearity.
+note: _Iyear_1984 omitted because of collinearity.
+note: _Iyear_1985 omitted because of collinearity.
+note: _Iyear_1986 omitted because of collinearity.
+note: _Iyear_1987 omitted because of collinearity.
+note: _Iyear_1988 omitted because of collinearity.
+note: _Iyear_1989 omitted because of collinearity.
+note: _Iyear_2010 omitted because of collinearity.
+note: _Iyear_2011 omitted because of collinearity.
+note: _Iyear_2012 omitted because of collinearity.
+
+Linear regression                               Number of obs     =        234
+                                                F(12, 13)         =          .
+                                                Prob > F          =          .
+                                                R-squared         =     0.8601
+                                                Root MSE          =     225.13
+
+                                 (Std. err. adjusted for 14 clusters in State)
+------------------------------------------------------------------------------
+             |               Robust
+women_ind~nf | Coefficient  std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+      prohib |  -336.7537   106.1156    -3.17   0.007    -566.0026   -107.5048
+   _IState_2 |   7.817041   677.9578     0.01   0.991    -1456.822    1472.456
+   _IState_3 |          0  (omitted)
+   _IState_4 |          0  (omitted)
+   _IState_5 |          0  (omitted)
+   _IState_6 |          0  (omitted)
+   _IState_7 |          0  (omitted)
+   _IState_8 |          0  (omitted)
+   _IState_9 |          0  (omitted)
+  _IState_10 |          0  (omitted)
+  _IState_11 |  -1278.688   1211.961    -1.06   0.311    -3896.971    1339.596
+  _IState_12 |          0  (omitted)
+  _IState_13 |          0  (omitted)
+  _IState_14 |  -996.8212   1091.163    -0.91   0.378    -3354.135    1360.492
+  _IState_15 |          0  (omitted)
+  _IState_16 |          0  (omitted)
+  _IState_17 |  -1529.114   1084.185    -1.41   0.182    -3871.353    813.1242
+  _IState_18 |  -1906.455   1951.581    -0.98   0.346    -6122.589    2309.679
+  _IState_19 |          0  (omitted)
+  _IState_20 |          0  (omitted)
+  _IState_21 |  -2040.441   1592.105    -1.28   0.222    -5479.974    1399.091
+  _IState_22 |          0  (omitted)
+  _IState_23 |          0  (omitted)
+  _IState_24 |    -5666.8   3734.233    -1.52   0.153    -13734.12     2400.52
+  _IState_25 |          0  (omitted)
+  _IState_26 |   51.02316   547.8795     0.09   0.927    -1132.599    1234.645
+  _IState_27 |  -3035.458   1526.142    -1.99   0.068    -6332.488    261.5721
+  _IState_28 |          0  (omitted)
+  _IState_29 |   178.0287    474.892     0.37   0.714     -847.913     1203.97
+  _IState_30 |          0  (omitted)
+  _IState_31 |  -2247.985   1411.623    -1.59   0.135     -5297.61    801.6411
+  _IState_32 |          0  (omitted)
+  _IState_33 |  -321.4736   408.9914    -0.79   0.446    -1205.046    562.0986
+  _IState_34 |          0  (omitted)
+  _IState_35 |    -1337.7   1028.478    -1.30   0.216    -3559.592    884.1913
+ _Iyear_1981 |          0  (omitted)
+ _Iyear_1982 |          0  (omitted)
+ _Iyear_1983 |          0  (omitted)
+ _Iyear_1984 |          0  (omitted)
+ _Iyear_1985 |          0  (omitted)
+ _Iyear_1986 |          0  (omitted)
+ _Iyear_1987 |          0  (omitted)
+ _Iyear_1988 |          0  (omitted)
+ _Iyear_1989 |          0  (omitted)
+ _Iyear_1990 |   382.9376   503.1537     0.76   0.460    -704.0599    1469.935
+ _Iyear_1991 |   370.6486   470.4623     0.79   0.445    -645.7233     1387.02
+ _Iyear_1992 |   385.3598   432.1316     0.89   0.389    -548.2037    1318.923
+ _Iyear_1993 |   409.6372   425.7155     0.96   0.353    -510.0652     1329.34
+ _Iyear_1994 |   433.9021   380.5604     1.14   0.275    -388.2487    1256.053
+ _Iyear_1995 |   440.4487   374.2503     1.18   0.260      -368.07    1248.967
+ _Iyear_1996 |    437.759   338.6339     1.29   0.219    -293.8152    1169.333
+ _Iyear_1997 |   396.8503   303.5458     1.31   0.214    -258.9206    1052.621
+ _Iyear_1998 |   397.3871   289.9997     1.37   0.194    -229.1191    1023.893
+ _Iyear_1999 |   370.5488   284.4073     1.30   0.215    -243.8758    984.9735
+ _Iyear_2000 |   389.3741    302.082     1.29   0.220    -263.2344    1041.982
+ _Iyear_2001 |   298.3618   268.7752     1.11   0.287    -282.2919    879.0154
+ _Iyear_2002 |   223.7254   230.8087     0.97   0.350    -274.9065    722.3573
+ _Iyear_2003 |   207.6572   192.7044     1.08   0.301    -208.6555    623.9698
+ _Iyear_2004 |   186.0949   169.5893     1.10   0.292    -180.2804    552.4702
+ _Iyear_2005 |   181.1037   185.3632     0.98   0.346    -219.3492    581.5566
+ _Iyear_2006 |   110.7958   134.7481     0.82   0.426    -180.3097    401.9014
+ _Iyear_2007 |   149.0855   107.3332     1.39   0.188    -82.79372    380.9647
+ _Iyear_2008 |   82.02659   77.30702     1.06   0.308    -84.98508    249.0383
+ _Iyear_2009 |   6.580365    24.7767     0.27   0.795    -46.94645    60.10718
+ _Iyear_2010 |          0  (omitted)
+ _Iyear_2011 |          0  (omitted)
+ _Iyear_2012 |          0  (omitted)
+    literacy |   21.52404   40.26058     0.53   0.602    -65.45366    108.5017
+       urban |   63.07196   18.87454     3.34   0.005     22.29599    103.8479
+       pcgdp |   .0169524   .0093222     1.82   0.092    -.0031871    .0370919
+       unemp |   84.04076   51.97736     1.62   0.130    -28.24951     196.331
+    pcpolice |   577.6033   352.8928     1.64   0.126    -184.7751    1339.982
+       _cons |  -2609.752    2181.16    -1.20   0.253    -7321.861    2102.357
+------------------------------------------------------------------------------
+(est1 stored)
+
+. eststo: reg women_index_f prohib  _I*  $controls [aw=pop], cluster(State) ;
+(sum of wgt is 17,612,662.5)
+note: _IState_3 omitted because of collinearity.
+note: _IState_4 omitted because of collinearity.
+note: _IState_6 omitted because of collinearity.
+note: _IState_7 omitted because of collinearity.
+note: _IState_8 omitted because of collinearity.
+note: _IState_9 omitted because of collinearity.
+note: _IState_10 omitted because of collinearity.
+note: _IState_12 omitted because of collinearity.
+note: _IState_13 omitted because of collinearity.
+note: _IState_15 omitted because of collinearity.
+note: _IState_16 omitted because of collinearity.
+note: _IState_19 omitted because of collinearity.
+note: _IState_20 omitted because of collinearity.
+note: _IState_22 omitted because of collinearity.
+note: _IState_23 omitted because of collinearity.
+note: _IState_24 omitted because of collinearity.
+note: _IState_25 omitted because of collinearity.
+note: _IState_28 omitted because of collinearity.
+note: _IState_30 omitted because of collinearity.
+note: _IState_32 omitted because of collinearity.
+note: _IState_34 omitted because of collinearity.
+note: _Iyear_1981 omitted because of collinearity.
+note: _Iyear_1982 omitted because of collinearity.
+note: _Iyear_1983 omitted because of collinearity.
+note: _Iyear_1984 omitted because of collinearity.
+note: _Iyear_1985 omitted because of collinearity.
+note: _Iyear_1986 omitted because of collinearity.
+note: _Iyear_1987 omitted because of collinearity.
+note: _Iyear_1988 omitted because of collinearity.
+note: _Iyear_1989 omitted because of collinearity.
+note: _Iyear_2008 omitted because of collinearity.
+note: _Iyear_2011 omitted because of collinearity.
+note: _Iyear_2012 omitted because of collinearity.
+
+Linear regression                               Number of obs     =        294
+                                                F(12, 13)         =          .
+                                                Prob > F          =          .
+                                                R-squared         =     0.9559
+                                                Root MSE          =     75.441
+
+                                 (Std. err. adjusted for 14 clusters in State)
+------------------------------------------------------------------------------
+             |               Robust
+women_ind~_f | Coefficient  std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+      prohib |  -71.56151   32.31625    -2.21   0.045    -141.3765   -1.746504
+   _IState_2 |   1674.704   667.9415     2.51   0.026      231.704    3117.704
+   _IState_3 |          0  (omitted)
+   _IState_4 |          0  (omitted)
+   _IState_5 |   1254.998   833.2139     1.51   0.156    -545.0512    3055.047
+   _IState_6 |          0  (omitted)
+   _IState_7 |          0  (omitted)
+   _IState_8 |          0  (omitted)
+   _IState_9 |          0  (omitted)
+  _IState_10 |          0  (omitted)
+  _IState_11 |   1686.924   574.1502     2.94   0.012     446.5478      2927.3
+  _IState_12 |          0  (omitted)
+  _IState_13 |          0  (omitted)
+  _IState_14 |   1302.921   605.4842     2.15   0.051    -5.147975     2610.99
+  _IState_15 |          0  (omitted)
+  _IState_16 |          0  (omitted)
+  _IState_17 |   1807.064   598.8733     3.02   0.010     513.2767    3100.851
+  _IState_18 |   1158.575     526.28     2.20   0.046     21.61628    2295.534
+  _IState_19 |          0  (omitted)
+  _IState_20 |          0  (omitted)
+  _IState_21 |   1666.487   511.0116     3.26   0.006     562.5138    2770.461
+  _IState_22 |          0  (omitted)
+  _IState_23 |          0  (omitted)
+  _IState_24 |          0  (omitted)
+  _IState_25 |          0  (omitted)
+  _IState_26 |   1538.635   741.5367     2.07   0.058    -63.35814    3140.627
+  _IState_27 |   849.7588    497.914     1.71   0.112    -225.9189    1925.436
+  _IState_28 |          0  (omitted)
+  _IState_29 |   1389.877   710.1514     1.96   0.072     -144.312    2924.066
+  _IState_30 |          0  (omitted)
+  _IState_31 |   1570.502   525.0866     2.99   0.010     436.1209    2704.882
+  _IState_32 |          0  (omitted)
+  _IState_33 |   1256.607   721.6713     1.74   0.105    -302.4693    2815.683
+  _IState_34 |          0  (omitted)
+  _IState_35 |   1598.914   614.5407     2.60   0.022     271.2797    2926.549
+ _Iyear_1981 |          0  (omitted)
+ _Iyear_1982 |          0  (omitted)
+ _Iyear_1983 |          0  (omitted)
+ _Iyear_1984 |          0  (omitted)
+ _Iyear_1985 |          0  (omitted)
+ _Iyear_1986 |          0  (omitted)
+ _Iyear_1987 |          0  (omitted)
+ _Iyear_1988 |          0  (omitted)
+ _Iyear_1989 |          0  (omitted)
+ _Iyear_1990 |   251.3188   164.8832     1.52   0.151    -104.8896    607.5273
+ _Iyear_1991 |   269.4925   166.6003     1.62   0.130    -90.42565    629.4106
+ _Iyear_1992 |   228.3132   147.2405     1.55   0.145    -89.78056    546.4069
+ _Iyear_1993 |   252.7188   143.5964     1.76   0.102    -57.50249      562.94
+ _Iyear_1994 |    252.681   141.9576     1.78   0.098    -53.99976    559.3618
+ _Iyear_1995 |   237.1578   137.3737     1.73   0.108    -59.62002    533.9356
+ _Iyear_1996 |   210.6176   115.1653     1.83   0.090    -38.18184    459.4171
+ _Iyear_1997 |   238.5909   118.6694     2.01   0.066    -17.77878    494.9606
+ _Iyear_1998 |   251.6627   100.8075     2.50   0.027     33.88129    469.4442
+ _Iyear_1999 |    266.939   95.45639     2.80   0.015     60.71801      473.16
+ _Iyear_2000 |    188.949   84.49599     2.24   0.044     6.406469    371.4915
+ _Iyear_2001 |   105.8138   53.06923     1.99   0.068    -8.835341    220.4629
+ _Iyear_2002 |   62.23701   44.43906     1.40   0.185    -33.76774    158.2417
+ _Iyear_2003 |   24.96071   40.72651     0.61   0.551    -63.02356     112.945
+ _Iyear_2004 |   10.24217   28.50538     0.36   0.725    -51.33995     71.8243
+ _Iyear_2005 |  -14.27603   26.24366    -0.54   0.596    -70.97202    42.41996
+ _Iyear_2006 |  -7.485937   22.49804    -0.33   0.745    -56.09001    41.11813
+ _Iyear_2007 |   1.372963   12.78659     0.11   0.916    -26.25079    28.99672
+ _Iyear_2008 |          0  (omitted)
+ _Iyear_2009 |  -34.96672   15.65504    -2.23   0.044    -68.78739   -1.146058
+ _Iyear_2010 |  -29.55166   15.45618    -1.91   0.078     -62.9427    3.839386
+ _Iyear_2011 |          0  (omitted)
+ _Iyear_2012 |          0  (omitted)
+    literacy |   8.458693   6.096155     1.39   0.189    -4.711248    21.62863
+       urban |   8.463759   11.99592     0.71   0.493    -17.45184    34.37936
+       pcgdp |  -.0035417    .003747    -0.95   0.362    -.0116366    .0045532
+       unemp |   38.98182    16.7325     2.33   0.037      2.83346    75.13018
+    pcpolice |   100.8605   70.70062     1.43   0.177    -51.87888    253.5999
+       _cons |  -1920.711   1249.387    -1.54   0.148    -4619.847    778.4245
+------------------------------------------------------------------------------
+(est2 stored)
+
+. eststo: reg women_index prohib  _I*  $controls [aw=pop], cluster(State) ;
+(sum of wgt is 13,007,801.5)
+note: _IState_3 omitted because of collinearity.
+note: _IState_4 omitted because of collinearity.
+note: _IState_5 omitted because of collinearity.
+note: _IState_6 omitted because of collinearity.
+note: _IState_7 omitted because of collinearity.
+note: _IState_8 omitted because of collinearity.
+note: _IState_9 omitted because of collinearity.
+note: _IState_10 omitted because of collinearity.
+note: _IState_12 omitted because of collinearity.
+note: _IState_13 omitted because of collinearity.
+note: _IState_15 omitted because of collinearity.
+note: _IState_16 omitted because of collinearity.
+note: _IState_19 omitted because of collinearity.
+note: _IState_20 omitted because of collinearity.
+note: _IState_22 omitted because of collinearity.
+note: _IState_23 omitted because of collinearity.
+note: _IState_25 omitted because of collinearity.
+note: _IState_28 omitted because of collinearity.
+note: _IState_30 omitted because of collinearity.
+note: _IState_32 omitted because of collinearity.
+note: _IState_34 omitted because of collinearity.
+note: _Iyear_1981 omitted because of collinearity.
+note: _Iyear_1982 omitted because of collinearity.
+note: _Iyear_1983 omitted because of collinearity.
+note: _Iyear_1984 omitted because of collinearity.
+note: _Iyear_1985 omitted because of collinearity.
+note: _Iyear_1986 omitted because of collinearity.
+note: _Iyear_1987 omitted because of collinearity.
+note: _Iyear_1988 omitted because of collinearity.
+note: _Iyear_1989 omitted because of collinearity.
+note: _Iyear_2010 omitted because of collinearity.
+note: _Iyear_2011 omitted because of collinearity.
+note: _Iyear_2012 omitted because of collinearity.
+
+Linear regression                               Number of obs     =        234
+                                                F(12, 13)         =          .
+                                                Prob > F          =          .
+                                                R-squared         =     0.8937
+                                                Root MSE          =     270.38
+
+                                 (Std. err. adjusted for 14 clusters in State)
+------------------------------------------------------------------------------
+             |               Robust
+ women_index | Coefficient  std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+      prohib |  -407.2852   129.1209    -3.15   0.008     -686.234   -128.3364
+   _IState_2 |   429.8977   779.5035     0.55   0.591    -1254.117    2113.913
+   _IState_3 |          0  (omitted)
+   _IState_4 |          0  (omitted)
+   _IState_5 |          0  (omitted)
+   _IState_6 |          0  (omitted)
+   _IState_7 |          0  (omitted)
+   _IState_8 |          0  (omitted)
+   _IState_9 |          0  (omitted)
+  _IState_10 |          0  (omitted)
+  _IState_11 |  -881.5117    1392.74    -0.63   0.538    -3890.344     2127.32
+  _IState_12 |          0  (omitted)
+  _IState_13 |          0  (omitted)
+  _IState_14 |  -1036.033    1263.41    -0.82   0.427    -3765.464    1693.398
+  _IState_15 |          0  (omitted)
+  _IState_16 |          0  (omitted)
+  _IState_17 |  -978.0179   1258.403    -0.78   0.451    -3696.632    1740.597
+  _IState_18 |  -2198.227   2347.693    -0.94   0.366    -7270.109    2873.655
+  _IState_19 |          0  (omitted)
+  _IState_20 |          0  (omitted)
+  _IState_21 |  -1703.944   1861.055    -0.92   0.377    -5724.509     2316.62
+  _IState_22 |          0  (omitted)
+  _IState_23 |          0  (omitted)
+  _IState_24 |  -6992.198   4399.206    -1.59   0.136     -16496.1    2511.708
+  _IState_25 |          0  (omitted)
+  _IState_26 |   243.7148   636.3471     0.38   0.708     -1131.03    1618.459
+  _IState_27 |  -3623.121   1789.992    -2.02   0.064    -7490.163    243.9207
+  _IState_28 |          0  (omitted)
+  _IState_29 |   287.2085   534.6725     0.54   0.600    -867.8813    1442.298
+  _IState_30 |          0  (omitted)
+  _IState_31 |  -2084.391   1663.905    -1.25   0.232    -5679.038    1510.257
+  _IState_32 |          0  (omitted)
+  _IState_33 |  -298.5117   465.9371    -0.64   0.533    -1305.108    708.0842
+  _IState_34 |          0  (omitted)
+  _IState_35 |  -1035.319   1224.526    -0.85   0.413    -3680.748    1610.109
+ _Iyear_1981 |          0  (omitted)
+ _Iyear_1982 |          0  (omitted)
+ _Iyear_1983 |          0  (omitted)
+ _Iyear_1984 |          0  (omitted)
+ _Iyear_1985 |          0  (omitted)
+ _Iyear_1986 |          0  (omitted)
+ _Iyear_1987 |          0  (omitted)
+ _Iyear_1988 |          0  (omitted)
+ _Iyear_1989 |          0  (omitted)
+ _Iyear_1990 |   910.3293   678.3284     1.34   0.203    -555.1102    2375.769
+ _Iyear_1991 |   913.4745   645.0751     1.42   0.180    -480.1255    2307.075
+ _Iyear_1992 |   879.6071   595.2019     1.48   0.163    -406.2484    2165.463
+ _Iyear_1993 |   921.4287   595.0811     1.55   0.146    -364.1658    2207.023
+ _Iyear_1994 |   935.7432   543.0411     1.72   0.109    -237.4256    2108.912
+ _Iyear_1995 |   919.1951   527.7105     1.74   0.105    -220.8542    2059.244
+ _Iyear_1996 |   878.9658   471.7214     1.86   0.085    -140.1263    1898.058
+ _Iyear_1997 |   859.0509   429.7401     2.00   0.067    -69.34608    1787.448
+ _Iyear_1998 |   864.2868   387.8444     2.23   0.044     26.40003    1702.174
+ _Iyear_1999 |   843.4431   366.0481     2.30   0.038     52.64427    1634.242
+ _Iyear_2000 |   778.2718   382.6281     2.03   0.063      -48.346     1604.89
+ _Iyear_2001 |   582.2292   327.0107     1.78   0.098    -124.2344    1288.693
+ _Iyear_2002 |   438.7377   270.4755     1.62   0.129    -145.5891    1023.065
+ _Iyear_2003 |   378.3159   234.2306     1.62   0.130    -127.7085    884.3402
+ _Iyear_2004 |   305.3253   205.8799     1.48   0.162     -139.451    750.1017
+ _Iyear_2005 |   306.5696     231.71     1.32   0.209    -194.0094    807.1487
+ _Iyear_2006 |   187.0158   172.4617     1.08   0.298     -185.565    559.5967
+ _Iyear_2007 |   208.9717   141.5935     1.48   0.164    -96.92239    514.8657
+ _Iyear_2008 |   113.9815   94.33345     1.21   0.248    -89.81349    317.7766
+ _Iyear_2009 |   12.82595   32.88673     0.39   0.703     -58.2215     83.8734
+ _Iyear_2010 |          0  (omitted)
+ _Iyear_2011 |          0  (omitted)
+ _Iyear_2012 |          0  (omitted)
+    literacy |   33.23018   46.52913     0.71   0.488    -67.28989    133.7503
+       urban |   67.64853   21.07718     3.21   0.007     22.11405     113.183
+       pcgdp |    .025027    .012511     2.00   0.067    -.0020014    .0520553
+       unemp |   136.0883   61.92772     2.20   0.047     2.301551     269.875
+    pcpolice |   698.9111   425.2811     1.64   0.124    -219.8529    1617.675
+       _cons |  -3715.118   2645.835    -1.40   0.184    -9431.097    2000.861
+------------------------------------------------------------------------------
+(est3 stored)
+
+. estout using "../../results/table1.csv", cells(`"b() se() t() p()"') stats(N r2 df_m df_r df_b df) notype abbr
+> ev begin(`"""') delimiter(`"",""') end(`"""') replace ;
+(output written to ../../results/table1.csv)
+
+. ***EDIT by Donna
+> 
+> /*
+> foreach x in women_indexnf r_cruelty r_molestation r_sexualharassment r_rape women_index_f  r_suicides_f r_dow
+> rydeath r_fire_f women_index { ;
+> 
+>         qui eststo:  reg `x' prohib  _I*  $controls [aw=pop], cluster(State) ;
+>         di "`x'" ;
+>         bootwildctpopwt prohib  _I* $controls, numvars(1) ;
+> } ; 
+> */
+> 
+> *** EDIT by Donna
+> * esttab using LeeLucaOwensSharma_AER_PP_Table2.csv, se b(3) se(3) r2(%9.2f) starlevels(* .10 ** .05 *** .01) 
+> keep(prohib) replace ;
+. log close;
+      name:  <unnamed>
+       log:  /home/zhiwenz/private-research/studies/luca-2015/source/AERPP-Replication-Data/LeeLucaOwensSharma_A
+> ER_PP_Results.txt
+  log type:  text
+ closed on:  24 Nov 2024, 12:37:53
+----------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,27 @@
+[
+  {
+    "id": "div_ret-incum_d-3",
+    "est": 1.6,
+    "se": 0.398
+  },
+  {
+    "id": "div_ret-incum_d-4",
+    "est": 2.2,
+    "se": 0.8
+  },
+  {
+    "id": "div_ret-incum_d-5",
+    "est": 1.9,
+    "se": 0.81
+  },
+  {
+    "id": "div_ret-incum_d-6",
+    "est": 1.65,
+    "se": 0.656
+  },
+  {
+    "id": "div_ret-ltw",
+    "est": 5.74,
+    "se": 1.801
+  }
+]

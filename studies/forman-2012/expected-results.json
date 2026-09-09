@@ -1,0 +1,12 @@
+[
+  {
+    "id": "tech-highcounty",
+    "est": 0.4588,
+    "se": 0.1585
+  },
+  {
+    "id": "tech-other",
+    "est": 0.0239,
+    "se": 0.0128
+  }
+]

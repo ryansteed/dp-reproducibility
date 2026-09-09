@@ -1,0 +1,624 @@
+Table 10B: dependent variable: lpcr_womtot
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             2.809            0.766            5.049 *          1.501    
+                  [1.935]          [1.587]          [2.859]          [2.505]    
+                                                                                
+r2                   0.89             0.95             0.89             0.95    
+N                     391              391              391              391    
+Table 10B: dependent variable: lprape2
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.123           -0.725            0.930           -0.380    
+                  [1.215]          [1.306]          [1.700]          [2.135]    
+                                                                                
+r2                   0.83             0.92             0.83             0.92    
+N                     391              391              391              391    
+Table 10B: dependent variable: lpwomgirl
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.199           -1.100            1.230           -0.405    
+                  [0.994]          [0.910]          [1.982]          [1.552]    
+                                                                                
+r2                   0.92             0.96             0.92             0.96    
+N                     340              340              340              340    
+Table 10B: dependent variable: lpcr_womtot
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             2.809            0.766            5.049 *          1.501    
+                  [1.935]          [1.587]          [2.859]          [2.505]    
+                                                                                
+r2                   0.89             0.95             0.89             0.95    
+N                     391              391              391              391    
+Table 10B: dependent variable: lprape2
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.123           -0.725            0.930           -0.380    
+                  [1.215]          [1.306]          [1.700]          [2.135]    
+                                                                                
+r2                   0.83             0.92             0.83             0.92    
+N                     391              391              391              391    
+Table 10B: dependent variable: lpwomgirl
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.199           -1.100            1.230           -0.405    
+                  [0.994]          [0.910]          [1.982]          [1.552]    
+                                                                                
+r2                   0.92             0.96             0.92             0.96    
+N                     340              340              340              340    
+Table 10B: dependent variable: lpcr_womtot
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             2.809            0.766            5.049 *          1.501    
+                  [1.935]          [1.587]          [2.859]          [2.505]    
+                                                                                
+r2                   0.89             0.95             0.89             0.95    
+N                     391              391              391              391    
+Table 10B: dependent variable: lprape2
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.123           -0.725            0.930           -0.380    
+                  [1.215]          [1.306]          [1.700]          [2.135]    
+                                                                                
+r2                   0.83             0.92             0.83             0.92    
+N                     391              391              391              391    
+Table 10B: dependent variable: lpwomgirl
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.199           -1.100            1.230           -0.405    
+                  [0.994]          [0.910]          [1.982]          [1.552]    
+                                                                                
+r2                   0.92             0.96             0.92             0.96    
+N                     340              340              340              340    
+Table 10B: dependent variable: lpcr_womtot
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             2.809            0.766            5.049 *          1.501    
+                  [1.935]          [1.587]          [2.859]          [2.505]    
+                                                                                
+r2                   0.89             0.95             0.89             0.95    
+N                     391              391              391              391    
+Table 10B: dependent variable: lprape2
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.123           -0.725            0.930           -0.380    
+                  [1.215]          [1.306]          [1.700]          [2.135]    
+                                                                                
+r2                   0.83             0.92             0.83             0.92    
+N                     391              391              391              391    
+Table 10B: dependent variable: lpwomgirl
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.199           -1.100            1.230           -0.405    
+                  [0.994]          [0.910]          [1.982]          [1.552]    
+                                                                                
+r2                   0.92             0.96             0.92             0.96    
+N                     340              340              340              340    
+Table 10B: dependent variable: lpcr_womtot
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             2.809            0.766            5.049 *          1.501    
+                  [1.935]          [1.587]          [2.859]          [2.505]    
+                                                                                
+r2                   0.89             0.95             0.89             0.95    
+N                     391              391              391              391    
+Table 10B: dependent variable: lprape2
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.123           -0.725            0.930           -0.380    
+                  [1.215]          [1.306]          [1.700]          [2.135]    
+                                                                                
+r2                   0.83             0.92             0.83             0.92    
+N                     391              391              391              391    
+Table 10B: dependent variable: lpwomgirl
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.199           -1.100            1.230           -0.405    
+                  [0.994]          [0.910]          [1.982]          [1.552]    
+                                                                                
+r2                   0.92             0.96             0.92             0.96    
+N                     340              340              340              340    
+Table 10B: dependent variable: lpcr_womtot
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             2.809            0.766            5.049 *          1.501    
+                  [1.935]          [1.587]          [2.859]          [2.505]    
+                                                                                
+r2                   0.89             0.95             0.89             0.95    
+N                     391              391              391              391    
+Table 10B: dependent variable: lprape2
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.123           -0.725            0.930           -0.380    
+                  [1.215]          [1.306]          [1.700]          [2.135]    
+                                                                                
+r2                   0.83             0.92             0.83             0.92    
+N                     391              391              391              391    
+Table 10B: dependent variable: lpwomgirl
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.199           -1.100            1.230           -0.405    
+                  [0.994]          [0.910]          [1.982]          [1.552]    
+                                                                                
+r2                   0.92             0.96             0.92             0.96    
+N                     340              340              340              340    
+Table 10B: dependent variable: lpcr_womtot
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             2.809            0.766            5.049 *          1.501    
+                  [1.935]          [1.587]          [2.859]          [2.505]    
+                                                                                
+r2                   0.89             0.95             0.89             0.95    
+N                     391              391              391              391    
+Table 10B: dependent variable: lprape2
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.123           -0.725            0.930           -0.380    
+                  [1.215]          [1.306]          [1.700]          [2.135]    
+                                                                                
+r2                   0.83             0.92             0.83             0.92    
+N                     391              391              391              391    
+Table 10B: dependent variable: lpwomgirl
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.199           -1.100            1.230           -0.405    
+                  [0.994]          [0.910]          [1.982]          [1.552]    
+                                                                                
+r2                   0.92             0.96             0.92             0.96    
+N                     340              340              340              340    
+Table 10B: dependent variable: lpcr_womtot
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             2.809            0.766            5.049 *          1.501    
+                  [1.935]          [1.587]          [2.859]          [2.505]    
+                                                                                
+r2                   0.89             0.95             0.89             0.95    
+N                     391              391              391              391    
+Table 10B: dependent variable: lprape2
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.123           -0.725            0.930           -0.380    
+                  [1.215]          [1.306]          [1.700]          [2.135]    
+                                                                                
+r2                   0.83             0.92             0.83             0.92    
+N                     391              391              391              391    
+Table 10B: dependent variable: lpwomgirl
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.199           -1.100            1.230           -0.405    
+                  [0.994]          [0.910]          [1.982]          [1.552]    
+                                                                                
+r2                   0.92             0.96             0.92             0.96    
+N                     340              340              340              340    
+Table 10B: dependent variable: lpcr_womtot
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             2.809            0.766            5.049 *          1.501    
+                  [1.935]          [1.587]          [2.859]          [2.505]    
+                                                                                
+r2                   0.89             0.95             0.89             0.95    
+N                     391              391              391              391    
+Table 10B: dependent variable: lprape2
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.123           -0.725            0.930           -0.380    
+                  [1.215]          [1.306]          [1.700]          [2.135]    
+                                                                                
+r2                   0.83             0.92             0.83             0.92    
+N                     391              391              391              391    
+Table 10B: dependent variable: lpwomgirl
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.199           -1.100            1.230           -0.405    
+                  [0.994]          [0.910]          [1.982]          [1.552]    
+                                                                                
+r2                   0.92             0.96             0.92             0.96    
+N                     340              340              340              340    
+Table 10B: dependent variable: lpcr_womtot
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             2.809            0.766            5.049 *          1.501    
+                  [1.935]          [1.587]          [2.859]          [2.505]    
+                                                                                
+r2                   0.89             0.95             0.89             0.95    
+N                     391              391              391              391    
+Table 10B: dependent variable: lprape2
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.123           -0.725            0.930           -0.380    
+                  [1.215]          [1.306]          [1.700]          [2.135]    
+                                                                                
+r2                   0.83             0.92             0.83             0.92    
+N                     391              391              391              391    
+Table 10B: dependent variable: lpwomgirl
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.199           -1.100            1.230           -0.405    
+                  [0.994]          [0.910]          [1.982]          [1.552]    
+                                                                                
+r2                   0.92             0.96             0.92             0.96    
+N                     340              340              340              340    
+Table 10B: dependent variable: lpcr_womtot
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             2.809            0.766            5.049 *          1.501    
+                  [1.935]          [1.587]          [2.859]          [2.505]    
+                                                                                
+r2                   0.89             0.95             0.89             0.95    
+N                     391              391              391              391    
+Table 10B: dependent variable: lprape2
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.123           -0.725            0.930           -0.380    
+                  [1.215]          [1.306]          [1.700]          [2.135]    
+                                                                                
+r2                   0.83             0.92             0.83             0.92    
+N                     391              391              391              391    
+Table 10B: dependent variable: lpwomgirl
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.199           -1.100            1.230           -0.405    
+                  [0.994]          [0.910]          [1.982]          [1.552]    
+                                                                                
+r2                   0.92             0.96             0.92             0.96    
+N                     340              340              340              340    
+Table 10B: dependent variable: lpcr_womtot
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             2.809            0.766            5.049 *          1.501    
+                  [1.935]          [1.587]          [2.859]          [2.505]    
+                                                                                
+r2                   0.89             0.95             0.89             0.95    
+N                     391              391              391              391    
+Table 10B: dependent variable: lprape2
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.123           -0.725            0.930           -0.380    
+                  [1.215]          [1.306]          [1.700]          [2.135]    
+                                                                                
+r2                   0.83             0.92             0.83             0.92    
+N                     391              391              391              391    
+Table 10B: dependent variable: lpwomgirl
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.199           -1.100            1.230           -0.405    
+                  [0.994]          [0.910]          [1.982]          [1.552]    
+                                                                                
+r2                   0.92             0.96             0.92             0.96    
+N                     340              340              340              340    
+Table 10B: dependent variable: lpcr_womtot
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             2.809            0.766            5.049 *          1.501    
+                  [1.935]          [1.587]          [2.859]          [2.505]    
+                                                                                
+r2                   0.89             0.95             0.89             0.95    
+N                     391              391              391              391    
+Table 10B: dependent variable: lprape2
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.123           -0.725            0.930           -0.380    
+                  [1.215]          [1.306]          [1.700]          [2.135]    
+                                                                                
+r2                   0.83             0.92             0.83             0.92    
+N                     391              391              391              391    
+Table 10B: dependent variable: lpwomgirl
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.199           -1.100            1.230           -0.405    
+                  [0.994]          [0.910]          [1.982]          [1.552]    
+                                                                                
+r2                   0.92             0.96             0.92             0.96    
+N                     340              340              340              340    
+Table 10B: dependent variable: lpcr_womtot
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             2.809            0.766            5.049 *          1.501    
+                  [1.935]          [1.587]          [2.859]          [2.505]    
+                                                                                
+r2                   0.89             0.95             0.89             0.95    
+N                     391              391              391              391    
+Table 10B: dependent variable: lprape2
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.123           -0.725            0.930           -0.380    
+                  [1.215]          [1.306]          [1.700]          [2.135]    
+                                                                                
+r2                   0.83             0.92             0.83             0.92    
+N                     391              391              391              391    
+Table 10B: dependent variable: lpwomgirl
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.199           -1.100            1.230           -0.405    
+                  [0.994]          [0.910]          [1.982]          [1.552]    
+                                                                                
+r2                   0.92             0.96             0.92             0.96    
+N                     340              340              340              340    
+Table 10B: dependent variable: lpcr_womtot
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             2.809            0.766            5.049 *          1.501    
+                  [1.935]          [1.587]          [2.859]          [2.505]    
+                                                                                
+r2                   0.89             0.95             0.89             0.95    
+N                     391              391              391              391    
+Table 10B: dependent variable: lprape2
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.123           -0.725            0.930           -0.380    
+                  [1.215]          [1.306]          [1.700]          [2.135]    
+                                                                                
+r2                   0.83             0.92             0.83             0.92    
+N                     391              391              391              391    
+Table 10B: dependent variable: lpwomgirl
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.199           -1.100            1.230           -0.405    
+                  [0.994]          [0.910]          [1.982]          [1.552]    
+                                                                                
+r2                   0.92             0.96             0.92             0.96    
+N                     340              340              340              340    
+Table 10B: dependent variable: lpcr_womtot
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             2.809            0.766            5.049 *          1.501    
+                  [1.935]          [1.587]          [2.859]          [2.505]    
+                                                                                
+r2                   0.89             0.95             0.89             0.95    
+N                     391              391              391              391    
+Table 10B: dependent variable: lprape2
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.123           -0.725            0.930           -0.380    
+                  [1.215]          [1.306]          [1.700]          [2.135]    
+                                                                                
+r2                   0.83             0.92             0.83             0.92    
+N                     391              391              391              391    
+Table 10B: dependent variable: lpwomgirl
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.199           -1.100            1.230           -0.405    
+                  [0.994]          [0.910]          [1.982]          [1.552]    
+                                                                                
+r2                   0.92             0.96             0.92             0.96    
+N                     340              340              340              340    
+Table 10B: dependent variable: lpcr_womtot
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             2.809            0.766            5.049 *          1.501    
+                  [1.935]          [1.587]          [2.859]          [2.505]    
+                                                                                
+r2                   0.89             0.95             0.89             0.95    
+N                     391              391              391              391    
+Table 10B: dependent variable: lprape2
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.123           -0.725            0.930           -0.380    
+                  [1.215]          [1.306]          [1.700]          [2.135]    
+                                                                                
+r2                   0.83             0.92             0.83             0.92    
+N                     391              391              391              391    
+Table 10B: dependent variable: lpwomgirl
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.199           -1.100            1.230           -0.405    
+                  [0.994]          [0.910]          [1.982]          [1.552]    
+                                                                                
+r2                   0.92             0.96             0.92             0.96    
+N                     340              340              340              340    
+Table 10B: dependent variable: lpcr_womtot
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             2.809            0.766            5.049 *          1.501    
+                  [1.935]          [1.587]          [2.859]          [2.505]    
+                                                                                
+r2                   0.89             0.95             0.89             0.95    
+N                     391              391              391              391    
+Table 10B: dependent variable: lprape2
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.123           -0.725            0.930           -0.380    
+                  [1.215]          [1.306]          [1.700]          [2.135]    
+                                                                                
+r2                   0.83             0.92             0.83             0.92    
+N                     391              391              391              391    
+Table 10B: dependent variable: lpwomgirl
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.199           -1.100            1.230           -0.405    
+                  [0.994]          [0.910]          [1.982]          [1.552]    
+                                                                                
+r2                   0.92             0.96             0.92             0.96    
+N                     340              340              340              340    
+Table 10B: dependent variable: lpcr_womtot
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             2.809            0.766            5.049 *          1.501    
+                  [1.935]          [1.587]          [2.859]          [2.505]    
+                                                                                
+r2                   0.89             0.95             0.89             0.95    
+N                     391              391              391              391    
+Table 10B: dependent variable: lprape2
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.123           -0.725            0.930           -0.380    
+                  [1.215]          [1.306]          [1.700]          [2.135]    
+                                                                                
+r2                   0.83             0.92             0.83             0.92    
+N                     391              391              391              391    
+Table 10B: dependent variable: lpwomgirl
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.199           -1.100            1.230           -0.405    
+                  [0.994]          [0.910]          [1.982]          [1.552]    
+                                                                                
+r2                   0.92             0.96             0.92             0.96    
+N                     340              340              340              340    
+Table 10B: dependent variable: lpcr_womtot
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             2.809            0.766            5.049 *          1.501    
+                  [1.935]          [1.587]          [2.859]          [2.505]    
+                                                                                
+r2                   0.89             0.95             0.89             0.95    
+N                     391              391              391              391    
+Table 10B: dependent variable: lprape2
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.123           -0.725            0.930           -0.380    
+                  [1.215]          [1.306]          [1.700]          [2.135]    
+                                                                                
+r2                   0.83             0.92             0.83             0.92    
+N                     391              391              391              391    
+Table 10B: dependent variable: lpwomgirl
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.199           -1.100            1.230           -0.405    
+                  [0.994]          [0.910]          [1.982]          [1.552]    
+                                                                                
+r2                   0.92             0.96             0.92             0.96    
+N                     340              340              340              340    
+Table 10B: dependent variable: lpcr_womtot
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             2.809            0.766            5.049 *          1.501    
+                  [1.935]          [1.587]          [2.859]          [2.505]    
+                                                                                
+r2                   0.89             0.95             0.89             0.95    
+N                     391              391              391              391    
+Table 10B: dependent variable: lprape2
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.123           -0.725            0.930           -0.380    
+                  [1.215]          [1.306]          [1.700]          [2.135]    
+                                                                                
+r2                   0.83             0.92             0.83             0.92    
+N                     391              391              391              391    
+Table 10B: dependent variable: lpwomgirl
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.199           -1.100            1.230           -0.405    
+                  [0.994]          [0.910]          [1.982]          [1.552]    
+                                                                                
+r2                   0.92             0.96             0.92             0.96    
+N                     340              340              340              340    
+Table 10B: dependent variable: lpcr_womtot
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             2.809            0.766            5.049 *          1.501    
+                  [1.935]          [1.587]          [2.859]          [2.505]    
+                                                                                
+r2                   0.89             0.95             0.89             0.95    
+N                     391              391              391              391    
+Table 10B: dependent variable: lprape2
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.123           -0.725            0.930           -0.380    
+                  [1.215]          [1.306]          [1.700]          [2.135]    
+                                                                                
+r2                   0.83             0.92             0.83             0.92    
+N                     391              391              391              391    
+Table 10B: dependent variable: lpwomgirl
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.199           -1.100            1.230           -0.405    
+                  [0.994]          [0.910]          [1.982]          [1.552]    
+                                                                                
+r2                   0.92             0.96             0.92             0.96    
+N                     340              340              340              340    
+Table 10B: dependent variable: lpcr_womtot
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             2.809            0.766            5.049 *          1.501    
+                  [1.935]          [1.587]          [2.859]          [2.505]    
+                                                                                
+r2                   0.89             0.95             0.89             0.95    
+N                     391              391              391              391    
+Table 10B: dependent variable: lprape2
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.123           -0.725            0.930           -0.380    
+                  [1.215]          [1.306]          [1.700]          [2.135]    
+                                                                                
+r2                   0.83             0.92             0.83             0.92    
+N                     391              391              391              391    
+Table 10B: dependent variable: lpwomgirl
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.199           -1.100            1.230           -0.405    
+                  [0.994]          [0.910]          [1.982]          [1.552]    
+                                                                                
+r2                   0.92             0.96             0.92             0.96    
+N                     340              340              340              340    
+Table 10B: dependent variable: lpcr_womtot
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             2.809            0.766            5.049 *          1.501    
+                  [1.935]          [1.587]          [2.859]          [2.505]    
+                                                                                
+r2                   0.89             0.95             0.89             0.95    
+N                     391              391              391              391    
+Table 10B: dependent variable: lprape2
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.123           -0.725            0.930           -0.380    
+                  [1.215]          [1.306]          [1.700]          [2.135]    
+                                                                                
+r2                   0.83             0.92             0.83             0.92    
+N                     391              391              391              391    
+Table 10B: dependent variable: lpwomgirl
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.199           -1.100            1.230           -0.405    
+                  [0.994]          [0.910]          [1.982]          [1.552]    
+                                                                                
+r2                   0.92             0.96             0.92             0.96    
+N                     340              340              340              340    
+Table 10B: dependent variable: lpcr_womtot
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             2.809            0.766            5.049 *          1.501    
+                  [1.935]          [1.587]          [2.859]          [2.505]    
+                                                                                
+r2                   0.89             0.95             0.89             0.95    
+N                     391              391              391              391    
+Table 10B: dependent variable: lprape2
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.123           -0.725            0.930           -0.380    
+                  [1.215]          [1.306]          [1.700]          [2.135]    
+                                                                                
+r2                   0.83             0.92             0.83             0.92    
+N                     391              391              391              391    
+Table 10B: dependent variable: lpwomgirl
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.199           -1.100            1.230           -0.405    
+                  [0.994]          [0.910]          [1.982]          [1.552]    
+                                                                                
+r2                   0.92             0.96             0.92             0.96    
+N                     340              340              340              340    
+Table 10B: dependent variable: lpcr_womtot
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             2.809            0.766            5.049 *          1.501    
+                  [1.935]          [1.587]          [2.859]          [2.505]    
+                                                                                
+r2                   0.89             0.95             0.89             0.95    
+N                     391              391              391              391    
+Table 10B: dependent variable: lprape2
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.123           -0.725            0.930           -0.380    
+                  [1.215]          [1.306]          [1.700]          [2.135]    
+                                                                                
+r2                   0.83             0.92             0.83             0.92    
+N                     391              391              391              391    
+Table 10B: dependent variable: lpwomgirl
+                       m1               m2               m3               m4    
+               b/se/blank       b/se/blank       b/se/blank       b/se/blank    
+wwinner             1.199           -1.100            1.230           -0.405    
+                  [0.994]          [0.910]          [1.982]          [1.552]    
+                                                                                
+r2                   0.92             0.96             0.92             0.96    
+N                     340              340              340              340    

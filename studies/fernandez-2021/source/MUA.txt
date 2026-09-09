@@ -1,0 +1,15 @@
+		(1)	(2)	(3)	(4)
+VARIABLES	LABELS	Pct in MUA	Pct in State	No. of Resident in MUA	No. of Residents remain in State
+					
+treat	Act14/Hurricane Maria	2.290***	-2.853***	0.0398**	-0.0412***
+		(0.584)	(0.234)	(0.0198)	(0.00286)
+Constant	Constant	23.64***	50.97***		
+		(0.244)	(0.187)		
+					
+Observations		260	260	260	260
+R-squared		0.987	0.985		
+State FE		YES	YES	YES	YES
+Year FE		YES	YES	YES	YES
+Number of state2				52	52
+Robust standard errors in parentheses					
+*** p<0.01, ** p<0.05, * p<0.1					
