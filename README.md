@@ -17,7 +17,7 @@ To run a replication with different levels of epsilon-DP, run `replicate [study-
 
 To run all available replications, use the study ID `all`: `replicate all [options]`.
 
-To replicate all experiments:
+To replicate all experiments from the paper:
 ```bash
 # control
 replicate all -x control -n 1
@@ -30,12 +30,17 @@ replicate all -x privacy_continuous -nctrl -elog 50 -m laplace -m gaussian
 
 # Data error
 replicate all -x error -nctrl -a 0.001 -a 0.01 -a 0.05 -a 0.1 -a 0.2 -a 0.5 -a 0.8 -sh hudson-berger -sh morris-lysy
-replicate all -x error_scaled -nctrl -a 0.001 -a 0.01 -a 0.05 -a 0.1 -a 0.2 -a 0.5 -a 0.8 -b 0.01 -b 0.1 -b 0.5 -cs est -sh hudson-berger
 
 # Gaussian on the margin
 replicate all -x margin -nctrl -e 0.0001 -e 0.001 -e 0.01 -e 0.1 -e 1 -e 10 -e 100 -e 1000 -m gaussian -a 0.001 -a 0.01 -a 0.05 -a 0.1 -a 0.2 -a 0.5 -a 0.8 -sh hudson-berger
+```
 
-# multiple imputation
+Additional options, not reported in the paper:
+```bash
+# add exponential scaling to data error variance
+replicate all -x error_scaled -nctrl -a 0.001 -a 0.01 -a 0.05 -a 0.1 -a 0.2 -a 0.5 -a 0.8 -b 0.01 -b 0.1 -b 0.5 -cs est -sh hudson-berger
+
+# multiple imputation (unstable, experimental)
 replicate all -x multiple_imputation -nctrl -mo 10 -e 100 -e 10 -e 1 -e 0.1 -e 0.01 -e 0.001
 ```
 
