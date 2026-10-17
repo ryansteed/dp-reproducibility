@@ -1,5 +1,5 @@
 ## Data
-1. Download ZIP from https://www.aeaweb.org/articles?id=10.1257/pol.4.3.91 > `source.zip`.
+1. Download ZIP from https://www.openicpsr.org/openicpsr/project/114796/version/V1/view > `source.zip`.
 2. `make source`.
 
 Code changes:
